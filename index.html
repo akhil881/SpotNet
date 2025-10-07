@@ -3,721 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpotNet Services - Intelligent Automation Solutions</title>
+    <meta name="description" content="SpotNet Services offers intelligent automation, security solutions, and EMI-based product sales for businesses and individuals.">
+    <title>SpotNet Services - Technology & Security Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
-        :root {
-            --primary: #4361ee;
-            --secondary: #3a0ca3;
-            --accent: #4cc9f0;
-            --light: #f8f9fa;
-            --dark: #212529;
-            --success: #4bb543;
-            --warning: #ffc107;
-            --danger: #dc3545;
-            --gray: #6c757d;
-            --light-gray: #e9ecef;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: #fff;
-            overflow-x: hidden;
-        }
-        
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        ul {
-            list-style: none;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: center;
-            border: none;
-        }
-        
-        .btn-primary {
-            background-color: var(--primary);
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            background-color: var(--secondary);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-        
-        .btn-secondary:hover {
-            background-color: var(--primary);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .btn-accent {
-            background-color: var(--accent);
-            color: white;
-        }
-        
-        .btn-accent:hover {
-            background-color: #3ab0d5;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 15px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(to right, var(--primary), var(--accent));
-            border-radius: 2px;
-        }
-        
-        .section-title p {
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: white;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo h1 {
-            font-size: 1.8rem;
-            color: var(--primary);
-            font-weight: 700;
-        }
-        
-        .logo span {
-            color: var(--secondary);
-        }
-        
-        .nav-links {
-            display: flex;
-        }
-        
-        .nav-links li {
-            margin-left: 30px;
-        }
-        
-        .nav-links a {
-            font-weight: 500;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
-        .mobile-menu {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 150px 0 100px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTIwMCA4MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBmaWxsPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpIiBkPSJNMCwwIEwxMjAwLDAgTDEyMDAsODAwIEwwLDgwMCBaIi8+PHBhdGggZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpIiBkPSJNMzAwLDAgTDEyMDAsMCBMMTIwMCw4MDAgTDMwMCw4MDAgWiIvPjxwYXRoIGZpbGw9InJnYmEoMjU1LCAyNTUsIDI1NSwgMC4xNSkiIGQ9Ik02MDAsMCBMMTIwMCwwIEwxMjAwLDgwMCBMNjAwLDgwMCBaIi8+PC9nPjwvc3ZnPg==');
-            opacity: 0.1;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-        }
-        
-        /* Services Section */
-        .services {
-            background-color: var(--light);
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .service-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background: linear-gradient(to bottom, var(--primary), var(--accent));
-            transition: width 0.3s ease;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .service-card:hover::before {
-            width: 100%;
-            opacity: 0.1;
-        }
-        
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-        
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--secondary);
-        }
-        
-        .service-card p {
-            color: var(--gray);
-            margin-bottom: 20px;
-        }
-        
-        .service-features {
-            margin-top: 20px;
-        }
-        
-        .service-features li {
-            margin-bottom: 8px;
-            display: flex;
-            align-items: flex-start;
-        }
-        
-        .service-features li i {
-            color: var(--success);
-            margin-right: 10px;
-            margin-top: 5px;
-        }
-        
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-        
-        .about-text h2 {
-            font-size: 2.2rem;
-            color: var(--secondary);
-            margin-bottom: 20px;
-        }
-        
-        .about-text p {
-            margin-bottom: 20px;
-            color: var(--gray);
-        }
-        
-        .about-values {
-            margin-top: 30px;
-        }
-        
-        .value-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-        
-        .value-icon {
-            background-color: var(--light);
-            color: var(--primary);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-        
-        .value-text h4 {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-            color: var(--secondary);
-        }
-        
-        .about-image {
-            position: relative;
-        }
-        
-        .about-image img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Industries Section */
-        .industries {
-            background-color: var(--light);
-        }
-        
-        .industries-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .industry-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .industry-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .industry-icon {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-        
-        .industry-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--secondary);
-        }
-        
-        .industry-card p {
-            color: var(--gray);
-        }
-        
-        /* Success Stories */
-        .success-stories {
-            background: linear-gradient(135deg, var(--secondary), var(--primary));
-            color: white;
-        }
-        
-        .success-stories .section-title h2,
-        .success-stories .section-title p {
-            color: white;
-        }
-        
-        .testimonials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .testimonial-card {
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 10px;
-            padding: 30px;
-            position: relative;
-        }
-        
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: 10px;
-            left: 20px;
-            font-size: 4rem;
-            color: rgba(255, 255, 255, 0.2);
-            font-family: Georgia, serif;
-        }
-        
-        .testimonial-text {
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-        
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: var(--accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            color: white;
-            font-weight: bold;
-        }
-        
-        .author-info h4 {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-        
-        .author-info p {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-        
-        /* CTA Section */
-        .cta {
-            background-color: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 80px 0;
-        }
-        
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .cta p {
-            max-width: 700px;
-            margin: 0 auto 30px;
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 80px 0 20px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 50px;
-        }
-        
-        .footer-column h3 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            color: var(--accent);
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--accent);
-        }
-        
-        .footer-column p {
-            margin-bottom: 20px;
-            opacity: 0.8;
-        }
-        
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-links a {
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            opacity: 1;
-            color: var(--accent);
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background-color: var(--accent);
-            transform: translateY(-3px);
-        }
-        
-        .contact-info li {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 15px;
-        }
-        
-        .contact-info li i {
-            margin-right: 15px;
-            color: var(--accent);
-            margin-top: 5px;
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            opacity: 0.7;
-        }
-        
-        /* WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background-color: #25d366;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-        
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
-        
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-image {
-                order: -1;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: white;
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-            }
-            
-            .nav-links.active {
-                display: flex;
-            }
-            
-            .nav-links li {
-                margin: 10px 0;
-            }
-            
-            .mobile-menu {
-                display: block;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-buttons, .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            section {
-                padding: 60px 0;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            .service-card, .industry-card, .testimonial-card {
-                padding: 20px;
-            }
+        :root{--primary:#4361ee;--secondary:#3a0ca3;--accent:#4cc9f0;--light:#f8f9fa;--dark:#212529;--success:#4bb543;--warning:#ffc107;--danger:#dc3545;--gray:#6c757d;--glass-bg:rgba(255,255,255,0.15);--glass-blur:blur(12px)}
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+        body{line-height:1.6;color:var(--dark);background:linear-gradient(135deg,#e0e7ff,#f0f9ff);overflow-x:hidden}
+        .container{max-width:1200px;margin:0 auto;padding:0 15px}
+        .btn{display:inline-block;padding:12px 30px;border-radius:50px;font-weight:600;cursor:pointer;border:none;color:#fff;background:linear-gradient(45deg,var(--primary),var(--accent));transition:all .3s;box-shadow:0 4px 15px rgba(0,0,0,.2)}
+        .btn:hover{transform:scale(1.05);box-shadow:0 8px 25px rgba(0,0,0,.3)}
+        .btn-accent{background:linear-gradient(45deg,var(--accent),var(--primary))}
+        section{padding:60px 0}
+        .section-title{text-align:center;margin-bottom:40px}
+        .section-title h2{font-size:2.5rem;color:var(--secondary);position:relative}
+        .section-title h2::after{content:'';position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);width:80px;height:4px;background:linear-gradient(45deg,var(--primary),var(--accent));border-radius:2px}
+        .section-title p{color:var(--gray);max-width:700px;margin:0 auto;font-size:1.1rem}
+        header{background:var(--glass-bg);backdrop-filter:var(--glass-blur);box-shadow:0 2px 15px rgba(0,0,0,.1);position:sticky;top:0;z-index:1000}
+        .navbar{display:flex;justify-content:space-between;align-items:center;padding:15px 0}
+        .logo h1{font-size:1.8rem;color:var(--primary);font-weight:700}
+        .logo span{color:var(--secondary)}
+        .nav-links{display:flex;gap:20px}
+        .nav-links li{list-style:none}
+        .nav-links a{font-weight:500;color:var(--dark);transition:color .3s}
+        .nav-links a:hover{color:var(--primary)}
+        .mobile-menu{display:none;font-size:1.5rem;cursor:pointer;color:var(--primary)}
+        .hero{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:100px 0 80px;text-align:center;animation:heroFade 1.5s ease-in}
+        @keyframes heroFade{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
+        .hero h1{font-size:3rem;margin-bottom:20px}
+        .hero p{font-size:1.2rem;margin-bottom:30px;opacity:.9}
+        .hero-buttons{display:flex;justify-content:center;gap:20px}
+        .hero-wave{position:absolute;bottom:0;width:100%;height:100px;fill:#fff}
+        .swiper-hero,.swiper-testimonials{position:relative}
+        .swiper-slide{text-align:center;padding:20px}
+        .swiper-slide img{width:100%;max-height:300px;object-fit:cover;border-radius:12px}
+        .swiper-slide h3{font-size:1.8rem;color:#fff;margin:15px 0}
+        .swiper-slide p{font-size:1.1rem;color:rgba(255,255,255,.9)}
+        .swiper-pagination-bullet-active{background:var(--accent)}
+        .swiper-button-next,.swiper-button-prev{color:var(--accent)}
+        .about-content{background:var(--glass-bg);backdrop-filter:var(--glass-blur);border-radius:12px;padding:30px;box-shadow:0 5px 20px rgba(0,0,0,.1);animation:cardReveal .5s ease-in}
+        .services-grid,.industries-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;display:flex;flex-wrap:wrap}
+        .service-card,.industry-card{background:var(--glass-bg);backdrop-filter:var(--glass-blur);border-radius:12px;padding:25px;box-shadow:0 5px 20px rgba(0,0,0,.1);transition:all .3s;border-left:5px solid var(--primary);animation:cardReveal .5s ease-in}
+        @keyframes cardReveal{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
+        .service-card:hover,.industry-card:hover{transform:scale(1.03);box-shadow:0 10px 25px rgba(0,0,0,.15)}
+        .service-icon,.industry-icon{width:60px;height:60px;margin-bottom:20px;border-radius:8px;object-fit:cover}
+        .service-card h3,.industry-card h3{font-size:1.5rem;color:var(--secondary);margin-bottom:10px}
+        .service-features li{display:flex;align-items:flex-start;margin-bottom:10px;font-size:.95rem}
+        .service-features li i{color:var(--success);margin-right:8px;margin-top:5px}
+        .industry-card{text-align:center}
+        .testimonials{background:var(--light);padding:60px 0}
+        .testimonial-card{background:var(--glass-bg);backdrop-filter:var(--glass-blur);border-radius:12px;padding:25px 25px 25px 50px;box-shadow:0 5px 20px rgba(0,0,0,.1);position:relative}
+        .testimonial-card::before{content:'"';position:absolute;top:10px;left:20px;font-size:4rem;color:rgba(0,0,0,.1);font-family:Georgia,serif}
+        .testimonial-text{font-style:italic;margin-bottom:15px}
+        .testimonial-author h4{font-size:1.2rem;color:var(--secondary)}
+        .cta{background:linear-gradient(45deg,var(--primary),var(--accent));color:#fff;text-align:center;padding:60px 0}
+        .cta h2{font-size:2.5rem;margin-bottom:20px}
+        .cta-buttons{display:flex;justify-content:center;gap:20px}
+        footer{background:var(--dark);color:#fff;padding:60px 0 20px}
+        .footer-content{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;margin-bottom:40px}
+        .footer-column h3{font-size:1.3rem;color:var(--accent);margin-bottom:15px}
+        .footer-links li{margin-bottom:8px;list-style:none}
+        .footer-links a{color:#fff;opacity:.8}
+        .footer-links a:hover{opacity:1;color:var(--accent)}
+        .social-links{display:flex;gap:12px;margin-top:15px}
+        .social-links a{width:40px;height:40px;border-radius:50%;background:var(--glass-bg);display:flex;align-items:center;justify-content:center;color:#fff;transition:all .3s}
+        .social-links a:hover{background:var(--accent);transform:scale(1.1)}
+        .footer-bottom{text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);opacity:.7}
+        .whatsapp-float{position:fixed;bottom:30px;right:30px;width:60px;height:60px;background:#25d366;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 5px 15px rgba(0,0,0,.2);z-index:1000;animation:pulse 2s infinite}
+        @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+        .whatsapp-float:hover{transform:scale(1.1)}
+        form input,form textarea{width:100%;padding:10px;margin-bottom:10px;border-radius:5px;border:1px solid var(--gray);background:var(--glass-bg);backdrop-filter:var(--glass-blur);color:var(--dark)}
+        form textarea{height:100px}
+        @media (max-width:768px){
+            .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:var(--glass-bg);backdrop-filter:var(--glass-blur);flex-direction:column;padding:20px;box-shadow:0 10px 15px rgba(0,0,0,.1)}
+            .nav-links.active{display:flex}
+            .nav-links li{margin:10px 0}
+            .mobile-menu{display:block}
+            .hero h1{font-size:2.2rem}
+            .hero-buttons,.cta-buttons{flex-direction:column;align-items:center}
+            .btn{width:100%;max-width:320px;padding:15px;font-size:1.1rem}
+            .footer-content{grid-template-columns:1fr}
+            .service-card,.industry-card,.testimonial-card{flex:1 1 100%;margin:10px}
+            .swiper-slide img{max-height:200px}
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
             <nav class="navbar">
@@ -726,435 +98,374 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#security">Security</a></li>
                     <li><a href="#industries">Industries</a></li>
-                    <li><a href="#success">Success Stories</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
+                <div class="mobile-menu" aria-label="Toggle navigation" role="button" tabindex="0">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <div class="hero-content">
-                <h1>Revolutionizing Business Through Intelligent Automation</h1>
-                <p>SpotNet Services is a premier technology solutions provider specializing in cutting-edge software development, business automation, and digital transformation.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-accent">Get Started</a>
-                    <a href="#services" class="btn btn-secondary">Our Services</a>
+            <h1>Intelligent Automation & Security Solutions</h1>
+            <p>SpotNet Services provides cutting-edge technology and security solutions that drive efficiency, enhance safety, and accelerate business growth.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-accent">Get Started</a>
+                <a href="#services" class="btn">Our Services</a>
+            </div>
+            <div class="swiper swiper-hero">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f" alt="Automation Technology" loading="lazy">
+                        <h3>Smart Automation</h3>
+                        <p>Streamline operations with AI-driven workflows and custom software.</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1560298803-1d998f6b5249" alt="Security Systems" loading="lazy">
+                        <h3>Advanced Security</h3>
+                        <p>Protect assets with CCTV, alarms, and biometric systems.</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1531746790731-6c087f6942de" alt="Custom APIs" loading="lazy">
+                        <h3>Seamless Integration</h3>
+                        <p>Connect systems with robust, tailored APIs.</p>
+                    </div>
                 </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        <svg class="hero-wave" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path fill="#fff" d="M0,64L80,80C160,96,320,128,480,128C640,128,800,96,960,80C1120,64,1280,64,1360,64L1440,64V120H0V64Z"/>
+        </svg>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About SpotNet Services</h2>
+                <p>Discover our mission to empower businesses and individuals with innovative solutions.</p>
+            </div>
+            <div class="about-content">
+                <p>SpotNet Services is a premier provider of intelligent automation, advanced security solutions, and a wide range of products available through easy EMI options. Based in Churu, Rajasthan, we partner with Zebrs India OPC Private Limited to facilitate seamless purchases of electronics, smartphones, furniture, tyres, luggage, mattresses, electric vehicles, and more through trusted banks and NBFCs.</p>
+                <p>Our technology division specializes in AI-powered software, including lab reporting systems, GST filing automation, website builders, and custom APIs, designed to streamline operations and boost efficiency. Our security solutions include state-of-the-art CCTV systems, alarms, biometric access controls, and solar-powered setups, ensuring safety for homes, offices, and industries.</p>
+                <p>We work closely with vendors, requiring KYC documents, product serial numbers, proof of delivery, and Google Maps locations to ensure transparency and compliance. Our commission structure (2% + GST, 4.5% + GST for flour mills) supports rapid payment settlements within 1-2 days post-loan disbursement. At SpotNet, we are committed to driving innovation, security, and accessibility for all.</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-title">
-                <h2>Our Services</h2>
-                <p>We offer a comprehensive suite of technology solutions designed to drive efficiency, reduce costs, and accelerate growth for your business.</p>
+                <h2>Software Solutions</h2>
+                <p>Comprehensive technology services to transform your business operations.</p>
             </div>
             <div class="services-grid">
-                <!-- Service 1 -->
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-flask"></i>
-                    </div>
+                    <img class="service-icon" src="https://images.unsplash.com/photo-1516321310766-61b7b7b93a57" alt="Lab Reporting Icon" loading="lazy">
                     <h3>Advanced Lab Reporting System</h3>
-                    <p>Fully featured laboratory management solution with AI-powered diagnostic analysis and professional report generation.</p>
+                    <p>AI-powered diagnostic analysis, multi-branch management, inventory tracking, and real-time reporting for laboratories.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> AI-powered diagnostic analysis</li>
-                        <li><i class="fas fa-check"></i> Multi-branch management</li>
-                        <li><i class="fas fa-check"></i> Inventory & equipment tracking</li>
-                        <li><i class="fas fa-check"></i> Telemedicine integration</li>
+                        <li><i class="fas fa-check"></i>Professional PDF report generation</li>
+                        <li><i class="fas fa-check"></i>Telemedicine integration</li>
+                        <li><i class="fas fa-check"></i>Real-time analytics dashboard</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Learn More</a>
                 </div>
-                
-                <!-- Service 2 -->
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                    </div>
+                    <img class="service-icon" src="https://images.unsplash.com/photo-1554224155-8d04cb21a74c" alt="GST Filing Icon" loading="lazy">
                     <h3>Automated GST Filing System</h3>
-                    <p>End-to-end tax compliance automation with real-time GST calculation and error detection.</p>
+                    <p>End-to-end tax compliance automation with real-time GST calculation and invoice processing.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Automated invoice data extraction</li>
-                        <li><i class="fas fa-check"></i> Real-time GST calculation</li>
-                        <li><i class="fas fa-check"></i> Error detection & correction</li>
-                        <li><i class="fas fa-check"></i> E-way bill generation</li>
+                        <li><i class="fas fa-check"></i>Automated invoice data extraction</li>
+                        <li><i class="fas fa-check"></i>Error detection & correction</li>
+                        <li><i class="fas fa-check"></i>E-way bill generation</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Learn More</a>
                 </div>
-                
-                <!-- Service 3 -->
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
+                    <img class="service-icon" src="https://images.unsplash.com/photo-1516321497487-e288fb19713f" alt="Website Builder Icon" loading="lazy">
                     <h3>Auto Website Making Platform</h3>
-                    <p>AI-powered website builder with drag-and-drop interface and mobile-optimized templates.</p>
+                    <p>AI-powered website builder with drag-and-drop interface for creating professional websites.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Drag-and-drop interface</li>
-                        <li><i class="fas fa-check"></i> AI content generation</li>
-                        <li><i class="fas fa-check"></i> Mobile-optimized templates</li>
-                        <li><i class="fas fa-check"></i> SEO automation</li>
+                        <li><i class="fas fa-check"></i>Mobile-optimized templates</li>
+                        <li><i class="fas fa-check"></i>SEO automation</li>
+                        <li><i class="fas fa-check"></i>E-commerce integration</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Learn More</a>
                 </div>
-                
-                <!-- Service 4 -->
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
+                    <img class="service-icon" src="https://images.unsplash.com/photo-1531746790731-6c087f6942de" alt="API Development Icon" loading="lazy">
                     <h3>Custom API Development</h3>
-                    <p>Power your business with robust APIs for seamless system integration and enhanced functionality.</p>
+                    <p>Robust APIs for seamless system integration and third-party connectivity.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> RESTful API development</li>
-                        <li><i class="fas fa-check"></i> Third-party integrations</li>
-                        <li><i class="fas fa-check"></i> Payment gateway APIs</li>
-                        <li><i class="fas fa-check"></i> Legacy system modernization</li>
+                        <li><i class="fas fa-check"></i>RESTful API development</li>
+                        <li><i class="fas fa-check"></i>Third-party integrations</li>
+                        <li><i class="fas fa-check"></i>Payment gateway APIs</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Learn More</a>
                 </div>
-                
-                <!-- Service 5 -->
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
+                    <img class="service-icon" src="https://images.unsplash.com/photo-1516321165247-7d8687253010" alt="Automation Icon" loading="lazy">
                     <h3>Business Process Automation</h3>
-                    <p>Transform operations with intelligent automation for workflow, document processing, and more.</p>
+                    <p>Transform operations with intelligent automation for workflows and customer interactions.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Workflow automation</li>
-                        <li><i class="fas fa-check"></i> Document processing</li>
-                        <li><i class="fas fa-check"></i> Customer service bots</li>
-                        <li><i class="fas fa-check"></i> Data entry automation</li>
+                        <li><i class="fas fa-check"></i>Workflow automation</li>
+                        <li><i class="fas fa-check"></i>Document processing</li>
+                        <li><i class="fas fa-check"></i>Customer service bots</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Learn More</a>
                 </div>
-                
-                <!-- Service 6 -->
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
+                    <img class="service-icon" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Software Development Icon" loading="lazy">
                     <h3>Custom Software Development</h3>
-                    <p>Tailored solutions for unique business needs including ERP, CRM, and mobile applications.</p>
+                    <p>Tailored solutions for unique business needs, including ERP, CRM, and e-commerce platforms.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Enterprise resource planning</li>
-                        <li><i class="fas fa-check"></i> Customer relationship management</li>
-                        <li><i class="fas fa-check"></i> Inventory management systems</li>
-                        <li><i class="fas fa-check"></i> E-commerce platforms</li>
+                        <li><i class="fas fa-check"></i>ERP & CRM systems</li>
+                        <li><i class="fas fa-check"></i>Inventory management</li>
+                        <li><i class="fas fa-check"></i>E-commerce platforms</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
+    <section class="services security-services" id="security">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About SpotNet Services</h2>
-                    <p>SpotNet Services is a premier technology solutions provider specializing in cutting-edge software development, business automation, and digital transformation. We empower businesses with intelligent solutions that drive efficiency, reduce costs, and accelerate growth.</p>
-                    
-                    <h3>Our Vision</h3>
-                    <p>"To become the leading partner for businesses seeking digital transformation through innovative, automated solutions that drive sustainable growth."</p>
-                    
-                    <h3>Our Mission</h3>
-                    <p>"To deliver world-class software solutions that simplify complex business processes, enhance productivity, and create competitive advantages for our clients."</p>
-                    
-                    <div class="about-values">
-                        <h3>Core Values</h3>
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <div class="value-text">
-                                <h4>Innovation First</h4>
-                                <p>Always pushing technological boundaries to deliver cutting-edge solutions.</p>
-                            </div>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-trophy"></i>
-                            </div>
-                            <div class="value-text">
-                                <h4>Client Success</h4>
-                                <p>Your growth is our success metric. We're committed to your business outcomes.</p>
-                            </div>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <div class="value-text">
-                                <h4>Quality Excellence</h4>
-                                <p>Enterprise-grade solutions built with precision and attention to detail.</p>
-                            </div>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-headset"></i>
-                            </div>
-                            <div class="value-text">
-                                <h4>Continuous Support</h4>
-                                <p>Partnership beyond deployment with ongoing maintenance and updates.</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="section-title">
+                <h2>Security Solutions</h2>
+                <p>Comprehensive physical and digital security systems for complete protection.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img class="service-icon" src="https://images.unsplash.com/photo-1560298803-1d998f6b5249" alt="CCTV Icon" loading="lazy">
+                    <h3>CCTV Systems</h3>
+                    <p>HD/IP cameras for home, office, and shop monitoring with remote access capabilities.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>Mobile view & remote access</li>
+                        <li><i class="fas fa-check"></i>Motion detection alerts</li>
+                        <li><i class="fas fa-check"></i>Night vision capability</li>
+                    </ul>
                 </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="SpotNet Team">
+                <div class="service-card">
+                    <img class="service-icon" src="https://images.unsplash.com/photo-1562774053-701939374585" alt="Alarm Icon" loading="lazy">
+                    <h3>Alarm Systems</h3>
+                    <p>Intruder detection with instant notifications and multi-sensor integration.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>Fire/gas/flood sensors</li>
+                        <li><i class="fas fa-check"></i>Instant phone notification</li>
+                        <li><i class="fas fa-check"></i>Battery backup system</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <img class="service-icon" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Access Control Icon" loading="lazy">
+                    <h3>Gate/Access Automation</h3>
+                    <p>Secure access control systems with biometric and RFID technology.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>Biometric & RFID access</li>
+                        <li><i class="fas fa-check"></i>Remote unlock capability</li>
+                        <li><i class="fas fa-check"></i>Access logs & reporting</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <img class="service-icon" src="https://images.unsplash.com/photo-1514923995763-768e52f5af87" alt="Dash Cam Icon" loading="lazy">
+                     <h3>Vehicle Dash Cams</h3>
+                    <p>Advanced recording for vehicle security with GPS and parking surveillance.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>Dual lens recording</li>
+                        <li><i class="fas fa-check"></i>GPS tracking</li>
+                        <li><i class="fas fa-check"></i>Parking surveillance mode</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <img class="service-icon" src="https://images.unsplash.com/photo-1601758066440-2f288d28a69a" alt="Temperature Scanner Icon" loading="lazy">
+                    <h3>Temperature Scanners</h3>
+                    <p>Contactless fever detection systems for safe entry management.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>Entry monitoring</li>
+                        <li><i class="fas fa-check"></i>Instant alarm triggers</li>
+                        <li><i class="fas fa-check"></i>Data log export</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <img class="service-icon" src="https://images.unsplash.com/photo-1470058869958-2a77ade41c02" alt="Solar Icon" loading="lazy">
+                    <h3>Solar Solutions</h3>
+                    <p>Eco-friendly power for security systems, including CCTV and lighting.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>Solar CCTV/lighting/UPS</li>
+                        <li><i class="fas fa-check"></i>Long-life panels</li>
+                        <li><i class="fas fa-check"></i>All-weather performance</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <img class="service-icon" src="https://images.unsplash.com/photo-1516321310766-61b7b7b93a57" alt="Intercom Icon" loading="lazy">
+                    <h3>Intercom Systems</h3>
+                    <p>Communication systems for buildings with smart home integration.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>Video/audio intercom</li>
+                        <li><i class="fas fa-check"></i>Group paging</li>
+                        <li><i class="fas fa-check"></i>Smart home integration</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <img class="service-icon" src="https://images.unsplash.com/photo-1516321497487-e288fb19713f" alt="Networking Icon" loading="lazy">
+                    <h3>Broadband & Networking</h3>
+                    <p>High-speed connectivity solutions with secure wireless networks.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>1Gbps fiber connections</li>
+                        <li><i class="fas fa-check"></i>Secure wireless networks</li>
+                        <li><i class="fas fa-check"></i>On-demand tech support</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <img class="service-icon" src="https://images.unsplash.com/photo-1516321165247-7d8687253010" alt="Biometric Icon" loading="lazy">
+                    <h3>Fingerprint/Facial Readers</h3>
+                    <p>Advanced biometric access control for enhanced security.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>IP67 rated readers</li>
+                        <li><i class="fas fa-check"></i>Multi-language prompts</li>
+                        <li><i class="fas fa-check"></i>Comprehensive reporting</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Industries Section -->
     <section class="industries" id="industries">
         <div class="container">
             <div class="section-title">
                 <h2>Industries We Serve</h2>
-                <p>We have extensive experience delivering tailored solutions across diverse industry verticals.</p>
+                <p>We deliver tailored solutions across diverse industry verticals.</p>
             </div>
             <div class="industries-grid">
-                <!-- Industry 1 -->
                 <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-hospital"></i>
-                    </div>
-                    <h3>Healthcare & Medicine</h3>
-                    <p>Lab management systems, hospital management software, telemedicine platforms, and patient record systems.</p>
+                    <img class="industry-icon" src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d" alt="Healthcare Icon" loading="lazy">
+                    <h3>Healthcare</h3>
+                    <p>Lab systems, hospital management, telemedicine platforms.</p>
                 </div>
-                
-                <!-- Industry 2 -->
                 <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
+                    <img class="industry-icon" src="https://images.unsplash.com/photo-1556740738-6bf2a6d8a91d" alt="Retail Icon" loading="lazy">
                     <h3>Retail & E-commerce</h3>
-                    <p>Online store development, inventory management, POS systems, customer analytics, and supply chain automation.</p>
+                    <p>Online stores, inventory management, POS systems.</p>
                 </div>
-                
-                <!-- Industry 3 -->
                 <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-industry"></i>
-                    </div>
+                    <img class="industry-icon" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1" alt="Manufacturing Icon" loading="lazy">
                     <h3>Manufacturing</h3>
-                    <p>Production tracking, quality control systems, supply chain management, equipment maintenance, and compliance automation.</p>
+                    <p>Production tracking, quality control, supply chain.</p>
                 </div>
-                
-                <!-- Industry 4 -->
                 <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
+                    <img class="industry-icon" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655" alt="Education Icon" loading="lazy">
                     <h3>Education</h3>
-                    <p>Learning management systems, student information systems, online examination platforms, and institutional management.</p>
-                </div>
-                
-                <!-- Industry 5 -->
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <h3>Finance & Banking</h3>
-                    <p>Loan management systems, investment platforms, risk assessment tools, compliance automation, and customer portal development.</p>
+                    <p>Learning management, student systems, online exams.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Success Stories -->
-    <section class="success-stories" id="success">
+    <section class="testimonials">
         <div class="container">
             <div class="section-title">
                 <h2>Success Stories</h2>
-                <p>See how we've helped businesses transform their operations and achieve remarkable results.</p>
+                <p>See how we've helped businesses transform their operations.</p>
             </div>
-            <div class="testimonials">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "SpotNet transformed our lab operations. What used to take days now happens in minutes. Their support is exceptional!"
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            DS
-                        </div>
-                        <div class="author-info">
-                            <h4>Dr. Sharma</h4>
-                            <p>Metro Diagnostics</p>
+            <div class="swiper swiper-testimonials">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-text">"SpotNet transformed our lab operations. What used to take days now happens in minutes. Their support is exceptional!"</div>
+                            <div class="testimonial-author">
+                                <h4>Dr. Sharma</h4>
+                                <p>Metro Diagnostics</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "The automated GST system saved us countless hours and eliminated compliance worries. Highly recommended!"
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            MG
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-text">"The automated GST system saved us countless hours and eliminated compliance worries. Highly recommended!"</div>
+                            <div class="testimonial-author">
+                                <h4>Mr. Gupta</h4>
+                                <p>StyleMart Retail</p>
+                            </div>
                         </div>
-                        <div class="author-info">
-                            <h4>Mr. Gupta</h4>
-                            <p>StyleMart Retail</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-text">"Their security systems gave us complete peace of mind. Professional installation and reliable performance."</div>
+                            <div class="testimonial-author">
+                                <h4>Ms. Patel</h4>
+                                <p>SecureTech Solutions</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Their custom CRM solution gave us the competitive edge we needed. The team understood our business perfectly."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            PP
-                        </div>
-                        <div class="author-info">
-                            <h4>Ms. Patel</h4>
-                            <p>TechStart Innovations</p>
-                        </div>
-                    </div>
-                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta">
         <div class="container">
             <h2>Ready to Transform Your Business?</h2>
-            <p>Take the first step towards intelligent automation and digital transformation. Contact us today for a free consultation.</p>
+            <p>Get in touch for a free consultation and discover how our solutions can benefit your organization.</p>
             <div class="cta-buttons">
                 <a href="tel:9140225588" class="btn btn-accent">Call Now</a>
-                <a href="mailto:support@spotnet.in" class="btn btn-secondary">Email Us</a>
+                <a href="https://wa.me/919140225588" class="btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>About SpotNet</h3>
-                    <p>SpotNet Services is a premier technology solutions provider specializing in cutting-edge software development, business automation, and digital transformation.</p>
+                    <p>SpotNet Services is a leading provider of intelligent automation and security solutions, offering products like electronics, furniture, and electric vehicles on EMI through our partnership with Zebrs India OPC Private Limited.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     </div>
                 </div>
-                
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#industries">Industries</a></li>
-                        <li><a href="#success">Success Stories</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Our Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Lab Reporting System</a></li>
-                        <li><a href="#">GST Filing System</a></li>
-                        <li><a href="#">Website Builder</a></li>
-                        <li><a href="#">API Development</a></li>
-                        <li><a href="#">Process Automation</a></li>
-                    </ul>
-                </div>
-                
                 <div class="footer-column">
                     <h3>Contact Us</h3>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>+91 9140225588</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>support@spotnet.in</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-globe"></i>
-                            <span>www.spotnet.in</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <span>Mon-Fri: 9AM-6PM<br>Sat: 10AM-2PM</span>
-                        </li>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> +91 9140225588</li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> support@spotnet.in</li>
+                        <li><i class="fas fa-globe" aria-hidden="true"></i> www.spotnet.in</li>
+                        <li><i class="fas fa-clock" aria-hidden="true"></i> Mon-Fri: 9AM-6PM</li>
                     </ul>
                 </div>
+                <div class="footer-column">
+                    <h3>Get in Touch</h3>
+                    <form action="/submit" method="POST">
+                        <input type="email" placeholder="Your Email" required aria-label="Email">
+                        <textarea placeholder="Your Message" required aria-label="Message"></textarea>
+                        <button type="submit" class="btn">Send</button>
+                    </form>
+                </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2023 SpotNet Services. All Rights Reserved.</p>
+                <p>&copy; 2025 SpotNet Services. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/919140225588" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+    <a href="https://wa.me/919140225588" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        // Mobile Menu Toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
-        
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    document.querySelector('.nav-links').classList.remove('active');
-                }
-            });
-        });
-        
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if(window.scrollY > 100) {
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
-            }
-        });
+        const mobileMenu=document.querySelector('.mobile-menu'),navLinks=document.querySelector('.nav-links');
+        mobileMenu.addEventListener('click',()=>{const isExpanded=navLinks.classList.toggle('active');mobileMenu.setAttribute('aria-expanded',isExpanded);if(isExpanded)navLinks.querySelector('a').focus()});
+        document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',e=>{e.preventDefault();const targetId=anchor.getAttribute('href');if(targetId==='#')return;const target=document.querySelector(targetId);if(target){window.scrollTo({top:target.offsetTop-80,behavior:'smooth'});navLinks.classList.remove('active')}else{console.warn(`Element ${targetId} not found`)}})});
+        new Swiper('.swiper-hero',{loop:true,autoplay:{delay:5000},pagination:{el:'.swiper-pagination',clickable:true},navigation:{nextEl:'.swiper-button-next',prevEl:'.swiper-button-prev'}});
+        new Swiper('.swiper-testimonials',{loop:true,slidesPerView:1,spaceBetween:20,pagination:{el:'.swiper-pagination',clickable:true},navigation:{nextEl:'.swiper-button-next',prevEl:'.swiper-button-prev'},breakpoints:{768:{slidesPerView:2}}});
     </script>
 </body>
 </html>
