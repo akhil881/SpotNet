@@ -1,0 +1,1793 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="cid:css-e4a0c9c5-16fe-43e3-a90e-78fbf953d5d0@mhtml.blink" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Source: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/08f981486af220dbc18a379c6c7e9488/35fab499-3dbd-423a-88cf-77f323018f99/befe6656.html?rnd=1763003363082&amp;utm_source=perplexity</title>
+    <meta name="robots" content="noindex nofollow">
+    
+</head>
+<body>
+    <div class="top-bar">HTML Source: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/08f981486af220dbc18a379c6c7e9488/35fab499-3dbd-423a-88cf-77f323018f99/befe6656.html?rnd=1763003363082&amp;utm_source=perplexity</div>
+    <pre><span class="line-number">1</span> &lt;!DOCTYPE html&gt;
+<span class="line-number">2</span> &lt;html lang="en"&gt;
+<span class="line-number">3</span> &lt;head&gt;
+<span class="line-number">4</span>     &lt;meta charset="UTF-8"&gt;
+<span class="line-number">5</span>     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+<span class="line-number">6</span>     &lt;title&gt;SpotNet Services - Enterprise AI &amp; Technology Solutions Provider&lt;/title&gt;
+<span class="line-number">7</span>     &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;
+<span class="line-number">8</span>     &lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"&gt;
+<span class="line-number">9</span>     &lt;style&gt;
+<span class="line-number">10</span>         :root {
+<span class="line-number">11</span>             --primary: #4361ee;
+<span class="line-number">12</span>             --secondary: #3a0ca3;
+<span class="line-number">13</span>             --accent: #4cc9f0;
+<span class="line-number">14</span>             --whatsapp: #25D366;
+<span class="line-number">15</span>             --success: #4bb543;
+<span class="line-number">16</span>             --dark: #212529;
+<span class="line-number">17</span>             --light: #f8f9fa;
+<span class="line-number">18</span>             --gray: #6c757d;
+<span class="line-number">19</span>         }
+<span class="line-number">20</span> 
+<span class="line-number">21</span>         * {
+<span class="line-number">22</span>             margin: 0;
+<span class="line-number">23</span>             padding: 0;
+<span class="line-number">24</span>             box-sizing: border-box;
+<span class="line-number">25</span>         }
+<span class="line-number">26</span> 
+<span class="line-number">27</span>         body {
+<span class="line-number">28</span>             font-family: 'Poppins', sans-serif;
+<span class="line-number">29</span>             line-height: 1.6;
+<span class="line-number">30</span>             color: var(--dark);
+<span class="line-number">31</span>             overflow-x: hidden;
+<span class="line-number">32</span>         }
+<span class="line-number">33</span> 
+<span class="line-number">34</span>         .container {
+<span class="line-number">35</span>             width: 100%;
+<span class="line-number">36</span>             max-width: 1400px;
+<span class="line-number">37</span>             margin: 0 auto;
+<span class="line-number">38</span>             padding: 0 20px;
+<span class="line-number">39</span>         }
+<span class="line-number">40</span> 
+<span class="line-number">41</span>         header {
+<span class="line-number">42</span>             background: rgba(255, 255, 255, 0.98);
+<span class="line-number">43</span>             backdrop-filter: blur(10px);
+<span class="line-number">44</span>             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+<span class="line-number">45</span>             position: fixed;
+<span class="line-number">46</span>             width: 100%;
+<span class="line-number">47</span>             top: 0;
+<span class="line-number">48</span>             z-index: 1000;
+<span class="line-number">49</span>         }
+<span class="line-number">50</span> 
+<span class="line-number">51</span>         .navbar {
+<span class="line-number">52</span>             display: flex;
+<span class="line-number">53</span>             justify-content: space-between;
+<span class="line-number">54</span>             align-items: center;
+<span class="line-number">55</span>             padding: 18px 0;
+<span class="line-number">56</span>         }
+<span class="line-number">57</span> 
+<span class="line-number">58</span>         .logo-container {
+<span class="line-number">59</span>             display: flex;
+<span class="line-number">60</span>             align-items: center;
+<span class="line-number">61</span>             gap: 15px;
+<span class="line-number">62</span>         }
+<span class="line-number">63</span> 
+<span class="line-number">64</span>         .logo-icon {
+<span class="line-number">65</span>             width: 50px;
+<span class="line-number">66</span>             height: 50px;
+<span class="line-number">67</span>             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+<span class="line-number">68</span>             border-radius: 12px;
+<span class="line-number">69</span>             display: flex;
+<span class="line-number">70</span>             align-items: center;
+<span class="line-number">71</span>             justify-content: center;
+<span class="line-number">72</span>             font-size: 1.8rem;
+<span class="line-number">73</span>             color: white;
+<span class="line-number">74</span>             font-weight: 900;
+<span class="line-number">75</span>         }
+<span class="line-number">76</span> 
+<span class="line-number">77</span>         .logo-text h1 {
+<span class="line-number">78</span>             font-size: 1.8rem;
+<span class="line-number">79</span>             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+<span class="line-number">80</span>             -webkit-background-clip: text;
+<span class="line-number">81</span>             -webkit-text-fill-color: transparent;
+<span class="line-number">82</span>             background-clip: text;
+<span class="line-number">83</span>             font-weight: 900;
+<span class="line-number">84</span>         }
+<span class="line-number">85</span> 
+<span class="line-number">86</span>         .logo-text p {
+<span class="line-number">87</span>             font-size: 0.75rem;
+<span class="line-number">88</span>             color: var(--gray);
+<span class="line-number">89</span>             margin-top: -3px;
+<span class="line-number">90</span>         }
+<span class="line-number">91</span> 
+<span class="line-number">92</span>         .nav-links {
+<span class="line-number">93</span>             display: flex;
+<span class="line-number">94</span>             list-style: none;
+<span class="line-number">95</span>             align-items: center;
+<span class="line-number">96</span>             gap: 30px;
+<span class="line-number">97</span>         }
+<span class="line-number">98</span> 
+<span class="line-number">99</span>         .nav-links a {
+<span class="line-number">100</span>             font-weight: 500;
+<span class="line-number">101</span>             color: var(--dark);
+<span class="line-number">102</span>             text-decoration: none;
+<span class="line-number">103</span>             transition: color 0.3s;
+<span class="line-number">104</span>             position: relative;
+<span class="line-number">105</span>         }
+<span class="line-number">106</span> 
+<span class="line-number">107</span>         .nav-links a:hover {
+<span class="line-number">108</span>             color: var(--primary);
+<span class="line-number">109</span>         }
+<span class="line-number">110</span> 
+<span class="line-number">111</span>         .nav-links a::after {
+<span class="line-number">112</span>             content: '';
+<span class="line-number">113</span>             position: absolute;
+<span class="line-number">114</span>             bottom: -5px;
+<span class="line-number">115</span>             left: 0;
+<span class="line-number">116</span>             width: 0;
+<span class="line-number">117</span>             height: 2px;
+<span class="line-number">118</span>             background: var(--primary);
+<span class="line-number">119</span>             transition: width 0.3s;
+<span class="line-number">120</span>         }
+<span class="line-number">121</span> 
+<span class="line-number">122</span>         .nav-links a:hover::after {
+<span class="line-number">123</span>             width: 100%;
+<span class="line-number">124</span>         }
+<span class="line-number">125</span> 
+<span class="line-number">126</span>         .btn {
+<span class="line-number">127</span>             padding: 12px 28px;
+<span class="line-number">128</span>             border-radius: 8px;
+<span class="line-number">129</span>             font-weight: 600;
+<span class="line-number">130</span>             cursor: pointer;
+<span class="line-number">131</span>             transition: all 0.3s;
+<span class="line-number">132</span>             text-decoration: none;
+<span class="line-number">133</span>             display: inline-flex;
+<span class="line-number">134</span>             align-items: center;
+<span class="line-number">135</span>             gap: 8px;
+<span class="line-number">136</span>             border: none;
+<span class="line-number">137</span>         }
+<span class="line-number">138</span> 
+<span class="line-number">139</span>         .btn-primary {
+<span class="line-number">140</span>             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+<span class="line-number">141</span>             color: white;
+<span class="line-number">142</span>             box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+<span class="line-number">143</span>         }
+<span class="line-number">144</span> 
+<span class="line-number">145</span>         .btn-primary:hover {
+<span class="line-number">146</span>             transform: translateY(-2px);
+<span class="line-number">147</span>             box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
+<span class="line-number">148</span>         }
+<span class="line-number">149</span> 
+<span class="line-number">150</span>         .btn-outline {
+<span class="line-number">151</span>             background: transparent;
+<span class="line-number">152</span>             border: 2px solid var(--primary);
+<span class="line-number">153</span>             color: var(--primary);
+<span class="line-number">154</span>         }
+<span class="line-number">155</span> 
+<span class="line-number">156</span>         .btn-outline:hover {
+<span class="line-number">157</span>             background: var(--primary);
+<span class="line-number">158</span>             color: white;
+<span class="line-number">159</span>         }
+<span class="line-number">160</span> 
+<span class="line-number">161</span>         .mobile-menu-btn {
+<span class="line-number">162</span>             display: none;
+<span class="line-number">163</span>             font-size: 1.6rem;
+<span class="line-number">164</span>             cursor: pointer;
+<span class="line-number">165</span>             color: var(--dark);
+<span class="line-number">166</span>         }
+<span class="line-number">167</span> 
+<span class="line-number">168</span>         .smart-sidebar {
+<span class="line-number">169</span>             position: fixed;
+<span class="line-number">170</span>             top: 0;
+<span class="line-number">171</span>             right: -100%;
+<span class="line-number">172</span>             width: 340px;
+<span class="line-number">173</span>             height: 100vh;
+<span class="line-number">174</span>             background: white;
+<span class="line-number">175</span>             box-shadow: -5px 0 30px rgba(0,0,0,0.15);
+<span class="line-number">176</span>             z-index: 2000;
+<span class="line-number">177</span>             transition: right 0.4s ease;
+<span class="line-number">178</span>             overflow-y: auto;
+<span class="line-number">179</span>             padding: 0;
+<span class="line-number">180</span>         }
+<span class="line-number">181</span> 
+<span class="line-number">182</span>         .smart-sidebar.active {
+<span class="line-number">183</span>             right: 0;
+<span class="line-number">184</span>         }
+<span class="line-number">185</span> 
+<span class="line-number">186</span>         .sidebar-header {
+<span class="line-number">187</span>             padding: 25px 30px;
+<span class="line-number">188</span>             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+<span class="line-number">189</span>             color: white;
+<span class="line-number">190</span>             display: flex;
+<span class="line-number">191</span>             justify-content: space-between;
+<span class="line-number">192</span>             align-items: center;
+<span class="line-number">193</span>         }
+<span class="line-number">194</span> 
+<span class="line-number">195</span>         .sidebar-header h3 {
+<span class="line-number">196</span>             font-size: 1.3rem;
+<span class="line-number">197</span>             font-weight: 700;
+<span class="line-number">198</span>         }
+<span class="line-number">199</span> 
+<span class="line-number">200</span>         .sidebar-close {
+<span class="line-number">201</span>             font-size: 1.8rem;
+<span class="line-number">202</span>             cursor: pointer;
+<span class="line-number">203</span>             transition: transform 0.3s;
+<span class="line-number">204</span>         }
+<span class="line-number">205</span> 
+<span class="line-number">206</span>         .sidebar-close:hover {
+<span class="line-number">207</span>             transform: rotate(90deg);
+<span class="line-number">208</span>         }
+<span class="line-number">209</span> 
+<span class="line-number">210</span>         .sidebar-content {
+<span class="line-number">211</span>             padding: 20px 0;
+<span class="line-number">212</span>         }
+<span class="line-number">213</span> 
+<span class="line-number">214</span>         .sidebar-section {
+<span class="line-number">215</span>             border-bottom: 1px solid #e9ecef;
+<span class="line-number">216</span>         }
+<span class="line-number">217</span> 
+<span class="line-number">218</span>         .sidebar-section-title {
+<span class="line-number">219</span>             padding: 15px 30px;
+<span class="line-number">220</span>             font-weight: 600;
+<span class="line-number">221</span>             color: var(--dark);
+<span class="line-number">222</span>             display: flex;
+<span class="line-number">223</span>             justify-content: space-between;
+<span class="line-number">224</span>             align-items: center;
+<span class="line-number">225</span>             cursor: pointer;
+<span class="line-number">226</span>             transition: background 0.3s;
+<span class="line-number">227</span>         }
+<span class="line-number">228</span> 
+<span class="line-number">229</span>         .sidebar-section-title:hover {
+<span class="line-number">230</span>             background: #f8f9fa;
+<span class="line-number">231</span>         }
+<span class="line-number">232</span> 
+<span class="line-number">233</span>         .sidebar-section-title i {
+<span class="line-number">234</span>             font-size: 0.9rem;
+<span class="line-number">235</span>             transition: transform 0.3s;
+<span class="line-number">236</span>         }
+<span class="line-number">237</span> 
+<span class="line-number">238</span>         .sidebar-section.active .sidebar-section-title i {
+<span class="line-number">239</span>             transform: rotate(180deg);
+<span class="line-number">240</span>         }
+<span class="line-number">241</span> 
+<span class="line-number">242</span>         .sidebar-links {
+<span class="line-number">243</span>             list-style: none;
+<span class="line-number">244</span>             max-height: 0;
+<span class="line-number">245</span>             overflow: hidden;
+<span class="line-number">246</span>             transition: max-height 0.3s ease;
+<span class="line-number">247</span>         }
+<span class="line-number">248</span> 
+<span class="line-number">249</span>         .sidebar-section.active .sidebar-links {
+<span class="line-number">250</span>             max-height: 500px;
+<span class="line-number">251</span>         }
+<span class="line-number">252</span> 
+<span class="line-number">253</span>         .sidebar-links li {
+<span class="line-number">254</span>             padding: 0;
+<span class="line-number">255</span>         }
+<span class="line-number">256</span> 
+<span class="line-number">257</span>         .sidebar-links a {
+<span class="line-number">258</span>             display: flex;
+<span class="line-number">259</span>             align-items: center;
+<span class="line-number">260</span>             gap: 12px;
+<span class="line-number">261</span>             padding: 12px 30px 12px 45px;
+<span class="line-number">262</span>             color: var(--gray);
+<span class="line-number">263</span>             text-decoration: none;
+<span class="line-number">264</span>             transition: all 0.3s;
+<span class="line-number">265</span>             font-size: 0.95rem;
+<span class="line-number">266</span>         }
+<span class="line-number">267</span> 
+<span class="line-number">268</span>         .sidebar-links a:hover {
+<span class="line-number">269</span>             background: #f8f9fa;
+<span class="line-number">270</span>             color: var(--primary);
+<span class="line-number">271</span>             padding-left: 50px;
+<span class="line-number">272</span>         }
+<span class="line-number">273</span> 
+<span class="line-number">274</span>         .sidebar-links a i {
+<span class="line-number">275</span>             font-size: 0.85rem;
+<span class="line-number">276</span>             width: 16px;
+<span class="line-number">277</span>         }
+<span class="line-number">278</span> 
+<span class="line-number">279</span>         .sidebar-cta {
+<span class="line-number">280</span>             padding: 25px 30px;
+<span class="line-number">281</span>             display: flex;
+<span class="line-number">282</span>             flex-direction: column;
+<span class="line-number">283</span>             gap: 12px;
+<span class="line-number">284</span>         }
+<span class="line-number">285</span> 
+<span class="line-number">286</span>         .sidebar-overlay {
+<span class="line-number">287</span>             position: fixed;
+<span class="line-number">288</span>             top: 0;
+<span class="line-number">289</span>             left: 0;
+<span class="line-number">290</span>             width: 100%;
+<span class="line-number">291</span>             height: 100vh;
+<span class="line-number">292</span>             background: rgba(0,0,0,0.5);
+<span class="line-number">293</span>             z-index: 1999;
+<span class="line-number">294</span>             display: none;
+<span class="line-number">295</span>             backdrop-filter: blur(2px);
+<span class="line-number">296</span>         }
+<span class="line-number">297</span> 
+<span class="line-number">298</span>         .sidebar-overlay.active {
+<span class="line-number">299</span>             display: block;
+<span class="line-number">300</span>         }
+<span class="line-number">301</span> 
+<span class="line-number">302</span>         .hero {
+<span class="line-number">303</span>             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+<span class="line-number">304</span>             color: white;
+<span class="line-number">305</span>             padding: 180px 0 100px;
+<span class="line-number">306</span>             text-align: center;
+<span class="line-number">307</span>             position: relative;
+<span class="line-number">308</span>             overflow: hidden;
+<span class="line-number">309</span>         }
+<span class="line-number">310</span> 
+<span class="line-number">311</span>         .hero::before {
+<span class="line-number">312</span>             content: '';
+<span class="line-number">313</span>             position: absolute;
+<span class="line-number">314</span>             top: 0;
+<span class="line-number">315</span>             left: 0;
+<span class="line-number">316</span>             right: 0;
+<span class="line-number">317</span>             bottom: 0;
+<span class="line-number">318</span>             background: url('data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"&gt;&lt;path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"&gt;&lt;/path&gt;&lt;/svg&gt;');
+<span class="line-number">319</span>             opacity: 0.3;
+<span class="line-number">320</span>         }
+<span class="line-number">321</span> 
+<span class="line-number">322</span>         .hero h1 {
+<span class="line-number">323</span>             font-size: 3.5rem;
+<span class="line-number">324</span>             font-weight: 900;
+<span class="line-number">325</span>             margin-bottom: 25px;
+<span class="line-number">326</span>             line-height: 1.1;
+<span class="line-number">327</span>             position: relative;
+<span class="line-number">328</span>             z-index: 1;
+<span class="line-number">329</span>         }
+<span class="line-number">330</span> 
+<span class="line-number">331</span>         .hero p {
+<span class="line-number">332</span>             font-size: 1.3rem;
+<span class="line-number">333</span>             margin-bottom: 40px;
+<span class="line-number">334</span>             opacity: 0.95;
+<span class="line-number">335</span>             max-width: 800px;
+<span class="line-number">336</span>             margin-left: auto;
+<span class="line-number">337</span>             margin-right: auto;
+<span class="line-number">338</span>             position: relative;
+<span class="line-number">339</span>             z-index: 1;
+<span class="line-number">340</span>         }
+<span class="line-number">341</span> 
+<span class="line-number">342</span>         .hero-buttons {
+<span class="line-number">343</span>             display: flex;
+<span class="line-number">344</span>             justify-content: center;
+<span class="line-number">345</span>             gap: 15px;
+<span class="line-number">346</span>             flex-wrap: wrap;
+<span class="line-number">347</span>             margin-bottom: 60px;
+<span class="line-number">348</span>             position: relative;
+<span class="line-number">349</span>             z-index: 1;
+<span class="line-number">350</span>         }
+<span class="line-number">351</span> 
+<span class="line-number">352</span>         .hero-stats {
+<span class="line-number">353</span>             display: grid;
+<span class="line-number">354</span>             grid-template-columns: repeat(4, 1fr);
+<span class="line-number">355</span>             gap: 40px;
+<span class="line-number">356</span>             max-width: 1000px;
+<span class="line-number">357</span>             margin: 0 auto;
+<span class="line-number">358</span>             padding-top: 60px;
+<span class="line-number">359</span>             border-top: 1px solid rgba(255,255,255,0.2);
+<span class="line-number">360</span>             position: relative;
+<span class="line-number">361</span>             z-index: 1;
+<span class="line-number">362</span>         }
+<span class="line-number">363</span> 
+<span class="line-number">364</span>         .stat-item h3 {
+<span class="line-number">365</span>             font-size: 3rem;
+<span class="line-number">366</span>             font-weight: 900;
+<span class="line-number">367</span>             margin-bottom: 8px;
+<span class="line-number">368</span>         }
+<span class="line-number">369</span> 
+<span class="line-number">370</span>         .stat-item p {
+<span class="line-number">371</span>             font-size: 1rem;
+<span class="line-number">372</span>             opacity: 0.9;
+<span class="line-number">373</span>         }
+<span class="line-number">374</span> 
+<span class="line-number">375</span>         section {
+<span class="line-number">376</span>             padding: 100px 0;
+<span class="line-number">377</span>         }
+<span class="line-number">378</span> 
+<span class="line-number">379</span>         .section-header {
+<span class="line-number">380</span>             text-align: center;
+<span class="line-number">381</span>             margin-bottom: 60px;
+<span class="line-number">382</span>         }
+<span class="line-number">383</span> 
+<span class="line-number">384</span>         .section-badge {
+<span class="line-number">385</span>             display: inline-block;
+<span class="line-number">386</span>             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+<span class="line-number">387</span>             color: white;
+<span class="line-number">388</span>             padding: 8px 20px;
+<span class="line-number">389</span>             border-radius: 50px;
+<span class="line-number">390</span>             font-size: 0.85rem;
+<span class="line-number">391</span>             font-weight: 600;
+<span class="line-number">392</span>             margin-bottom: 15px;
+<span class="line-number">393</span>         }
+<span class="line-number">394</span> 
+<span class="line-number">395</span>         .section-header h2 {
+<span class="line-number">396</span>             font-size: 2.8rem;
+<span class="line-number">397</span>             font-weight: 900;
+<span class="line-number">398</span>             margin-bottom: 15px;
+<span class="line-number">399</span>             color: var(--dark);
+<span class="line-number">400</span>         }
+<span class="line-number">401</span> 
+<span class="line-number">402</span>         .section-header p {
+<span class="line-number">403</span>             font-size: 1.15rem;
+<span class="line-number">404</span>             color: var(--gray);
+<span class="line-number">405</span>             max-width: 700px;
+<span class="line-number">406</span>             margin: 0 auto;
+<span class="line-number">407</span>         }
+<span class="line-number">408</span> 
+<span class="line-number">409</span>         .products-grid {
+<span class="line-number">410</span>             display: grid;
+<span class="line-number">411</span>             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+<span class="line-number">412</span>             gap: 30px;
+<span class="line-number">413</span>         }
+<span class="line-number">414</span> 
+<span class="line-number">415</span>         .product-card {
+<span class="line-number">416</span>             background: white;
+<span class="line-number">417</span>             border-radius: 16px;
+<span class="line-number">418</span>             padding: 40px;
+<span class="line-number">419</span>             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+<span class="line-number">420</span>             transition: all 0.3s;
+<span class="line-number">421</span>             border: 2px solid transparent;
+<span class="line-number">422</span>         }
+<span class="line-number">423</span> 
+<span class="line-number">424</span>         .product-card:hover {
+<span class="line-number">425</span>             transform: translateY(-10px);
+<span class="line-number">426</span>             box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+<span class="line-number">427</span>             border-color: var(--primary);
+<span class="line-number">428</span>         }
+<span class="line-number">429</span> 
+<span class="line-number">430</span>         .product-icon {
+<span class="line-number">431</span>             width: 70px;
+<span class="line-number">432</span>             height: 70px;
+<span class="line-number">433</span>             border-radius: 14px;
+<span class="line-number">434</span>             display: flex;
+<span class="line-number">435</span>             align-items: center;
+<span class="line-number">436</span>             justify-content: center;
+<span class="line-number">437</span>             font-size: 2rem;
+<span class="line-number">438</span>             margin-bottom: 20px;
+<span class="line-number">439</span>             color: white;
+<span class="line-number">440</span>         }
+<span class="line-number">441</span> 
+<span class="line-number">442</span>         .product-card h3 {
+<span class="line-number">443</span>             font-size: 1.7rem;
+<span class="line-number">444</span>             font-weight: 700;
+<span class="line-number">445</span>             margin-bottom: 15px;
+<span class="line-number">446</span>         }
+<span class="line-number">447</span> 
+<span class="line-number">448</span>         .product-card p {
+<span class="line-number">449</span>             color: var(--gray);
+<span class="line-number">450</span>             margin-bottom: 20px;
+<span class="line-number">451</span>             line-height: 1.7;
+<span class="line-number">452</span>         }
+<span class="line-number">453</span> 
+<span class="line-number">454</span>         .product-features {
+<span class="line-number">455</span>             list-style: none;
+<span class="line-number">456</span>             margin: 20px 0;
+<span class="line-number">457</span>         }
+<span class="line-number">458</span> 
+<span class="line-number">459</span>         .product-features li {
+<span class="line-number">460</span>             padding: 8px 0;
+<span class="line-number">461</span>             color: var(--dark);
+<span class="line-number">462</span>             display: flex;
+<span class="line-number">463</span>             align-items: center;
+<span class="line-number">464</span>             gap: 10px;
+<span class="line-number">465</span>         }
+<span class="line-number">466</span> 
+<span class="line-number">467</span>         .product-features li i {
+<span class="line-number">468</span>             color: var(--success);
+<span class="line-number">469</span>         }
+<span class="line-number">470</span> 
+<span class="line-number">471</span>         .services-grid {
+<span class="line-number">472</span>             display: grid;
+<span class="line-number">473</span>             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+<span class="line-number">474</span>             gap: 30px;
+<span class="line-number">475</span>         }
+<span class="line-number">476</span> 
+<span class="line-number">477</span>         .service-card {
+<span class="line-number">478</span>             background: white;
+<span class="line-number">479</span>             border-radius: 16px;
+<span class="line-number">480</span>             padding: 35px;
+<span class="line-number">481</span>             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+<span class="line-number">482</span>             transition: all 0.3s;
+<span class="line-number">483</span>             border-left: 4px solid transparent;
+<span class="line-number">484</span>         }
+<span class="line-number">485</span> 
+<span class="line-number">486</span>         .service-card:hover {
+<span class="line-number">487</span>             transform: translateY(-8px);
+<span class="line-number">488</span>             box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+<span class="line-number">489</span>             border-left-color: var(--primary);
+<span class="line-number">490</span>         }
+<span class="line-number">491</span> 
+<span class="line-number">492</span>         .service-icon {
+<span class="line-number">493</span>             width: 65px;
+<span class="line-number">494</span>             height: 65px;
+<span class="line-number">495</span>             border-radius: 12px;
+<span class="line-number">496</span>             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+<span class="line-number">497</span>             display: flex;
+<span class="line-number">498</span>             align-items: center;
+<span class="line-number">499</span>             justify-content: center;
+<span class="line-number">500</span>             font-size: 1.8rem;
+<span class="line-number">501</span>             margin-bottom: 20px;
+<span class="line-number">502</span>             color: white;
+<span class="line-number">503</span>         }
+<span class="line-number">504</span> 
+<span class="line-number">505</span>         .service-card h3 {
+<span class="line-number">506</span>             font-size: 1.5rem;
+<span class="line-number">507</span>             font-weight: 700;
+<span class="line-number">508</span>             margin-bottom: 12px;
+<span class="line-number">509</span>         }
+<span class="line-number">510</span> 
+<span class="line-number">511</span>         .service-card p {
+<span class="line-number">512</span>             color: var(--gray);
+<span class="line-number">513</span>             margin-bottom: 15px;
+<span class="line-number">514</span>             line-height: 1.6;
+<span class="line-number">515</span>         }
+<span class="line-number">516</span> 
+<span class="line-number">517</span>         .service-features {
+<span class="line-number">518</span>             list-style: none;
+<span class="line-number">519</span>             margin: 15px 0;
+<span class="line-number">520</span>         }
+<span class="line-number">521</span> 
+<span class="line-number">522</span>         .service-features li {
+<span class="line-number">523</span>             padding: 6px 0;
+<span class="line-number">524</span>             color: var(--dark);
+<span class="line-number">525</span>             display: flex;
+<span class="line-number">526</span>             align-items: center;
+<span class="line-number">527</span>             gap: 8px;
+<span class="line-number">528</span>             font-size: 0.9rem;
+<span class="line-number">529</span>         }
+<span class="line-number">530</span> 
+<span class="line-number">531</span>         .service-features li i {
+<span class="line-number">532</span>             color: var(--success);
+<span class="line-number">533</span>             font-size: 0.85rem;
+<span class="line-number">534</span>         }
+<span class="line-number">535</span> 
+<span class="line-number">536</span>         .carousel-section {
+<span class="line-number">537</span>             background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+<span class="line-number">538</span>         }
+<span class="line-number">539</span> 
+<span class="line-number">540</span>         .carousel-wrapper {
+<span class="line-number">541</span>             position: relative;
+<span class="line-number">542</span>             overflow: hidden;
+<span class="line-number">543</span>             padding: 20px 0 60px;
+<span class="line-number">544</span>         }
+<span class="line-number">545</span> 
+<span class="line-number">546</span>         .carousel-container {
+<span class="line-number">547</span>             display: flex;
+<span class="line-number">548</span>             gap: 20px;
+<span class="line-number">549</span>             overflow-x: auto;
+<span class="line-number">550</span>             scroll-behavior: smooth;
+<span class="line-number">551</span>             scrollbar-width: none;
+<span class="line-number">552</span>             -ms-overflow-style: none;
+<span class="line-number">553</span>             padding: 10px 5px;
+<span class="line-number">554</span>         }
+<span class="line-number">555</span> 
+<span class="line-number">556</span>         .carousel-container::-webkit-scrollbar {
+<span class="line-number">557</span>             display: none;
+<span class="line-number">558</span>         }
+<span class="line-number">559</span> 
+<span class="line-number">560</span>         .carousel-card {
+<span class="line-number">561</span>             background: white;
+<span class="line-number">562</span>             border-radius: 16px;
+<span class="line-number">563</span>             padding: 35px 30px;
+<span class="line-number">564</span>             min-width: 360px;
+<span class="line-number">565</span>             max-width: 360px;
+<span class="line-number">566</span>             flex-shrink: 0;
+<span class="line-number">567</span>             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+<span class="line-number">568</span>             transition: all 0.3s;
+<span class="line-number">569</span>         }
+<span class="line-number">570</span> 
+<span class="line-number">571</span>         .carousel-card:hover {
+<span class="line-number">572</span>             transform: translateY(-8px);
+<span class="line-number">573</span>             box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+<span class="line-number">574</span>         }
+<span class="line-number">575</span> 
+<span class="line-number">576</span>         .carousel-icon {
+<span class="line-number">577</span>             width: 60px;
+<span class="line-number">578</span>             height: 60px;
+<span class="line-number">579</span>             border-radius: 12px;
+<span class="line-number">580</span>             display: flex;
+<span class="line-number">581</span>             align-items: center;
+<span class="line-number">582</span>             justify-content: center;
+<span class="line-number">583</span>             font-size: 1.8rem;
+<span class="line-number">584</span>             margin-bottom: 18px;
+<span class="line-number">585</span>             color: white;
+<span class="line-number">586</span>         }
+<span class="line-number">587</span> 
+<span class="line-number">588</span>         .carousel-card h3 {
+<span class="line-number">589</span>             font-size: 1.4rem;
+<span class="line-number">590</span>             font-weight: 700;
+<span class="line-number">591</span>             margin-bottom: 10px;
+<span class="line-number">592</span>         }
+<span class="line-number">593</span> 
+<span class="line-number">594</span>         .carousel-card p {
+<span class="line-number">595</span>             color: var(--gray);
+<span class="line-number">596</span>             line-height: 1.6;
+<span class="line-number">597</span>             margin-bottom: 15px;
+<span class="line-number">598</span>             font-size: 0.95rem;
+<span class="line-number">599</span>         }
+<span class="line-number">600</span> 
+<span class="line-number">601</span>         .carousel-features {
+<span class="line-number">602</span>             list-style: none;
+<span class="line-number">603</span>             margin: 15px 0;
+<span class="line-number">604</span>         }
+<span class="line-number">605</span> 
+<span class="line-number">606</span>         .carousel-features li {
+<span class="line-number">607</span>             padding: 6px 0;
+<span class="line-number">608</span>             color: var(--dark);
+<span class="line-number">609</span>             display: flex;
+<span class="line-number">610</span>             align-items: flex-start;
+<span class="line-number">611</span>             gap: 8px;
+<span class="line-number">612</span>             font-size: 0.9rem;
+<span class="line-number">613</span>         }
+<span class="line-number">614</span> 
+<span class="line-number">615</span>         .carousel-features li i {
+<span class="line-number">616</span>             color: var(--success);
+<span class="line-number">617</span>             margin-top: 3px;
+<span class="line-number">618</span>             font-size: 0.85rem;
+<span class="line-number">619</span>         }
+<span class="line-number">620</span> 
+<span class="line-number">621</span>         .carousel-nav {
+<span class="line-number">622</span>             display: flex;
+<span class="line-number">623</span>             justify-content: center;
+<span class="line-number">624</span>             gap: 12px;
+<span class="line-number">625</span>             margin-top: 30px;
+<span class="line-number">626</span>         }
+<span class="line-number">627</span> 
+<span class="line-number">628</span>         .carousel-btn {
+<span class="line-number">629</span>             width: 50px;
+<span class="line-number">630</span>             height: 50px;
+<span class="line-number">631</span>             border-radius: 50%;
+<span class="line-number">632</span>             background: white;
+<span class="line-number">633</span>             color: var(--primary);
+<span class="line-number">634</span>             border: 2px solid var(--primary);
+<span class="line-number">635</span>             cursor: pointer;
+<span class="line-number">636</span>             display: flex;
+<span class="line-number">637</span>             align-items: center;
+<span class="line-number">638</span>             justify-content: center;
+<span class="line-number">639</span>             font-size: 1.1rem;
+<span class="line-number">640</span>             transition: all 0.3s;
+<span class="line-number">641</span>         }
+<span class="line-number">642</span> 
+<span class="line-number">643</span>         .carousel-btn:hover {
+<span class="line-number">644</span>             background: var(--primary);
+<span class="line-number">645</span>             color: white;
+<span class="line-number">646</span>             transform: scale(1.05);
+<span class="line-number">647</span>         }
+<span class="line-number">648</span> 
+<span class="line-number">649</span>         .testimonials-grid {
+<span class="line-number">650</span>             display: grid;
+<span class="line-number">651</span>             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+<span class="line-number">652</span>             gap: 30px;
+<span class="line-number">653</span>         }
+<span class="line-number">654</span> 
+<span class="line-number">655</span>         .testimonial-card {
+<span class="line-number">656</span>             background: white;
+<span class="line-number">657</span>             border-radius: 16px;
+<span class="line-number">658</span>             padding: 35px 30px;
+<span class="line-number">659</span>             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+<span class="line-number">660</span>             position: relative;
+<span class="line-number">661</span>         }
+<span class="line-number">662</span> 
+<span class="line-number">663</span>         .testimonial-quote {
+<span class="line-number">664</span>             position: absolute;
+<span class="line-number">665</span>             top: 20px;
+<span class="line-number">666</span>             left: 20px;
+<span class="line-number">667</span>             font-size: 4rem;
+<span class="line-number">668</span>             color: var(--primary);
+<span class="line-number">669</span>             opacity: 0.1;
+<span class="line-number">670</span>             font-family: Georgia, serif;
+<span class="line-number">671</span>         }
+<span class="line-number">672</span> 
+<span class="line-number">673</span>         .testimonial-text {
+<span class="line-number">674</span>             font-style: italic;
+<span class="line-number">675</span>             color: var(--gray);
+<span class="line-number">676</span>             line-height: 1.7;
+<span class="line-number">677</span>             margin-bottom: 20px;
+<span class="line-number">678</span>             position: relative;
+<span class="line-number">679</span>             z-index: 1;
+<span class="line-number">680</span>         }
+<span class="line-number">681</span> 
+<span class="line-number">682</span>         .testimonial-author {
+<span class="line-number">683</span>             display: flex;
+<span class="line-number">684</span>             align-items: center;
+<span class="line-number">685</span>             gap: 15px;
+<span class="line-number">686</span>         }
+<span class="line-number">687</span> 
+<span class="line-number">688</span>         .author-avatar {
+<span class="line-number">689</span>             width: 55px;
+<span class="line-number">690</span>             height: 55px;
+<span class="line-number">691</span>             border-radius: 50%;
+<span class="line-number">692</span>             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+<span class="line-number">693</span>             display: flex;
+<span class="line-number">694</span>             align-items: center;
+<span class="line-number">695</span>             justify-content: center;
+<span class="line-number">696</span>             color: white;
+<span class="line-number">697</span>             font-weight: 700;
+<span class="line-number">698</span>             font-size: 1.2rem;
+<span class="line-number">699</span>         }
+<span class="line-number">700</span> 
+<span class="line-number">701</span>         .author-info h4 {
+<span class="line-number">702</span>             font-weight: 600;
+<span class="line-number">703</span>             margin-bottom: 3px;
+<span class="line-number">704</span>         }
+<span class="line-number">705</span> 
+<span class="line-number">706</span>         .author-info p {
+<span class="line-number">707</span>             font-size: 0.9rem;
+<span class="line-number">708</span>             color: var(--gray);
+<span class="line-number">709</span>         }
+<span class="line-number">710</span> 
+<span class="line-number">711</span>         .testimonial-rating {
+<span class="line-number">712</span>             display: flex;
+<span class="line-number">713</span>             gap: 4px;
+<span class="line-number">714</span>             margin-top: 4px;
+<span class="line-number">715</span>         }
+<span class="line-number">716</span> 
+<span class="line-number">717</span>         .testimonial-rating i {
+<span class="line-number">718</span>             color: #FFD700;
+<span class="line-number">719</span>             font-size: 0.85rem;
+<span class="line-number">720</span>         }
+<span class="line-number">721</span> 
+<span class="line-number">722</span>         .cta {
+<span class="line-number">723</span>             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+<span class="line-number">724</span>             color: white;
+<span class="line-number">725</span>             text-align: center;
+<span class="line-number">726</span>             padding: 80px 0;
+<span class="line-number">727</span>             position: relative;
+<span class="line-number">728</span>             overflow: hidden;
+<span class="line-number">729</span>         }
+<span class="line-number">730</span> 
+<span class="line-number">731</span>         .cta::before {
+<span class="line-number">732</span>             content: '';
+<span class="line-number">733</span>             position: absolute;
+<span class="line-number">734</span>             top: 0;
+<span class="line-number">735</span>             left: 0;
+<span class="line-number">736</span>             right: 0;
+<span class="line-number">737</span>             bottom: 0;
+<span class="line-number">738</span>             background: url('data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"&gt;&lt;path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"&gt;&lt;/path&gt;&lt;/svg&gt;');
+<span class="line-number">739</span>         }
+<span class="line-number">740</span> 
+<span class="line-number">741</span>         .cta-content {
+<span class="line-number">742</span>             position: relative;
+<span class="line-number">743</span>             z-index: 1;
+<span class="line-number">744</span>         }
+<span class="line-number">745</span> 
+<span class="line-number">746</span>         .cta h2 {
+<span class="line-number">747</span>             font-size: 2.8rem;
+<span class="line-number">748</span>             font-weight: 900;
+<span class="line-number">749</span>             margin-bottom: 20px;
+<span class="line-number">750</span>         }
+<span class="line-number">751</span> 
+<span class="line-number">752</span>         .cta p {
+<span class="line-number">753</span>             font-size: 1.2rem;
+<span class="line-number">754</span>             margin-bottom: 35px;
+<span class="line-number">755</span>             opacity: 0.95;
+<span class="line-number">756</span>             max-width: 700px;
+<span class="line-number">757</span>             margin-left: auto;
+<span class="line-number">758</span>             margin-right: auto;
+<span class="line-number">759</span>         }
+<span class="line-number">760</span> 
+<span class="line-number">761</span>         .cta-buttons {
+<span class="line-number">762</span>             display: flex;
+<span class="line-number">763</span>             justify-content: center;
+<span class="line-number">764</span>             gap: 15px;
+<span class="line-number">765</span>             flex-wrap: wrap;
+<span class="line-number">766</span>         }
+<span class="line-number">767</span> 
+<span class="line-number">768</span>         footer {
+<span class="line-number">769</span>             background: #1a1a2e;
+<span class="line-number">770</span>             color: white;
+<span class="line-number">771</span>             padding: 70px 0 30px;
+<span class="line-number">772</span>         }
+<span class="line-number">773</span> 
+<span class="line-number">774</span>         .footer-content {
+<span class="line-number">775</span>             display: grid;
+<span class="line-number">776</span>             grid-template-columns: 2fr 1fr;
+<span class="line-number">777</span>             gap: 60px;
+<span class="line-number">778</span>             margin-bottom: 40px;
+<span class="line-number">779</span>         }
+<span class="line-number">780</span> 
+<span class="line-number">781</span>         .footer-about h3 {
+<span class="line-number">782</span>             font-size: 1.8rem;
+<span class="line-number">783</span>             margin-bottom: 15px;
+<span class="line-number">784</span>             font-weight: 900;
+<span class="line-number">785</span>             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+<span class="line-number">786</span>             -webkit-background-clip: text;
+<span class="line-number">787</span>             -webkit-text-fill-color: transparent;
+<span class="line-number">788</span>             background-clip: text;
+<span class="line-number">789</span>         }
+<span class="line-number">790</span> 
+<span class="line-number">791</span>         .footer-about p {
+<span class="line-number">792</span>             color: rgba(255,255,255,0.7);
+<span class="line-number">793</span>             line-height: 1.7;
+<span class="line-number">794</span>             margin-bottom: 20px;
+<span class="line-number">795</span>         }
+<span class="line-number">796</span> 
+<span class="line-number">797</span>         .footer-column h4 {
+<span class="line-number">798</span>             font-size: 1.1rem;
+<span class="line-number">799</span>             margin-bottom: 18px;
+<span class="line-number">800</span>             font-weight: 700;
+<span class="line-number">801</span>         }
+<span class="line-number">802</span> 
+<span class="line-number">803</span>         .footer-contact {
+<span class="line-number">804</span>             display: flex;
+<span class="line-number">805</span>             align-items: center;
+<span class="line-number">806</span>             gap: 12px;
+<span class="line-number">807</span>             margin-bottom: 12px;
+<span class="line-number">808</span>             color: rgba(255,255,255,0.8);
+<span class="line-number">809</span>         }
+<span class="line-number">810</span> 
+<span class="line-number">811</span>         .footer-contact i {
+<span class="line-number">812</span>             color: var(--whatsapp);
+<span class="line-number">813</span>             font-size: 1.3rem;
+<span class="line-number">814</span>         }
+<span class="line-number">815</span> 
+<span class="line-number">816</span>         .footer-contact a {
+<span class="line-number">817</span>             color: var(--whatsapp);
+<span class="line-number">818</span>             text-decoration: none;
+<span class="line-number">819</span>             font-weight: 600;
+<span class="line-number">820</span>             transition: opacity 0.3s;
+<span class="line-number">821</span>         }
+<span class="line-number">822</span> 
+<span class="line-number">823</span>         .footer-contact a:hover {
+<span class="line-number">824</span>             opacity: 0.8;
+<span class="line-number">825</span>         }
+<span class="line-number">826</span> 
+<span class="line-number">827</span>         .social-links {
+<span class="line-number">828</span>             display: flex;
+<span class="line-number">829</span>             gap: 10px;
+<span class="line-number">830</span>             margin-top: 15px;
+<span class="line-number">831</span>         }
+<span class="line-number">832</span> 
+<span class="line-number">833</span>         .social-links a {
+<span class="line-number">834</span>             width: 40px;
+<span class="line-number">835</span>             height: 40px;
+<span class="line-number">836</span>             border-radius: 50%;
+<span class="line-number">837</span>             background: rgba(255,255,255,0.1);
+<span class="line-number">838</span>             display: flex;
+<span class="line-number">839</span>             align-items: center;
+<span class="line-number">840</span>             justify-content: center;
+<span class="line-number">841</span>             color: white;
+<span class="line-number">842</span>             text-decoration: none;
+<span class="line-number">843</span>             transition: all 0.3s;
+<span class="line-number">844</span>         }
+<span class="line-number">845</span> 
+<span class="line-number">846</span>         .social-links a:hover {
+<span class="line-number">847</span>             background: var(--primary);
+<span class="line-number">848</span>             transform: translateY(-3px);
+<span class="line-number">849</span>         }
+<span class="line-number">850</span> 
+<span class="line-number">851</span>         .footer-links {
+<span class="line-number">852</span>             list-style: none;
+<span class="line-number">853</span>         }
+<span class="line-number">854</span> 
+<span class="line-number">855</span>         .footer-links li {
+<span class="line-number">856</span>             margin-bottom: 10px;
+<span class="line-number">857</span>         }
+<span class="line-number">858</span> 
+<span class="line-number">859</span>         .footer-links a {
+<span class="line-number">860</span>             color: rgba(255,255,255,0.7);
+<span class="line-number">861</span>             text-decoration: none;
+<span class="line-number">862</span>             transition: color 0.3s;
+<span class="line-number">863</span>             display: flex;
+<span class="line-number">864</span>             align-items: center;
+<span class="line-number">865</span>             gap: 8px;
+<span class="line-number">866</span>         }
+<span class="line-number">867</span> 
+<span class="line-number">868</span>         .footer-links a:hover {
+<span class="line-number">869</span>             color: white;
+<span class="line-number">870</span>         }
+<span class="line-number">871</span> 
+<span class="line-number">872</span>         .footer-bottom {
+<span class="line-number">873</span>             text-align: center;
+<span class="line-number">874</span>             padding-top: 25px;
+<span class="line-number">875</span>             border-top: 1px solid rgba(255,255,255,0.1);
+<span class="line-number">876</span>             color: rgba(255,255,255,0.6);
+<span class="line-number">877</span>         }
+<span class="line-number">878</span> 
+<span class="line-number">879</span>         .whatsapp-float {
+<span class="line-number">880</span>             position: fixed;
+<span class="line-number">881</span>             bottom: 25px;
+<span class="line-number">882</span>             right: 25px;
+<span class="line-number">883</span>             width: 60px;
+<span class="line-number">884</span>             height: 60px;
+<span class="line-number">885</span>             background: var(--whatsapp);
+<span class="line-number">886</span>             border-radius: 50%;
+<span class="line-number">887</span>             display: flex;
+<span class="line-number">888</span>             align-items: center;
+<span class="line-number">889</span>             justify-content: center;
+<span class="line-number">890</span>             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+<span class="line-number">891</span>             z-index: 999;
+<span class="line-number">892</span>             cursor: pointer;
+<span class="line-number">893</span>             transition: all 0.3s;
+<span class="line-number">894</span>             text-decoration: none;
+<span class="line-number">895</span>             color: white;
+<span class="line-number">896</span>         }
+<span class="line-number">897</span> 
+<span class="line-number">898</span>         .whatsapp-float:hover {
+<span class="line-number">899</span>             transform: scale(1.1);
+<span class="line-number">900</span>             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+<span class="line-number">901</span>         }
+<span class="line-number">902</span> 
+<span class="line-number">903</span>         .whatsapp-float i {
+<span class="line-number">904</span>             font-size: 1.8rem;
+<span class="line-number">905</span>         }
+<span class="line-number">906</span> 
+<span class="line-number">907</span>         @media (max-width: 1200px) {
+<span class="line-number">908</span>             .carousel-card {
+<span class="line-number">909</span>                 min-width: 340px;
+<span class="line-number">910</span>                 max-width: 340px;
+<span class="line-number">911</span>             }
+<span class="line-number">912</span>         }
+<span class="line-number">913</span> 
+<span class="line-number">914</span>         @media (max-width: 968px) {
+<span class="line-number">915</span>             .nav-links {
+<span class="line-number">916</span>                 display: none;
+<span class="line-number">917</span>             }
+<span class="line-number">918</span> 
+<span class="line-number">919</span>             .mobile-menu-btn {
+<span class="line-number">920</span>                 display: block;
+<span class="line-number">921</span>             }
+<span class="line-number">922</span> 
+<span class="line-number">923</span>             .hero h1 {
+<span class="line-number">924</span>                 font-size: 2.5rem;
+<span class="line-number">925</span>             }
+<span class="line-number">926</span> 
+<span class="line-number">927</span>             .hero p {
+<span class="line-number">928</span>                 font-size: 1.1rem;
+<span class="line-number">929</span>             }
+<span class="line-number">930</span> 
+<span class="line-number">931</span>             .hero-stats {
+<span class="line-number">932</span>                 grid-template-columns: repeat(2, 1fr);
+<span class="line-number">933</span>                 gap: 30px;
+<span class="line-number">934</span>             }
+<span class="line-number">935</span> 
+<span class="line-number">936</span>             .section-header h2 {
+<span class="line-number">937</span>                 font-size: 2.2rem;
+<span class="line-number">938</span>             }
+<span class="line-number">939</span> 
+<span class="line-number">940</span>             .products-grid,
+<span class="line-number">941</span>             .services-grid,
+<span class="line-number">942</span>             .testimonials-grid {
+<span class="line-number">943</span>                 grid-template-columns: 1fr;
+<span class="line-number">944</span>             }
+<span class="line-number">945</span> 
+<span class="line-number">946</span>             .carousel-card {
+<span class="line-number">947</span>                 min-width: 300px;
+<span class="line-number">948</span>                 max-width: 300px;
+<span class="line-number">949</span>             }
+<span class="line-number">950</span> 
+<span class="line-number">951</span>             .footer-content {
+<span class="line-number">952</span>                 grid-template-columns: 1fr;
+<span class="line-number">953</span>                 gap: 40px;
+<span class="line-number">954</span>             }
+<span class="line-number">955</span> 
+<span class="line-number">956</span>             .whatsapp-float {
+<span class="line-number">957</span>                 width: 55px;
+<span class="line-number">958</span>                 height: 55px;
+<span class="line-number">959</span>                 bottom: 20px;
+<span class="line-number">960</span>                 right: 20px;
+<span class="line-number">961</span>             }
+<span class="line-number">962</span> 
+<span class="line-number">963</span>             .whatsapp-float i {
+<span class="line-number">964</span>                 font-size: 1.6rem;
+<span class="line-number">965</span>             }
+<span class="line-number">966</span> 
+<span class="line-number">967</span>             .smart-sidebar {
+<span class="line-number">968</span>                 width: 300px;
+<span class="line-number">969</span>             }
+<span class="line-number">970</span>         }
+<span class="line-number">971</span> 
+<span class="line-number">972</span>         @media (max-width: 576px) {
+<span class="line-number">973</span>             .hero h1 {
+<span class="line-number">974</span>                 font-size: 2rem;
+<span class="line-number">975</span>             }
+<span class="line-number">976</span> 
+<span class="line-number">977</span>             .hero-stats {
+<span class="line-number">978</span>                 grid-template-columns: 1fr;
+<span class="line-number">979</span>                 gap: 20px;
+<span class="line-number">980</span>             }
+<span class="line-number">981</span> 
+<span class="line-number">982</span>             .carousel-card {
+<span class="line-number">983</span>                 min-width: 280px;
+<span class="line-number">984</span>                 max-width: 280px;
+<span class="line-number">985</span>             }
+<span class="line-number">986</span> 
+<span class="line-number">987</span>             .product-card,
+<span class="line-number">988</span>             .service-card {
+<span class="line-number">989</span>                 padding: 25px;
+<span class="line-number">990</span>             }
+<span class="line-number">991</span> 
+<span class="line-number">992</span>             .smart-sidebar {
+<span class="line-number">993</span>                 width: 280px;
+<span class="line-number">994</span>             }
+<span class="line-number">995</span>         }
+<span class="line-number">996</span>     &lt;/style&gt;
+<span class="line-number">997</span> &lt;/head&gt;
+<span class="line-number">998</span> &lt;body&gt;
+<span class="line-number">999</span>     &lt;header&gt;
+<span class="line-number">1000</span>         &lt;div class="container"&gt;
+<span class="line-number">1001</span>             &lt;nav class="navbar"&gt;
+<span class="line-number">1002</span>                 &lt;div class="logo-container"&gt;
+<span class="line-number">1003</span>                     &lt;div class="logo-icon"&gt;SN&lt;/div&gt;
+<span class="line-number">1004</span>                     &lt;div class="logo-text"&gt;
+<span class="line-number">1005</span>                         &lt;h1&gt;SpotNet Services&lt;/h1&gt;
+<span class="line-number">1006</span>                         &lt;p&gt;Enterprise Technology Solutions&lt;/p&gt;
+<span class="line-number">1007</span>                     &lt;/div&gt;
+<span class="line-number">1008</span>                 &lt;/div&gt;
+<span class="line-number">1009</span>                 &lt;ul class="nav-links"&gt;
+<span class="line-number">1010</span>                     &lt;li&gt;&lt;a href="#products"&gt;Products&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1011</span>                     &lt;li&gt;&lt;a href="#ai-services"&gt;AI Services&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1012</span>                     &lt;li&gt;&lt;a href="#tech-services"&gt;Technology&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1013</span>                     &lt;li&gt;&lt;a href="#industries"&gt;Industries&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1014</span>                     &lt;li&gt;&lt;a href="#testimonials"&gt;Testimonials&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1015</span>                     &lt;li&gt;&lt;a href="#" class="btn btn-outline" onclick="loginWithFacebook()"&gt;Login&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1016</span>                     &lt;li&gt;&lt;a href="#contact" class="btn btn-primary"&gt;Get Started&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1017</span>                 &lt;/ul&gt;
+<span class="line-number">1018</span>                 &lt;div class="mobile-menu-btn" onclick="toggleSidebar()"&gt;
+<span class="line-number">1019</span>                     &lt;i class="fas fa-bars"&gt;&lt;/i&gt;
+<span class="line-number">1020</span>                 &lt;/div&gt;
+<span class="line-number">1021</span>             &lt;/nav&gt;
+<span class="line-number">1022</span>         &lt;/div&gt;
+<span class="line-number">1023</span>     &lt;/header&gt;
+<span class="line-number">1024</span> 
+<span class="line-number">1025</span>     &lt;div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"&gt;&lt;/div&gt;
+<span class="line-number">1026</span>     &lt;div class="smart-sidebar" id="smartSidebar"&gt;
+<span class="line-number">1027</span>         &lt;div class="sidebar-header"&gt;
+<span class="line-number">1028</span>             &lt;h3&gt;Navigation Menu&lt;/h3&gt;
+<span class="line-number">1029</span>             &lt;div class="sidebar-close" onclick="toggleSidebar()"&gt;
+<span class="line-number">1030</span>                 &lt;i class="fas fa-times"&gt;&lt;/i&gt;
+<span class="line-number">1031</span>             &lt;/div&gt;
+<span class="line-number">1032</span>         &lt;/div&gt;
+<span class="line-number">1033</span>         &lt;div class="sidebar-content"&gt;
+<span class="line-number">1034</span>             &lt;div class="sidebar-section active"&gt;
+<span class="line-number">1035</span>                 &lt;div class="sidebar-section-title" onclick="toggleSection(this)"&gt;
+<span class="line-number">1036</span>                     &lt;span&gt;Flagship Products&lt;/span&gt;
+<span class="line-number">1037</span>                     &lt;i class="fas fa-chevron-down"&gt;&lt;/i&gt;
+<span class="line-number">1038</span>                 &lt;/div&gt;
+<span class="line-number">1039</span>                 &lt;ul class="sidebar-links"&gt;
+<span class="line-number">1040</span>                     &lt;li&gt;&lt;a href="https://spotlinkapp.spotnet.in"&gt;&lt;i class="fab fa-whatsapp"&gt;&lt;/i&gt; SpotLink WhatsApp API&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1041</span>                     &lt;li&gt;&lt;a href="https://ai.spotnet.in"&gt;&lt;i class="fas fa-balance-scale"&gt;&lt;/i&gt; Lawyer AI&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1042</span>                     &lt;li&gt;&lt;a href="#products"&gt;&lt;i class="fas fa-code"&gt;&lt;/i&gt; Custom Software&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1043</span>                 &lt;/ul&gt;
+<span class="line-number">1044</span>             &lt;/div&gt;
+<span class="line-number">1045</span>             &lt;div class="sidebar-section"&gt;
+<span class="line-number">1046</span>                 &lt;div class="sidebar-section-title" onclick="toggleSection(this)"&gt;
+<span class="line-number">1047</span>                     &lt;span&gt;AI Services&lt;/span&gt;
+<span class="line-number">1048</span>                     &lt;i class="fas fa-chevron-down"&gt;&lt;/i&gt;
+<span class="line-number">1049</span>                 &lt;/div&gt;
+<span class="line-number">1050</span>                 &lt;ul class="sidebar-links"&gt;
+<span class="line-number">1051</span>                     &lt;li&gt;&lt;a href="#ai-services"&gt;&lt;i class="fas fa-robot"&gt;&lt;/i&gt; AI Chatbots &amp; IVR&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1052</span>                     &lt;li&gt;&lt;a href="#ai-services"&gt;&lt;i class="fas fa-chart-line"&gt;&lt;/i&gt; Predictive Analytics&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1053</span>                     &lt;li&gt;&lt;a href="#ai-services"&gt;&lt;i class="fas fa-bullhorn"&gt;&lt;/i&gt; AI Marketing&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1054</span>                     &lt;li&gt;&lt;a href="#ai-services"&gt;&lt;i class="fas fa-heartbeat"&gt;&lt;/i&gt; Healthcare AI&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1055</span>                     &lt;li&gt;&lt;a href="#ai-services"&gt;&lt;i class="fas fa-graduation-cap"&gt;&lt;/i&gt; Education AI&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1056</span>                     &lt;li&gt;&lt;a href="#ai-services"&gt;&lt;i class="fas fa-shopping-cart"&gt;&lt;/i&gt; E-commerce AI&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1057</span>                 &lt;/ul&gt;
+<span class="line-number">1058</span>             &lt;/div&gt;
+<span class="line-number">1059</span>             &lt;div class="sidebar-section"&gt;
+<span class="line-number">1060</span>                 &lt;div class="sidebar-section-title" onclick="toggleSection(this)"&gt;
+<span class="line-number">1061</span>                     &lt;span&gt;Technology Services&lt;/span&gt;
+<span class="line-number">1062</span>                     &lt;i class="fas fa-chevron-down"&gt;&lt;/i&gt;
+<span class="line-number">1063</span>                 &lt;/div&gt;
+<span class="line-number">1064</span>                 &lt;ul class="sidebar-links"&gt;
+<span class="line-number">1065</span>                     &lt;li&gt;&lt;a href="#tech-services"&gt;&lt;i class="fas fa-shield-alt"&gt;&lt;/i&gt; Cybersecurity&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1066</span>                     &lt;li&gt;&lt;a href="#tech-services"&gt;&lt;i class="fas fa-cloud"&gt;&lt;/i&gt; Cloud Solutions&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1067</span>                     &lt;li&gt;&lt;a href="#tech-services"&gt;&lt;i class="fas fa-network-wired"&gt;&lt;/i&gt; Network Infrastructure&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1068</span>                     &lt;li&gt;&lt;a href="#tech-services"&gt;&lt;i class="fas fa-database"&gt;&lt;/i&gt; Data Management&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1069</span>                     &lt;li&gt;&lt;a href="#tech-services"&gt;&lt;i class="fas fa-mobile-alt"&gt;&lt;/i&gt; Mobile Development&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1070</span>                 &lt;/ul&gt;
+<span class="line-number">1071</span>             &lt;/div&gt;
+<span class="line-number">1072</span>             &lt;div class="sidebar-section"&gt;
+<span class="line-number">1073</span>                 &lt;div class="sidebar-section-title" onclick="toggleSection(this)"&gt;
+<span class="line-number">1074</span>                     &lt;span&gt;Industries&lt;/span&gt;
+<span class="line-number">1075</span>                     &lt;i class="fas fa-chevron-down"&gt;&lt;/i&gt;
+<span class="line-number">1076</span>                 &lt;/div&gt;
+<span class="line-number">1077</span>                 &lt;ul class="sidebar-links"&gt;
+<span class="line-number">1078</span>                     &lt;li&gt;&lt;a href="#industries"&gt;&lt;i class="fas fa-shopping-bag"&gt;&lt;/i&gt; E-commerce&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1079</span>                     &lt;li&gt;&lt;a href="#industries"&gt;&lt;i class="fas fa-user-md"&gt;&lt;/i&gt; Healthcare&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1080</span>                     &lt;li&gt;&lt;a href="#industries"&gt;&lt;i class="fas fa-book"&gt;&lt;/i&gt; Education&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1081</span>                     &lt;li&gt;&lt;a href="#industries"&gt;&lt;i class="fas fa-hotel"&gt;&lt;/i&gt; Hospitality&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1082</span>                     &lt;li&gt;&lt;a href="#industries"&gt;&lt;i class="fas fa-building"&gt;&lt;/i&gt; Real Estate&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1083</span>                 &lt;/ul&gt;
+<span class="line-number">1084</span>             &lt;/div&gt;
+<span class="line-number">1085</span>             &lt;div class="sidebar-section"&gt;
+<span class="line-number">1086</span>                 &lt;div class="sidebar-section-title" onclick="toggleSection(this)"&gt;
+<span class="line-number">1087</span>                     &lt;span&gt;Company&lt;/span&gt;
+<span class="line-number">1088</span>                     &lt;i class="fas fa-chevron-down"&gt;&lt;/i&gt;
+<span class="line-number">1089</span>                 &lt;/div&gt;
+<span class="line-number">1090</span>                 &lt;ul class="sidebar-links"&gt;
+<span class="line-number">1091</span>                     &lt;li&gt;&lt;a href="#testimonials"&gt;&lt;i class="fas fa-star"&gt;&lt;/i&gt; Testimonials&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1092</span>                     &lt;li&gt;&lt;a href="#contact"&gt;&lt;i class="fas fa-envelope"&gt;&lt;/i&gt; Contact Us&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1093</span>                     &lt;li&gt;&lt;a href="https://ai.spotnet.in"&gt;&lt;i class="fas fa-link"&gt;&lt;/i&gt; AI Portal&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1094</span>                 &lt;/ul&gt;
+<span class="line-number">1095</span>             &lt;/div&gt;
+<span class="line-number">1096</span>         &lt;/div&gt;
+<span class="line-number">1097</span>         &lt;div class="sidebar-cta"&gt;
+<span class="line-number">1098</span>             &lt;a href="#" class="btn btn-primary" onclick="loginWithFacebook()" style="justify-content: center;"&gt;
+<span class="line-number">1099</span>                 &lt;i class="fab fa-facebook"&gt;&lt;/i&gt; Login with Facebook
+<span class="line-number">1100</span>             &lt;/a&gt;
+<span class="line-number">1101</span>             &lt;a href="#contact" class="btn btn-outline" style="justify-content: center;"&gt;
+<span class="line-number">1102</span>                 &lt;i class="fas fa-rocket"&gt;&lt;/i&gt; Get Started Free
+<span class="line-number">1103</span>             &lt;/a&gt;
+<span class="line-number">1104</span>         &lt;/div&gt;
+<span class="line-number">1105</span>     &lt;/div&gt;
+<span class="line-number">1106</span> 
+<span class="line-number">1107</span>     &lt;section class="hero"&gt;
+<span class="line-number">1108</span>         &lt;div class="container"&gt;
+<span class="line-number">1109</span>             &lt;h1&gt;Transform Your Business with AI &amp; Technology&lt;/h1&gt;
+<span class="line-number">1110</span>             &lt;p&gt;SpotNet Services delivers cutting-edge AI solutions, WhatsApp automation, custom software, and enterprise technology to help businesses save time, reduce costs, and achieve unprecedented growth.&lt;/p&gt;
+<span class="line-number">1111</span>             &lt;div class="hero-buttons"&gt;
+<span class="line-number">1112</span>                 &lt;a href="#products" class="btn btn-primary" style="background: white; color: var(--primary);"&gt;
+<span class="line-number">1113</span>                     &lt;i class="fas fa-rocket"&gt;&lt;/i&gt; Explore Solutions
+<span class="line-number">1114</span>                 &lt;/a&gt;
+<span class="line-number">1115</span>                 &lt;a href="https://ai.spotnet.in" class="btn btn-outline" style="border-color: white; color: white;"&gt;
+<span class="line-number">1116</span>                     &lt;i class="fas fa-robot"&gt;&lt;/i&gt; AI Services
+<span class="line-number">1117</span>                 &lt;/a&gt;
+<span class="line-number">1118</span>                 &lt;a href="#contact" class="btn btn-outline" style="border-color: white; color: white;"&gt;
+<span class="line-number">1119</span>                     &lt;i class="fas fa-phone"&gt;&lt;/i&gt; Contact Sales
+<span class="line-number">1120</span>                 &lt;/a&gt;
+<span class="line-number">1121</span>             &lt;/div&gt;
+<span class="line-number">1122</span>             &lt;div class="hero-stats"&gt;
+<span class="line-number">1123</span>                 &lt;div class="stat-item"&gt;
+<span class="line-number">1124</span>                     &lt;h3&gt;500+&lt;/h3&gt;
+<span class="line-number">1125</span>                     &lt;p&gt;Happy Clients&lt;/p&gt;
+<span class="line-number">1126</span>                 &lt;/div&gt;
+<span class="line-number">1127</span>                 &lt;div class="stat-item"&gt;
+<span class="line-number">1128</span>                     &lt;h3&gt;25+&lt;/h3&gt;
+<span class="line-number">1129</span>                     &lt;p&gt;AI Solutions&lt;/p&gt;
+<span class="line-number">1130</span>                 &lt;/div&gt;
+<span class="line-number">1131</span>                 &lt;div class="stat-item"&gt;
+<span class="line-number">1132</span>                     &lt;h3&gt;98%&lt;/h3&gt;
+<span class="line-number">1133</span>                     &lt;p&gt;Satisfaction Rate&lt;/p&gt;
+<span class="line-number">1134</span>                 &lt;/div&gt;
+<span class="line-number">1135</span>                 &lt;div class="stat-item"&gt;
+<span class="line-number">1136</span>                     &lt;h3&gt;24/7&lt;/h3&gt;
+<span class="line-number">1137</span>                     &lt;p&gt;Support&lt;/p&gt;
+<span class="line-number">1138</span>                 &lt;/div&gt;
+<span class="line-number">1139</span>             &lt;/div&gt;
+<span class="line-number">1140</span>         &lt;/div&gt;
+<span class="line-number">1141</span>     &lt;/section&gt;
+<span class="line-number">1142</span> 
+<span class="line-number">1143</span>     &lt;section id="products"&gt;
+<span class="line-number">1144</span>         &lt;div class="container"&gt;
+<span class="line-number">1145</span>             &lt;div class="section-header"&gt;
+<span class="line-number">1146</span>                 &lt;div class="section-badge"&gt;Flagship Products&lt;/div&gt;
+<span class="line-number">1147</span>                 &lt;h2&gt;Enterprise-Grade Solutions&lt;/h2&gt;
+<span class="line-number">1148</span>                 &lt;p&gt;Comprehensive technology products designed to automate, optimize, and scale your business operations with cutting-edge features.&lt;/p&gt;
+<span class="line-number">1149</span>             &lt;/div&gt;
+<span class="line-number">1150</span>             &lt;div class="products-grid"&gt;
+<span class="line-number">1151</span>                 &lt;div class="product-card"&gt;
+<span class="line-number">1152</span>                     &lt;div class="product-icon" style="background: linear-gradient(135deg, #25D366, #128C7E);"&gt;
+<span class="line-number">1153</span>                         &lt;i class="fab fa-whatsapp"&gt;&lt;/i&gt;
+<span class="line-number">1154</span>                     &lt;/div&gt;
+<span class="line-number">1155</span>                     &lt;h3&gt;SpotLink - WhatsApp Business API&lt;/h3&gt;
+<span class="line-number">1156</span>                     &lt;p&gt;Professional WhatsApp Business API platform for automated customer communication, marketing campaigns, and 24/7 AI-powered support.&lt;/p&gt;
+<span class="line-number">1157</span>                     &lt;ul class="product-features"&gt;
+<span class="line-number">1158</span>                         &lt;li&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt; Unlimited broadcast messaging&lt;/li&gt;
+<span class="line-number">1159</span>                         &lt;li&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt; AI chatbot with NLP&lt;/li&gt;
+<span class="line-number">1160</span>                         &lt;li&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt; Multi-agent dashboard&lt;/li&gt;
+<span class="line-number">1161</span>                         &lt;li&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt; Advanced analytics &amp; CRM&lt;/li&gt;
+<span class="line-number">1162</span>                         &lt;li&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt; Green tick verification&lt;/li&gt;
+<span class="line-number">1163</span>                     &lt;/ul&gt;
+<span class="line-number">1164</span>                     &lt;a href="https://spotlinkapp.spotnet.in" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;"&gt;
+<span class="line-number">1165</span>                         &lt;i class="fas fa-external-link-alt"&gt;&lt;/i&gt; Launch SpotLink
+<span class="line-number">1166</span>                     &lt;/a&gt;
+<span class="line-number">1167</span>                 &lt;/div&gt;
+<span class="line-number">1168</span>                 &lt;div class="product-card"&gt;
+<span class="line-number">1169</span>                     &lt;div class="product-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);"&gt;
+<span class="line-number">1170</span>                         &lt;i class="fas fa-balance-scale"&gt;&lt;/i&gt;
+<span class="line-number">1171</span>                     &lt;/div&gt;
+<span class="line-number">1172</span>                     &lt;h3&gt;Lawyer AI - Legal Intelligence&lt;/h3&gt;
+<span class="line-number">1173</span>                     &lt;p&gt;Advanced AI legal assistant trained on Indian law. Get instant legal insights, document drafting, case analysis, and compliance guidance.&lt;/p&gt;
+<span class="line-number">1174</span>                     &lt;ul class="product-features"&gt;
+<span class="line-number">1175</span>                         &lt;li&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt; Indian legal framework trained&lt;/li&gt;
+<span class="line-number">1176</span>                         &lt;li&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt; Automated document generation&lt;/li&gt;
+<span class="line-number">1177</span>                         &lt;li&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt; Case law research &amp; analysis&lt;/li&gt;
+<span class="line-number">1178</span>                         &lt;li&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt; Compliance checking&lt;/li&gt;
+<span class="line-number">1179</span>                         &lt;li&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt; Legal precedent database&lt;/li&gt;
+<span class="line-number">1180</span>                     &lt;/ul&gt;
+<span class="line-number">1181</span>                     &lt;a href="https://ai.spotnet.in" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;"&gt;
+<span class="line-number">1182</span>                         &lt;i class="fas fa-external-link-alt"&gt;&lt;/i&gt; Try Lawyer AI
+<span class="line-number">1183</span>                     &lt;/a&gt;
+<span class="line-number">1184</span>                 &lt;/div&gt;
+<span class="line-number">1185</span>                 &lt;div class="product-card"&gt;
+<span class="line-number">1186</span>                     &lt;div class="product-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);"&gt;
+<span class="line-number">1187</span>                         &lt;i class="fas fa-code"&gt;&lt;/i&gt;
+<span class="line-number">1188</span>                     &lt;/div&gt;
+<span class="line-number">1189</span>                     &lt;h3&gt;Custom Software Development&lt;/h3&gt;
+<span class="line-number">1190</span>                     &lt;p&gt;Full-stack custom software solutions tailored to your business. Web apps, mobile apps, enterprise systems, and cloud infrastructure.&lt;/p&gt;
+<span class="line-number">1191</span>                     &lt;ul class="product-features"&gt;
+<span class="line-number">1192</span>                         &lt;li&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt; Web &amp; mobile development&lt;/li&gt;
+<span class="line-number">1193</span>                         &lt;li&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt; Enterprise software systems&lt;/li&gt;
+<span class="line-number">1194</span>                         &lt;li&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt; Cloud infrastructure &amp; DevOps&lt;/li&gt;
+<span class="line-number">1195</span>                         &lt;li&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt; API development &amp; integration&lt;/li&gt;
+<span class="line-number">1196</span>                         &lt;li&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt; Ongoing support &amp; maintenance&lt;/li&gt;
+<span class="line-number">1197</span>                     &lt;/ul&gt;
+<span class="line-number">1198</span>                     &lt;a href="#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;"&gt;
+<span class="line-number">1199</span>                         &lt;i class="fas fa-comments"&gt;&lt;/i&gt; Discuss Project
+<span class="line-number">1200</span>                     &lt;/a&gt;
+<span class="line-number">1201</span>                 &lt;/div&gt;
+<span class="line-number">1202</span>             &lt;/div&gt;
+<span class="line-number">1203</span>         &lt;/div&gt;
+<span class="line-number">1204</span>     &lt;/section&gt;
+<span class="line-number">1205</span> 
+<span class="line-number">1206</span>     &lt;section id="ai-services" style="background: #f8f9fa;"&gt;
+<span class="line-number">1207</span>         &lt;div class="container"&gt;
+<span class="line-number">1208</span>             &lt;div class="section-header"&gt;
+<span class="line-number">1209</span>                 &lt;div class="section-badge"&gt;AI-Powered Solutions&lt;/div&gt;
+<span class="line-number">1210</span>                 &lt;h2&gt;Comprehensive AI Services&lt;/h2&gt;
+<span class="line-number">1211</span>                 &lt;p&gt;Cutting-edge artificial intelligence solutions to automate, optimize, and transform your business operations with intelligent technology.&lt;/p&gt;
+<span class="line-number">1212</span>             &lt;/div&gt;
+<span class="line-number">1213</span>             &lt;div class="services-grid"&gt;
+<span class="line-number">1214</span>                 &lt;div class="service-card"&gt;
+<span class="line-number">1215</span>                     &lt;div class="service-icon"&gt;
+<span class="line-number">1216</span>                         &lt;i class="fas fa-robot"&gt;&lt;/i&gt;
+<span class="line-number">1217</span>                     &lt;/div&gt;
+<span class="line-number">1218</span>                     &lt;h3&gt;24/7 AI Chatbots &amp; IVR&lt;/h3&gt;
+<span class="line-number">1219</span>                     &lt;p&gt;Intelligent chatbots and IVR call systems that efficiently manage customer queries with multilingual support.&lt;/p&gt;
+<span class="line-number">1220</span>                     &lt;ul class="service-features"&gt;
+<span class="line-number">1221</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Automated customer support 24/7&lt;/li&gt;
+<span class="line-number">1222</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Multilingual conversation support&lt;/li&gt;
+<span class="line-number">1223</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Reduced wait times &amp; increased satisfaction&lt;/li&gt;
+<span class="line-number">1224</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Seamless handoff to human agents&lt;/li&gt;
+<span class="line-number">1225</span>                     &lt;/ul&gt;
+<span class="line-number">1226</span>                 &lt;/div&gt;
+<span class="line-number">1227</span>                 &lt;div class="service-card"&gt;
+<span class="line-number">1228</span>                     &lt;div class="service-icon"&gt;
+<span class="line-number">1229</span>                         &lt;i class="fas fa-cogs"&gt;&lt;/i&gt;
+<span class="line-number">1230</span>                     &lt;/div&gt;
+<span class="line-number">1231</span>                     &lt;h3&gt;Business Automation&lt;/h3&gt;
+<span class="line-number">1232</span>                     &lt;p&gt;Automate data entry, invoice processing, and CRM tasks to improve efficiency and reduce operational costs.&lt;/p&gt;
+<span class="line-number">1233</span>                     &lt;ul class="service-features"&gt;
+<span class="line-number">1234</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Automated data entry &amp; processing&lt;/li&gt;
+<span class="line-number">1235</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Invoice automation &amp; validation&lt;/li&gt;
+<span class="line-number">1236</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; CRM task synchronization&lt;/li&gt;
+<span class="line-number">1237</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Error reduction &amp; accuracy boost&lt;/li&gt;
+<span class="line-number">1238</span>                     &lt;/ul&gt;
+<span class="line-number">1239</span>                 &lt;/div&gt;
+<span class="line-number">1240</span>                 &lt;div class="service-card"&gt;
+<span class="line-number">1241</span>                     &lt;div class="service-icon"&gt;
+<span class="line-number">1242</span>                         &lt;i class="fas fa-chart-line"&gt;&lt;/i&gt;
+<span class="line-number">1243</span>                     &lt;/div&gt;
+<span class="line-number">1244</span>                     &lt;h3&gt;Predictive Analytics&lt;/h3&gt;
+<span class="line-number">1245</span>                     &lt;p&gt;Advanced AI analytics platform providing deep insights for data-driven decision-making and business growth.&lt;/p&gt;
+<span class="line-number">1246</span>                     &lt;ul class="service-features"&gt;
+<span class="line-number">1247</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Predictive data modeling&lt;/li&gt;
+<span class="line-number">1248</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Customer behavior analysis&lt;/li&gt;
+<span class="line-number">1249</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Sales forecasting &amp; trends&lt;/li&gt;
+<span class="line-number">1250</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Real-time business intelligence&lt;/li&gt;
+<span class="line-number">1251</span>                     &lt;/ul&gt;
+<span class="line-number">1252</span>                 &lt;/div&gt;
+<span class="line-number">1253</span>                 &lt;div class="service-card"&gt;
+<span class="line-number">1254</span>                     &lt;div class="service-icon"&gt;
+<span class="line-number">1255</span>                         &lt;i class="fas fa-bullhorn"&gt;&lt;/i&gt;
+<span class="line-number">1256</span>                     &lt;/div&gt;
+<span class="line-number">1257</span>                     &lt;h3&gt;AI Marketing Campaigns&lt;/h3&gt;
+<span class="line-number">1258</span>                     &lt;p&gt;AI-powered advertising campaigns with customer insights and personalized offers to maximize ROI.&lt;/p&gt;
+<span class="line-number">1259</span>                     &lt;ul class="service-features"&gt;
+<span class="line-number">1260</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Targeted audience segmentation&lt;/li&gt;
+<span class="line-number">1261</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Personalized customer offers&lt;/li&gt;
+<span class="line-number">1262</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Campaign performance optimization&lt;/li&gt;
+<span class="line-number">1263</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Enhanced customer loyalty&lt;/li&gt;
+<span class="line-number">1264</span>                     &lt;/ul&gt;
+<span class="line-number">1265</span>                 &lt;/div&gt;
+<span class="line-number">1266</span>                 &lt;div class="service-card"&gt;
+<span class="line-number">1267</span>                     &lt;div class="service-icon"&gt;
+<span class="line-number">1268</span>                         &lt;i class="fas fa-heartbeat"&gt;&lt;/i&gt;
+<span class="line-number">1269</span>                     &lt;/div&gt;
+<span class="line-number">1270</span>                     &lt;h3&gt;Healthcare AI Solutions&lt;/h3&gt;
+<span class="line-number">1271</span>                     &lt;p&gt;AI diagnosis support, patient chatbots, and health analytics to enhance healthcare service delivery.&lt;/p&gt;
+<span class="line-number">1272</span>                     &lt;ul class="service-features"&gt;
+<span class="line-number">1273</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; AI-assisted diagnosis support&lt;/li&gt;
+<span class="line-number">1274</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; 24/7 patient assistance chatbots&lt;/li&gt;
+<span class="line-number">1275</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Health analytics &amp; insights&lt;/li&gt;
+<span class="line-number">1276</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Faster medical decision-making&lt;/li&gt;
+<span class="line-number">1277</span>                     &lt;/ul&gt;
+<span class="line-number">1278</span>                 &lt;/div&gt;
+<span class="line-number">1279</span>                 &lt;div class="service-card"&gt;
+<span class="line-number">1280</span>                     &lt;div class="service-icon"&gt;
+<span class="line-number">1281</span>                         &lt;i class="fas fa-graduation-cap"&gt;&lt;/i&gt;
+<span class="line-number">1282</span>                     &lt;/div&gt;
+<span class="line-number">1283</span>                     &lt;h3&gt;Education AI Platform&lt;/h3&gt;
+<span class="line-number">1284</span>                     &lt;p&gt;AI tutors, exam prep bots, and smart learning platforms tailored to individual student needs.&lt;/p&gt;
+<span class="line-number">1285</span>                     &lt;ul class="service-features"&gt;
+<span class="line-number">1286</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Personalized AI tutoring&lt;/li&gt;
+<span class="line-number">1287</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Exam preparation assistance&lt;/li&gt;
+<span class="line-number">1288</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Adaptive learning paths&lt;/li&gt;
+<span class="line-number">1289</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Student progress tracking&lt;/li&gt;
+<span class="line-number">1290</span>                     &lt;/ul&gt;
+<span class="line-number">1291</span>                 &lt;/div&gt;
+<span class="line-number">1292</span>                 &lt;div class="service-card"&gt;
+<span class="line-number">1293</span>                     &lt;div class="service-icon"&gt;
+<span class="line-number">1294</span>                         &lt;i class="fas fa-shopping-cart"&gt;&lt;/i&gt;
+<span class="line-number">1295</span>                     &lt;/div&gt;
+<span class="line-number">1296</span>                     &lt;h3&gt;E-commerce AI&lt;/h3&gt;
+<span class="line-number">1297</span>                     &lt;p&gt;AI product recommendations, fraud detection, and intelligent inventory management for online stores.&lt;/p&gt;
+<span class="line-number">1298</span>                     &lt;ul class="service-features"&gt;
+<span class="line-number">1299</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Smart product recommendations&lt;/li&gt;
+<span class="line-number">1300</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Real-time fraud detection&lt;/li&gt;
+<span class="line-number">1301</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Automated inventory optimization&lt;/li&gt;
+<span class="line-number">1302</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Sales accuracy improvement&lt;/li&gt;
+<span class="line-number">1303</span>                     &lt;/ul&gt;
+<span class="line-number">1304</span>                 &lt;/div&gt;
+<span class="line-number">1305</span>                 &lt;div class="service-card"&gt;
+<span class="line-number">1306</span>                     &lt;div class="service-icon"&gt;
+<span class="line-number">1307</span>                         &lt;i class="fas fa-tools"&gt;&lt;/i&gt;
+<span class="line-number">1308</span>                     &lt;/div&gt;
+<span class="line-number">1309</span>                     &lt;h3&gt;Predictive Maintenance&lt;/h3&gt;
+<span class="line-number">1310</span>                     &lt;p&gt;AI-powered tools that prevent equipment failures, saving time and money in operations.&lt;/p&gt;
+<span class="line-number">1311</span>                     &lt;ul class="service-features"&gt;
+<span class="line-number">1312</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Equipment failure prediction&lt;/li&gt;
+<span class="line-number">1313</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Maintenance scheduling automation&lt;/li&gt;
+<span class="line-number">1314</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Downtime reduction&lt;/li&gt;
+<span class="line-number">1315</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Cost savings optimization&lt;/li&gt;
+<span class="line-number">1316</span>                     &lt;/ul&gt;
+<span class="line-number">1317</span>                 &lt;/div&gt;
+<span class="line-number">1318</span>                 &lt;div class="service-card"&gt;
+<span class="line-number">1319</span>                     &lt;div class="service-icon"&gt;
+<span class="line-number">1320</span>                         &lt;i class="fas fa-project-diagram"&gt;&lt;/i&gt;
+<span class="line-number">1321</span>                     &lt;/div&gt;
+<span class="line-number">1322</span>                     &lt;h3&gt;Custom AI Solutions&lt;/h3&gt;
+<span class="line-number">1323</span>                     &lt;p&gt;Tailored AI systems designed for your specific business needs, from predictive analytics to workflow automation.&lt;/p&gt;
+<span class="line-number">1324</span>                     &lt;ul class="service-features"&gt;
+<span class="line-number">1325</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Custom AI model development&lt;/li&gt;
+<span class="line-number">1326</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Workflow automation systems&lt;/li&gt;
+<span class="line-number">1327</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Scalable AI infrastructure&lt;/li&gt;
+<span class="line-number">1328</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Seamless integration support&lt;/li&gt;
+<span class="line-number">1329</span>                     &lt;/ul&gt;
+<span class="line-number">1330</span>                 &lt;/div&gt;
+<span class="line-number">1331</span>             &lt;/div&gt;
+<span class="line-number">1332</span>         &lt;/div&gt;
+<span class="line-number">1333</span>     &lt;/section&gt;
+<span class="line-number">1334</span> 
+<span class="line-number">1335</span>     &lt;section id="tech-services"&gt;
+<span class="line-number">1336</span>         &lt;div class="container"&gt;
+<span class="line-number">1337</span>             &lt;div class="section-header"&gt;
+<span class="line-number">1338</span>                 &lt;div class="section-badge"&gt;Technology Infrastructure&lt;/div&gt;
+<span class="line-number">1339</span>                 &lt;h2&gt;Enterprise Technology Services&lt;/h2&gt;
+<span class="line-number">1340</span>                 &lt;p&gt;Comprehensive technology services to secure, optimize, and accelerate your business operations with enterprise-grade solutions.&lt;/p&gt;
+<span class="line-number">1341</span>             &lt;/div&gt;
+<span class="line-number">1342</span>             &lt;div class="services-grid"&gt;
+<span class="line-number">1343</span>                 &lt;div class="service-card"&gt;
+<span class="line-number">1344</span>                     &lt;div class="service-icon"&gt;
+<span class="line-number">1345</span>                         &lt;i class="fas fa-shield-alt"&gt;&lt;/i&gt;
+<span class="line-number">1346</span>                     &lt;/div&gt;
+<span class="line-number">1347</span>                     &lt;h3&gt;Cybersecurity Solutions&lt;/h3&gt;
+<span class="line-number">1348</span>                     &lt;p&gt;Enterprise-grade security infrastructure to protect your business from cyber threats and data breaches.&lt;/p&gt;
+<span class="line-number">1349</span>                     &lt;ul class="service-features"&gt;
+<span class="line-number">1350</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Network security &amp; firewall&lt;/li&gt;
+<span class="line-number">1351</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Penetration testing services&lt;/li&gt;
+<span class="line-number">1352</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Security audits &amp; compliance&lt;/li&gt;
+<span class="line-number">1353</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Advanced data encryption&lt;/li&gt;
+<span class="line-number">1354</span>                     &lt;/ul&gt;
+<span class="line-number">1355</span>                 &lt;/div&gt;
+<span class="line-number">1356</span>                 &lt;div class="service-card"&gt;
+<span class="line-number">1357</span>                     &lt;div class="service-icon"&gt;
+<span class="line-number">1358</span>                         &lt;i class="fas fa-cloud"&gt;&lt;/i&gt;
+<span class="line-number">1359</span>                     &lt;/div&gt;
+<span class="line-number">1360</span>                     &lt;h3&gt;Cloud Solutions&lt;/h3&gt;
+<span class="line-number">1361</span>                     &lt;p&gt;Scalable cloud infrastructure with migration, management, and optimization services for modern businesses.&lt;/p&gt;
+<span class="line-number">1362</span>                     &lt;ul class="service-features"&gt;
+<span class="line-number">1363</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Cloud migration services&lt;/li&gt;
+<span class="line-number">1364</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Multi-cloud management&lt;/li&gt;
+<span class="line-number">1365</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Infrastructure as code&lt;/li&gt;
+<span class="line-number">1366</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Cost optimization strategies&lt;/li&gt;
+<span class="line-number">1367</span>                     &lt;/ul&gt;
+<span class="line-number">1368</span>                 &lt;/div&gt;
+<span class="line-number">1369</span>                 &lt;div class="service-card"&gt;
+<span class="line-number">1370</span>                     &lt;div class="service-icon"&gt;
+<span class="line-number">1371</span>                         &lt;i class="fas fa-network-wired"&gt;&lt;/i&gt;
+<span class="line-number">1372</span>                     &lt;/div&gt;
+<span class="line-number">1373</span>                     &lt;h3&gt;Network Infrastructure&lt;/h3&gt;
+<span class="line-number">1374</span>                     &lt;p&gt;Design, deploy, and manage robust network infrastructure for seamless enterprise operations.&lt;/p&gt;
+<span class="line-number">1375</span>                     &lt;ul class="service-features"&gt;
+<span class="line-number">1376</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Network design &amp; setup&lt;/li&gt;
+<span class="line-number">1377</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Enterprise Wi-Fi solutions&lt;/li&gt;
+<span class="line-number">1378</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; VPN &amp; remote access&lt;/li&gt;
+<span class="line-number">1379</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; 24/7 network monitoring&lt;/li&gt;
+<span class="line-number">1380</span>                     &lt;/ul&gt;
+<span class="line-number">1381</span>                 &lt;/div&gt;
+<span class="line-number">1382</span>                 &lt;div class="service-card"&gt;
+<span class="line-number">1383</span>                     &lt;div class="service-icon"&gt;
+<span class="line-number">1384</span>                         &lt;i class="fas fa-database"&gt;&lt;/i&gt;
+<span class="line-number">1385</span>                     &lt;/div&gt;
+<span class="line-number">1386</span>                     &lt;h3&gt;Data Management&lt;/h3&gt;
+<span class="line-number">1387</span>                     &lt;p&gt;Comprehensive data storage, backup, and recovery solutions ensuring business continuity.&lt;/p&gt;
+<span class="line-number">1388</span>                     &lt;ul class="service-features"&gt;
+<span class="line-number">1389</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Database design &amp; optimization&lt;/li&gt;
+<span class="line-number">1390</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Automated backup systems&lt;/li&gt;
+<span class="line-number">1391</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Disaster recovery planning&lt;/li&gt;
+<span class="line-number">1392</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Advanced data analytics&lt;/li&gt;
+<span class="line-number">1393</span>                     &lt;/ul&gt;
+<span class="line-number">1394</span>                 &lt;/div&gt;
+<span class="line-number">1395</span>                 &lt;div class="service-card"&gt;
+<span class="line-number">1396</span>                     &lt;div class="service-icon"&gt;
+<span class="line-number">1397</span>                         &lt;i class="fas fa-mobile-alt"&gt;&lt;/i&gt;
+<span class="line-number">1398</span>                     &lt;/div&gt;
+<span class="line-number">1399</span>                     &lt;h3&gt;Mobile App Development&lt;/h3&gt;
+<span class="line-number">1400</span>                     &lt;p&gt;Native and cross-platform mobile applications for iOS and Android with cutting-edge features.&lt;/p&gt;
+<span class="line-number">1401</span>                     &lt;ul class="service-features"&gt;
+<span class="line-number">1402</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; iOS &amp; Android development&lt;/li&gt;
+<span class="line-number">1403</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; React Native &amp; Flutter&lt;/li&gt;
+<span class="line-number">1404</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; App store optimization&lt;/li&gt;
+<span class="line-number">1405</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Maintenance &amp; updates&lt;/li&gt;
+<span class="line-number">1406</span>                     &lt;/ul&gt;
+<span class="line-number">1407</span>                 &lt;/div&gt;
+<span class="line-number">1408</span>                 &lt;div class="service-card"&gt;
+<span class="line-number">1409</span>                     &lt;div class="service-icon"&gt;
+<span class="line-number">1410</span>                         &lt;i class="fas fa-headset"&gt;&lt;/i&gt;
+<span class="line-number">1411</span>                     &lt;/div&gt;
+<span class="line-number">1412</span>                     &lt;h3&gt;IT Support &amp; Consulting&lt;/h3&gt;
+<span class="line-number">1413</span>                     &lt;p&gt;Expert IT consulting and round-the-clock technical support for seamless business operations.&lt;/p&gt;
+<span class="line-number">1414</span>                     &lt;ul class="service-features"&gt;
+<span class="line-number">1415</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; 24/7 helpdesk support&lt;/li&gt;
+<span class="line-number">1416</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; IT strategy consulting&lt;/li&gt;
+<span class="line-number">1417</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Technology audits&lt;/li&gt;
+<span class="line-number">1418</span>                         &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Digital transformation&lt;/li&gt;
+<span class="line-number">1419</span>                     &lt;/ul&gt;
+<span class="line-number">1420</span>                 &lt;/div&gt;
+<span class="line-number">1421</span>             &lt;/div&gt;
+<span class="line-number">1422</span>         &lt;/div&gt;
+<span class="line-number">1423</span>     &lt;/section&gt;
+<span class="line-number">1424</span> 
+<span class="line-number">1425</span>     &lt;section id="industries" class="carousel-section"&gt;
+<span class="line-number">1426</span>         &lt;div class="container"&gt;
+<span class="line-number">1427</span>             &lt;div class="section-header"&gt;
+<span class="line-number">1428</span>                 &lt;div class="section-badge"&gt;Industry Solutions&lt;/div&gt;
+<span class="line-number">1429</span>                 &lt;h2&gt;Specialized Business Solutions&lt;/h2&gt;
+<span class="line-number">1430</span>                 &lt;p&gt;WhatsApp API and automation solutions tailored for every industry vertical with dedicated support.&lt;/p&gt;
+<span class="line-number">1431</span>             &lt;/div&gt;
+<span class="line-number">1432</span>             &lt;div class="carousel-wrapper"&gt;
+<span class="line-number">1433</span>                 &lt;div class="carousel-container" id="industriesCarousel"&gt;
+<span class="line-number">1434</span>                     &lt;div class="carousel-card"&gt;
+<span class="line-number">1435</span>                         &lt;div class="carousel-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);"&gt;
+<span class="line-number">1436</span>                             &lt;i class="fas fa-shopping-cart"&gt;&lt;/i&gt;
+<span class="line-number">1437</span>                         &lt;/div&gt;
+<span class="line-number">1438</span>                         &lt;h3&gt;E-commerce &amp; Retail&lt;/h3&gt;
+<span class="line-number">1439</span>                         &lt;p&gt;Complete commerce solution with catalogs, order tracking, and payment integration.&lt;/p&gt;
+<span class="line-number">1440</span>                         &lt;ul class="carousel-features"&gt;
+<span class="line-number">1441</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Product catalog management&lt;/li&gt;
+<span class="line-number">1442</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Abandoned cart recovery&lt;/li&gt;
+<span class="line-number">1443</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Order tracking automation&lt;/li&gt;
+<span class="line-number">1444</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Payment gateway integration&lt;/li&gt;
+<span class="line-number">1445</span>                         &lt;/ul&gt;
+<span class="line-number">1446</span>                     &lt;/div&gt;
+<span class="line-number">1447</span>                     &lt;div class="carousel-card"&gt;
+<span class="line-number">1448</span>                         &lt;div class="carousel-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);"&gt;
+<span class="line-number">1449</span>                             &lt;i class="fas fa-user-md"&gt;&lt;/i&gt;
+<span class="line-number">1450</span>                         &lt;/div&gt;
+<span class="line-number">1451</span>                         &lt;h3&gt;Healthcare &amp; Wellness&lt;/h3&gt;
+<span class="line-number">1452</span>                         &lt;p&gt;HIPAA-compliant patient communication and telemedicine integration platform.&lt;/p&gt;
+<span class="line-number">1453</span>                         &lt;ul class="carousel-features"&gt;
+<span class="line-number">1454</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Appointment scheduling&lt;/li&gt;
+<span class="line-number">1455</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Prescription management&lt;/li&gt;
+<span class="line-number">1456</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Lab report delivery&lt;/li&gt;
+<span class="line-number">1457</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Telemedicine support&lt;/li&gt;
+<span class="line-number">1458</span>                         &lt;/ul&gt;
+<span class="line-number">1459</span>                     &lt;/div&gt;
+<span class="line-number">1460</span>                     &lt;div class="carousel-card"&gt;
+<span class="line-number">1461</span>                         &lt;div class="carousel-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);"&gt;
+<span class="line-number">1462</span>                             &lt;i class="fas fa-graduation-cap"&gt;&lt;/i&gt;
+<span class="line-number">1463</span>                         &lt;/div&gt;
+<span class="line-number">1464</span>                         &lt;h3&gt;Education &amp; Training&lt;/h3&gt;
+<span class="line-number">1465</span>                         &lt;p&gt;Complete education management with student engagement and communication tools.&lt;/p&gt;
+<span class="line-number">1466</span>                         &lt;ul class="carousel-features"&gt;
+<span class="line-number">1467</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Admission automation&lt;/li&gt;
+<span class="line-number">1468</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Class schedules &amp; reminders&lt;/li&gt;
+<span class="line-number">1469</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Assignment sharing&lt;/li&gt;
+<span class="line-number">1470</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Parent communication&lt;/li&gt;
+<span class="line-number">1471</span>                         &lt;/ul&gt;
+<span class="line-number">1472</span>                     &lt;/div&gt;
+<span class="line-number">1473</span>                     &lt;div class="carousel-card"&gt;
+<span class="line-number">1474</span>                         &lt;div class="carousel-icon" style="background: linear-gradient(135deg, #43e97b, #38f9d7);"&gt;
+<span class="line-number">1475</span>                             &lt;i class="fas fa-hotel"&gt;&lt;/i&gt;
+<span class="line-number">1476</span>                         &lt;/div&gt;
+<span class="line-number">1477</span>                         &lt;h3&gt;Hospitality &amp; Travel&lt;/h3&gt;
+<span class="line-number">1478</span>                         &lt;p&gt;Guest experience platform with booking management and concierge services.&lt;/p&gt;
+<span class="line-number">1479</span>                         &lt;ul class="carousel-features"&gt;
+<span class="line-number">1480</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Booking confirmations&lt;/li&gt;
+<span class="line-number">1481</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Check-in/out automation&lt;/li&gt;
+<span class="line-number">1482</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Travel itinerary updates&lt;/li&gt;
+<span class="line-number">1483</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Guest request handling&lt;/li&gt;
+<span class="line-number">1484</span>                         &lt;/ul&gt;
+<span class="line-number">1485</span>                     &lt;/div&gt;
+<span class="line-number">1486</span>                     &lt;div class="carousel-card"&gt;
+<span class="line-number">1487</span>                         &lt;div class="carousel-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);"&gt;
+<span class="line-number">1488</span>                             &lt;i class="fas fa-building"&gt;&lt;/i&gt;
+<span class="line-number">1489</span>                         &lt;/div&gt;
+<span class="line-number">1490</span>                         &lt;h3&gt;Real Estate&lt;/h3&gt;
+<span class="line-number">1491</span>                         &lt;p&gt;Property marketing platform with virtual tours and document sharing capabilities.&lt;/p&gt;
+<span class="line-number">1492</span>                         &lt;ul class="carousel-features"&gt;
+<span class="line-number">1493</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Property listings broadcast&lt;/li&gt;
+<span class="line-number">1494</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Virtual tour scheduling&lt;/li&gt;
+<span class="line-number">1495</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Lead qualification&lt;/li&gt;
+<span class="line-number">1496</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Document verification&lt;/li&gt;
+<span class="line-number">1497</span>                         &lt;/ul&gt;
+<span class="line-number">1498</span>                     &lt;/div&gt;
+<span class="line-number">1499</span>                     &lt;div class="carousel-card"&gt;
+<span class="line-number">1500</span>                         &lt;div class="carousel-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);"&gt;
+<span class="line-number">1501</span>                             &lt;i class="fas fa-truck"&gt;&lt;/i&gt;
+<span class="line-number">1502</span>                         &lt;/div&gt;
+<span class="line-number">1503</span>                         &lt;h3&gt;Logistics &amp; Delivery&lt;/h3&gt;
+<span class="line-number">1504</span>                         &lt;p&gt;Complete tracking system with real-time updates and driver coordination.&lt;/p&gt;
+<span class="line-number">1505</span>                         &lt;ul class="carousel-features"&gt;
+<span class="line-number">1506</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Real-time tracking&lt;/li&gt;
+<span class="line-number">1507</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Delivery confirmation&lt;/li&gt;
+<span class="line-number">1508</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Driver communication&lt;/li&gt;
+<span class="line-number">1509</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Route optimization&lt;/li&gt;
+<span class="line-number">1510</span>                         &lt;/ul&gt;
+<span class="line-number">1511</span>                     &lt;/div&gt;
+<span class="line-number">1512</span>                     &lt;div class="carousel-card"&gt;
+<span class="line-number">1513</span>                         &lt;div class="carousel-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);"&gt;
+<span class="line-number">1514</span>                             &lt;i class="fas fa-dumbbell"&gt;&lt;/i&gt;
+<span class="line-number">1515</span>                         &lt;/div&gt;
+<span class="line-number">1516</span>                         &lt;h3&gt;Fitness &amp; Gyms&lt;/h3&gt;
+<span class="line-number">1517</span>                         &lt;p&gt;Member engagement platform with class booking and fitness tracking integration.&lt;/p&gt;
+<span class="line-number">1518</span>                         &lt;ul class="carousel-features"&gt;
+<span class="line-number">1519</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Class booking system&lt;/li&gt;
+<span class="line-number">1520</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Membership renewals&lt;/li&gt;
+<span class="line-number">1521</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Workout plan delivery&lt;/li&gt;
+<span class="line-number">1522</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Progress tracking&lt;/li&gt;
+<span class="line-number">1523</span>                         &lt;/ul&gt;
+<span class="line-number">1524</span>                     &lt;/div&gt;
+<span class="line-number">1525</span>                     &lt;div class="carousel-card"&gt;
+<span class="line-number">1526</span>                         &lt;div class="carousel-icon" style="background: linear-gradient(135deg, #43e97b, #38f9d7);"&gt;
+<span class="line-number">1527</span>                             &lt;i class="fas fa-store"&gt;&lt;/i&gt;
+<span class="line-number">1528</span>                         &lt;/div&gt;
+<span class="line-number">1529</span>                         &lt;h3&gt;Retail &amp; FMCG&lt;/h3&gt;
+<span class="line-number">1530</span>                         &lt;p&gt;Distribution management and retailer communication platform for FMCG brands.&lt;/p&gt;
+<span class="line-number">1531</span>                         &lt;ul class="carousel-features"&gt;
+<span class="line-number">1532</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Order placement automation&lt;/li&gt;
+<span class="line-number">1533</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Inventory alerts&lt;/li&gt;
+<span class="line-number">1534</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Promotional campaigns&lt;/li&gt;
+<span class="line-number">1535</span>                             &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Payment tracking&lt;/li&gt;
+<span class="line-number">1536</span>                         &lt;/ul&gt;
+<span class="line-number">1537</span>                     &lt;/div&gt;
+<span class="line-number">1538</span>                 &lt;/div&gt;
+<span class="line-number">1539</span>                 &lt;div class="carousel-nav"&gt;
+<span class="line-number">1540</span>                     &lt;button class="carousel-btn" onclick="scrollCarousel('industriesCarousel', -1)"&gt;
+<span class="line-number">1541</span>                         &lt;i class="fas fa-chevron-left"&gt;&lt;/i&gt;
+<span class="line-number">1542</span>                     &lt;/button&gt;
+<span class="line-number">1543</span>                     &lt;button class="carousel-btn" onclick="scrollCarousel('industriesCarousel', 1)"&gt;
+<span class="line-number">1544</span>                         &lt;i class="fas fa-chevron-right"&gt;&lt;/i&gt;
+<span class="line-number">1545</span>                     &lt;/button&gt;
+<span class="line-number">1546</span>                 &lt;/div&gt;
+<span class="line-number">1547</span>             &lt;/div&gt;
+<span class="line-number">1548</span>         &lt;/div&gt;
+<span class="line-number">1549</span>     &lt;/section&gt;
+<span class="line-number">1550</span> 
+<span class="line-number">1551</span>     &lt;section id="testimonials" style="background: #f8f9fa;"&gt;
+<span class="line-number">1552</span>         &lt;div class="container"&gt;
+<span class="line-number">1553</span>             &lt;div class="section-header"&gt;
+<span class="line-number">1554</span>                 &lt;div class="section-badge"&gt;Client Success Stories&lt;/div&gt;
+<span class="line-number">1555</span>                 &lt;h2&gt;Trusted by Industry Leaders&lt;/h2&gt;
+<span class="line-number">1556</span>                 &lt;p&gt;See how businesses are transforming their operations with SpotNet Services across India.&lt;/p&gt;
+<span class="line-number">1557</span>             &lt;/div&gt;
+<span class="line-number">1558</span>             &lt;div class="testimonials-grid"&gt;
+<span class="line-number">1559</span>                 &lt;div class="testimonial-card"&gt;
+<span class="line-number">1560</span>                     &lt;div class="testimonial-quote"&gt;"&lt;/div&gt;
+<span class="line-number">1561</span>                     &lt;p class="testimonial-text"&gt;"The customer service team at SpotNet is top-notch. They helped us every step of the way, and the results speak for themselves – our sales have increased by 50%!"&lt;/p&gt;
+<span class="line-number">1562</span>                     &lt;div class="testimonial-author"&gt;
+<span class="line-number">1563</span>                         &lt;div class="author-avatar"&gt;RP&lt;/div&gt;
+<span class="line-number">1564</span>                         &lt;div class="author-info"&gt;
+<span class="line-number">1565</span>                             &lt;h4&gt;Rajesh Patel&lt;/h4&gt;
+<span class="line-number">1566</span>                             &lt;p&gt;CEO, Fashion Hub India&lt;/p&gt;
+<span class="line-number">1567</span>                             &lt;div class="testimonial-rating"&gt;
+<span class="line-number">1568</span>                                 &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+<span class="line-number">1569</span>                                 &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+<span class="line-number">1570</span>                                 &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+<span class="line-number">1571</span>                                 &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+<span class="line-number">1572</span>                                 &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+<span class="line-number">1573</span>                             &lt;/div&gt;
+<span class="line-number">1574</span>                         &lt;/div&gt;
+<span class="line-number">1575</span>                     &lt;/div&gt;
+<span class="line-number">1576</span>                 &lt;/div&gt;
+<span class="line-number">1577</span>                 &lt;div class="testimonial-card"&gt;
+<span class="line-number">1578</span>                     &lt;div class="testimonial-quote"&gt;"&lt;/div&gt;
+<span class="line-number">1579</span>                     &lt;p class="testimonial-text"&gt;"The AI analytics platform has provided us with deep insights into our data, allowing us to make more informed decisions. It's like having a crystal ball for our business."&lt;/p&gt;
+<span class="line-number">1580</span>                     &lt;div class="testimonial-author"&gt;
+<span class="line-number">1581</span>                         &lt;div class="author-avatar"&gt;SM&lt;/div&gt;
+<span class="line-number">1582</span>                         &lt;div class="author-info"&gt;
+<span class="line-number">1583</span>                             &lt;h4&gt;Sneha Mehta&lt;/h4&gt;
+<span class="line-number">1584</span>                             &lt;p&gt;Director, Tech Innovations Ltd&lt;/p&gt;
+<span class="line-number">1585</span>                             &lt;div class="testimonial-rating"&gt;
+<span class="line-number">1586</span>                                 &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+<span class="line-number">1587</span>                                 &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+<span class="line-number">1588</span>                                 &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+<span class="line-number">1589</span>                                 &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+<span class="line-number">1590</span>                                 &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+<span class="line-number">1591</span>                             &lt;/div&gt;
+<span class="line-number">1592</span>                         &lt;/div&gt;
+<span class="line-number">1593</span>                     &lt;/div&gt;
+<span class="line-number">1594</span>                 &lt;/div&gt;
+<span class="line-number">1595</span>                 &lt;div class="testimonial-card"&gt;
+<span class="line-number">1596</span>                     &lt;div class="testimonial-quote"&gt;"&lt;/div&gt;
+<span class="line-number">1597</span>                     &lt;p class="testimonial-text"&gt;"The predictive maintenance tools from SpotNet have saved us significant time and money by preventing equipment failures. It's an invaluable resource for our operations."&lt;/p&gt;
+<span class="line-number">1598</span>                     &lt;div class="testimonial-author"&gt;
+<span class="line-number">1599</span>                         &lt;div class="author-avatar"&gt;AK&lt;/div&gt;
+<span class="line-number">1600</span>                         &lt;div class="author-info"&gt;
+<span class="line-number">1601</span>                             &lt;h4&gt;Amit Kumar&lt;/h4&gt;
+<span class="line-number">1602</span>                             &lt;p&gt;Operations Head, Manufacturing Co&lt;/p&gt;
+<span class="line-number">1603</span>                             &lt;div class="testimonial-rating"&gt;
+<span class="line-number">1604</span>                                 &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+<span class="line-number">1605</span>                                 &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+<span class="line-number">1606</span>                                 &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+<span class="line-number">1607</span>                                 &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+<span class="line-number">1608</span>                                 &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+<span class="line-number">1609</span>                             &lt;/div&gt;
+<span class="line-number">1610</span>                         &lt;/div&gt;
+<span class="line-number">1611</span>                     &lt;/div&gt;
+<span class="line-number">1612</span>                 &lt;/div&gt;
+<span class="line-number">1613</span>             &lt;/div&gt;
+<span class="line-number">1614</span>         &lt;/div&gt;
+<span class="line-number">1615</span>     &lt;/section&gt;
+<span class="line-number">1616</span> 
+<span class="line-number">1617</span>     &lt;section class="cta" id="contact"&gt;
+<span class="line-number">1618</span>         &lt;div class="cta-content"&gt;
+<span class="line-number">1619</span>             &lt;div class="container"&gt;
+<span class="line-number">1620</span>                 &lt;h2&gt;Ready to Transform Your Business?&lt;/h2&gt;
+<span class="line-number">1621</span>                 &lt;p&gt;Join 500+ enterprises who trust SpotNet Services for AI and technology solutions. Get a free consultation with our experts and discover how we can help scale your business.&lt;/p&gt;
+<span class="line-number">1622</span>                 &lt;div class="cta-buttons"&gt;
+<span class="line-number">1623</span>                     &lt;a href="#" class="btn btn-primary" onclick="loginWithFacebook()" style="background: white; color: var(--primary);"&gt;
+<span class="line-number">1624</span>                         &lt;i class="fab fa-facebook"&gt;&lt;/i&gt; Get Started Free
+<span class="line-number">1625</span>                     &lt;/a&gt;
+<span class="line-number">1626</span>                     &lt;a href="https://wa.me/919120909501?text=Hi%20SpotNet%20Services!%20I%27m%20interested%20in%20your%20enterprise%20solutions." class="btn btn-outline" style="border-color: white; color: white;"&gt;
+<span class="line-number">1627</span>                         &lt;i class="fab fa-whatsapp"&gt;&lt;/i&gt; Chat on WhatsApp
+<span class="line-number">1628</span>                     &lt;/a&gt;
+<span class="line-number">1629</span>                     &lt;a href="tel:+919120909501" class="btn btn-outline" style="border-color: white; color: white;"&gt;
+<span class="line-number">1630</span>                         &lt;i class="fas fa-phone"&gt;&lt;/i&gt; Call Sales
+<span class="line-number">1631</span>                     &lt;/a&gt;
+<span class="line-number">1632</span>                 &lt;/div&gt;
+<span class="line-number">1633</span>             &lt;/div&gt;
+<span class="line-number">1634</span>         &lt;/div&gt;
+<span class="line-number">1635</span>     &lt;/section&gt;
+<span class="line-number">1636</span> 
+<span class="line-number">1637</span>     &lt;footer&gt;
+<span class="line-number">1638</span>         &lt;div class="container"&gt;
+<span class="line-number">1639</span>             &lt;div class="footer-content"&gt;
+<span class="line-number">1640</span>                 &lt;div class="footer-about"&gt;
+<span class="line-number">1641</span>                     &lt;h3&gt;SpotNet Services&lt;/h3&gt;
+<span class="line-number">1642</span>                     &lt;p&gt;Leading enterprise technology partner specializing in WhatsApp Business API, AI solutions, and custom software development. We transform businesses with cutting-edge AI and automation technology, helping companies save time, reduce costs, and achieve unprecedented growth.&lt;/p&gt;
+<span class="line-number">1643</span>                     &lt;div class="footer-contact"&gt;
+<span class="line-number">1644</span>                         &lt;i class="fab fa-whatsapp"&gt;&lt;/i&gt;
+<span class="line-number">1645</span>                         &lt;div&gt;
+<span class="line-number">1646</span>                             &lt;a href="https://wa.me/919120909501?text=Hi%20SpotNet%20Services!%20I%27m%20interested%20in%20your%20solutions."&gt;SpotNet Services&lt;/a&gt;
+<span class="line-number">1647</span>                         &lt;/div&gt;
+<span class="line-number">1648</span>                     &lt;/div&gt;
+<span class="line-number">1649</span>                     &lt;div class="social-links"&gt;
+<span class="line-number">1650</span>                         &lt;a href="https://facebook.com/spotnetservices"&gt;&lt;i class="fab fa-facebook-f"&gt;&lt;/i&gt;&lt;/a&gt;
+<span class="line-number">1651</span>                         &lt;a href="#"&gt;&lt;i class="fab fa-twitter"&gt;&lt;/i&gt;&lt;/a&gt;
+<span class="line-number">1652</span>                         &lt;a href="#"&gt;&lt;i class="fab fa-linkedin-in"&gt;&lt;/i&gt;&lt;/a&gt;
+<span class="line-number">1653</span>                         &lt;a href="#"&gt;&lt;i class="fab fa-instagram"&gt;&lt;/i&gt;&lt;/a&gt;
+<span class="line-number">1654</span>                         &lt;a href="#"&gt;&lt;i class="fab fa-youtube"&gt;&lt;/i&gt;&lt;/a&gt;
+<span class="line-number">1655</span>                     &lt;/div&gt;
+<span class="line-number">1656</span>                 &lt;/div&gt;
+<span class="line-number">1657</span>                 &lt;div class="footer-column"&gt;
+<span class="line-number">1658</span>                     &lt;h4&gt;Quick Links&lt;/h4&gt;
+<span class="line-number">1659</span>                     &lt;ul class="footer-links"&gt;
+<span class="line-number">1660</span>                         &lt;li&gt;&lt;a href="https://spotlinkapp.spotnet.in"&gt;&lt;i class="fas fa-external-link-alt"&gt;&lt;/i&gt; SpotLink Dashboard&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1661</span>                         &lt;li&gt;&lt;a href="https://ai.spotnet.in"&gt;&lt;i class="fas fa-external-link-alt"&gt;&lt;/i&gt; AI Services Portal&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1662</span>                         &lt;li&gt;&lt;a href="#products"&gt;&lt;i class="fas fa-chevron-right"&gt;&lt;/i&gt; Our Products&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1663</span>                         &lt;li&gt;&lt;a href="#ai-services"&gt;&lt;i class="fas fa-chevron-right"&gt;&lt;/i&gt; AI Solutions&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1664</span>                         &lt;li&gt;&lt;a href="#testimonials"&gt;&lt;i class="fas fa-chevron-right"&gt;&lt;/i&gt; Testimonials&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1665</span>                         &lt;li&gt;&lt;a href="#contact"&gt;&lt;i class="fas fa-chevron-right"&gt;&lt;/i&gt; Contact Us&lt;/a&gt;&lt;/li&gt;
+<span class="line-number">1666</span>                     &lt;/ul&gt;
+<span class="line-number">1667</span>                 &lt;/div&gt;
+<span class="line-number">1668</span>             &lt;/div&gt;
+<span class="line-number">1669</span>             &lt;div class="footer-bottom"&gt;
+<span class="line-number">1670</span>                 &lt;p&gt;&amp;copy; 2025 SpotNet Services. All rights reserved. | Enterprise AI &amp; Technology Solutions&lt;/p&gt;
+<span class="line-number">1671</span>             &lt;/div&gt;
+<span class="line-number">1672</span>         &lt;/div&gt;
+<span class="line-number">1673</span>     &lt;/footer&gt;
+<span class="line-number">1674</span> 
+<span class="line-number">1675</span>     &lt;a href="https://wa.me/919120909501?text=Hi%20SpotNet%20Services!%20I%27m%20interested%20in%20your%20enterprise%20solutions." class="whatsapp-float" title="Chat with SpotNet Services"&gt;
+<span class="line-number">1676</span>         &lt;i class="fab fa-whatsapp"&gt;&lt;/i&gt;
+<span class="line-number">1677</span>     &lt;/a&gt;
+<span class="line-number">1678</span> 
+<span class="line-number">1679</span>     &lt;script&gt;
+<span class="line-number">1680</span>         function toggleSidebar() {
+<span class="line-number">1681</span>             document.getElementById('smartSidebar').classList.toggle('active');
+<span class="line-number">1682</span>             document.getElementById('sidebarOverlay').classList.toggle('active');
+<span class="line-number">1683</span>         }
+<span class="line-number">1684</span> 
+<span class="line-number">1685</span>         function toggleSection(element) {
+<span class="line-number">1686</span>             const section = element.parentElement;
+<span class="line-number">1687</span>             const allSections = document.querySelectorAll('.sidebar-section');
+<span class="line-number">1688</span> 
+<span class="line-number">1689</span>             allSections.forEach(s =&gt; {
+<span class="line-number">1690</span>                 if (s !== section) {
+<span class="line-number">1691</span>                     s.classList.remove('active');
+<span class="line-number">1692</span>                 }
+<span class="line-number">1693</span>             });
+<span class="line-number">1694</span> 
+<span class="line-number">1695</span>             section.classList.toggle('active');
+<span class="line-number">1696</span>         }
+<span class="line-number">1697</span> 
+<span class="line-number">1698</span>         window.addEventListener('scroll', function() {
+<span class="line-number">1699</span>             const header = document.querySelector('header');
+<span class="line-number">1700</span>             if (window.scrollY &gt; 50) {
+<span class="line-number">1701</span>                 header.style.boxShadow = '0 5px 30px rgba(0,0,0,0.12)';
+<span class="line-number">1702</span>             } else {
+<span class="line-number">1703</span>                 header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+<span class="line-number">1704</span>             }
+<span class="line-number">1705</span>         });
+<span class="line-number">1706</span> 
+<span class="line-number">1707</span>         document.querySelectorAll('a[href^="#"]').forEach(anchor =&gt; {
+<span class="line-number">1708</span>             anchor.addEventListener('click', function (e) {
+<span class="line-number">1709</span>                 const href = this.getAttribute('href');
+<span class="line-number">1710</span>                 if (href !== '#') {
+<span class="line-number">1711</span>                     e.preventDefault();
+<span class="line-number">1712</span>                     const target = document.querySelector(href);
+<span class="line-number">1713</span>                     if (target) {
+<span class="line-number">1714</span>                         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+<span class="line-number">1715</span>                         if (window.innerWidth &lt;= 968) {
+<span class="line-number">1716</span>                             toggleSidebar();
+<span class="line-number">1717</span>                         }
+<span class="line-number">1718</span>                     }
+<span class="line-number">1719</span>                 }
+<span class="line-number">1720</span>             });
+<span class="line-number">1721</span>         });
+<span class="line-number">1722</span> 
+<span class="line-number">1723</span>         function scrollCarousel(carouselId, direction) {
+<span class="line-number">1724</span>             const container = document.getElementById(carouselId);
+<span class="line-number">1725</span>             const scrollAmount = 380;
+<span class="line-number">1726</span>             container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+<span class="line-number">1727</span>         }
+<span class="line-number">1728</span> 
+<span class="line-number">1729</span>         function setupAutoScroll(carouselId, interval = 5000) {
+<span class="line-number">1730</span>             const container = document.getElementById(carouselId);
+<span class="line-number">1731</span>             let autoScrollInterval = setInterval(() =&gt; {
+<span class="line-number">1732</span>                 if (container.scrollLeft + container.clientWidth &gt;= container.scrollWidth - 10) {
+<span class="line-number">1733</span>                     container.scrollTo({ left: 0, behavior: 'smooth' });
+<span class="line-number">1734</span>                 } else {
+<span class="line-number">1735</span>                     scrollCarousel(carouselId, 1);
+<span class="line-number">1736</span>                 }
+<span class="line-number">1737</span>             }, interval);
+<span class="line-number">1738</span> 
+<span class="line-number">1739</span>             container.addEventListener('mouseenter', () =&gt; clearInterval(autoScrollInterval));
+<span class="line-number">1740</span>             container.addEventListener('mouseleave', () =&gt; {
+<span class="line-number">1741</span>                 autoScrollInterval = setInterval(() =&gt; {
+<span class="line-number">1742</span>                     if (container.scrollLeft + container.clientWidth &gt;= container.scrollWidth - 10) {
+<span class="line-number">1743</span>                         container.scrollTo({ left: 0, behavior: 'smooth' });
+<span class="line-number">1744</span>                     } else {
+<span class="line-number">1745</span>                         scrollCarousel(carouselId, 1);
+<span class="line-number">1746</span>                     }
+<span class="line-number">1747</span>                 }, interval);
+<span class="line-number">1748</span>             });
+<span class="line-number">1749</span>         }
+<span class="line-number">1750</span> 
+<span class="line-number">1751</span>         setupAutoScroll('industriesCarousel', 5000);
+<span class="line-number">1752</span> 
+<span class="line-number">1753</span>         function loginWithFacebook() {
+<span class="line-number">1754</span>             window.fbAsyncInit = function() {
+<span class="line-number">1755</span>                 FB.init({
+<span class="line-number">1756</span>                     appId: '2294386157677689',
+<span class="line-number">1757</span>                     cookie: true,
+<span class="line-number">1758</span>                     xfbml: true,
+<span class="line-number">1759</span>                     version: 'v18.0'
+<span class="line-number">1760</span>                 });
+<span class="line-number">1761</span>             };
+<span class="line-number">1762</span> 
+<span class="line-number">1763</span>             (function(d, s, id){
+<span class="line-number">1764</span>                 var js, fjs = d.getElementsByTagName(s)[0];
+<span class="line-number">1765</span>                 if (d.getElementById(id)) return;
+<span class="line-number">1766</span>                 js = d.createElement(s); js.id = id;
+<span class="line-number">1767</span>                 js.src = "https://connect.facebook.net/en_US/sdk.js";
+<span class="line-number">1768</span>                 fjs.parentNode.insertBefore(js, fjs);
+<span class="line-number">1769</span>             }(document, 'script', 'facebook-jssdk'));
+<span class="line-number">1770</span> 
+<span class="line-number">1771</span>             setTimeout(() =&gt; {
+<span class="line-number">1772</span>                 FB.login(function(response) {
+<span class="line-number">1773</span>                     if (response.authResponse) {
+<span class="line-number">1774</span>                         window.location.href = 'https://business.facebook.com/messaging/whatsapp/onboard/?app_id=2294386157677689&amp;config_id=843327554858322&amp;extras=%7B%22sessionInfoVersion%22%3A%223%22%2C%22version%22%3A%22v3%22%7D';
+<span class="line-number">1775</span>                     }
+<span class="line-number">1776</span>                 }, {scope: 'public_profile,email'});
+<span class="line-number">1777</span>             }, 1000);
+<span class="line-number">1778</span>         }
+<span class="line-number">1779</span>     &lt;/script&gt;
+<span class="line-number">1780</span> &lt;/body&gt;
+<span class="line-number">1781</span> &lt;/html&gt;
+</pre>
+
+</body></html>
