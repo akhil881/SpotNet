@@ -1,705 +1,1953 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SpotNet Services — Digital Infrastructure for Bharat, Built from Dumariyaganj</title>
-<meta name="description" content="SpotNet Services runs broadband, AI, healthcare software, fintech, fitness and community ventures out of Dumariyaganj, Uttar Pradesh — proof that small towns can build national-grade technology.">
-<link rel="stylesheet" href="css/all.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-/* ===================== TOKENS ===================== */
-:root{
-  --ink:#101a2c;
-  --ink-soft:#48536b;
-  --ink-faint:#7c869c;
-  --paper:#faf8f3;
-  --paper-dim:#f0ece2;
-  --paper-line:rgba(16,26,44,.10);
-  --white:#ffffff;
-  --signal:#ff5a36;
-  --signal-dark:#e2431f;
-  --teal:#0d7a70;
-  --teal-dark:#0a5f57;
-  --gold:#d99a34;
-  --wa:#25D366;
-  --radius:14px;
-  --font-d:'Space Grotesk',sans-serif;
-  --font-b:'Inter',sans-serif;
-  --shadow:0 20px 50px -25px rgba(16,26,44,.35);
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:var(--font-b);color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden;}
-h1,h2,h3,h4{font-family:var(--font-d);line-height:1.15;letter-spacing:-.01em;color:var(--ink);}
-a{text-decoration:none;color:inherit;}
-img{display:block;max-width:100%;}
-.container{width:100%;max-width:1280px;margin:0 auto;padding:0 24px;}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-d);font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--signal);margin-bottom:14px;}
-.eyebrow::before{content:'';width:18px;height:2px;background:var(--signal);display:inline-block;}
-.section-head{max-width:640px;margin-bottom:48px;}
-.section-head h2{font-size:clamp(1.7rem,3vw,2.5rem);margin-bottom:14px;}
-.section-head p{color:var(--ink-soft);font-size:1.05rem;}
-.section{padding:96px 0;}
-.section.dim{background:var(--paper-dim);}
-.section.ink{background:var(--ink);color:var(--paper);}
-.section.ink h2,.section.ink h3,.section.ink .eyebrow{color:var(--paper);}
-.section.ink .eyebrow{color:#ff8a68;}
-.section.ink .eyebrow::before{background:#ff8a68;}
-.section.ink p{color:#b7bfd1;}
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotNet Services - Enterprise AI & Technology Solutions Provider</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --accent: #4cc9f0;
+            --whatsapp: #25D366;
+            --success: #4bb543;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+        }
 
-/* buttons */
-.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:999px;font-weight:600;font-size:.92rem;border:1.5px solid transparent;transition:.2s;cursor:pointer;font-family:var(--font-b);}
-.btn-signal{background:var(--signal);color:#fff;}
-.btn-signal:hover{background:var(--signal-dark);transform:translateY(-2px);}
-.btn-ink{background:var(--ink);color:var(--paper);}
-.btn-ink:hover{background:#000;transform:translateY(-2px);}
-.btn-ghost{border-color:currentColor;}
-.btn-ghost:hover{background:rgba(255,255,255,.08);}
-.btn-ghost.light{border-color:rgba(16,26,44,.25);color:var(--ink);}
-.btn-ghost.light:hover{background:rgba(16,26,44,.06);}
-.btn-wa{background:var(--wa);color:#fff;}
-.btn-wa:hover{filter:brightness(.93);transform:translateY(-2px);}
-.btn-sm{padding:9px 18px;font-size:.82rem;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* ===================== HEADER ===================== */
-header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(250,248,243,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--paper-line);}
-.navbar{display:flex;align-items:center;justify-content:space-between;padding:16px 0;}
-.brand{display:flex;align-items:center;gap:12px;}
-.brand-mark{width:42px;height:42px;border-radius:10px;background:var(--ink);position:relative;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.brand-mark span{position:absolute;border:2px solid var(--signal);border-radius:50%;opacity:0;animation:markPulse 2.8s ease-out infinite;}
-.brand-mark span:nth-child(1){width:14px;height:14px;animation-delay:0s;}
-.brand-mark span:nth-child(2){width:14px;height:14px;animation-delay:.9s;}
-.brand-mark i{color:var(--signal);font-size:1.05rem;z-index:2;}
-@keyframes markPulse{0%{width:14px;height:14px;opacity:.9;}100%{width:38px;height:38px;opacity:0;}}
-.brand-text h1{font-size:1.25rem;font-weight:700;}
-.brand-text p{font-size:.68rem;color:var(--ink-faint);letter-spacing:.08em;text-transform:uppercase;margin-top:-1px;}
-.nav-links{display:flex;list-style:none;align-items:center;gap:30px;}
-.nav-links>li{position:relative;}
-.nav-links>li>a{font-weight:600;font-size:.92rem;display:flex;align-items:center;gap:6px;padding:8px 0;}
-.nav-links>li>a:hover{color:var(--signal);}
-.dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(8px);background:var(--white);border-radius:12px;box-shadow:var(--shadow);min-width:240px;padding:10px;opacity:0;visibility:hidden;transition:.2s;border:1px solid var(--paper-line);}
-.nav-links>li:hover .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
-.dropdown a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:.86rem;font-weight:500;color:var(--ink-soft);}
-.dropdown a:hover{background:var(--paper-dim);color:var(--ink);}
-.nav-cta{display:flex;align-items:center;gap:14px;}
-.mobile-menu-btn{display:none;font-size:1.3rem;cursor:pointer;}
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
 
-/* sidebar */
-.sidebar-overlay{position:fixed;inset:0;background:rgba(16,26,44,.5);z-index:1500;opacity:0;visibility:hidden;transition:.3s;}
-.sidebar-overlay.active{opacity:1;visibility:visible;}
-.smart-sidebar{position:fixed;top:0;right:-340px;width:320px;height:100%;background:var(--ink);color:var(--paper);z-index:1600;transition:.35s;overflow-y:auto;}
-.smart-sidebar.active{right:0;}
-.sidebar-header{display:flex;justify-content:space-between;align-items:center;padding:22px;border-bottom:1px solid rgba(255,255,255,.1);}
-.sidebar-header h3{color:var(--paper);font-size:1.05rem;}
-.sidebar-close{cursor:pointer;}
-.sidebar-content{padding:12px;}
-.sidebar-section-title{padding:14px 12px;font-weight:600;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:#ff8a68;}
-.sidebar-links{list-style:none;padding-bottom:10px;}
-.sidebar-links a{display:flex;gap:10px;align-items:center;padding:10px 14px;border-radius:8px;font-size:.9rem;color:#d7dcea;}
-.sidebar-links a:hover{background:rgba(255,255,255,.06);color:#fff;}
-.sidebar-cta{padding:18px;display:flex;flex-direction:column;gap:10px;}
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-/* ===================== HERO ===================== */
-.hero{padding:170px 0 100px;position:relative;overflow:hidden;}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;}
-.hero h2{font-size:clamp(2.4rem,4.6vw,3.6rem);margin-bottom:20px;}
-.hero h2 em{font-style:normal;color:var(--signal);}
-.hero p.lede{font-size:1.14rem;color:var(--ink-soft);max-width:520px;margin-bottom:32px;}
-.hero-buttons{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px;}
-.hero-stats{display:flex;gap:36px;flex-wrap:wrap;}
-.hero-stats .stat h3{font-size:1.7rem;color:var(--ink);}
-.hero-stats .stat p{font-size:.8rem;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.06em;}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--paper-dim);border:1px solid var(--paper-line);border-radius:999px;padding:7px 16px;font-size:.8rem;font-weight:600;color:var(--ink-soft);margin-bottom:22px;}
-.hero-badge i{color:var(--signal);}
+        .hero {
+            position: relative;
+            background: linear-gradient(120deg, rgba(67,97,238,0.93), rgba(58,12,163,0.93)), url('https://images.unsplash.com/photo-1758691737083-0e7fdbde0f05?fm=jpg&q=70&w=2000&auto=format&fit=crop') center/cover no-repeat;
+        }
 
-/* signal map */
-.signal-map{width:100%;max-width:480px;margin:0 auto;}
-.ring{fill:none;stroke:var(--signal);stroke-width:1.4;opacity:0;transform-origin:250px 250px;animation:ringOut 3.6s ease-out infinite;}
-.ring:nth-child(2){animation-delay:1.2s;}
-.ring:nth-child(3){animation-delay:2.4s;}
-@keyframes ringOut{0%{r:26;opacity:.85;}100%{r:172;opacity:0;}}
-.hub-circle{fill:var(--ink);}
-.hub-label{font-family:var(--font-d);font-weight:700;fill:var(--paper);font-size:15px;}
-.node-line{stroke:var(--paper-line);stroke-width:2;}
-.node-circle{fill:var(--white);stroke:var(--paper-line);stroke-width:1.5;}
-.node-icon{fill:var(--ink);font-size:15px;}
-.node-label{font-family:var(--font-b);font-weight:700;fill:var(--ink-soft);font-size:11.5px;}
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
 
-/* ===================== ECOSYSTEM STRIP ===================== */
-.strip{background:var(--ink);padding:26px 0;overflow:hidden;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);}
-.strip-track{display:flex;gap:56px;white-space:nowrap;animation:scrollTrack 32s linear infinite;width:max-content;}
-.strip-track span{color:#8b96ad;font-family:var(--font-d);font-weight:600;font-size:.95rem;letter-spacing:.02em;}
-.strip-track span i{color:var(--signal);margin-right:8px;}
-@keyframes scrollTrack{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+        }
 
-/* ===================== PRODUCT / VENTURE CARDS ===================== */
-.grid{display:grid;gap:26px;}
-.grid-3{grid-template-columns:repeat(3,1fr);}
-.grid-2{grid-template-columns:repeat(2,1fr);}
-.grid-4{grid-template-columns:repeat(4,1fr);}
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
 
-.pcard{background:var(--white);border:1px solid var(--paper-line);border-radius:var(--radius);padding:30px;transition:.25s;position:relative;}
-.pcard:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent;}
-.pcard-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#fff;margin-bottom:20px;}
-.pcard h3{font-size:1.18rem;margin-bottom:10px;}
-.pcard p{color:var(--ink-soft);font-size:.92rem;margin-bottom:18px;}
-.pcard-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
-.pcard-tags span{font-size:.72rem;font-weight:600;color:var(--ink-soft);background:var(--paper-dim);padding:5px 11px;border-radius:999px;}
-.pcard-link{font-weight:700;font-size:.88rem;display:inline-flex;align-items:center;gap:7px;color:var(--ink);}
-.pcard-link i{transition:.2s;}
-.pcard:hover .pcard-link i{transform:translateX(4px);}
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            font-weight: 900;
+        }
 
-/* venture cards with photo */
-.vcard{border-radius:var(--radius);overflow:hidden;background:var(--white);border:1px solid var(--paper-line);transition:.25s;}
-.vcard:hover{transform:translateY(-5px);box-shadow:var(--shadow);}
-.vcard-img{height:190px;overflow:hidden;position:relative;}
-.vcard-img img{width:100%;height:100%;object-fit:cover;transition:.5s;}
-.vcard:hover .vcard-img img{transform:scale(1.06);}
-.vcard-tag{position:absolute;top:14px;left:14px;background:rgba(16,26,44,.82);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.04em;padding:5px 12px;border-radius:999px;text-transform:uppercase;}
-.vcard-body{padding:24px;}
-.vcard-body h3{font-size:1.1rem;margin-bottom:8px;}
-.vcard-body p{font-size:.9rem;color:var(--ink-soft);margin-bottom:16px;}
+        .logo-text h1 {
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+        }
 
-/* utility tool row */
-.trow{display:flex;gap:20px;align-items:flex-start;padding:26px 0;border-bottom:1px solid var(--paper-line);}
-.trow:last-child{border-bottom:none;}
-.trow-icon{width:46px;height:46px;border-radius:10px;background:var(--paper-dim);display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:1.1rem;flex-shrink:0;}
-.trow h4{font-size:1.05rem;margin-bottom:6px;}
-.trow p{color:var(--ink-soft);font-size:.9rem;max-width:520px;}
-.trow-cta{margin-left:auto;flex-shrink:0;align-self:center;}
+        .logo-text p {
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin-top: -3px;
+        }
 
-/* AI / tech services */
-.svc-card{background:var(--white);border:1px solid var(--paper-line);border-radius:12px;padding:24px;transition:.2s;}
-.svc-card:hover{border-color:var(--signal);transform:translateY(-3px);}
-.svc-card i{font-size:1.3rem;color:var(--signal);margin-bottom:14px;display:block;}
-.svc-card h4{font-size:1rem;margin-bottom:8px;}
-.svc-card p{font-size:.85rem;color:var(--ink-soft);}
+        .nav-links {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 30px;
+        }
 
-.split{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center;}
-.split-img{border-radius:var(--radius);overflow:hidden;height:420px;}
-.split-img img{width:100%;height:100%;object-fit:cover;}
+        .nav-links a {
+            font-weight: 500;
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+        }
 
-/* industries strip (scroll snap) */
-.iscroll{display:flex;gap:20px;overflow-x:auto;padding-bottom:14px;scroll-snap-type:x mandatory;}
-.iscroll::-webkit-scrollbar{height:6px;}
-.iscroll::-webkit-scrollbar-thumb{background:var(--paper-line);border-radius:4px;}
-.icard{scroll-snap-align:start;flex:0 0 260px;background:var(--white);border:1px solid var(--paper-line);border-radius:12px;padding:22px;}
-.icard i{color:var(--teal);font-size:1.2rem;margin-bottom:12px;display:block;}
-.icard h4{font-size:.98rem;margin-bottom:6px;}
-.icard p{font-size:.84rem;color:var(--ink-soft);}
+        .nav-links a:hover {
+            color: var(--primary);
+        }
 
-/* testimonials */
-.tcard{background:var(--white);border:1px solid var(--paper-line);border-radius:var(--radius);padding:28px;}
-.tcard .stars{color:var(--gold);font-size:.8rem;margin-bottom:14px;}
-.tcard p.quote{font-size:.98rem;color:var(--ink);margin-bottom:20px;font-style:italic;}
-.tcard .author{display:flex;align-items:center;gap:12px;}
-.avatar{width:42px;height:42px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;font-family:var(--font-d);}
-.tcard .author h5{font-size:.92rem;}
-.tcard .author p{font-size:.78rem;color:var(--ink-faint);}
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
 
-/* CTA */
-.cta-section{background:var(--ink);color:var(--paper);padding:100px 0;text-align:center;position:relative;overflow:hidden;}
-.cta-section h2{color:var(--paper);font-size:clamp(1.8rem,3.6vw,2.7rem);max-width:680px;margin:0 auto 18px;}
-.cta-section p{color:#b7bfd1;max-width:560px;margin:0 auto 34px;font-size:1.05rem;}
-.cta-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+        .nav-links a:hover::after {
+            width: 100%;
+        }
 
-/* footer */
-footer{background:#0b1220;color:#93a0bb;padding:70px 0 26px;}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px;}
-.footer-about h3{color:#fff;font-size:1.2rem;margin-bottom:14px;}
-.footer-about p{font-size:.88rem;line-height:1.7;margin-bottom:20px;color:#8895b3;}
-.footer-social{display:flex;gap:10px;}
-.footer-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;transition:.2s;}
-.footer-social a:hover{background:var(--signal);color:#fff;}
-.footer-col h4{color:#fff;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px;}
-.footer-col ul{list-style:none;}
-.footer-col li{margin-bottom:11px;}
-.footer-col a{font-size:.88rem;color:#93a0bb;}
-.footer-col a:hover{color:#fff;}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.8rem;color:#6b7893;}
+        .btn {
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+        }
 
-.whatsapp-float{position:fixed;bottom:26px;right:26px;width:58px;height:58px;background:var(--wa);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;box-shadow:0 10px 30px rgba(37,211,102,.45);z-index:900;animation:floatPulse 2.6s ease-in-out infinite;}
-@keyframes floatPulse{0%,100%{transform:scale(1);}50%{transform:scale(1.07);}}
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+        }
 
-/* responsive */
-@media(max-width:980px){
-  .nav-links,.nav-cta .btn-ghost{display:none;}
-  .mobile-menu-btn{display:block;}
-  .hero-grid{grid-template-columns:1fr;}
-  .signal-map{max-width:340px;margin-top:20px;}
-  .grid-3,.grid-4{grid-template-columns:repeat(2,1fr);}
-  .grid-2,.split{grid-template-columns:1fr;}
-  .split-img{height:280px;order:-1;}
-  .footer-grid{grid-template-columns:1fr 1fr;}
-}
-@media(max-width:600px){
-  .grid-3,.grid-4,.grid-2{grid-template-columns:1fr;}
-  .footer-grid{grid-template-columns:1fr;}
-  .section{padding:64px 0;}
-  .trow{flex-wrap:wrap;}
-  .trow-cta{margin-left:0;}
-}
-</style>
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: var(--dark);
+        }
+
+        .smart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 340px;
+            height: 100vh;
+            background: white;
+            box-shadow: -5px 0 30px rgba(0,0,0,0.15);
+            z-index: 2000;
+            transition: right 0.4s ease;
+            overflow-y: auto;
+            padding: 0;
+        }
+
+        .smart-sidebar.active {
+            right: 0;
+        }
+
+        .sidebar-header {
+            padding: 25px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sidebar-header h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .sidebar-close {
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .sidebar-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .sidebar-content {
+            padding: 20px 0;
+        }
+
+        .sidebar-section {
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .sidebar-section-title {
+            padding: 15px 30px;
+            font-weight: 600;
+            color: var(--dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .sidebar-section-title:hover {
+            background: #f8f9fa;
+        }
+
+        .sidebar-section-title i {
+            font-size: 0.9rem;
+            transition: transform 0.3s;
+        }
+
+        .sidebar-section.active .sidebar-section-title i {
+            transform: rotate(180deg);
+        }
+
+        .sidebar-links {
+            list-style: none;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .sidebar-section.active .sidebar-links {
+            max-height: 500px;
+        }
+
+        .sidebar-links li {
+            padding: 0;
+        }
+
+        .sidebar-links a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 30px 12px 45px;
+            color: var(--gray);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .sidebar-links a:hover {
+            background: #f8f9fa;
+            color: var(--primary);
+            padding-left: 50px;
+        }
+
+        .sidebar-links a i {
+            font-size: 0.85rem;
+            width: 16px;
+        }
+
+        .sidebar-cta {
+            padding: 25px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            z-index: 1999;
+            display: none;
+            backdrop-filter: blur(2px);
+        }
+
+        .sidebar-overlay.active {
+            display: block;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 180px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            opacity: 0.3;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 25px;
+            line-height: 1.1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-top: 60px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 8px;
+        }
+
+        .stat-item p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .section-header p {
+            font-size: 1.15rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+            border-color: var(--primary);
+        }
+
+        .product-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .product-card--media {
+            padding: 0 0 40px 0;
+            overflow: hidden;
+        }
+
+        .product-media {
+            position: relative;
+            height: 190px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-media::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.05) 40%, rgba(0,0,0,0.55) 100%);
+        }
+
+        .product-badge-live {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(255,255,255,0.95);
+            color: var(--primary, #4361ee);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            padding: 5px 12px;
+            border-radius: 20px;
+            z-index: 2;
+        }
+
+        .product-media .product-icon {
+            position: absolute;
+            bottom: -28px;
+            left: 32px;
+            z-index: 2;
+            margin-bottom: 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+
+        .product-card--media .product-body {
+            padding: 48px 32px 0 32px;
+        }
+
+        .solar-banner {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 60px 40px;
+            margin-top: 50px;
+            background: linear-gradient(120deg, rgba(255,140,0,0.88), rgba(255,94,0,0.9)), url('https://images.unsplash.com/photo-1745187946672-2c1d8cf26a2b?fm=jpg&q=70&w=2000&auto=format&fit=crop') center/cover no-repeat;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            color: white;
+        }
+
+        .solar-banner h3 {
+            font-size: 1.9rem;
+            margin-bottom: 8px;
+        }
+
+        .solar-banner p {
+            opacity: 0.95;
+            max-width: 480px;
+        }
+
+        .product-card h3 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .product-card p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .product-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .product-features li {
+            padding: 8px 0;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .product-features li i {
+            color: var(--success);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-left: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+            border-left-color: var(--primary);
+        }
+
+        .service-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .service-features {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .service-features li {
+            padding: 6px 0;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .service-features li i {
+            color: var(--success);
+            font-size: 0.85rem;
+        }
+
+        .carousel-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            overflow: hidden;
+            padding: 20px 0 60px;
+        }
+
+        .carousel-container {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding: 10px 5px;
+        }
+
+        .carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .carousel-card {
+            background: white;
+            border-radius: 16px;
+            padding: 35px 30px;
+            min-width: 360px;
+            max-width: 360px;
+            flex-shrink: 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .carousel-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+
+        .carousel-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 18px;
+            color: white;
+        }
+
+        .carousel-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .carousel-card p {
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .carousel-features {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .carousel-features li {
+            padding: 6px 0;
+            color: var(--dark);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .carousel-features li i {
+            color: var(--success);
+            margin-top: 3px;
+            font-size: 0.85rem;
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .carousel-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .carousel-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 16px;
+            padding: 35px 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .testimonial-quote {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.1;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .author-info p {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .testimonial-rating {
+            display: flex;
+            gap: 4px;
+            margin-top: 4px;
+        }
+
+        .testimonial-rating i {
+            color: #FFD700;
+            font-size: 0.85rem;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta h2 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 70px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-about h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-about p {
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .footer-column h4 {
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+        .footer-contact {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .footer-contact i {
+            color: var(--whatsapp);
+            font-size: 1.3rem;
+        }
+
+        .footer-contact a {
+            color: var(--whatsapp);
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .footer-contact a:hover {
+            opacity: 0.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: var(--whatsapp);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: white;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-float i {
+            font-size: 1.8rem;
+        }
+
+        @media (max-width: 1200px) {
+            .carousel-card {
+                min-width: 340px;
+                max-width: 340px;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+
+            .products-grid,
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .carousel-card {
+                min-width: 300px;
+                max-width: 300px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-float i {
+                font-size: 1.6rem;
+            }
+
+            .smart-sidebar {
+                width: 300px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .carousel-card {
+                min-width: 280px;
+                max-width: 280px;
+            }
+
+            .product-card,
+            .service-card {
+                padding: 25px;
+            }
+
+            .smart-sidebar {
+                width: 280px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <div class="logo-icon">SN</div>
+                    <div class="logo-text">
+                        <h1>SpotNet Services</h1>
+                        <p>Enterprise Technology Solutions</p>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#ai-services">AI Services</a></li>
+                    <li><a href="#tech-services">Technology</a></li>
+                    <li><a href="#industries">Industries</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#" class="btn btn-outline" onclick="loginWithFacebook()">Login</a></li>
+                    <li><a href="#contact" class="btn btn-primary">Get Started</a></li>
+                </ul>
+                <div class="mobile-menu-btn" onclick="toggleSidebar()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-<header>
-  <div class="container navbar">
-    <a href="#" class="brand">
-      <div class="brand-mark"><span></span><span></span><i class="fas fa-satellite-dish"></i></div>
-      <div class="brand-text">
-        <h1>SpotNet</h1>
-        <p>Services · Dumariyaganj, UP</p>
-      </div>
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+    <div class="smart-sidebar" id="smartSidebar">
+        <div class="sidebar-header">
+            <h3>Navigation Menu</h3>
+            <div class="sidebar-close" onclick="toggleSidebar()">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="sidebar-content">
+            <div class="sidebar-section active">
+                <div class="sidebar-section-title" onclick="toggleSection(this)">
+                    <span>Flagship Products</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="sidebar-links">
+                    <li><a href="https://medos.spotnet.in"><i class="fas fa-hospital"></i> SpotNet MedOS</a></li>
+                    <li><a href="https://invoicekit.spotnet.in"><i class="fas fa-file-invoice-dollar"></i> InvoiceKit</a></li>
+                    <li><a href="https://irangebio.web.app"><i class="fas fa-link"></i> iRange – Link in Bio</a></li>
+                    <li><a href="https://spotlinkapp.spotnet.in"><i class="fab fa-whatsapp"></i> SpotLink WhatsApp API</a></li>
+                    <li><a href="https://ai.spotnet.in"><i class="fas fa-balance-scale"></i> Lawyer AI</a></li>
+                    <li><a href="#products"><i class="fas fa-calendar-check"></i> Servicele Bookings</a></li>
+                    <li><a href="solar.html"><i class="fas fa-solar-panel"></i> Solar Installation</a></li>
+                    <li><a href="#products"><i class="fas fa-code"></i> Custom Software</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title" onclick="toggleSection(this)">
+                    <span>AI Services</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="sidebar-links">
+                    <li><a href="#ai-services"><i class="fas fa-robot"></i> AI Chatbots & IVR</a></li>
+                    <li><a href="#ai-services"><i class="fas fa-chart-line"></i> Predictive Analytics</a></li>
+                    <li><a href="#ai-services"><i class="fas fa-bullhorn"></i> AI Marketing</a></li>
+                    <li><a href="#ai-services"><i class="fas fa-heartbeat"></i> Healthcare AI</a></li>
+                    <li><a href="#ai-services"><i class="fas fa-graduation-cap"></i> Education AI</a></li>
+                    <li><a href="#ai-services"><i class="fas fa-shopping-cart"></i> E-commerce AI</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title" onclick="toggleSection(this)">
+                    <span>Technology Services</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="sidebar-links">
+                    <li><a href="#tech-services"><i class="fas fa-shield-alt"></i> Cybersecurity</a></li>
+                    <li><a href="#tech-services"><i class="fas fa-cloud"></i> Cloud Solutions</a></li>
+                    <li><a href="#tech-services"><i class="fas fa-network-wired"></i> Network Infrastructure</a></li>
+                    <li><a href="#tech-services"><i class="fas fa-database"></i> Data Management</a></li>
+                    <li><a href="#tech-services"><i class="fas fa-mobile-alt"></i> Mobile Development</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title" onclick="toggleSection(this)">
+                    <span>Industries</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="sidebar-links">
+                    <li><a href="#industries"><i class="fas fa-shopping-bag"></i> E-commerce</a></li>
+                    <li><a href="#industries"><i class="fas fa-user-md"></i> Healthcare</a></li>
+                    <li><a href="#industries"><i class="fas fa-book"></i> Education</a></li>
+                    <li><a href="#industries"><i class="fas fa-hotel"></i> Hospitality</a></li>
+                    <li><a href="#industries"><i class="fas fa-building"></i> Real Estate</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title" onclick="toggleSection(this)">
+                    <span>Company</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="sidebar-links">
+                    <li><a href="#testimonials"><i class="fas fa-star"></i> Testimonials</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                    <li><a href="https://ai.spotnet.in"><i class="fas fa-link"></i> AI Portal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sidebar-cta">
+            <a href="#" class="btn btn-primary" onclick="loginWithFacebook()" style="justify-content: center;">
+                <i class="fab fa-facebook"></i> Login with Facebook
+            </a>
+            <a href="#contact" class="btn btn-outline" style="justify-content: center;">
+                <i class="fas fa-rocket"></i> Get Started Free
+            </a>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Transform Your Business with AI & Technology</h1>
+            <p>SpotNet Services delivers cutting-edge AI solutions, WhatsApp automation, custom software, and enterprise technology to help businesses save time, reduce costs, and achieve unprecedented growth.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary" style="background: white; color: var(--primary);">
+                    <i class="fas fa-rocket"></i> Explore Solutions
+                </a>
+                <a href="https://ai.spotnet.in" class="btn btn-outline" style="border-color: white; color: white;">
+                    <i class="fas fa-robot"></i> AI Services
+                </a>
+                <a href="#contact" class="btn btn-outline" style="border-color: white; color: white;">
+                    <i class="fas fa-phone"></i> Contact Sales
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-item">
+                    <h3>25+</h3>
+                    <p>AI Solutions</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>Satisfaction Rate</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Flagship Products</div>
+                <h2>Enterprise-Grade Solutions</h2>
+                <p>Comprehensive technology products designed to automate, optimize, and scale your business operations with cutting-edge features.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card product-card--media">
+                    <div class="product-media" style="background-image: url('https://images.unsplash.com/photo-1758691462848-ba1e929da259?fm=jpg&q=75&w=1200&auto=format&fit=crop');">
+                        <span class="product-badge-live">LIVE</span>
+                        <div class="product-icon" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>SpotNet MedOS</h3>
+                        <p>AI-powered Hospital & Lab Management System built for Indian clinics — patient records, billing, lab reports, and staff workflows in one place.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check-circle"></i> Multi-tenant patient & OPD records</li>
+                            <li><i class="fas fa-check-circle"></i> Lab report generation & delivery</li>
+                            <li><i class="fas fa-check-circle"></i> Billing & staff role management</li>
+                            <li><i class="fas fa-check-circle"></i> Real-time cloud sync</li>
+                        </ul>
+                        <a href="https://medos.spotnet.in" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
+                            <i class="fas fa-external-link-alt"></i> Launch MedOS
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card product-card--media">
+                    <div class="product-media" style="background-image: url('https://images.unsplash.com/photo-1709880945165-d2208c6ad2ec?fm=jpg&q=75&w=1200&auto=format&fit=crop');">
+                        <span class="product-badge-live">LIVE</span>
+                        <div class="product-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>InvoiceKit</h3>
+                        <p>GST-ready invoicing and salary slip generator built for Indian MSMEs — create, send, and track professional invoices in seconds.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check-circle"></i> GST-compliant invoice generation</li>
+                            <li><i class="fas fa-check-circle"></i> Salary slip & payroll templates</li>
+                            <li><i class="fas fa-check-circle"></i> Client & payment tracking</li>
+                            <li><i class="fas fa-check-circle"></i> PDF export & sharing</li>
+                        </ul>
+                        <a href="https://invoicekit.spotnet.in" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
+                            <i class="fas fa-external-link-alt"></i> Launch InvoiceKit
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card product-card--media">
+                    <div class="product-media" style="background-image: url('https://images.unsplash.com/photo-1745848413078-f85af10e5bf2?fm=jpg&q=75&w=1200&auto=format&fit=crop');">
+                        <span class="product-badge-live">LIVE</span>
+                        <div class="product-icon" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
+                            <i class="fas fa-link"></i>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>iRange - Link in Bio</h3>
+                        <p>A clean, fast link-in-bio Android app to bring all your social links, store, and content together in one shareable page.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check-circle"></i> Custom bio link page</li>
+                            <li><i class="fas fa-check-circle"></i> Social & store link blocks</li>
+                            <li><i class="fas fa-check-circle"></i> Click analytics</li>
+                            <li><i class="fas fa-check-circle"></i> Android app, free to use</li>
+                        </ul>
+                        <a href="https://irangebio.web.app" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
+                            <i class="fas fa-external-link-alt"></i> Open iRange
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Servicele - Service Booking</h3>
+                    <p>WhatsApp-native local service booking platform — vendor registration, customer bookings, and admin approval, all over WhatsApp.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i> WhatsApp-based booking flow</li>
+                        <li><i class="fas fa-check-circle"></i> Vendor registration & approval</li>
+                        <li><i class="fas fa-check-circle"></i> Admin commands via WhatsApp</li>
+                        <li><i class="fas fa-check-circle"></i> Subscription monetization ready</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
+                        <i class="fas fa-comments"></i> Get Early Access
+                    </a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #25D366, #128C7E);">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>SpotLink - WhatsApp Business API</h3>
+                    <p>Professional WhatsApp Business API platform for automated customer communication, marketing campaigns, and 24/7 AI-powered support.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i> Unlimited broadcast messaging</li>
+                        <li><i class="fas fa-check-circle"></i> AI chatbot with NLP</li>
+                        <li><i class="fas fa-check-circle"></i> Multi-agent dashboard</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced analytics & CRM</li>
+                        <li><i class="fas fa-check-circle"></i> Green tick verification</li>
+                    </ul>
+                    <a href="https://spotlinkapp.spotnet.in" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
+                        <i class="fas fa-external-link-alt"></i> Launch SpotLink
+                    </a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Lawyer AI - Legal Intelligence</h3>
+                    <p>Advanced AI legal assistant trained on Indian law. Get instant legal insights, document drafting, case analysis, and compliance guidance.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i> Indian legal framework trained</li>
+                        <li><i class="fas fa-check-circle"></i> Automated document generation</li>
+                        <li><i class="fas fa-check-circle"></i> Case law research & analysis</li>
+                        <li><i class="fas fa-check-circle"></i> Compliance checking</li>
+                        <li><i class="fas fa-check-circle"></i> Legal precedent database</li>
+                    </ul>
+                    <a href="https://ai.spotnet.in" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
+                        <i class="fas fa-external-link-alt"></i> Try Lawyer AI
+                    </a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Custom Software Development</h3>
+                    <p>Full-stack custom software solutions tailored to your business. Web apps, mobile apps, enterprise systems, and cloud infrastructure.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i> Web & mobile development</li>
+                        <li><i class="fas fa-check-circle"></i> Enterprise software systems</li>
+                        <li><i class="fas fa-check-circle"></i> Cloud infrastructure & DevOps</li>
+                        <li><i class="fas fa-check-circle"></i> API development & integration</li>
+                        <li><i class="fas fa-check-circle"></i> Ongoing support & maintenance</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
+                        <i class="fas fa-comments"></i> Discuss Project
+                    </a>
+                </div>
+            </div>
+
+            <div class="solar-banner">
+                <div>
+                    <h3><i class="fas fa-solar-panel"></i> Solar Installation Services</h3>
+                    <p>Rooftop solar panel installation for homes and businesses in Siddharthnagar & UP — cut your electricity bill and go green with SpotNet's certified installation team.</p>
+                </div>
+                <a href="solar.html" class="btn btn-primary" style="background: white; color: #ff5e00; white-space: nowrap;">
+                    <i class="fas fa-arrow-right"></i> Explore Solar Plans
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="ai-services" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">AI-Powered Solutions</div>
+                <h2>Comprehensive AI Services</h2>
+                <p>Cutting-edge artificial intelligence solutions to automate, optimize, and transform your business operations with intelligent technology.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>24/7 AI Chatbots & IVR</h3>
+                    <p>Intelligent chatbots and IVR call systems that efficiently manage customer queries with multilingual support.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Automated customer support 24/7</li>
+                        <li><i class="fas fa-check"></i> Multilingual conversation support</li>
+                        <li><i class="fas fa-check"></i> Reduced wait times & increased satisfaction</li>
+                        <li><i class="fas fa-check"></i> Seamless handoff to human agents</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Business Automation</h3>
+                    <p>Automate data entry, invoice processing, and CRM tasks to improve efficiency and reduce operational costs.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Automated data entry & processing</li>
+                        <li><i class="fas fa-check"></i> Invoice automation & validation</li>
+                        <li><i class="fas fa-check"></i> CRM task synchronization</li>
+                        <li><i class="fas fa-check"></i> Error reduction & accuracy boost</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Predictive Analytics</h3>
+                    <p>Advanced AI analytics platform providing deep insights for data-driven decision-making and business growth.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Predictive data modeling</li>
+                        <li><i class="fas fa-check"></i> Customer behavior analysis</li>
+                        <li><i class="fas fa-check"></i> Sales forecasting & trends</li>
+                        <li><i class="fas fa-check"></i> Real-time business intelligence</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>AI Marketing Campaigns</h3>
+                    <p>AI-powered advertising campaigns with customer insights and personalized offers to maximize ROI.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Targeted audience segmentation</li>
+                        <li><i class="fas fa-check"></i> Personalized customer offers</li>
+                        <li><i class="fas fa-check"></i> Campaign performance optimization</li>
+                        <li><i class="fas fa-check"></i> Enhanced customer loyalty</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Healthcare AI Solutions</h3>
+                    <p>AI diagnosis support, patient chatbots, and health analytics to enhance healthcare service delivery.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> AI-assisted diagnosis support</li>
+                        <li><i class="fas fa-check"></i> 24/7 patient assistance chatbots</li>
+                        <li><i class="fas fa-check"></i> Health analytics & insights</li>
+                        <li><i class="fas fa-check"></i> Faster medical decision-making</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Education AI Platform</h3>
+                    <p>AI tutors, exam prep bots, and smart learning platforms tailored to individual student needs.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Personalized AI tutoring</li>
+                        <li><i class="fas fa-check"></i> Exam preparation assistance</li>
+                        <li><i class="fas fa-check"></i> Adaptive learning paths</li>
+                        <li><i class="fas fa-check"></i> Student progress tracking</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-commerce AI</h3>
+                    <p>AI product recommendations, fraud detection, and intelligent inventory management for online stores.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Smart product recommendations</li>
+                        <li><i class="fas fa-check"></i> Real-time fraud detection</li>
+                        <li><i class="fas fa-check"></i> Automated inventory optimization</li>
+                        <li><i class="fas fa-check"></i> Sales accuracy improvement</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Predictive Maintenance</h3>
+                    <p>AI-powered tools that prevent equipment failures, saving time and money in operations.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Equipment failure prediction</li>
+                        <li><i class="fas fa-check"></i> Maintenance scheduling automation</li>
+                        <li><i class="fas fa-check"></i> Downtime reduction</li>
+                        <li><i class="fas fa-check"></i> Cost savings optimization</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Custom AI Solutions</h3>
+                    <p>Tailored AI systems designed for your specific business needs, from predictive analytics to workflow automation.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Custom AI model development</li>
+                        <li><i class="fas fa-check"></i> Workflow automation systems</li>
+                        <li><i class="fas fa-check"></i> Scalable AI infrastructure</li>
+                        <li><i class="fas fa-check"></i> Seamless integration support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech-services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Technology Infrastructure</div>
+                <h2>Enterprise Technology Services</h2>
+                <p>Comprehensive technology services to secure, optimize, and accelerate your business operations with enterprise-grade solutions.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity Solutions</h3>
+                    <p>Enterprise-grade security infrastructure to protect your business from cyber threats and data breaches.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Network security & firewall</li>
+                        <li><i class="fas fa-check"></i> Penetration testing services</li>
+                        <li><i class="fas fa-check"></i> Security audits & compliance</li>
+                        <li><i class="fas fa-check"></i> Advanced data encryption</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud infrastructure with migration, management, and optimization services for modern businesses.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Cloud migration services</li>
+                        <li><i class="fas fa-check"></i> Multi-cloud management</li>
+                        <li><i class="fas fa-check"></i> Infrastructure as code</li>
+                        <li><i class="fas fa-check"></i> Cost optimization strategies</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Network Infrastructure</h3>
+                    <p>Design, deploy, and manage robust network infrastructure for seamless enterprise operations.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Network design & setup</li>
+                        <li><i class="fas fa-check"></i> Enterprise Wi-Fi solutions</li>
+                        <li><i class="fas fa-check"></i> VPN & remote access</li>
+                        <li><i class="fas fa-check"></i> 24/7 network monitoring</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Management</h3>
+                    <p>Comprehensive data storage, backup, and recovery solutions ensuring business continuity.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Database design & optimization</li>
+                        <li><i class="fas fa-check"></i> Automated backup systems</li>
+                        <li><i class="fas fa-check"></i> Disaster recovery planning</li>
+                        <li><i class="fas fa-check"></i> Advanced data analytics</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Development</h3>
+                    <p>Native and cross-platform mobile applications for iOS and Android with cutting-edge features.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> iOS & Android development</li>
+                        <li><i class="fas fa-check"></i> React Native & Flutter</li>
+                        <li><i class="fas fa-check"></i> App store optimization</li>
+                        <li><i class="fas fa-check"></i> Maintenance & updates</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>IT Support & Consulting</h3>
+                    <p>Expert IT consulting and round-the-clock technical support for seamless business operations.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 24/7 helpdesk support</li>
+                        <li><i class="fas fa-check"></i> IT strategy consulting</li>
+                        <li><i class="fas fa-check"></i> Technology audits</li>
+                        <li><i class="fas fa-check"></i> Digital transformation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="industries" class="carousel-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Industry Solutions</div>
+                <h2>Specialized Business Solutions</h2>
+                <p>WhatsApp API and automation solutions tailored for every industry vertical with dedicated support.</p>
+            </div>
+            <div class="carousel-wrapper">
+                <div class="carousel-container" id="industriesCarousel">
+                    <div class="carousel-card">
+                        <div class="carousel-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3>E-commerce & Retail</h3>
+                        <p>Complete commerce solution with catalogs, order tracking, and payment integration.</p>
+                        <ul class="carousel-features">
+                            <li><i class="fas fa-check"></i> Product catalog management</li>
+                            <li><i class="fas fa-check"></i> Abandoned cart recovery</li>
+                            <li><i class="fas fa-check"></i> Order tracking automation</li>
+                            <li><i class="fas fa-check"></i> Payment gateway integration</li>
+                        </ul>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3>Healthcare & Wellness</h3>
+                        <p>HIPAA-compliant patient communication and telemedicine integration platform.</p>
+                        <ul class="carousel-features">
+                            <li><i class="fas fa-check"></i> Appointment scheduling</li>
+                            <li><i class="fas fa-check"></i> Prescription management</li>
+                            <li><i class="fas fa-check"></i> Lab report delivery</li>
+                            <li><i class="fas fa-check"></i> Telemedicine support</li>
+                        </ul>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Education & Training</h3>
+                        <p>Complete education management with student engagement and communication tools.</p>
+                        <ul class="carousel-features">
+                            <li><i class="fas fa-check"></i> Admission automation</li>
+                            <li><i class="fas fa-check"></i> Class schedules & reminders</li>
+                            <li><i class="fas fa-check"></i> Assignment sharing</li>
+                            <li><i class="fas fa-check"></i> Parent communication</li>
+                        </ul>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-icon" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <h3>Hospitality & Travel</h3>
+                        <p>Guest experience platform with booking management and concierge services.</p>
+                        <ul class="carousel-features">
+                            <li><i class="fas fa-check"></i> Booking confirmations</li>
+                            <li><i class="fas fa-check"></i> Check-in/out automation</li>
+                            <li><i class="fas fa-check"></i> Travel itinerary updates</li>
+                            <li><i class="fas fa-check"></i> Guest request handling</li>
+                        </ul>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Real Estate</h3>
+                        <p>Property marketing platform with virtual tours and document sharing capabilities.</p>
+                        <ul class="carousel-features">
+                            <li><i class="fas fa-check"></i> Property listings broadcast</li>
+                            <li><i class="fas fa-check"></i> Virtual tour scheduling</li>
+                            <li><i class="fas fa-check"></i> Lead qualification</li>
+                            <li><i class="fas fa-check"></i> Document verification</li>
+                        </ul>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Logistics & Delivery</h3>
+                        <p>Complete tracking system with real-time updates and driver coordination.</p>
+                        <ul class="carousel-features">
+                            <li><i class="fas fa-check"></i> Real-time tracking</li>
+                            <li><i class="fas fa-check"></i> Delivery confirmation</li>
+                            <li><i class="fas fa-check"></i> Driver communication</li>
+                            <li><i class="fas fa-check"></i> Route optimization</li>
+                        </ul>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h3>Fitness & Gyms</h3>
+                        <p>Member engagement platform with class booking and fitness tracking integration.</p>
+                        <ul class="carousel-features">
+                            <li><i class="fas fa-check"></i> Class booking system</li>
+                            <li><i class="fas fa-check"></i> Membership renewals</li>
+                            <li><i class="fas fa-check"></i> Workout plan delivery</li>
+                            <li><i class="fas fa-check"></i> Progress tracking</li>
+                        </ul>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-icon" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3>Retail & FMCG</h3>
+                        <p>Distribution management and retailer communication platform for FMCG brands.</p>
+                        <ul class="carousel-features">
+                            <li><i class="fas fa-check"></i> Order placement automation</li>
+                            <li><i class="fas fa-check"></i> Inventory alerts</li>
+                            <li><i class="fas fa-check"></i> Promotional campaigns</li>
+                            <li><i class="fas fa-check"></i> Payment tracking</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="carousel-btn" onclick="scrollCarousel('industriesCarousel', -1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn" onclick="scrollCarousel('industriesCarousel', 1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Client Success Stories</div>
+                <h2>Trusted by Industry Leaders</h2>
+                <p>See how businesses are transforming their operations with SpotNet Services across India.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">"The customer service team at SpotNet is top-notch. They helped us every step of the way, and the results speak for themselves – our sales have increased by 50%!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RP</div>
+                        <div class="author-info">
+                            <h4>Rajesh Patel</h4>
+                            <p>CEO, Fashion Hub India</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">"The AI analytics platform has provided us with deep insights into our data, allowing us to make more informed decisions. It's like having a crystal ball for our business."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h4>Sneha Mehta</h4>
+                            <p>Director, Tech Innovations Ltd</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">"The predictive maintenance tools from SpotNet have saved us significant time and money by preventing equipment failures. It's an invaluable resource for our operations."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AK</div>
+                        <div class="author-info">
+                            <h4>Amit Kumar</h4>
+                            <p>Operations Head, Manufacturing Co</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="contact">
+        <div class="cta-content">
+            <div class="container">
+                <h2>Ready to Transform Your Business?</h2>
+                <p>Join 500+ enterprises who trust SpotNet Services for AI and technology solutions. Get a free consultation with our experts and discover how we can help scale your business.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary" onclick="loginWithFacebook()" style="background: white; color: var(--primary);">
+                        <i class="fab fa-facebook"></i> Get Started Free
+                    </a>
+                    <a href="https://wa.me/15558572517?text=Hi%20SpotNet%20Services!%20I%27m%20interested%20in%20your%20enterprise%20solutions." class="btn btn-outline" style="border-color: white; color: white;">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                    <a href="tel:+919120909501" class="btn btn-outline" style="border-color: white; color: white;">
+                        <i class="fas fa-phone"></i> Call Sales
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>SpotNet Services</h3>
+                    <p>Leading enterprise technology partner specializing in WhatsApp Business API, AI solutions, and custom software development. We transform businesses with cutting-edge AI and automation technology, helping companies save time, reduce costs, and achieve unprecedented growth.</p>
+                    <div class="footer-contact">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <a href="https://wa.me/15558572517?text=Hi%20SpotNet%20Services!%20I%27m%20interested%20in%20your%20solutions.">SpotNet Services</a>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://facebook.com/spotnetservices"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://medos.spotnet.in"><i class="fas fa-external-link-alt"></i> SpotNet MedOS</a></li>
+                        <li><a href="https://invoicekit.spotnet.in"><i class="fas fa-external-link-alt"></i> InvoiceKit</a></li>
+                        <li><a href="https://irangebio.web.app"><i class="fas fa-external-link-alt"></i> iRange – Link in Bio</a></li>
+                        <li><a href="solar.html"><i class="fas fa-solar-panel"></i> Solar Installation</a></li>
+                        <li><a href="https://spotlinkapp.spotnet.in"><i class="fas fa-external-link-alt"></i> SpotLink Dashboard</a></li>
+                        <li><a href="https://ai.spotnet.in"><i class="fas fa-external-link-alt"></i> AI Services Portal</a></li>
+                        <li><a href="#products"><i class="fas fa-chevron-right"></i> Our Products</a></li>
+                        <li><a href="#ai-services"><i class="fas fa-chevron-right"></i> AI Solutions</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 SpotNet Services. All rights reserved. | Enterprise AI & Technology Solutions</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/15558572517?text=Hi%20SpotNet%20Services!%20I%27m%20interested%20in%20your%20enterprise%20solutions." class="whatsapp-float" title="Chat with SpotNet Services">
+        <i class="fab fa-whatsapp"></i>
     </a>
-    <ul class="nav-links">
-      <li><a href="#products">Products <i class="fas fa-chevron-down" style="font-size:.65rem;"></i></a>
-        <div class="dropdown">
-          <a href="https://spotlinkapp.spotnet.in"><i class="fab fa-whatsapp"></i> SpotLink WhatsApp API</a>
-          <a href="https://ai.spotnet.in"><i class="fas fa-balance-scale"></i> Lawyer AI</a>
-          <a href="https://medos.spotnet.in"><i class="fas fa-heartbeat"></i> MedOS by Mediclo‑Lab</a>
-          <a href="https://invoicekit.spotnet.in"><i class="fas fa-file-invoice-dollar"></i> InvoiceKit</a>
-          <a href="https://irangebio.web.app"><i class="fas fa-link"></i> iRange — Link in Bio</a>
-        </div>
-      </li>
-      <li><a href="#ventures">Ventures <i class="fas fa-chevron-down" style="font-size:.65rem;"></i></a>
-        <div class="dropdown">
-          <a href="#ventures"><i class="fas fa-wifi"></i> SpotNet Broadband</a>
-          <a href="#ventures"><i class="fas fa-dumbbell"></i> The Verve Club Gym</a>
-          <a href="#ventures"><i class="fas fa-solar-panel"></i> Solar Installations</a>
-          <a href="#ventures"><i class="fas fa-tv"></i> LED Digital Signage</a>
-        </div>
-      </li>
-      <li><a href="#ai-services">AI Services</a></li>
-      <li><a href="#tech-services">Tech Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="nav-cta">
-      <a href="#contact" class="btn btn-ghost light btn-sm">Talk to us</a>
-      <a href="https://wa.me/919120909501" class="btn btn-wa btn-sm"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      <div class="mobile-menu-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></div>
-    </div>
-  </div>
-</header>
 
-<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
-<div class="smart-sidebar" id="smartSidebar">
-  <div class="sidebar-header">
-    <h3>Menu</h3>
-    <div class="sidebar-close" onclick="toggleSidebar()"><i class="fas fa-times"></i></div>
-  </div>
-  <div class="sidebar-content">
-    <div class="sidebar-section-title">Products</div>
-    <ul class="sidebar-links">
-      <li><a href="https://spotlinkapp.spotnet.in"><i class="fab fa-whatsapp"></i> SpotLink</a></li>
-      <li><a href="https://ai.spotnet.in"><i class="fas fa-balance-scale"></i> Lawyer AI</a></li>
-      <li><a href="https://medos.spotnet.in"><i class="fas fa-heartbeat"></i> MedOS</a></li>
-      <li><a href="https://invoicekit.spotnet.in"><i class="fas fa-file-invoice-dollar"></i> InvoiceKit</a></li>
-      <li><a href="https://irangebio.web.app"><i class="fas fa-link"></i> iRange</a></li>
-    </ul>
-    <div class="sidebar-section-title">Ventures</div>
-    <ul class="sidebar-links">
-      <li><a href="#ventures"><i class="fas fa-wifi"></i> SpotNet Broadband</a></li>
-      <li><a href="#ventures"><i class="fas fa-dumbbell"></i> The Verve Club</a></li>
-      <li><a href="#ventures"><i class="fas fa-solar-panel"></i> Solar Installations</a></li>
-      <li><a href="#ventures"><i class="fas fa-tv"></i> LED Digital Signage</a></li>
-    </ul>
-    <div class="sidebar-section-title">Company</div>
-    <ul class="sidebar-links">
-      <li><a href="#ai-services"><i class="fas fa-robot"></i> AI Services</a></li>
-      <li><a href="#tech-services"><i class="fas fa-cloud"></i> Tech Services</a></li>
-      <li><a href="#testimonials"><i class="fas fa-star"></i> Testimonials</a></li>
-      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
-  </div>
-  <div class="sidebar-cta">
-    <a href="https://wa.me/919120909501" class="btn btn-wa" style="justify-content:center;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-    <a href="#contact" class="btn btn-ghost" style="justify-content:center;border-color:rgba(255,255,255,.3);">Get in touch</a>
-  </div>
-</div>
+    <script>
+        function toggleSidebar() {
+            document.getElementById('smartSidebar').classList.toggle('active');
+            document.getElementById('sidebarOverlay').classList.toggle('active');
+        }
 
-<!-- ===================== HERO ===================== -->
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="hero-badge"><i class="fas fa-map-marker-alt"></i> Built &amp; based in Dumariyaganj, Siddharthnagar — UP</div>
-      <h2>One small‑town network. <em>Six digital businesses.</em> Growing every quarter.</h2>
-      <p class="lede">SpotNet Services began as a broadband ISP for Dumariyaganj. Today it's a connected group — a WhatsApp API platform, a hospital management SaaS, a legal AI, a billing tool, a gym, and a solar installation business — all run by one local team that ships fast.</p>
-      <div class="hero-buttons">
-        <a href="#products" class="btn btn-signal"><i class="fas fa-diagram-project"></i> See the ecosystem</a>
-        <a href="#contact" class="btn btn-ghost light"><i class="fas fa-phone"></i> Talk to us</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><h3>6</h3><p>Live products &amp; ventures</p></div>
-        <div class="stat"><h3>2019</h3><p>Started as an ISP</p></div>
-        <div class="stat"><h3>UP</h3><p>Rooted in Siddharthnagar</p></div>
-      </div>
-    </div>
-    <div>
-      <svg class="signal-map" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-        <circle class="ring" cx="250" cy="250" r="26"/>
-        <circle class="ring" cx="250" cy="250" r="26"/>
-        <circle class="ring" cx="250" cy="250" r="26"/>
-        <line class="node-line" x1="250" y1="250" x2="250" y2="80"/>
-        <line class="node-line" x1="250" y1="250" x2="411.7" y2="197.5"/>
-        <line class="node-line" x1="250" y1="250" x2="349.9" y2="387.5"/>
-        <line class="node-line" x1="250" y1="250" x2="150.1" y2="387.5"/>
-        <line class="node-line" x1="250" y1="250" x2="88.3" y2="197.5"/>
-        <circle class="hub-circle" cx="250" cy="250" r="52"/>
-        <text class="hub-label" x="250" y="247" text-anchor="middle">SPOT</text>
-        <text class="hub-label" x="250" y="264" text-anchor="middle">NET</text>
-        <g>
-          <circle class="node-circle" cx="250" cy="80" r="30"/>
-          <text x="250" y="87" text-anchor="middle" class="node-icon" style="font-family:var(--font-d);font-weight:700;font-size:18px;">Wi</text>
-          <text x="250" y="128" text-anchor="middle" class="node-label">Connectivity</text>
-        </g>
-        <g>
-          <circle class="node-circle" cx="411.7" cy="197.5" r="30"/>
-          <text x="411.7" y="207" text-anchor="middle" class="node-icon" style="font-family:var(--font-d);font-weight:700;font-size:18px;">₹</text>
-          <text x="411.7" y="246" text-anchor="middle" class="node-label">FinTech</text>
-        </g>
-        <g>
-          <circle class="node-circle" cx="349.9" cy="387.5" r="30"/>
-          <text x="349.9" y="394.5" text-anchor="middle" class="node-icon" style="font-family:var(--font-d);font-weight:700;font-size:18px;">Fit</text>
-          <text x="349.9" y="436" text-anchor="middle" class="node-label">Fitness</text>
-        </g>
-        <g>
-          <circle class="node-circle" cx="150.1" cy="387.5" r="30"/>
-          <text x="150.1" y="394.5" text-anchor="middle" class="node-icon" style="font-family:var(--font-d);font-weight:700;font-size:18px;">§</text>
-          <text x="150.1" y="436" text-anchor="middle" class="node-label">Legal AI</text>
-        </g>
-        <g>
-          <circle class="node-circle" cx="88.3" cy="197.5" r="30"/>
-          <text x="88.3" y="207" text-anchor="middle" class="node-icon" style="font-family:var(--font-d);font-weight:700;font-size:18px;">+</text>
-          <text x="88.3" y="246" text-anchor="middle" class="node-label">Health</text>
-        </g>
-      </svg>
-    </div>
-  </div>
-</section>
+        function toggleSection(element) {
+            const section = element.parentElement;
+            const allSections = document.querySelectorAll('.sidebar-section');
 
-<!-- ===================== SCROLLING STRIP ===================== -->
-<div class="strip">
-  <div class="strip-track" id="stripTrack"></div>
-</div>
+            allSections.forEach(s => {
+                if (s !== section) {
+                    s.classList.remove('active');
+                }
+            });
 
-<!-- ===================== FLAGSHIP PRODUCTS ===================== -->
-<section class="section" id="products">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">Flagship products</div>
-      <h2>Software the group builds and runs itself</h2>
-      <p>Five products, each solving a real problem SpotNet ran into first-hand — then opened up for other businesses to use.</p>
-    </div>
-    <div class="grid grid-3">
-      <div class="pcard">
-        <div class="pcard-icon" style="background:linear-gradient(135deg,#25D366,#128C7E);"><i class="fab fa-whatsapp"></i></div>
-        <h3>SpotLink</h3>
-        <p>WhatsApp Business API platform for automated customer chat, broadcast marketing, and a multi‑agent support dashboard.</p>
-        <div class="pcard-tags"><span>Broadcast</span><span>AI Chatbot</span><span>CRM</span></div>
-        <a href="https://spotlinkapp.spotnet.in" class="pcard-link">Open SpotLink <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="pcard">
-        <div class="pcard-icon" style="background:linear-gradient(135deg,#7b5cff,#b06ae0);"><i class="fas fa-balance-scale"></i></div>
-        <h3>Lawyer AI</h3>
-        <p>An AI legal assistant trained on Indian law — drafts documents, researches case law, and flags compliance gaps.</p>
-        <div class="pcard-tags"><span>Indian Law</span><span>Drafting</span><span>Research</span></div>
-        <a href="https://ai.spotnet.in" class="pcard-link">Open Lawyer AI <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="pcard">
-        <div class="pcard-icon" style="background:linear-gradient(135deg,#0d7a70,#12a89b);"><i class="fas fa-heartbeat"></i></div>
-        <h3>MedOS <span style="font-size:.7rem;font-weight:600;color:var(--ink-faint);">by Mediclo‑Lab</span></h3>
-        <p>Multi‑tenant hospital &amp; diagnostic lab ERP — patient records, billing, and lab reporting in one dashboard.</p>
-        <div class="pcard-tags"><span>Hospital ERP</span><span>Lab Reports</span><span>Multi‑tenant</span></div>
-        <a href="https://medos.spotnet.in" class="pcard-link">Open MedOS <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="pcard">
-        <div class="pcard-icon" style="background:linear-gradient(135deg,#d99a34,#f0b955);"><i class="fas fa-file-invoice-dollar"></i></div>
-        <h3>InvoiceKit</h3>
-        <p>GST invoicing and salary‑slip generation built for Indian MSMEs — no accounting background needed.</p>
-        <div class="pcard-tags"><span>GST</span><span>Payroll</span><span>MSME</span></div>
-        <a href="https://invoicekit.spotnet.in" class="pcard-link">Open InvoiceKit <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="pcard">
-        <div class="pcard-icon" style="background:linear-gradient(135deg,#ff5a36,#ff8a68);"><i class="fas fa-link"></i></div>
-        <h3>iRange</h3>
-        <p>A clean, fast Link‑in‑Bio Android app for creators and small brands to organise every link in one place.</p>
-        <div class="pcard-tags"><span>Android</span><span>Creators</span><span>Link in Bio</span></div>
-        <a href="https://irangebio.web.app" class="pcard-link">Open iRange <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="pcard">
-        <div class="pcard-icon" style="background:linear-gradient(135deg,#101a2c,#48536b);"><i class="fas fa-code"></i></div>
-        <h3>Custom Software</h3>
-        <p>Full‑stack web &amp; mobile builds, automation pipelines, and API integrations — scoped and delivered by the SpotNet team.</p>
-        <div class="pcard-tags"><span>Web &amp; Mobile</span><span>Automation</span><span>APIs</span></div>
-        <a href="#contact" class="pcard-link">Discuss a project <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
-  </div>
-</section>
+            section.classList.toggle('active');
+        }
 
-<!-- ===================== LOCAL VENTURES ===================== -->
-<section class="section dim" id="ventures">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">Local ventures</div>
-      <h2>Real businesses, running in Dumariyaganj today</h2>
-      <p>Before SpotNet wrote a line of SaaS code, it laid fibre and served customers on the ground. These ventures keep that on‑the‑ground work going.</p>
-    </div>
-    <div class="grid grid-4">
-      <div class="vcard">
-        <div class="vcard-img"><span class="vcard-tag">Since 2019</span><img src="https://images.unsplash.com/photo-1604869515882-4d10fa4b0492?w=700&q=80&auto=format&fit=crop" alt="Fibre network"></div>
-        <div class="vcard-body">
-          <h3>SpotNet Broadband</h3>
-          <p>Fibre &amp; wireless internet for homes and businesses across Dumariyaganj — where it all started.</p>
-        </div>
-      </div>
-      <div class="vcard">
-        <div class="vcard-img"><span class="vcard-tag">The Verve Club</span><img src="https://images.unsplash.com/photo-1671970922029-0430d2ae122c?w=700&q=80&auto=format&fit=crop" alt="Gym interior"></div>
-        <div class="vcard-body">
-          <h3>The Verve Club</h3>
-          <p>Dumariyaganj's only fully air‑conditioned gym — premium equipment, near HDFC Bank, three dedicated training zones.</p>
-        </div>
-      </div>
-      <div class="vcard">
-        <div class="vcard-img"><span class="vcard-tag">New</span><img src="https://images.unsplash.com/photo-1745187946672-2c1d8cf26a2b?w=700&q=80&auto=format&fit=crop" alt="Solar panel installation"></div>
-        <div class="vcard-body">
-          <h3>Solar Installations</h3>
-          <p>Rooftop solar design and installation for homes and small businesses, with maintenance support after commissioning.</p>
-        </div>
-      </div>
-      <div class="vcard">
-        <div class="vcard-img"><span class="vcard-tag">Advertising</span><img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=700&q=80&auto=format&fit=crop" alt="LED display screen"></div>
-        <div class="vcard-body">
-          <h3>LED Digital Signage</h3>
-          <p>Outdoor LED video walls for local advertisers — bringing big‑city advertising infrastructure to a Tier‑3 town.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 5px 30px rgba(0,0,0,0.12)';
+            } else {
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+            }
+        });
 
-<!-- ===================== COMMUNITY TOOLS ===================== -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">Community &amp; utility tools</div>
-      <h2>Small, focused tools for everyday problems</h2>
-      <p>Not every product needs to be a platform. These are lightweight, single‑purpose tools built to remove one specific friction.</p>
-    </div>
-    <div>
-      <div class="trow">
-        <div class="trow-icon"><i class="fas fa-landmark"></i></div>
-        <div>
-          <h4>SarkariSaathi</h4>
-          <p>A Hindi‑first navigator that helps people understand and apply for government schemes without standing in line.</p>
-        </div>
-        <div class="trow-cta"><span class="btn btn-ghost light btn-sm"><i class="fas fa-language"></i> Hindi‑first</span></div>
-      </div>
-      <div class="trow">
-        <div class="trow-icon"><i class="fab fa-whatsapp"></i></div>
-        <div>
-          <h4>Servicele</h4>
-          <p>WhatsApp‑native service booking — vendors register, customers book, admins approve, all inside a WhatsApp chat.</p>
-        </div>
-        <div class="trow-cta"><span class="btn btn-ghost light btn-sm"><i class="fas fa-mobile-alt"></i> No app install</span></div>
-      </div>
-      <div class="trow">
-        <div class="trow-icon"><i class="fas fa-store"></i></div>
-        <div>
-          <h4>SpotServe</h4>
-          <p>A local services marketplace connecting nearby customers with electricians, plumbers, tutors, and other everyday help.</p>
-        </div>
-        <div class="trow-cta"><span class="btn btn-ghost light btn-sm"><i class="fas fa-map-marker-alt"></i> Hyperlocal</span></div>
-      </div>
-    </div>
-  </div>
-</section>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        if (window.innerWidth <= 968) {
+                            toggleSidebar();
+                        }
+                    }
+                }
+            });
+        });
 
-<!-- ===================== AI SERVICES ===================== -->
-<section class="section dim" id="ai-services">
-  <div class="container">
-    <div class="split">
-      <div class="split-img"><img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=900&q=80&auto=format&fit=crop" alt="Monitoring dashboard"></div>
-      <div>
-        <div class="eyebrow">AI services</div>
-        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:16px;">AI that plugs into how your business already runs</h2>
-        <p style="color:var(--ink-soft);margin-bottom:30px;max-width:520px;">From WhatsApp chatbots to healthcare AI, these are the same building blocks SpotNet uses across its own products — now available for your business.</p>
-        <div class="grid grid-2" style="gap:16px;">
-          <div class="svc-card"><i class="fas fa-robot"></i><h4>AI Chatbots &amp; IVR</h4><p>24/7 support across WhatsApp, web, and voice.</p></div>
-          <div class="svc-card"><i class="fas fa-chart-line"></i><h4>Predictive Analytics</h4><p>Forecast demand, churn, and revenue trends.</p></div>
-          <div class="svc-card"><i class="fas fa-bullhorn"></i><h4>AI Marketing</h4><p>Auto‑generated campaigns tuned to your audience.</p></div>
-          <div class="svc-card"><i class="fas fa-heartbeat"></i><h4>Healthcare AI</h4><p>Triage, scheduling, and report summarisation.</p></div>
-          <div class="svc-card"><i class="fas fa-graduation-cap"></i><h4>Education AI</h4><p>Personalised learning paths &amp; grading support.</p></div>
-          <div class="svc-card"><i class="fas fa-shopping-cart"></i><h4>E‑commerce AI</h4><p>Recommendations, cart recovery, and pricing.</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        function scrollCarousel(carouselId, direction) {
+            const container = document.getElementById(carouselId);
+            const scrollAmount = 380;
+            container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
 
-<!-- ===================== TECH SERVICES ===================== -->
-<section class="section" id="tech-services">
-  <div class="container">
-    <div class="split">
-      <div>
-        <div class="eyebrow">Technology services</div>
-        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:16px;">Infrastructure work, done by people who run their own</h2>
-        <p style="color:var(--ink-soft);margin-bottom:30px;max-width:520px;">SpotNet's own products run on this same stack — so this isn't theoretical advice, it's what keeps our own systems up.</p>
-        <div class="grid grid-2" style="gap:16px;">
-          <div class="svc-card"><i class="fas fa-shield-alt"></i><h4>Cybersecurity</h4><p>Audits, hardening, and incident response.</p></div>
-          <div class="svc-card"><i class="fas fa-cloud"></i><h4>Cloud Solutions</h4><p>Architecture, migration, and cost optimisation.</p></div>
-          <div class="svc-card"><i class="fas fa-network-wired"></i><h4>Network Infrastructure</h4><p>Fibre, wireless, and enterprise networking.</p></div>
-          <div class="svc-card"><i class="fas fa-database"></i><h4>Data Management</h4><p>Pipelines, warehousing, and reporting.</p></div>
-          <div class="svc-card"><i class="fas fa-mobile-alt"></i><h4>Mobile Development</h4><p>Native &amp; cross‑platform apps, shipped to store.</p></div>
-          <div class="svc-card"><i class="fas fa-code-branch"></i><h4>DevOps &amp; CI/CD</h4><p>Automated deploys and monitoring, end to end.</p></div>
-        </div>
-      </div>
-      <div class="split-img"><img src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?w=900&q=80&auto=format&fit=crop" alt="Developer workstation"></div>
-    </div>
-  </div>
-</section>
+        function setupAutoScroll(carouselId, interval = 5000) {
+            const container = document.getElementById(carouselId);
+            let autoScrollInterval = setInterval(() => {
+                if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
+                    container.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    scrollCarousel(carouselId, 1);
+                }
+            }, interval);
 
-<!-- ===================== INDUSTRIES ===================== -->
-<section class="section dim" id="industries">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">Industry solutions</div>
-      <h2>Built for the industries we already serve</h2>
-      <p>Every vertical below maps to a product SpotNet has shipped — not a generic template.</p>
-    </div>
-    <div class="iscroll">
-      <div class="icard"><i class="fas fa-user-md"></i><h4>Healthcare &amp; Diagnostics</h4><p>Appointment scheduling, lab reports, and patient records via MedOS.</p></div>
-      <div class="icard"><i class="fas fa-balance-scale"></i><h4>Legal Practices</h4><p>Drafting, research, and compliance checks via Lawyer AI.</p></div>
-      <div class="icard"><i class="fas fa-shopping-cart"></i><h4>E‑commerce &amp; Retail</h4><p>Catalogue broadcast and cart recovery via SpotLink.</p></div>
-      <div class="icard"><i class="fas fa-dumbbell"></i><h4>Fitness &amp; Wellness</h4><p>Membership and class booking, proven at The Verve Club.</p></div>
-      <div class="icard"><i class="fas fa-building"></i><h4>MSMEs &amp; Small Business</h4><p>GST billing and payroll via InvoiceKit.</p></div>
-      <div class="icard"><i class="fas fa-solar-panel"></i><h4>Renewable Energy</h4><p>Rooftop solar design, quoting, and installation tracking.</p></div>
-      <div class="icard"><i class="fas fa-landmark"></i><h4>Government &amp; Public Services</h4><p>Scheme discovery and application help via SarkariSaathi.</p></div>
-    </div>
-  </div>
-</section>
+            container.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
+            container.addEventListener('mouseleave', () => {
+                autoScrollInterval = setInterval(() => {
+                    if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
+                        container.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        scrollCarousel(carouselId, 1);
+                    }
+                }, interval);
+            });
+        }
 
-<!-- ===================== TESTIMONIALS ===================== -->
-<section class="section" id="testimonials">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">Client feedback</div>
-      <h2>What partners say after switching</h2>
-    </div>
-    <div class="grid grid-3">
-      <div class="tcard">
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p class="quote">"MedOS cut our report turnaround from hours to minutes. Our lab finally runs on one system instead of three registers."</p>
-        <div class="author"><div class="avatar">RK</div><div><h5>Dr. R. Kasaudhan</h5><p>RPL Hospital, Siddharthnagar</p></div></div>
-      </div>
-      <div class="tcard">
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p class="quote">"SpotLink handles our WhatsApp orders automatically now. What used to take a full‑time person is running in the background."</p>
-        <div class="author"><div class="avatar">SM</div><div><h5>Sneha Mehta</h5><p>Local Retail Business</p></div></div>
-      </div>
-      <div class="tcard">
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p class="quote">"Being the only AC gym in town, The Verve Club fills up every evening. SpotNet built the booking flow and it just works."</p>
-        <div class="author"><div class="avatar">AK</div><div><h5>Amit Kumar</h5><p>Member, The Verve Club</p></div></div>
-      </div>
-    </div>
-  </div>
-</section>
+        setupAutoScroll('industriesCarousel', 5000);
 
-<!-- ===================== CTA ===================== -->
-<section class="cta-section" id="contact">
-  <div class="container">
-    <div class="eyebrow" style="justify-content:center;">Let's talk</div>
-    <h2>Whether it's broadband, software, or a solar quote — we're one message away</h2>
-    <p>Reach the SpotNet team directly. No call centre, no ticket queue — just the people who build the product.</p>
-    <div class="cta-buttons">
-      <a href="https://wa.me/919120909501?text=Hi%20SpotNet%20Services%2C%20I%27d%20like%20to%20know%20more." class="btn btn-wa"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-      <a href="tel:+919120909501" class="btn btn-ghost"><i class="fas fa-phone"></i> Call +91 91209 09501</a>
-      <a href="mailto:spotnet95@gmail.com" class="btn btn-ghost"><i class="fas fa-envelope"></i> Email us</a>
-    </div>
-  </div>
-</section>
+        function loginWithFacebook() {
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId: '2294386157677689',
+                    cookie: true,
+                    xfbml: true,
+                    version: 'v18.0'
+                });
+            };
 
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-about">
-        <h3>SpotNet Services</h3>
-        <p>A Dumariyaganj‑based technology group running broadband, AI software, fintech tools, and community ventures — proof that Tier‑3 India can build and ship national‑grade products.</p>
-        <div class="footer-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Products</h4>
-        <ul>
-          <li><a href="https://spotlinkapp.spotnet.in">SpotLink</a></li>
-          <li><a href="https://ai.spotnet.in">Lawyer AI</a></li>
-          <li><a href="https://medos.spotnet.in">MedOS</a></li>
-          <li><a href="https://invoicekit.spotnet.in">InvoiceKit</a></li>
-          <li><a href="https://irangebio.web.app">iRange</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Ventures</h4>
-        <ul>
-          <li><a href="#ventures">SpotNet Broadband</a></li>
-          <li><a href="#ventures">The Verve Club</a></li>
-          <li><a href="#ventures">Solar Installations</a></li>
-          <li><a href="#ventures">LED Digital Signage</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#ai-services">AI Services</a></li>
-          <li><a href="#tech-services">Tech Services</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 SpotNet Services, Dumariyaganj, Siddharthnagar, UP. All rights reserved.</p>
-      <p>Built by the SpotNet team.</p>
-    </div>
-  </div>
-</footer>
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
 
-<a href="https://wa.me/919120909501" class="whatsapp-float" title="Chat with SpotNet Services"><i class="fab fa-whatsapp"></i></a>
+            setTimeout(() => {
+                FB.login(function(response) {
+                    if (response.authResponse) {
+                        window.location.href = 'https://business.facebook.com/messaging/whatsapp/onboard/?app_id=2294386157677689&config_id=843327554858322&extras=%7B%22sessionInfoVersion%22%3A%223%22%2C%22version%22%3A%22v3%22%7D';
+                    }
+                }, {scope: 'public_profile,email'});
+            }, 1000);
+        }
+    </script>
 
-<script>
-function toggleSidebar(){
-  document.getElementById('smartSidebar').classList.toggle('active');
-  document.getElementById('sidebarOverlay').classList.toggle('active');
-}
-// build the infinite scrolling ecosystem strip (duplicated for seamless loop)
-(function(){
-  var items = [
-    ['fa-solid fa-wifi','SpotNet Broadband'],
-    ['fa-brands fa-whatsapp','SpotLink'],
-    ['fa-solid fa-balance-scale','Lawyer AI'],
-    ['fa-solid fa-heartbeat','MedOS'],
-    ['fa-solid fa-file-invoice-dollar','InvoiceKit'],
-    ['fa-solid fa-link','iRange'],
-    ['fa-solid fa-dumbbell','The Verve Club'],
-    ['fa-solid fa-solar-panel','Solar Installations'],
-    ['fa-solid fa-landmark','SarkariSaathi'],
-    ['fa-solid fa-store','SpotServe']
-  ];
-  var track = document.getElementById('stripTrack');
-  var html = '';
-  for(var r=0;r<2;r++){
-    items.forEach(function(it){ html += '<span><i class="'+it[0]+'"></i>'+it[1]+'</span>'; });
-  }
-  track.innerHTML = html;
-})();
-</script>
-</body>
-</html>
+</body></html>
