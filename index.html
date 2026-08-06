@@ -2,8 +2,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpotNet Services - Enterprise AI & Technology Solutions Provider</title>
+    <meta name="description" content="SpotNet Services builds AI solutions, WhatsApp automation, custom software, and enterprise technology for businesses — plus local broadband, and solar installation in Siddharthnagar, Uttar Pradesh.">
+    <meta name="keywords" content="SpotNet Services, WhatsApp Business API India, AI chatbot development, custom software development UP, hospital management system, MedOS, InvoiceKit, broadband Siddharthnagar, internet service Dumariyaganj, solar installation UP, AI automation India, lead generation service">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SpotNet Services">
+    <link rel="canonical" href="https://spotnet.in/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SpotNet Services">
+    <meta property="og:title" content="SpotNet Services - Enterprise AI & Technology Solutions Provider">
+    <meta property="og:description" content="AI solutions, WhatsApp automation, custom software, broadband & solar installation for businesses in Siddharthnagar, Uttar Pradesh and beyond.">
+    <meta property="og:url" content="https://spotnet.in/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1758691737083-0e7fdbde0f05?fm=jpg&q=70&w=1200&auto=format&fit=crop">
+    <meta property="og:locale" content="en_IN">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SpotNet Services - Enterprise AI & Technology Solutions Provider">
+    <meta name="twitter:description" content="AI solutions, WhatsApp automation, custom software, broadband & solar installation in Siddharthnagar, UP.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1758691737083-0e7fdbde0f05?fm=jpg&q=70&w=1200&auto=format&fit=crop">
+
+    <meta name="geo.region" content="IN-UP">
+    <meta name="geo.placename" content="Dumariyaganj, Siddharthnagar">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='11' fill='%230b1f3a'/%3E%3Ccircle cx='24' cy='10' r='5' fill='%23ffffff'/%3E%3Ccircle cx='10' cy='34' r='5' fill='%23ffffff' fill-opacity='0.85'/%3E%3Ccircle cx='38' cy='34' r='5' fill='%2306b6d4'/%3E%3Cpath d='M24 15L11 30M24 15L37 30M13 34H35' stroke='%23ffffff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SpotNet Services",
+        "url": "https://spotnet.in/",
+        "logo": "https://spotnet.in/favicon.svg",
+        "description": "SpotNet Services builds AI solutions, WhatsApp automation, custom software, hospital management systems, broadband connectivity, and solar installation for businesses in Siddharthnagar, Uttar Pradesh and across India.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dumariyaganj",
+            "addressRegion": "Siddharthnagar, Uttar Pradesh",
+            "addressCountry": "IN"
+        },
+        "sameAs": [
+            "https://facebook.com/spotnetservices"
+        ],
+        "makesOffer": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Chatbot & Automation Solutions"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "WhatsApp Business API Integration"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom Software Development"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Broadband & Internet Services"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Solar Panel Installation"}}
+        ]
+    }
+    </script>
     <style>
         :root {
             --primary: #1a56db;
@@ -105,6 +155,11 @@
 
         .nav-links a:hover {
             color: var(--primary);
+        }
+
+        .nav-links a.btn-primary,
+        .nav-links a.btn-primary:hover {
+            color: white;
         }
 
         .nav-links a::after {
@@ -406,8 +461,9 @@
         }
 
         .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 30px;
         }
 
@@ -418,6 +474,8 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
             transition: all 0.3s;
             border: 2px solid transparent;
+            flex: 1 1 350px;
+            max-width: 400px;
         }
 
         .product-card:hover {
@@ -455,6 +513,19 @@
             position: absolute;
             inset: 0;
             background: linear-gradient(180deg, rgba(0,0,0,0.05) 40%, rgba(0,0,0,0.55) 100%);
+        }
+
+        .badge-dev {
+            display: inline-block;
+            background: #fff4e0;
+            color: #b45309;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
         }
 
         .product-badge-live {
@@ -571,8 +642,9 @@
         }
 
         .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 30px;
         }
 
@@ -583,6 +655,8 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
             transition: all 0.3s;
             border-left: 4px solid transparent;
+            flex: 1 1 320px;
+            max-width: 370px;
         }
 
         .service-card:hover {
@@ -904,7 +978,7 @@
 
         .footer-contact {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 12px;
             margin-bottom: 12px;
             color: rgba(255,255,255,0.8);
@@ -913,6 +987,7 @@
         .footer-contact i {
             color: var(--whatsapp);
             font-size: 1.3rem;
+            margin-top: 3px;
         }
 
         .footer-contact a {
@@ -1148,9 +1223,9 @@
                     <li><a href="https://medos.spotnet.in"><i class="fas fa-hospital"></i> SpotNet MedOS</a></li>
                     <li><a href="https://invoicekit.spotnet.in"><i class="fas fa-file-invoice-dollar"></i> InvoiceKit</a></li>
                     <li><a href="https://irangebio.web.app"><i class="fas fa-link"></i> iRange – Link in Bio</a></li>
-                    <li><a href="https://spotlinkapp.spotnet.in"><i class="fab fa-whatsapp"></i> SpotLink WhatsApp API</a></li>
-                    <li><a href="https://ai.spotnet.in"><i class="fas fa-balance-scale"></i> Lawyer AI</a></li>
-                    <li><a href="#products"><i class="fas fa-calendar-check"></i> Servicele Bookings</a></li>
+                    <li><a href="#products"><i class="fab fa-whatsapp"></i> SpotLink WhatsApp API (In Development)</a></li>
+                    <li><a href="#products"><i class="fas fa-balance-scale"></i> Lawyer AI (In Development)</a></li>
+                    <li><a href="#products"><i class="fas fa-calendar-check"></i> Servicele Bookings (In Development)</a></li>
                     <li><a href="solar.html"><i class="fas fa-solar-panel"></i> Solar Installation</a></li>
                     <li><a href="#products"><i class="fas fa-code"></i> Custom Software</a></li>
                 </ul>
@@ -1203,7 +1278,7 @@
                 <ul class="sidebar-links">
                     <li><a href="#testimonials"><i class="fas fa-star"></i> Testimonials</a></li>
                     <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
-                    <li><a href="https://ai.spotnet.in"><i class="fas fa-link"></i> AI Portal</a></li>
+                    <li><a href="#products"><i class="fas fa-link"></i> AI Portal (In Development)</a></li>
                 </ul>
             </div>
         </div>
@@ -1225,7 +1300,7 @@
                 <a href="#products" class="btn btn-primary" style="background: white; color: var(--primary);">
                     <i class="fas fa-rocket"></i> Explore Solutions
                 </a>
-                <a href="https://ai.spotnet.in" class="btn btn-outline" style="border-color: white; color: white;">
+                <a href="#ai-services" class="btn btn-outline" style="border-color: white; color: white;">
                     <i class="fas fa-robot"></i> AI Services
                 </a>
                 <a href="#contact" class="btn btn-outline" style="border-color: white; color: white;">
@@ -1328,6 +1403,7 @@
                     <div class="product-icon" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">
                         <i class="fas fa-calendar-check"></i>
                     </div>
+                    <span class="badge-dev"><i class="fas fa-hammer"></i> In Development</span>
                     <h3>Servicele - Service Booking</h3>
                     <p>WhatsApp-native local service booking platform — vendor registration, customer bookings, and admin approval, all over WhatsApp.</p>
                     <ul class="product-features">
@@ -1337,13 +1413,14 @@
                         <li><i class="fas fa-check-circle"></i> Subscription monetization ready</li>
                     </ul>
                     <a href="#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
-                        <i class="fas fa-comments"></i> Get Early Access
+                        <i class="fas fa-comments"></i> Join Waitlist
                     </a>
                 </div>
                 <div class="product-card">
                     <div class="product-icon" style="background: linear-gradient(135deg, #25D366, #128C7E);">
                         <i class="fab fa-whatsapp"></i>
                     </div>
+                    <span class="badge-dev"><i class="fas fa-hammer"></i> In Development</span>
                     <h3>SpotLink - WhatsApp Business API</h3>
                     <p>Professional WhatsApp Business API platform for automated customer communication, marketing campaigns, and 24/7 AI-powered support.</p>
                     <ul class="product-features">
@@ -1353,14 +1430,15 @@
                         <li><i class="fas fa-check-circle"></i> Advanced analytics & CRM</li>
                         <li><i class="fas fa-check-circle"></i> Green tick verification</li>
                     </ul>
-                    <a href="https://spotlinkapp.spotnet.in" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
-                        <i class="fas fa-external-link-alt"></i> Launch SpotLink
+                    <a href="#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
+                        <i class="fas fa-comments"></i> Join Waitlist
                     </a>
                 </div>
                 <div class="product-card">
                     <div class="product-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
                         <i class="fas fa-balance-scale"></i>
                     </div>
+                    <span class="badge-dev"><i class="fas fa-hammer"></i> In Development</span>
                     <h3>Lawyer AI - Legal Intelligence</h3>
                     <p>Advanced AI legal assistant trained on Indian law. Get instant legal insights, document drafting, case analysis, and compliance guidance.</p>
                     <ul class="product-features">
@@ -1370,8 +1448,8 @@
                         <li><i class="fas fa-check-circle"></i> Compliance checking</li>
                         <li><i class="fas fa-check-circle"></i> Legal precedent database</li>
                     </ul>
-                    <a href="https://ai.spotnet.in" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
-                        <i class="fas fa-external-link-alt"></i> Try Lawyer AI
+                    <a href="#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
+                        <i class="fas fa-comments"></i> Join Waitlist
                     </a>
                 </div>
                 <div class="product-card">
@@ -1925,12 +2003,20 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <h3>SpotNet Services</h3>
-                    <p>Leading enterprise technology partner specializing in WhatsApp Business API, AI solutions, and custom software development. We transform businesses with cutting-edge AI and automation technology, helping companies save time, reduce costs, and achieve unprecedented growth.</p>
+                    <p>SpotNet Services is a Siddharthnagar-based technology company building AI, automation, and enterprise software for businesses across India. From WhatsApp Business API and AI chatbots to custom SaaS products like MedOS, InvoiceKit, and iRange, we combine local understanding with enterprise-grade engineering. We also run SpotNet Broadband, delivering reliable local internet connectivity in Dumariyaganj and the surrounding Siddharthnagar region, and are actively expanding into solar installation and business automation services.</p>
+                    <div class="footer-contact">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>Dumariyaganj, Siddharthnagar, Uttar Pradesh, India</div>
+                    </div>
                     <div class="footer-contact">
                         <i class="fab fa-whatsapp"></i>
                         <div>
                             <a href="https://wa.me/15558572517?text=Hi%20SpotNet%20Services!%20I%27m%20interested%20in%20your%20solutions.">SpotNet Services</a>
                         </div>
+                    </div>
+                    <div class="footer-contact">
+                        <i class="fas fa-envelope"></i>
+                        <div><a href="mailto:spotnet95@gmail.com">spotnet95@gmail.com</a></div>
                     </div>
                     <div class="social-links">
                         <a href="https://facebook.com/spotnetservices" title="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -1945,8 +2031,8 @@
                         <li><a href="https://invoicekit.spotnet.in"><i class="fas fa-external-link-alt"></i> InvoiceKit</a></li>
                         <li><a href="https://irangebio.web.app"><i class="fas fa-external-link-alt"></i> iRange – Link in Bio</a></li>
                         <li><a href="solar.html"><i class="fas fa-solar-panel"></i> Solar Installation</a></li>
-                        <li><a href="https://spotlinkapp.spotnet.in"><i class="fas fa-external-link-alt"></i> SpotLink Dashboard</a></li>
-                        <li><a href="https://ai.spotnet.in"><i class="fas fa-external-link-alt"></i> AI Services Portal</a></li>
+                        <li><a href="#products"><i class="fas fa-hammer"></i> SpotLink Dashboard (In Development)</a></li>
+                        <li><a href="#products"><i class="fas fa-hammer"></i> AI Services Portal (In Development)</a></li>
                         <li><a href="#products"><i class="fas fa-chevron-right"></i> Our Products</a></li>
                         <li><a href="#ai-services"><i class="fas fa-chevron-right"></i> AI Solutions</a></li>
                         <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
