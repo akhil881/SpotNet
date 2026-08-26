@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/:match*",
+      "has": [
+        {
+          "type": "host",
+          "value": "servicele.spotnet.in"
+        }
+      ],
+      "destination": "https://service-le.servicele.workers.dev/:match*"
+    }
+  ]
+}
