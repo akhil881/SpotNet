@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "https://YOUR-WORKER-NAME.YOUR-SUBDOMAIN.workers.dev/$1" }
+    { "source": "/(.*)", "destination": "https://service-le.servicele.workers.dev/$1" }
   ]
 }
