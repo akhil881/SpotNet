@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotNet Engineering & Tech Insights | AI, SaaS & Clean Energy Blog</title>
+    <meta name="description" content="Technical breakdowns, enterprise guides, and policy analysis on AI automation, WhatsApp Business API, hospital software (MedOS), and PM Surya Ghar solar subsidies in UP from SpotNet Services.">
+    <meta name="keywords" content="SpotNet blog, AI automation blog, WhatsApp API guide, PM Surya Ghar subsidy UP, solar installation Siddharthnagar, MedOS hospital software, Dumariyaganj tech updates">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SpotNet Services">
+    <link rel="canonical" href="https://spotnet.in/blog.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="blog">
+    <meta property="og:site_name" content="SpotNet Services">
+    <meta property="og:title" content="SpotNet Insights | AI, Intelligent SaaS & Clean Energy Blog">
+    <meta property="og:description" content="Actionable guides and technical breakdowns on AI automation, healthcare software, and renewable solar power in Uttar Pradesh.">
+    <meta property="og:url" content="https://spotnet.in/blog.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?fm=jpg&q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:locale" content="en_IN">
+
+    <meta name="geo.region" content="IN-UP">
+    <meta name="geo.placename" content="Dumariyaganj, Siddharthnagar">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%23030712'/%3E%3Ccircle cx='24' cy='10' r='5' fill='%2338bdf8'/%3E%3Ccircle cx='10' cy='34' r='5' fill='%23818cf8'/%3E%3Ccircle cx='38' cy='34' r='5' fill='%2300f2fe'/%3E%3Cpath d='M24 15L11 30M24 15L37 30M13 34H35' stroke='%23ffffff' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+
+    <!-- Typography & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- Schema.org Blog -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "SpotNet Services Insights",
+        "url": "https://spotnet.in/blog.html",
+        "description": "Technical insights on AI automation, healthcare SaaS, GST billing, and rooftop solar subsidies in Uttar Pradesh.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "SpotNet Services",
+            "url": "https://spotnet.in/",
+            "logo": "https://spotnet.in/favicon.svg"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-base: #030712;
+            --bg-surface: #0a0f1d;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-glow: rgba(56, 189, 248, 0.35);
+            --electric-blue: #38bdf8;
+            --solar-amber: #f59e0b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 10; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        .ambient-mesh {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            background: 
+                radial-gradient(circle at 50% -10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 90% 40%, rgba(99, 102, 241, 0.08) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        /* Tesla-Style Floating Capsule Header */
+        header {
+            position: fixed; top: 20px; left: 0; width: 100%; z-index: 1000; pointer-events: none;
+        }
+
+        .header-capsule {
+            pointer-events: auto; max-width: 1200px; margin: 0 auto;
+            padding: 10px 24px; border-radius: 999px;
+            background: rgba(10, 15, 29, 0.78);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-subtle);
+            display: flex; align-items: center; justify-content: space-between;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .logo-wrap { display: flex; align-items: center; gap: 12px; }
+        .brand-icon {
+            width: 38px; height: 38px; border-radius: 10px;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border: 1px solid rgba(255,255,255,0.12);
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 0 16px rgba(56, 189, 248, 0.2);
+        }
+
+        .nav-links { display: flex; align-items: center; gap: 26px; }
+        .nav-links a { font-size: 0.9rem; font-weight: 500; color: #94a3b8; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: #fff; }
+
+        .btn-futuristic {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 10px 22px; border-radius: 999px; font-size: 0.88rem;
+            font-weight: 600; cursor: pointer; transition: all 0.25s; border: none;
+        }
+        .btn-glow {
+            background: linear-gradient(135deg, #2563eb, #0284c7);
+            color: #fff; box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+        }
+        .btn-glow:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(14, 165, 233, 0.7); }
+
+        /* Blog Hero */
+        .blog-hero {
+            position: relative; padding: 170px 0 60px; text-align: center; z-index: 10;
+        }
+
+        .telemetry-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 6px 16px; border-radius: 999px;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--border-subtle);
+            font-family: var(--font-mono); font-size: 0.78rem;
+            color: #38bdf8; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px;
+        }
+
+        .blog-hero h1 {
+            font-size: 3.6rem; font-weight: 800; line-height: 1.15;
+            letter-spacing: -0.03em; max-width: 840px; margin: 0 auto 18px;
+        }
+
+        .blog-hero p {
+            font-size: 1.15rem; color: var(--text-muted); max-width: 700px;
+            margin: 0 auto 36px; line-height: 1.65;
+        }
+
+        /* Search & Filter Pills */
+        .filter-controls { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+        .search-box { position: relative; width: 100%; }
+        .search-box input {
+            width: 100%; padding: 16px 20px 16px 50px; border-radius: 999px;
+            background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border-subtle);
+            color: #fff; font-size: 0.95rem; outline: none; transition: all 0.2s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); font-family: inherit;
+        }
+        .search-box input:focus {
+            border-color: var(--electric-blue); box-shadow: 0 0 25px rgba(56, 189, 248, 0.3); background: #111827;
+        }
+        .search-box i {
+            position: absolute; left: 20px; top: 50%; transform: translateY(-50%);
+            color: var(--text-dim); font-size: 1.1rem;
+        }
+
+        .cat-pills { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .cat-btn {
+            background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-subtle);
+            color: var(--text-muted); padding: 8px 18px; border-radius: 999px;
+            font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
+        }
+        .cat-btn:hover, .cat-btn.active {
+            background: #1e293b; color: #fff; border-color: var(--electric-blue);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+        }
+
+        /* Articles Layout */
+        main { padding: 60px 0 100px; position: relative; z-index: 10; }
+
+        .featured-card {
+            background: var(--bg-surface);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            border-radius: 24px; overflow: hidden;
+            display: grid; grid-template-columns: 1.1fr 1fr;
+            margin-bottom: 60px; transition: all 0.3s ease;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(245, 158, 11, 0.08);
+        }
+        .featured-card:hover { transform: translateY(-4px); }
+        .featured-img-wrap { position: relative; min-height: 380px; }
+        .featured-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .featured-badge {
+            position: absolute; top: 20px; left: 20px;
+            background: var(--solar-amber); color: #000;
+            font-size: 0.75rem; font-weight: 800; text-transform: uppercase;
+            padding: 6px 14px; border-radius: 999px; font-family: var(--font-mono);
+        }
+        .featured-content { padding: 44px; display: flex; flex-direction: column; justify-content: center; }
+
+        .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        .article-card {
+            background: var(--bg-surface); border: 1px solid var(--border-subtle);
+            border-radius: 20px; overflow: hidden; display: flex; flex-direction: column;
+            transition: all 0.3s ease;
+        }
+        .article-card:hover {
+            transform: translateY(-5px); border-color: var(--border-glow);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 20px rgba(56, 189, 248, 0.1);
+        }
+        .article-thumb { height: 210px; overflow: hidden; position: relative; }
+        .article-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+        .article-card:hover .article-thumb img { transform: scale(1.06); }
+
+        .tag-pill {
+            position: absolute; top: 14px; left: 14px; padding: 4px 12px;
+            border-radius: 999px; font-size: 0.72rem; font-weight: 700;
+            font-family: var(--font-mono); text-transform: uppercase; color: #fff;
+        }
+        .tag-ai { background: rgba(56, 189, 248, 0.85); color: #000; }
+        .tag-solar { background: rgba(245, 158, 11, 0.85); color: #000; }
+        .tag-saas { background: rgba(16, 185, 129, 0.85); color: #000; }
+        .tag-local { background: rgba(168, 85, 247, 0.85); color: #fff; }
+
+        .article-body { padding: 26px; display: flex; flex-direction: column; flex: 1; }
+        .article-body h4 { font-size: 1.25rem; font-weight: 700; color: #fff; line-height: 1.4; margin: 10px 0 12px; }
+        .article-body p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 22px; flex: 1; }
+        .article-meta {
+            display: flex; gap: 14px; font-size: 0.8rem; color: var(--text-dim);
+            font-family: var(--font-mono); margin-bottom: 10px;
+        }
+
+        .read-action {
+            display: flex; align-items: center; justify-content: space-between;
+            padding-top: 16px; border-top: 1px solid var(--border-subtle);
+            color: var(--electric-blue); font-weight: 600; font-size: 0.88rem; cursor: pointer;
+        }
+
+        /* Modal Reader */
+        .article-modal {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(3, 7, 18, 0.85); backdrop-filter: blur(12px);
+            z-index: 3000; display: none; align-items: center; justify-content: center; padding: 20px;
+        }
+        .article-modal.active { display: flex; }
+        .modal-box {
+            background: #090e1a; border: 1px solid var(--border-subtle);
+            max-width: 820px; width: 100%; max-height: 90vh; border-radius: 24px;
+            overflow-y: auto; padding: 44px; position: relative;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.8), 0 0 40px rgba(56, 189, 248, 0.15);
+        }
+        .modal-close {
+            position: absolute; top: 20px; right: 20px; width: 38px; height: 38px;
+            border-radius: 50%; background: #1e293b; color: #fff;
+            display: flex; align-items: center; justify-content: center; cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background: #020617; border-top: 1px solid var(--border-subtle);
+            padding: 70px 0 30px; position: relative; z-index: 10;
+        }
+
+        @media (max-width: 992px) {
+            .blog-hero h1 { font-size: 2.6rem; }
+            .articles-grid { grid-template-columns: 1fr; }
+            .featured-card { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .modal-box { padding: 26px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-mesh"></div>
+
+    <header>
+        <div class="container">
+            <div class="header-capsule">
+                <a href="index.html" class="logo-wrap">
+                    <div class="brand-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:22px; height:22px;">
+                            <circle cx="24" cy="10" r="5" fill="#38bdf8"/>
+                            <circle cx="10" cy="34" r="5" fill="#818cf8"/>
+                            <circle cx="38" cy="34" r="5" fill="#00f2fe"/>
+                            <path d="M24 15L11 30M24 15L37 30M13 34H35" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div style="font-size:1.15rem; font-weight:800; color:#fff;">SpotNet</div>
+                        <div style="font-family:var(--font-mono); font-size:0.65rem; color:var(--electric-blue); text-transform:uppercase;">Engineering Blog</div>
+                    </div>
+                </a>
+
+                <nav class="nav-links">
+                    <a href="index.html">Ecosystem</a>
+                    <a href="index.html#products">Products</a>
+                    <a href="solar.html" style="color:#f59e0b;"><i class="fas fa-sun"></i> Solar Division</a>
+                    <a href="blog.html" class="active">Insights</a>
+                    <a href="index.html#consultation" class="btn-futuristic btn-glow">Contact Team</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="telemetry-badge">
+                <i class="fas fa-microchip"></i> SpotNet Research & Engineering
+            </div>
+            <h1>
+                Architecting The Future Of <br>
+                <span style="background: linear-gradient(135deg, #ffffff, #93c5fd, #38bdf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    AI, SaaS & Clean Power
+                </span>
+            </h1>
+            <p>
+                In-depth engineering notes, government subsidy breakdowns, and business automation playbooks from Siddharthnagar to enterprise India.
+            </p>
+
+            <div class="filter-controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="blogSearch" placeholder="Search technical guides, PM Surya Ghar, MedOS, WhatsApp API..." onkeyup="filterPosts()">
+                </div>
+                <div class="cat-pills">
+                    <button class="cat-btn active" onclick="setCategory('all', this)">All Insights</button>
+                    <button class="cat-btn" onclick="setCategory('solar', this)">Solar & Energy</button>
+                    <button class="cat-btn" onclick="setCategory('ai', this)">Enterprise AI</button>
+                    <button class="cat-btn" onclick="setCategory('saas', this)">SaaS Platforms</button>
+                    <button class="cat-btn" onclick="setCategory('local', this)">Regional Fiber</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+
+            <!-- Featured Highlight Article -->
+            <article class="featured-card" data-category="solar" data-id="post-solar-guide">
+                <div class="featured-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?fm=jpg&q=80&w=1000&auto=format&fit=crop" alt="Rooftop solar installation UP">
+                    <div class="featured-badge">Featured Field Guide</div>
+                </div>
+                <div class="featured-content">
+                    <div style="display:flex; gap:16px; font-family:var(--font-mono); font-size:0.8rem; color:#f59e0b; margin-bottom:14px;">
+                        <span><i class="fas fa-solar-panel"></i> SOLAR DIVISION</span>
+                        <span><i class="far fa-calendar-alt"></i> OCT 2026</span>
+                        <span><i class="far fa-clock"></i> 7 MIN READ</span>
+                    </div>
+                    <h2 style="font-size:2rem; font-weight:800; color:#fff; line-height:1.25; margin-bottom:16px;">
+                        PM Surya Ghar Muft Bijli Yojana: Step-by-Step Subsidy Guide for UP Homes & Shops
+                    </h2>
+                    <p style="color:var(--text-muted); font-size:1rem; line-height:1.65; margin-bottom:26px;">
+                        Cut electric utility bills by up to 90%. Comprehensive breakdown of Central and Uttar Pradesh state subsidies, bidirectional net-metering approvals, and why SpotNet's local engineering team makes the process 100% turnkey.
+                    </p>
+                    <div>
+                        <button class="btn-futuristic btn-glow" onclick="openArticle('post-solar-guide')">
+                            Read Complete Guide <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Articles Header -->
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:34px; padding-bottom:14px; border-bottom:1px solid var(--border-subtle);">
+                <h3 style="font-size:1.6rem; font-weight:800; color:#fff;">Latest Engineering Dispatches</h3>
+                <span id="postCount" style="font-family:var(--font-mono); font-size:0.85rem; color:var(--text-dim);">Showing 6 articles</span>
+            </div>
+
+            <!-- Articles Grid -->
+            <div class="articles-grid" id="postsContainer">
+
+                <!-- 1. WhatsApp API -->
+                <article class="article-card" data-category="ai" data-id="post-whatsapp-ai">
+                    <div class="article-thumb">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="WhatsApp Business AI">
+                        <span class="tag-pill tag-ai">AI & API</span>
+                    </div>
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>OCT 2026</span> • <span>5 MIN READ</span>
+                        </div>
+                        <h4>Beyond Basic Chatbots: How Indian Retailers Scale with WhatsApp Business API</h4>
+                        <p>Automate multi-product catalogues, instant UPI payments, and 24/7 customer resolution with 98% message open rates.</p>
+                        <div class="read-action" onclick="openArticle('post-whatsapp-ai')">
+                            <span>Read Technical Deep-Dive</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. MedOS -->
+                <article class="article-card" data-category="saas" data-id="post-medos">
+                    <div class="article-thumb">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="MedOS Hospital Software">
+                        <span class="tag-pill tag-saas">Health SaaS</span>
+                    </div>
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>SEP 2026</span> • <span>6 MIN READ</span>
+                        </div>
+                        <h4>Digitizing Tier-2 & Tier-3 Clinics: How SpotNet MedOS Simplifies Hospital Operations</h4>
+                        <p>Paperless OPD token displays, bilingual prescriptions, and digital lab inventory engineered for Indian nursing homes.</p>
+                        <div class="read-action" onclick="openArticle('post-medos')">
+                            <span>Read Architecture Note</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. InvoiceKit -->
+                <article class="article-card" data-category="saas" data-id="post-invoicekit">
+                    <div class="article-thumb">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="InvoiceKit GST">
+                        <span class="tag-pill tag-saas">Fintech</span>
+                    </div>
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>SEP 2026</span> • <span>4 MIN READ</span>
+                        </div>
+                        <h4>GST-Compliant Invoicing in Under 60 Seconds: Inside InvoiceKit</h4>
+                        <p>Eliminate complex spreadsheets. Fast GST tax calculation, WhatsApp shareable PDF bills, and client balance ledgers.</p>
+                        <div class="read-action" onclick="openArticle('post-invoicekit')">
+                            <span>Read Feature Breakdown</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Solar Types -->
+                <article class="article-card" data-category="solar" data-id="post-solar-types">
+                    <div class="article-thumb">
+                        <img src="https://images.unsplash.com/photo-1548337138-e87d889cc369?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="On Grid vs Hybrid Solar">
+                        <span class="tag-pill tag-solar">Clean Energy</span>
+                    </div>
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>AUG 2026</span> • <span>5 MIN READ</span>
+                        </div>
+                        <h4>On-Grid vs Off-Grid vs Hybrid Solar: Which Configuration Fits Your Building?</h4>
+                        <p>Understanding inverter architectures, battery storage economics, and how net-metering lets you sell surplus power to UP DISCOM.</p>
+                        <div class="read-action" onclick="openArticle('post-solar-types')">
+                            <span>Read Energy Analysis</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. Fiber Broadband -->
+                <article class="article-card" data-category="local" data-id="post-broadband">
+                    <div class="article-thumb">
+                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Optical Fiber Broadband">
+                        <span class="tag-pill tag-local">Regional Infra</span>
+                    </div>
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>AUG 2026</span> • <span>4 MIN READ</span>
+                        </div>
+                        <h4>Why Dedicated Fiber Broadband is the Backbone for Dumariyaganj Businesses</h4>
+                        <p>Why modern institutions cannot rely on unstable cellular 4G/5G signals and how symmetrical gigabit fiber fuels local growth.</p>
+                        <div class="read-action" onclick="openArticle('post-broadband')">
+                            <span>Read Telecom Report</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. Custom AI Agents -->
+                <article class="article-card" data-category="ai" data-id="post-ai-custom">
+                    <div class="article-thumb">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Enterprise AI Agent">
+                        <span class="tag-pill tag-ai">Generative AI</span>
+                    </div>
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>JUL 2026</span> • <span>6 MIN READ</span>
+                        </div>
+                        <h4>Enterprise AI Agents: Integrating LLMs with Internal SQL Databases</h4>
+                        <p>A technical look at how SpotNet builds secure, private RAG assistants answering queries directly from your CRM and ERP records.</p>
+                        <div class="read-action" onclick="openArticle('post-ai-custom')">
+                            <span>Read Architecture Note</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- No Results Notice -->
+                <div id="noResults" style="display:none; grid-column:1/-1; text-align:center; padding:60px 20px; background:var(--bg-surface); border-radius:20px; border:1px dashed var(--border-subtle);">
+                    <i class="fas fa-search-minus" style="font-size:2.5rem; color:var(--text-dim); margin-bottom:14px;"></i>
+                    <h3 style="color:#fff; font-size:1.4rem;">No matching articles found</h3>
+                    <p style="color:var(--text-muted); font-size:0.95rem;">Try adjusting your search query or reset the filter pill above.</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Article Reader -->
+    <div class="article-modal" id="articleModal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-box">
+            <div class="modal-close" onclick="closeArticle()"><i class="fas fa-times"></i></div>
+            <div id="modalCategoryPill" style="display:inline-block; font-family:var(--font-mono); font-size:0.75rem; font-weight:700; color:#38bdf8; text-transform:uppercase; margin-bottom:10px;">TOPIC</div>
+            <h2 id="modalTitle" style="font-size:2rem; font-weight:800; color:#fff; line-height:1.25; margin-bottom:16px;">Title</h2>
+            <div id="modalMeta" style="font-family:var(--font-mono); font-size:0.82rem; color:var(--text-dim); margin-bottom:24px; padding-bottom:16px; border-bottom:1px solid var(--border-subtle);">
+                <!-- Meta dynamic -->
+            </div>
+            <div id="modalContent" style="color:#cbd5e1; font-size:1.02rem; line-height:1.8;">
+                <!-- Content dynamic -->
+            </div>
+            <div style="margin-top:30px; padding-top:20px; border-top:1px solid var(--border-subtle); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+                <span style="font-size:0.9rem; color:var(--text-muted);">Have questions regarding this topic?</span>
+                <a id="modalShareWhatsapp" href="#" class="btn-futuristic btn-glow" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> Discuss on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; padding-bottom:30px; border-bottom:1px solid var(--border-subtle);">
+                <div class="logo-wrap">
+                    <div class="brand-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:20px; height:20px;">
+                            <circle cx="24" cy="10" r="5" fill="#38bdf8"/>
+                            <circle cx="10" cy="34" r="5" fill="#818cf8"/>
+                            <circle cx="38" cy="34" r="5" fill="#00f2fe"/>
+                            <path d="M24 15L11 30M24 15L37 30M13 34H35" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div style="font-size:1.15rem; font-weight:800; color:#fff;">SpotNet Services</div>
+                        <div style="font-family:var(--font-mono); font-size:0.65rem; color:var(--electric-blue); text-transform:uppercase;">Insights & Research</div>
+                    </div>
+                </div>
+                <div style="display:flex; gap:24px; font-size:0.92rem; color:#94a3b8;">
+                    <a href="index.html">Main Ecosystem</a>
+                    <a href="index.html#products">Products</a>
+                    <a href="solar.html">Solar Installation</a>
+                    <a href="index.html#consultation">Contact</a>
+                </div>
+            </div>
+            <div style="padding-top:24px; text-align:center; color:var(--text-dim); font-size:0.85rem;">
+                © 2026 SpotNet Services. All rights reserved. | Enterprise AI & Technology Insights
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic -->
+    <script>
+        const articleDatabase = {
+            "post-solar-guide": {
+                category: "Solar Energy & UP Policy",
+                date: "October 2026",
+                readTime: "7 min read",
+                title: "PM Surya Ghar Muft Bijli Yojana: Step-by-Step Subsidy Guide for UP Homes & Shops",
+                content: `
+                    <p style="margin-bottom:16px;">The Government of India has introduced historic subsidies under the <strong>PM Surya Ghar: Muft Bijli Yojana</strong> to incentivize residential rooftop solar systems across Uttar Pradesh. Eligible residences can claim both Central and State financial support that covers up to 60-70% of benchmark project costs.</p>
+                    
+                    <h4 style="color:#fff; font-size:1.25rem; margin:20px 0 10px;">1. Subsidy Breakdown for Residential Systems</h4>
+                    <ul style="margin-left:20px; margin-bottom:18px;">
+                        <li style="margin-bottom:8px;"><strong>1 kW System:</strong> Approximately ₹30,000 Central subsidy. Ideal for small homes with monthly consumption under 150 units.</li>
+                        <li style="margin-bottom:8px;"><strong>2 kW System:</strong> Approximately ₹60,000 Central subsidy. Covers lights, fans, refrigerator, and LED TVs.</li>
+                        <li style="margin-bottom:8px;"><strong>3 kW to 10 kW:</strong> Up to ₹78,000 Central subsidy + UP State top-up subsidies. Perfect for running multiple ACs and high wattage commercial loads.</li>
+                    </ul>
+
+                    <h4 style="color:#fff; font-size:1.25rem; margin:20px 0 10px;">2. How Net-Metering Works in Uttar Pradesh</h4>
+                    <p style="margin-bottom:16px;">Net-metering allows bidirectional energy flow. During sunny daytime hours, your solar panels supply power to your home and export excess electricity into the DISCOM grid. At night, you draw power back. At the end of the billing cycle, you only pay for the net units consumed.</p>
+
+                    <h4 style="color:#fff; font-size:1.25rem; margin:20px 0 10px;">3. Why Choose SpotNet Solar in Siddharthnagar?</h4>
+                    <p>SpotNet Solar handles the entire journey end-to-end: complimentary rooftop shadow analysis, online portal registration, meter testing, and quality Tier-1 solar panel installation with a 25-year performance warranty.</p>
+                `
+            },
+            "post-whatsapp-ai": {
+                category: "Enterprise AI & Messaging",
+                date: "October 2026",
+                readTime: "5 min read",
+                title: "Beyond Basic Chatbots: How Indian Retailers Scale with WhatsApp Business API",
+                content: `
+                    <p style="margin-bottom:16px;">WhatsApp is the primary digital communication channel in India with over 500 million active users and an unmatched <strong>98% message open rate</strong>. However, managing inquiries manually through the standard WhatsApp Business App becomes impossible once daily chat volume scales past 50 conversations.</p>
+                    
+                    <h4 style="color:#fff; font-size:1.25rem; margin:20px 0 10px;">Core Superpowers of the Official WhatsApp Business API:</h4>
+                    <ul style="margin-left:20px; margin-bottom:18px;">
+                        <li style="margin-bottom:8px;"><strong>Interactive Multi-Product Catalogues:</strong> Allow customers to browse, select variants, and add items to cart directly within the chat interface.</li>
+                        <li style="margin-bottom:8px;"><strong>Instant Automated Payment Links:</strong> Integrate UPI and Razorpay payment triggers directly upon order confirmation.</li>
+                        <li style="margin-bottom:8px;"><strong>Green Tick Verification:</strong> Establish credibility and customer trust by getting your brand verified.</li>
+                        <li style="margin-bottom:8px;"><strong>AI-Driven Customer Resolution:</strong> Natural Language Processing (NLP) models handle 80% of routine questions without human intervention.</li>
+                    </ul>
+
+                    <p>SpotNet crafts customized WhatsApp CRM workflows connected to your ERP or SQL database, turning WhatsApp into your highest converting sales funnel.</p>
+                `
+            },
+            "post-medos": {
+                category: "Healthcare SaaS",
+                date: "September 2026",
+                readTime: "6 min read",
+                title: "Digitizing Tier-2 & Tier-3 Clinics: How SpotNet MedOS Simplifies Hospital Operations",
+                content: `
+                    <p style="margin-bottom:16px;">Independent hospitals, polyclinics, and diagnostic centers across semi-urban and rural India frequently struggle with manual paperwork, chaotic OPD waiting lines, and untracked pharmacy inventories. SpotNet MedOS was engineered to bridge this exact operational gap.</p>
+                    
+                    <h4 style="color:#fff; font-size:1.25rem; margin:20px 0 10px;">Core Capabilities of SpotNet MedOS:</h4>
+                    <ul style="margin-left:20px; margin-bottom:18px;">
+                        <li style="margin-bottom:8px;"><strong>Smart OPD Queue & Token Display:</strong> Eliminates waiting room overcrowding with automated digital queue screens and SMS token reminders.</li>
+                        <li style="margin-bottom:8px;"><strong>1-Click Prescription Generation:</strong> Pre-saved templates for common conditions, drug-drug interaction warnings, and instant bilingual printed prescriptions.</li>
+                        <li style="margin-bottom:8px;"><strong>Integrated Pharmacy & Inventory:</strong> Real-time tracking of medicine batches, expiry warnings, and supplier purchase orders.</li>
+                        <li style="margin-bottom:8px;"><strong>ABDM Digital Health Readiness:</strong> Formatted to align with national digital health standards.</li>
+                    </ul>
+                `
+            },
+            "post-invoicekit": {
+                category: "Fintech & Invoicing",
+                date: "September 2026",
+                readTime: "4 min read",
+                title: "GST-Compliant Invoicing in Under 60 Seconds: Inside InvoiceKit",
+                content: `
+                    <p style="margin-bottom:16px;">Traditional accounting software is often bloated, complex, and steep in licensing fees. For freelancers, contractors, and local traders, generating a professional, GST-compliant invoice shouldn't take more than a minute.</p>
+                    
+                    <h4 style="color:#fff; font-size:1.25rem; margin:20px 0 10px;">Why Thousands Choose InvoiceKit:</h4>
+                    <ul style="margin-left:20px; margin-bottom:18px;">
+                        <li style="margin-bottom:8px;"><strong>Zero Learning Curve:</strong> Clean, distraction-free interface designed for speed and clarity.</li>
+                        <li style="margin-bottom:8px;"><strong>Instant GST & IGST Calculations:</strong> Select your state, enter HSN/SAC codes, and tax rates calculate automatically.</li>
+                        <li style="margin-bottom:8px;"><strong>Direct WhatsApp Sharing:</strong> Download lightweight, beautifully formatted PDF invoices or share direct secure download links with your customers.</li>
+                    </ul>
+                `
+            },
+            "post-solar-types": {
+                category: "Solar Engineering",
+                date: "August 2026",
+                readTime: "5 min read",
+                title: "On-Grid vs Off-Grid vs Hybrid Solar: Which Configuration Fits Your Building?",
+                content: `
+                    <p style="margin-bottom:16px;">Choosing the right solar configuration depends primarily on your local grid stability and financial goals.</p>
+                    
+                    <h4 style="color:#fff; font-size:1.25rem; margin:20px 0 10px;">1. On-Grid Solar (Grid-Tied)</h4>
+                    <p style="margin-bottom:14px;">Most affordable and highest ROI. Connected directly to the electrical grid with net-metering. Best for areas with reliable grid power looking to eliminate monthly utility bills.</p>
+
+                    <h4 style="color:#fff; font-size:1.25rem; margin:20px 0 10px;">2. Off-Grid Solar</h4>
+                    <p style="margin-bottom:14px;">Completely detached from the power utility. Requires dedicated battery banks (Lithium-ion or Tubular) to store energy. Ideal for remote farmhouses, tube-wells, or areas with frequent long outages.</p>
+
+                    <h4 style="color:#fff; font-size:1.25rem; margin:20px 0 10px;">3. Hybrid Solar (The Best of Both Worlds)</h4>
+                    <p>Combines grid connection with battery backup. Ensures 24/7 continuous electricity even during grid load-shedding while still earning net-metering benefits.</p>
+                `
+            },
+            "post-broadband": {
+                category: "Regional Infrastructure",
+                date: "August 2026",
+                readTime: "4 min read",
+                title: "Why Dedicated Fiber Broadband is the Backbone for Dumariyaganj Businesses",
+                content: `
+                    <p style="margin-bottom:16px;">While mobile 5G connectivity has expanded, businesses requiring consistent cloud uploads, CCTV remote monitoring, digital banking terminals, and video conferencing know the limitations of wireless cellular signals.</p>
+                    
+                    <h4 style="color:#fff; font-size:1.25rem; margin:20px 0 10px;">The Optical Fiber Advantage:</h4>
+                    <ul style="margin-left:20px; margin-bottom:18px;">
+                        <li style="margin-bottom:8px;"><strong>Symmetric Upload & Download Speeds:</strong> Seamless cloud backups and video feeds.</li>
+                        <li style="margin-bottom:8px;"><strong>Ultra-low Latency (Ping &lt; 15ms):</strong> Zero buffering for VoIP calls, payments, and online trading.</li>
+                        <li style="margin-bottom:8px;"><strong>Weather-Resistant Reliability:</strong> Dedicated optical fiber unaffected by monsoon weather.</li>
+                    </ul>
+                `
+            },
+            "post-ai-custom": {
+                category: "Generative AI",
+                date: "July 2026",
+                readTime: "6 min read",
+                title: "Enterprise AI Agents: Integrating LLMs with Internal SQL Databases",
+                content: `
+                    <p style="margin-bottom:16px;">While public generative AI models are impressive, enterprise value comes from connecting AI to private, proprietary enterprise knowledge: inventory databases, customer histories, and ERP transactions.</p>
+                    
+                    <h4 style="color:#fff; font-size:1.25rem; margin:20px 0 10px;">Architecture of a SpotNet Enterprise AI Agent:</h4>
+                    <ul style="margin-left:20px; margin-bottom:18px;">
+                        <li style="margin-bottom:8px;"><strong>Retrieval-Augmented Generation (RAG):</strong> Embeds internal policy documents into secure vector databases.</li>
+                        <li style="margin-bottom:8px;"><strong>Text-to-SQL Pipelines:</strong> Translates natural language questions into validated SQL queries.</li>
+                        <li style="margin-bottom:8px;"><strong>Role-Based Access Control (RBAC):</strong> Guarantees that employees only query data permissible under their clearance levels.</li>
+                    </ul>
+                `
+            }
+        };
+
+        let activeCategory = 'all';
+
+        function setCategory(cat, btn) {
+            activeCategory = cat;
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterPosts();
+        }
+
+        function filterPosts() {
+            const query = document.getElementById('blogSearch').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.article-card');
+            const feat = document.querySelector('.featured-card');
+            let count = 0;
+
+            if (feat) {
+                const fCat = feat.getAttribute('data-category');
+                const fTxt = feat.innerText.toLowerCase();
+                const showFeat = (activeCategory === 'all' || fCat === activeCategory) && (!query || fTxt.includes(query));
+                feat.style.display = showFeat ? 'grid' : 'none';
+                if (showFeat) count++;
+            }
+
+            cards.forEach(card => {
+                const cCat = card.getAttribute('data-category');
+                const cTxt = card.innerText.toLowerCase();
+                const show = (activeCategory === 'all' || cCat === activeCategory) && (!query || cTxt.includes(query));
+                card.style.display = show ? 'flex' : 'none';
+                if (show) count++;
+            });
+
+            document.getElementById('postCount').innerText = `Showing ${count} article${count === 1 ? '' : 's'}`;
+            document.getElementById('noResults').style.display = count === 0 ? 'block' : 'none';
+        }
+
+        function openArticle(id) {
+            const art = articleDatabase[id];
+            if (!art) return;
+            document.getElementById('modalTitle').innerText = art.title;
+            document.getElementById('modalCategoryPill').innerText = art.category;
+            document.getElementById('modalMeta').innerHTML = `<span><i class="far fa-calendar-alt"></i> ${art.date}</span> • <span><i class="far fa-clock"></i> ${art.readTime}</span> • <span>SpotNet Engineering</span>`;
+            document.getElementById('modalContent').innerHTML = art.content;
+            
+            const shareText = encodeURIComponent(`Read this article on SpotNet: ${art.title} - https://spotnet.in/blog.html`);
+            document.getElementById('modalShareWhatsapp').href = `https://wa.me/15558572517?text=${shareText}`;
+            
+            document.getElementById('articleModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeArticle() {
+            document.getElementById('articleModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeModalOnBackdrop(e) {
+            if (e.target === document.getElementById('articleModal')) closeArticle();
+        }
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeArticle();
+        });
+    </script>
+</body>
+</html>

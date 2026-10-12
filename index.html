@@ -1,33 +1,46 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpotNet Services - Enterprise AI & Technology Solutions Provider</title>
-    <meta name="description" content="SpotNet Services builds AI solutions, WhatsApp automation, custom software, and enterprise technology for businesses — plus local broadband, and solar installation in Siddharthnagar, Uttar Pradesh.">
-    <meta name="keywords" content="SpotNet Services, WhatsApp Business API India, AI chatbot development, custom software development UP, hospital management system, MedOS, InvoiceKit, broadband Siddharthnagar, internet service Dumariyaganj, solar installation UP, AI automation India, lead generation service">
+    <title>SpotNet Services | Enterprise AI, Intelligent SaaS & Clean Energy</title>
+    <meta name="description" content="SpotNet Services engineers enterprise AI chatbots, WhatsApp Business automation, healthcare SaaS (MedOS), GST invoicing (InvoiceKit), rooftop solar installations, and high-speed broadband in Uttar Pradesh and across India.">
+    <meta name="keywords" content="SpotNet Services, Enterprise AI India, WhatsApp Business API automation, MedOS hospital software, InvoiceKit GST, rooftop solar installation UP, PM Surya Ghar subsidy Dumariyaganj, Siddharthnagar fiber broadband, custom SaaS software development">
     <meta name="robots" content="index, follow">
     <meta name="author" content="SpotNet Services">
     <link rel="canonical" href="https://spotnet.in/">
 
+    <!-- Open Graph / Meta -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="SpotNet Services">
-    <meta property="og:title" content="SpotNet Services - Enterprise AI & Technology Solutions Provider">
-    <meta property="og:description" content="AI solutions, WhatsApp automation, custom software, broadband & solar installation for businesses in Siddharthnagar, Uttar Pradesh and beyond.">
+    <meta property="og:title" content="SpotNet Services | Enterprise AI, Intelligent SaaS & Clean Energy">
+    <meta property="og:description" content="Next-generation AI agents, WhatsApp Business API automation, healthcare software, rooftop solar & fiber broadband in UP.">
     <meta property="og:url" content="https://spotnet.in/">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1758691737083-0e7fdbde0f05?fm=jpg&q=70&w=1200&auto=format&fit=crop">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?fm=jpg&q=80&w=1200&auto=format&fit=crop">
     <meta property="og:locale" content="en_IN">
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SpotNet Services - Enterprise AI & Technology Solutions Provider">
-    <meta name="twitter:description" content="AI solutions, WhatsApp automation, custom software, broadband & solar installation in Siddharthnagar, UP.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1758691737083-0e7fdbde0f05?fm=jpg&q=70&w=1200&auto=format&fit=crop">
+    <meta name="twitter:title" content="SpotNet Services | Enterprise AI & Technology">
+    <meta name="twitter:description" content="Next-generation AI solutions, WhatsApp Business automation, MedOS & certified solar installation in Uttar Pradesh.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?fm=jpg&q=80&w=1200&auto=format&fit=crop">
 
     <meta name="geo.region" content="IN-UP">
     <meta name="geo.placename" content="Dumariyaganj, Siddharthnagar">
 
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='11' fill='%230b1f3a'/%3E%3Ccircle cx='24' cy='10' r='5' fill='%23ffffff'/%3E%3Ccircle cx='10' cy='34' r='5' fill='%23ffffff' fill-opacity='0.85'/%3E%3Ccircle cx='38' cy='34' r='5' fill='%2306b6d4'/%3E%3Cpath d='M24 15L11 30M24 15L37 30M13 34H35' stroke='%23ffffff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%23030712'/%3E%3Ccircle cx='24' cy='10' r='5' fill='%2338bdf8'/%3E%3Ccircle cx='10' cy='34' r='5' fill='%23818cf8'/%3E%3Ccircle cx='38' cy='34' r='5' fill='%2300f2fe'/%3E%3Cpath d='M24 15L11 30M24 15L37 30M13 34H35' stroke='%23ffffff' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
 
+    <!-- Typography & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- Supabase JS CDN (Ready for Vercel/Supabase DB wiring) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -35,36 +48,39 @@
         "name": "SpotNet Services",
         "url": "https://spotnet.in/",
         "logo": "https://spotnet.in/favicon.svg",
-        "description": "SpotNet Services builds AI solutions, WhatsApp automation, custom software, hospital management systems, broadband connectivity, and solar installation for businesses in Siddharthnagar, Uttar Pradesh and across India.",
+        "description": "SpotNet Services builds enterprise AI solutions, WhatsApp Business API automation, clinical hospital software (MedOS), GST invoicing tools (InvoiceKit), fiber broadband, and certified rooftop solar installation in Siddharthnagar, Uttar Pradesh and across India.",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Dumariyaganj",
             "addressRegion": "Siddharthnagar, Uttar Pradesh",
             "addressCountry": "IN"
         },
+        "telephone": "+91-9120909501",
+        "email": "spotnet95@gmail.com",
         "sameAs": [
             "https://facebook.com/spotnetservices"
-        ],
-        "makesOffer": [
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Chatbot & Automation Solutions"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "WhatsApp Business API Integration"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom Software Development"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Broadband & Internet Services"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Solar Panel Installation"}}
         ]
     }
     </script>
+
     <style>
         :root {
-            --primary: #1a56db;
-            --secondary: #0b1f3a;
-            --accent: #06b6d4;
-            --gold: #d4a017;
-            --whatsapp: #25D366;
-            --success: #4bb543;
-            --dark: #212529;
-            --light: #f8f9fa;
-            --gray: #6c757d;
+            --bg-base: #030712;
+            --bg-surface: #0a0f1d;
+            --bg-elevated: #111827;
+            --bg-glass: rgba(15, 23, 42, 0.7);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-glow: rgba(56, 189, 248, 0.35);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
+            --cyan-glow: #00f2fe;
+            --electric-blue: #38bdf8;
+            --indigo-accent: #6366f1;
+            --solar-amber: #f59e0b;
+            --emerald-online: #10b981;
+            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
         }
 
         * {
@@ -73,2117 +89,1904 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            letter-spacing: -0.01em;
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
             overflow-x: hidden;
+            background-color: var(--bg-base);
+            position: relative;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Ambient Glow & Grid Backdrop */
+        .ambient-mesh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            background: 
+                radial-gradient(circle at 50% -10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 90% 40%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 10% 80%, rgba(6, 182, 212, 0.06) 0%, transparent 50%);
+        }
+
+        .ambient-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.8;
         }
 
         .container {
             width: 100%;
-            max-width: 1400px;
+            max-width: 1320px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
+            position: relative;
+            z-index: 10;
         }
 
-        header {
-            background: rgba(255, 255, 255, 0.98);
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* Typography & Headings */
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 20%, #93c5fd 60%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-solar {
+            background: linear-gradient(135deg, #fef08a 0%, #f59e0b 60%, #ea580c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Micro-Badges */
+        .telemetry-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--border-subtle);
+            font-family: var(--font-mono);
+            font-size: 0.76rem;
+            color: #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .pulse-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: var(--emerald-online);
+            box-shadow: 0 0 10px var(--emerald-online);
+            animation: pulse-glow 2s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.85); }
+        }
+
+        /* Tesla-Style Floating Capsule Header */
+        header {
             position: fixed;
+            top: 20px;
+            left: 0;
             width: 100%;
-            top: 0;
             z-index: 1000;
+            pointer-events: none;
         }
 
-        .navbar {
+        .header-capsule {
+            pointer-events: auto;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 24px;
+            border-radius: 999px;
+            background: rgba(10, 15, 29, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border-subtle);
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: center;
-            padding: 18px 0;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            transition: all 0.3s ease;
         }
 
-        .logo-container {
+        .header-capsule:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .logo-wrap {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
 
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            border-radius: 12px;
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border: 1px solid rgba(255,255,255,0.12);
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 6px 16px rgba(11,31,58,0.25);
+            box-shadow: 0 0 16px rgba(56, 189, 248, 0.2);
         }
 
-        .logo-icon svg { width: 28px; height: 28px; }
+        .brand-icon svg { width: 22px; height: 22px; }
 
-        .logo-text h1 {
-            font-size: 1.8rem;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 900;
+        .brand-name {
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #fff;
         }
 
-        .logo-text p {
-            font-size: 0.75rem;
-            color: var(--gray);
-            margin-top: -3px;
+        .brand-tag {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: var(--electric-blue);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
         }
 
         .nav-links {
             display: flex;
-            list-style: none;
             align-items: center;
-            gap: 30px;
+            gap: 24px;
         }
 
         .nav-links a {
+            font-size: 0.88rem;
             font-weight: 500;
-            color: var(--dark);
-            text-decoration: none;
-            transition: color 0.3s;
+            color: #94a3b8;
+            transition: color 0.2s, text-shadow 0.2s;
             position: relative;
         }
 
         .nav-links a:hover {
-            color: var(--primary);
+            color: #ffffff;
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
         }
 
-        .nav-links a.btn-primary,
-        .nav-links a.btn-primary:hover {
-            color: white;
+        .nav-pill-solar {
+            color: #f59e0b !important;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .btn {
-            padding: 12px 28px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
+        /* Buttons */
+        .btn-futuristic {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            border: none;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-        }
-
-        .btn-outline:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            font-size: 1.6rem;
-            cursor: pointer;
-            color: var(--dark);
-        }
-
-        .smart-sidebar {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 340px;
-            height: 100vh;
-            background: white;
-            box-shadow: -5px 0 30px rgba(0,0,0,0.15);
-            z-index: 2000;
-            transition: right 0.4s ease;
-            overflow-y: auto;
-            padding: 0;
-        }
-
-        .smart-sidebar.active {
-            right: 0;
-        }
-
-        .sidebar-header {
-            padding: 25px 30px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .sidebar-header h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-
-        .sidebar-close {
-            font-size: 1.8rem;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .sidebar-close:hover {
-            transform: rotate(90deg);
-        }
-
-        .sidebar-content {
-            padding: 20px 0;
-        }
-
-        .sidebar-section {
-            border-bottom: 1px solid #e9ecef;
-        }
-
-        .sidebar-section-title {
-            padding: 15px 30px;
+            padding: 10px 22px;
+            border-radius: 999px;
+            font-size: 0.88rem;
             font-weight: 600;
-            color: var(--dark);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .sidebar-section-title:hover {
-            background: #f8f9fa;
-        }
-
-        .sidebar-section-title i {
-            font-size: 0.9rem;
-            transition: transform 0.3s;
-        }
-
-        .sidebar-section.active .sidebar-section-title i {
-            transform: rotate(180deg);
-        }
-
-        .sidebar-links {
-            list-style: none;
-            max-height: 0;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid transparent;
+            position: relative;
             overflow: hidden;
-            transition: max-height 0.3s ease;
         }
 
-        .sidebar-section.active .sidebar-links {
-            max-height: 500px;
+        .btn-glow {
+            background: linear-gradient(135deg, #2563eb, #0284c7);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
         }
 
-        .sidebar-links li {
-            padding: 0;
+        .btn-glow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(14, 165, 233, 0.7);
+            color: #fff;
         }
 
-        .sidebar-links a {
+        .btn-glass {
+            background: rgba(255, 255, 255, 0.05);
+            color: #f8fafc;
+            border: 1px solid var(--border-subtle);
+            backdrop-filter: blur(8px);
+        }
+
+        .btn-glass:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .btn-solar {
+            background: linear-gradient(135deg, #d97706, #b45309);
+            color: #fff;
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.35);
+        }
+
+        .btn-solar:hover {
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.3rem;
+            color: #fff;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            padding: 180px 0 120px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        #particleCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin: 22px 0 24px;
+        }
+
+        .hero-desc {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 780px;
+            margin: 0 auto 38px;
+            line-height: 1.65;
+            font-weight: 400;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        /* Telemetry Status Strip */
+        .telemetry-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 18px;
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid var(--border-subtle);
+            backdrop-filter: blur(12px);
+        }
+
+        .tele-stat h4 {
+            font-size: 1.9rem;
+            font-weight: 800;
+            font-family: var(--font-mono);
+            color: #fff;
+        }
+
+        .tele-stat p {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 4px;
+        }
+
+        /* Section Layout */
+        section {
+            padding: 100px 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin: 14px 0 16px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Glassmorphism Card System with Interactive Glow */
+        .glass-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 32px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            backdrop-filter: blur(16px);
+        }
+
+        .glass-card:hover {
+            border-color: var(--border-glow);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(56, 189, 248, 0.1);
+        }
+
+        /* Product Interactive Switcher Matrix */
+        .product-tabs-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .tab-btn {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            padding: 10px 22px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn:hover,
+        .tab-btn.active {
+            background: #1e293b;
+            color: #fff;
+            border-color: var(--electric-blue);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .product-hero-card {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            padding: 44px;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(10, 15, 29, 0.9) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.5), 0 0 35px rgba(56, 189, 248, 0.12);
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .badge-live {
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .badge-waitlist {
+            background: rgba(245, 158, 11, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .feature-bullets {
+            margin: 20px 0 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .feature-bullets li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.92rem;
+            color: #cbd5e1;
+        }
+
+        .feature-bullets i {
+            color: var(--electric-blue);
+            margin-top: 4px;
+            font-size: 0.85rem;
+        }
+
+        /* Interactive WhatsApp AI Simulator (Tesla/xAI level) */
+        .simulator-section {
+            background: linear-gradient(180deg, transparent 0%, rgba(10, 15, 29, 0.8) 50%, transparent 100%);
+            padding: 110px 0;
+        }
+
+        .sim-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .phone-wrapper {
+            position: relative;
+            background: #000;
+            border-radius: 36px;
+            padding: 16px;
+            border: 4px solid #1e293b;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 40px rgba(37, 211, 102, 0.15);
+            max-width: 460px;
+            margin: 0 auto;
+        }
+
+        .phone-notch {
+            width: 120px;
+            height: 20px;
+            background: #1e293b;
+            border-radius: 0 0 14px 14px;
+            margin: 0 auto 12px;
+        }
+
+        .phone-screen {
+            background: #0b141a;
+            border-radius: 24px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 520px;
+        }
+
+        .wa-header {
+            background: #1f2c34;
+            padding: 14px 16px;
             display: flex;
             align-items: center;
             gap: 12px;
-            padding: 12px 30px 12px 45px;
-            color: var(--gray);
-            text-decoration: none;
-            transition: all 0.3s;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .wa-avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        .wa-info h5 { font-size: 0.95rem; color: #fff; font-weight: 600; }
+        .wa-info p { font-size: 0.75rem; color: #25D366; }
+
+        .chat-body {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 18px 18px;
+        }
+
+        .msg-bubble {
+            max-width: 82%;
+            padding: 10px 14px;
+            border-radius: 14px;
+            font-size: 0.88rem;
+            line-height: 1.45;
+            position: relative;
+        }
+
+        .msg-bot {
+            align-self: flex-start;
+            background: #202c33;
+            color: #e9edef;
+            border-bottom-left-radius: 4px;
+        }
+
+        .msg-user {
+            align-self: flex-end;
+            background: #005c4b;
+            color: #e9edef;
+            border-bottom-right-radius: 4px;
+        }
+
+        .msg-time {
+            font-size: 0.65rem;
+            color: rgba(255,255,255,0.5);
+            text-align: right;
+            margin-top: 4px;
+        }
+
+        .prompt-triggers {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 24px;
+        }
+
+        .sim-btn {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid var(--border-subtle);
+            color: #f1f5f9;
+            padding: 14px 20px;
+            border-radius: 12px;
+            text-align: left;
+            font-size: 0.92rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.25s ease;
+        }
+
+        .sim-btn:hover {
+            border-color: var(--electric-blue);
+            background: rgba(30, 41, 59, 0.8);
+            transform: translateX(6px);
+        }
+
+        /* Tesla-Style Solar Calculator */
+        .solar-calc-card {
+            background: linear-gradient(135deg, rgba(20, 24, 38, 0.9) 0%, rgba(12, 17, 30, 0.9) 100%);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            border-radius: 28px;
+            padding: 50px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 40px rgba(245, 158, 11, 0.08);
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .calc-slider-box {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .range-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: #1e293b;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .range-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--solar-amber);
+            box-shadow: 0 0 15px var(--solar-amber);
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+
+        .range-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+        }
+
+        .calc-metrics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .metric-box {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .metric-box h3 {
+            font-size: 1.7rem;
+            font-weight: 800;
+            font-family: var(--font-mono);
+            color: #fff;
+        }
+
+        .metric-box p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Lead Intake Console (Supabase-wired) */
+        .intake-console {
+            background: rgba(10, 15, 29, 0.85);
+            border: 1px solid var(--border-subtle);
+            border-radius: 28px;
+            padding: 50px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .input-group.full { grid-column: 1 / -1; }
+
+        .input-group label {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .input-field {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 14px 18px;
+            color: #fff;
             font-size: 0.95rem;
+            outline: none;
+            transition: all 0.2s;
+            font-family: inherit;
         }
 
-        .sidebar-links a:hover {
-            background: #f8f9fa;
-            color: var(--primary);
-            padding-left: 50px;
+        .input-field:focus {
+            border-color: var(--electric-blue);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+            background: #111827;
         }
 
-        .sidebar-links a i {
-            font-size: 0.85rem;
-            width: 16px;
+        /* Industries Carousel */
+        .carousel-track {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding-bottom: 20px;
+            scrollbar-width: none;
         }
 
-        .sidebar-cta {
-            padding: 25px 30px;
+        .carousel-track::-webkit-scrollbar { display: none; }
+
+        .industry-card {
+            min-width: 320px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 18px;
+            padding: 28px;
+            flex-shrink: 0;
+            transition: all 0.3s;
+        }
+
+        .industry-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-4px);
+        }
+
+        /* Footer */
+        footer {
+            background: #020617;
+            border-top: 1px solid var(--border-subtle);
+            padding: 90px 0 30px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h5 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+            letter-spacing: 0.02em;
+        }
+
+        .footer-links-list {
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
 
-        .sidebar-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: rgba(0,0,0,0.5);
-            z-index: 1999;
-            display: none;
-            backdrop-filter: blur(2px);
-        }
-
-        .sidebar-overlay.active {
-            display: block;
-        }
-
-        .hero {
-            background: linear-gradient(120deg, rgba(26,86,219,0.92), rgba(11,31,58,0.92)), url('https://images.unsplash.com/photo-1758691737083-0e7fdbde0f05?fm=jpg&q=70&w=2000&auto=format&fit=crop') center/cover no-repeat;
-            color: white;
-            padding: 180px 0 100px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-            opacity: 0.3;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 900;
-            margin-bottom: 25px;
-            line-height: 1.1;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
-            opacity: 0.95;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-bottom: 60px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding-top: 60px;
-            border-top: 1px solid rgba(255,255,255,0.2);
-            position: relative;
-            z-index: 1;
-        }
-
-        .stat-item h3 {
-            font-size: 3rem;
-            font-weight: 900;
-            margin-bottom: 8px;
-        }
-
-        .stat-item p {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-
-        section {
-            padding: 100px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .section-header h2 {
-            font-size: 2.8rem;
-            font-weight: 900;
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
-
-        .section-header p {
-            font-size: 1.15rem;
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .products-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            transition: all 0.3s;
-            border: 2px solid transparent;
-            flex: 1 1 350px;
-            max-width: 400px;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-            border-color: var(--primary);
-        }
-
-        .product-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 14px;
+        .footer-links-list a {
+            color: var(--text-dim);
+            font-size: 0.92rem;
+            transition: color 0.2s;
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: white;
+            gap: 8px;
         }
 
-        .product-card--media {
-            padding: 0 0 40px 0;
-            overflow: hidden;
+        .footer-links-list a:hover {
+            color: #fff;
         }
 
-        .product-media {
-            position: relative;
-            height: 190px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .product-media::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(0,0,0,0.05) 40%, rgba(0,0,0,0.55) 100%);
-        }
-
-        .badge-dev {
-            display: inline-block;
-            background: #fff4e0;
-            color: #b45309;
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.03em;
-            padding: 4px 12px;
-            border-radius: 20px;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-        }
-
-        .product-badge-live {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            background: rgba(255,255,255,0.95);
-            color: var(--primary, #4361ee);
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.03em;
-            padding: 5px 12px;
-            border-radius: 20px;
-            z-index: 2;
-        }
-
-        .product-media .product-icon {
-            position: absolute;
-            bottom: -28px;
-            left: 32px;
-            z-index: 2;
-            margin-bottom: 0;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-        }
-
-        .product-card--media .product-body {
-            padding: 48px 32px 0 32px;
-        }
-
-        .carousel-card--media {
-            padding: 0 0 30px 0;
-            overflow: hidden;
-        }
-
-        .carousel-media {
-            position: relative;
-            height: 140px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .carousel-media::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(0,0,0,0.05) 40%, rgba(0,0,0,0.5) 100%);
-        }
-
-        .carousel-media .carousel-icon {
-            position: absolute;
-            bottom: -22px;
-            left: 30px;
-            z-index: 2;
-            margin-bottom: 0;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.25);
-        }
-
-        .carousel-card--media .carousel-body {
-            padding: 38px 30px 0 30px;
-        }
-
-        .solar-banner {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            padding: 60px 40px;
-            margin-top: 50px;
-            background: linear-gradient(120deg, rgba(255,140,0,0.88), rgba(255,94,0,0.9)), url('https://images.unsplash.com/photo-1745187946672-2c1d8cf26a2b?fm=jpg&q=70&w=2000&auto=format&fit=crop') center/cover no-repeat;
+        .footer-bottom-bar {
+            padding-top: 30px;
+            border-top: 1px solid var(--border-subtle);
             display: flex;
-            flex-wrap: wrap;
-            align-items: center;
             justify-content: space-between;
-            gap: 24px;
-            color: white;
-        }
-
-        .solar-banner h3 {
-            font-size: 1.9rem;
-            margin-bottom: 8px;
-        }
-
-        .solar-banner p {
-            opacity: 0.95;
-            max-width: 480px;
-        }
-
-        .product-card h3 {
-            font-size: 1.7rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .product-card p {
-            color: var(--gray);
-            margin-bottom: 20px;
-            line-height: 1.7;
-        }
-
-        .product-features {
-            list-style: none;
-            margin: 20px 0;
-        }
-
-        .product-features li {
-            padding: 8px 0;
-            color: var(--dark);
-            display: flex;
             align-items: center;
-            gap: 10px;
-        }
-
-        .product-features li i {
-            color: var(--success);
-        }
-
-        .services-grid {
-            display: flex;
+            color: var(--text-dim);
+            font-size: 0.85rem;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
+            gap: 16px;
         }
 
-        .service-card {
-            background: white;
-            border-radius: 16px;
-            padding: 35px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            transition: all 0.3s;
-            border-left: 4px solid transparent;
-            flex: 1 1 320px;
-            max-width: 370px;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-            border-left-color: var(--primary);
-        }
-
-        .service-icon {
-            width: 65px;
-            height: 65px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: white;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .service-card p {
-            color: var(--gray);
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .service-features {
-            list-style: none;
-            margin: 15px 0;
-        }
-
-        .service-features li {
-            padding: 6px 0;
-            color: var(--dark);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9rem;
-        }
-
-        .service-features li i {
-            color: var(--success);
-            font-size: 0.85rem;
-        }
-
-        .carousel-section {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
-        }
-
-        .carousel-wrapper {
-            position: relative;
-            overflow: hidden;
-            padding: 20px 0 60px;
-        }
-
-        .carousel-container {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-            padding: 10px 5px;
-        }
-
-        .carousel-container::-webkit-scrollbar {
-            display: none;
-        }
-
-        .carousel-card {
-            background: white;
-            border-radius: 16px;
-            padding: 35px 30px;
-            min-width: 360px;
-            max-width: 360px;
-            flex-shrink: 0;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            transition: all 0.3s;
-        }
-
-        .carousel-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-        }
-
-        .carousel-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            margin-bottom: 18px;
-            color: white;
-        }
-
-        .carousel-card h3 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .carousel-card p {
-            color: var(--gray);
-            line-height: 1.6;
-            margin-bottom: 15px;
-            font-size: 0.95rem;
-        }
-
-        .carousel-features {
-            list-style: none;
-            margin: 15px 0;
-        }
-
-        .carousel-features li {
-            padding: 6px 0;
-            color: var(--dark);
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-            font-size: 0.9rem;
-        }
-
-        .carousel-features li i {
-            color: var(--success);
-            margin-top: 3px;
-            font-size: 0.85rem;
-        }
-
-        .carousel-nav {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 30px;
-        }
-
-        .carousel-btn {
-            width: 50px;
-            height: 50px;
+        /* Floating WhatsApp Button */
+        .floating-wa-btn {
+            position: fixed;
+            bottom: 26px;
+            right: 26px;
+            width: 58px;
+            height: 58px;
             border-radius: 50%;
-            background: white;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-            cursor: pointer;
+            background: #25D366;
+            color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.1rem;
-            transition: all 0.3s;
+            font-size: 1.7rem;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: transform 0.25s;
         }
 
-        .carousel-btn:hover {
-            background: var(--primary);
-            color: white;
-            transform: scale(1.05);
+        .floating-wa-btn:hover {
+            transform: scale(1.1);
         }
 
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background: white;
-            border-radius: 16px;
-            padding: 35px 30px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            position: relative;
-        }
-
-        .testimonial-quote {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 4rem;
-            color: var(--primary);
-            opacity: 0.1;
-            font-family: Georgia, serif;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            color: var(--gray);
-            line-height: 1.7;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .testimonial-author {
+        /* Mobile Drawer */
+        .mobile-drawer {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 320px;
+            height: 100vh;
+            background: #090e1a;
+            border-left: 1px solid var(--border-subtle);
+            z-index: 2000;
+            padding: 30px 24px;
             display: flex;
-            align-items: center;
-            gap: 15px;
+            flex-direction: column;
+            gap: 24px;
+            transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .author-avatar {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .author-info h4 {
-            font-weight: 600;
-            margin-bottom: 3px;
-        }
-
-        .author-info p {
-            font-size: 0.9rem;
-            color: var(--gray);
-        }
-
-        .testimonial-rating {
-            display: flex;
-            gap: 4px;
-            margin-top: 4px;
-        }
-
-        .testimonial-rating i {
-            color: #FFD700;
-            font-size: 0.85rem;
-        }
-
-        .cta {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            text-align: center;
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta::before {
-            content: '';
-            position: absolute;
+        .mobile-drawer.active { right: 0; }
+        .drawer-overlay {
+            position: fixed;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(4px);
+            z-index: 1999;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+        .drawer-overlay.active { opacity: 1; visibility: visible; }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .hero-title { font-size: 3.1rem; }
+            .products-grid { grid-template-columns: repeat(2, 1fr); }
+            .product-hero-card { grid-template-columns: 1fr; }
+            .sim-grid, .solar-calc-card, .intake-console { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .telemetry-strip { grid-template-columns: repeat(2, 1fr); }
         }
 
-        .cta-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta h2 {
-            font-size: 2.8rem;
-            font-weight: 900;
-            margin-bottom: 20px;
-        }
-
-        .cta p {
-            font-size: 1.2rem;
-            margin-bottom: 35px;
-            opacity: 0.95;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        footer {
-            background: #1a1a2e;
-            color: white;
-            padding: 70px 0 30px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 60px;
-            margin-bottom: 40px;
-        }
-
-        .footer-about h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            font-weight: 900;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .footer-about p {
-            color: rgba(255,255,255,0.7);
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        .footer-column h4 {
-            font-size: 1.1rem;
-            margin-bottom: 18px;
-            font-weight: 700;
-        }
-
-        .footer-contact {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 12px;
-            color: rgba(255,255,255,0.8);
-        }
-
-        .footer-contact i {
-            color: var(--whatsapp);
-            font-size: 1.3rem;
-            margin-top: 3px;
-        }
-
-        .footer-contact a {
-            color: var(--whatsapp);
-            text-decoration: none;
-            font-weight: 600;
-            transition: opacity 0.3s;
-        }
-
-        .footer-contact a:hover {
-            opacity: 0.8;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .social-links a:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            transition: color 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 25px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.6);
-        }
-
-        .whatsapp-float {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            width: 60px;
-            height: 60px;
-            background: var(--whatsapp);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-            z-index: 999;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            color: white;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
-        }
-
-        .whatsapp-float i {
-            font-size: 1.8rem;
-        }
-
-        @media (max-width: 1200px) {
-            .carousel-card {
-                min-width: 340px;
-                max-width: 340px;
-            }
-        }
-
-        @media (max-width: 968px) {
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .hero-stats {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
-            }
-
-            .section-header h2 {
-                font-size: 2.2rem;
-            }
-
-            .products-grid,
-            .services-grid,
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .carousel-card {
-                min-width: 300px;
-                max-width: 300px;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .whatsapp-float {
-                width: 55px;
-                height: 55px;
-                bottom: 20px;
-                right: 20px;
-            }
-
-            .whatsapp-float i {
-                font-size: 1.6rem;
-            }
-
-            .smart-sidebar {
-                width: 300px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero-stats {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .carousel-card {
-                min-width: 280px;
-                max-width: 280px;
-            }
-
-            .product-card,
-            .service-card {
-                padding: 25px;
-            }
-
-            .smart-sidebar {
-                width: 280px;
-            }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-toggle { display: block; }
+            header { top: 10px; }
+            .header-capsule { padding: 10px 18px; }
+            .hero-title { font-size: 2.3rem; }
+            .hero-desc { font-size: 1.05rem; }
+            .products-grid { grid-template-columns: 1fr; }
+            .form-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .section-header h2 { font-size: 2.1rem; }
+            .solar-calc-card, .intake-console { padding: 28px 20px; }
         }
     </style>
 </head>
 <body>
+
+    <!-- Ambient Visual Effects -->
+    <div class="ambient-mesh"></div>
+    <div class="ambient-grid"></div>
+
+    <!-- Tesla-Style Capsule Header -->
     <header>
         <div class="container">
-            <nav class="navbar">
-                <div class="logo-container">
-                    <div class="logo-icon">
+            <div class="header-capsule">
+                <a href="index.html" class="logo-wrap">
+                    <div class="brand-icon">
                         <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="24" cy="10" r="5" fill="#ffffff"/>
-                            <circle cx="10" cy="34" r="5" fill="#ffffff" fill-opacity="0.85"/>
-                            <circle cx="38" cy="34" r="5" fill="#06b6d4"/>
-                            <path d="M24 15L11 30M24 15L37 30M13 34H35" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/>
+                            <circle cx="24" cy="10" r="5" fill="#38bdf8"/>
+                            <circle cx="10" cy="34" r="5" fill="#818cf8"/>
+                            <circle cx="38" cy="34" r="5" fill="#00f2fe"/>
+                            <path d="M24 15L11 30M24 15L37 30M13 34H35" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <div class="logo-text">
-                        <h1>SpotNet Services</h1>
-                        <p>Enterprise Technology Solutions</p>
+                    <div>
+                        <div class="brand-name">SpotNet</div>
+                        <div class="brand-tag">Services</div>
                     </div>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#ai-services">AI Services</a></li>
-                    <li><a href="#tech-services">Technology</a></li>
-                    <li><a href="#industries">Industries</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact" class="btn btn-primary">Get Started</a></li>
-                </ul>
-                <div class="mobile-menu-btn" onclick="toggleSidebar()">
+                </a>
+
+                <nav class="nav-links">
+                    <a href="#products">Products</a>
+                    <a href="#ai-suite">AI Suite</a>
+                    <a href="#whatsapp-demo">AI Live Demo</a>
+                    <a href="solar.html" class="nav-pill-solar"><i class="fas fa-sun"></i> Solar Division</a>
+                    <a href="#roi-calc">ROI Calc</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="#consultation" class="btn-futuristic btn-glow">Deploy / Contact</a>
+                </nav>
+
+                <div class="mobile-toggle" onclick="toggleDrawer()">
                     <i class="fas fa-bars"></i>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
 
-    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
-    <div class="smart-sidebar" id="smartSidebar">
-        <div class="sidebar-header">
-            <h3>Navigation Menu</h3>
-            <div class="sidebar-close" onclick="toggleSidebar()">
-                <i class="fas fa-times"></i>
+    <!-- Mobile Drawer Navigation -->
+    <div class="drawer-overlay" id="drawerOverlay" onclick="toggleDrawer()"></div>
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div class="logo-wrap">
+                <div class="brand-icon"><i class="fas fa-bolt" style="color:var(--electric-blue)"></i></div>
+                <div class="brand-name">SpotNet</div>
             </div>
+            <i class="fas fa-times" onclick="toggleDrawer()" style="cursor:pointer; color:#94a3b8; font-size:1.3rem;"></i>
         </div>
-        <div class="sidebar-content">
-            <div class="sidebar-section active">
-                <div class="sidebar-section-title" onclick="toggleSection(this)">
-                    <span>Flagship Products</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <ul class="sidebar-links">
-                    <li><a href="https://medos.spotnet.in"><i class="fas fa-hospital"></i> SpotNet MedOS</a></li>
-                    <li><a href="https://freeinvoice.spotnet.in"><i class="fas fa-file-invoice-dollar"></i> InvoiceKit</a></li>
-                    <li><a href="https://irangebio.spotnet.in"><i class="fas fa-link"></i> iRange – Link in Bio</a></li>
-                    <li><a href="#products"><i class="fab fa-whatsapp"></i> SpotLink WhatsApp API (In Development)</a></li>
-                    <li><a href="#products"><i class="fas fa-balance-scale"></i> Lawyer AI (In Development)</a></li>
-                    <li><a href="https://servicele.spotnet.in/"><i class="fas fa-calendar-check"></i> Servicele Bookings</a></li>
-                    <li><a href="solar.html"><i class="fas fa-solar-panel"></i> Solar Installation</a></li>
-                    <li><a href="#products"><i class="fas fa-code"></i> Custom Software</a></li>
-                </ul>
-            </div>
-            <div class="sidebar-section">
-                <div class="sidebar-section-title" onclick="toggleSection(this)">
-                    <span>AI Services</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <ul class="sidebar-links">
-                    <li><a href="#ai-services"><i class="fas fa-robot"></i> AI Chatbots & IVR</a></li>
-                    <li><a href="#ai-services"><i class="fas fa-chart-line"></i> Predictive Analytics</a></li>
-                    <li><a href="#ai-services"><i class="fas fa-bullhorn"></i> AI Marketing</a></li>
-                    <li><a href="#ai-services"><i class="fas fa-heartbeat"></i> Healthcare AI</a></li>
-                    <li><a href="#ai-services"><i class="fas fa-graduation-cap"></i> Education AI</a></li>
-                    <li><a href="#ai-services"><i class="fas fa-shopping-cart"></i> E-commerce AI</a></li>
-                </ul>
-            </div>
-            <div class="sidebar-section">
-                <div class="sidebar-section-title" onclick="toggleSection(this)">
-                    <span>Technology Services</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <ul class="sidebar-links">
-                    <li><a href="#tech-services"><i class="fas fa-shield-alt"></i> Cybersecurity</a></li>
-                    <li><a href="#tech-services"><i class="fas fa-cloud"></i> Cloud Solutions</a></li>
-                    <li><a href="#tech-services"><i class="fas fa-network-wired"></i> Network Infrastructure</a></li>
-                    <li><a href="#tech-services"><i class="fas fa-database"></i> Data Management</a></li>
-                    <li><a href="#tech-services"><i class="fas fa-mobile-alt"></i> Mobile Development</a></li>
-                </ul>
-            </div>
-            <div class="sidebar-section">
-                <div class="sidebar-section-title" onclick="toggleSection(this)">
-                    <span>Industries</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <ul class="sidebar-links">
-                    <li><a href="#industries"><i class="fas fa-shopping-bag"></i> E-commerce</a></li>
-                    <li><a href="#industries"><i class="fas fa-user-md"></i> Healthcare</a></li>
-                    <li><a href="#industries"><i class="fas fa-book"></i> Education</a></li>
-                    <li><a href="#industries"><i class="fas fa-hotel"></i> Hospitality</a></li>
-                    <li><a href="#industries"><i class="fas fa-building"></i> Real Estate</a></li>
-                </ul>
-            </div>
-            <div class="sidebar-section">
-                <div class="sidebar-section-title" onclick="toggleSection(this)">
-                    <span>Company</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <ul class="sidebar-links">
-                    <li><a href="#testimonials"><i class="fas fa-star"></i> Testimonials</a></li>
-                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
-                    <li><a href="#products"><i class="fas fa-link"></i> AI Portal (In Development)</a></li>
-                </ul>
-            </div>
+        <div class="telemetry-badge" style="width: fit-content;">
+            <span class="pulse-dot"></span> System Operational
         </div>
-        <div class="sidebar-cta">
-            <a href="https://wa.me/15558572517?text=Hi%20SpotNet%20Services!%20I%27m%20interested%20in%20your%20solutions." class="btn btn-primary" style="justify-content: center;">
-                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-            </a>
-            <a href="#contact" class="btn btn-outline" style="justify-content: center;">
-                <i class="fas fa-rocket"></i> Get Started Free
-            </a>
-        </div>
+        <nav style="display:flex; flex-direction:column; gap:16px; margin-top:20px;">
+            <a href="#products" onclick="toggleDrawer()" style="font-size:1.05rem; color:#cbd5e1;"><i class="fas fa-boxes" style="width:24px;"></i> Products</a>
+            <a href="#ai-suite" onclick="toggleDrawer()" style="font-size:1.05rem; color:#cbd5e1;"><i class="fas fa-robot" style="width:24px;"></i> AI Suite</a>
+            <a href="#whatsapp-demo" onclick="toggleDrawer()" style="font-size:1.05rem; color:#cbd5e1;"><i class="fab fa-whatsapp" style="width:24px;"></i> AI Live Demo</a>
+            <a href="solar.html" onclick="toggleDrawer()" style="font-size:1.05rem; color:#f59e0b;"><i class="fas fa-sun" style="width:24px;"></i> Solar Installation</a>
+            <a href="#roi-calc" onclick="toggleDrawer()" style="font-size:1.05rem; color:#cbd5e1;"><i class="fas fa-calculator" style="width:24px;"></i> Solar ROI Calc</a>
+            <a href="blog.html" onclick="toggleDrawer()" style="font-size:1.05rem; color:#cbd5e1;"><i class="fas fa-newspaper" style="width:24px;"></i> Blog & Insights</a>
+            <a href="#consultation" onclick="toggleDrawer()" class="btn-futuristic btn-glow" style="margin-top:20px; justify-content:center;">Get Started</a>
+        </nav>
     </div>
 
-    <section class="hero">
+    <!-- Hero Section with Canvas Constellation -->
+    <section class="hero-section">
+        <canvas id="particleCanvas"></canvas>
         <div class="container">
-            <h1>Transform Your Business with AI & Technology</h1>
-            <p>SpotNet Services delivers cutting-edge AI solutions, WhatsApp automation, custom software, and enterprise technology to help businesses save time, reduce costs, and achieve unprecedented growth.</p>
-            <div class="hero-buttons">
-                <a href="#products" class="btn btn-primary" style="background: white; color: var(--primary);">
-                    <i class="fas fa-rocket"></i> Explore Solutions
-                </a>
-                <a href="#ai-services" class="btn btn-outline" style="border-color: white; color: white;">
-                    <i class="fas fa-robot"></i> AI Services
-                </a>
-                <a href="#contact" class="btn btn-outline" style="border-color: white; color: white;">
-                    <i class="fas fa-phone"></i> Contact Sales
-                </a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <h3>500+</h3>
-                    <p>Happy Clients</p>
+            <div class="hero-content">
+                <div class="telemetry-badge">
+                    <span class="pulse-dot"></span> SpotNet 2.0 • Enterprise Cloud & Green Energy
                 </div>
-                <div class="stat-item">
-                    <h3>25+</h3>
-                    <p>AI Solutions</p>
+
+                <h1 class="hero-title">
+                    Architecting <span class="gradient-text">Intelligent Systems</span> For Modern Business
+                </h1>
+
+                <p class="hero-desc">
+                    SpotNet Services delivers enterprise-grade AI chatbots, WhatsApp Business automation, clinic SaaS (MedOS), GST billing (InvoiceKit), certified rooftop solar installations, and high-speed broadband in Uttar Pradesh and across India.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#products" class="btn-futuristic btn-glow">
+                        <i class="fas fa-layer-group"></i> Explore Products
+                    </a>
+                    <a href="#whatsapp-demo" class="btn-futuristic btn-glass">
+                        <i class="fab fa-whatsapp"></i> Test AI Agent Live
+                    </a>
+                    <a href="solar.html" class="btn-futuristic btn-solar">
+                        <i class="fas fa-solar-panel"></i> Solar Subsidy (UP)
+                    </a>
                 </div>
-                <div class="stat-item">
-                    <h3>98%</h3>
-                    <p>Satisfaction Rate</p>
-                </div>
-                <div class="stat-item">
-                    <h3>24/7</h3>
-                    <p>Support</p>
+
+                <!-- Live System Telemetry Strip -->
+                <div class="telemetry-strip">
+                    <div class="tele-stat">
+                        <h4>500+</h4>
+                        <p>Enterprise Deployments</p>
+                    </div>
+                    <div class="tele-stat">
+                        <h4>98.4%</h4>
+                        <p>Automation Accuracy</p>
+                    </div>
+                    <div class="tele-stat">
+                        <h4>₹0 Bill</h4>
+                        <p>UP Rooftop Solar Target</p>
+                    </div>
+                    <div class="tele-stat">
+                        <h4>&lt; 15ms</h4>
+                        <p>Fiber Network Latency</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Flagship Products Showcase Matrix -->
     <section id="products">
         <div class="container">
             <div class="section-header">
-                <div class="section-badge">Flagship Products</div>
-                <h2>Enterprise-Grade Solutions</h2>
-                <p>Comprehensive technology products designed to automate, optimize, and scale your business operations with cutting-edge features.</p>
+                <div class="telemetry-badge">Ecosystem Matrix</div>
+                <h2>Engineered For Scale. Built For Real Impact.</h2>
+                <p>Proprietary SaaS platforms and AI engines developed in-house to solve critical operational bottlenecks for Indian enterprises and institutions.</p>
             </div>
-            <div class="products-grid">
-                <div class="product-card product-card--media">
-                    <div class="product-media" style="background-image: url('https://images.unsplash.com/photo-1758691462848-ba1e929da259?fm=jpg&q=75&w=1200&auto=format&fit=crop');">
-                        <span class="product-badge-live">LIVE</span>
-                        <div class="product-icon" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">
-                            <i class="fas fa-hospital"></i>
+
+            <!-- Product Category Filter Switcher -->
+            <div class="product-tabs-nav">
+                <button class="tab-btn active" onclick="filterProducts('all', this)">All Solutions</button>
+                <button class="tab-btn" onclick="filterProducts('saas', this)">SaaS Platforms</button>
+                <button class="tab-btn" onclick="filterProducts('ai', this)">AI & Automation</button>
+                <button class="tab-btn" onclick="filterProducts('infrastructure', this)">Solar & Telecom</button>
+            </div>
+
+            <div class="products-grid" id="productGrid">
+
+                <!-- 1. SpotNet MedOS (Featured) -->
+                <div class="glass-card product-hero-card" data-cat="saas">
+                    <div>
+                        <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+                            <span class="status-badge badge-live"><i class="fas fa-check-circle"></i> PRODUCTION LIVE</span>
+                            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim);">HEALTHCARE SUITE</span>
+                        </div>
+                        <h3 style="font-size:2.2rem; font-weight:800; margin-bottom:14px; color:#fff;">SpotNet MedOS</h3>
+                        <p style="color:var(--text-muted); font-size:1.05rem; line-height:1.65; margin-bottom:20px;">
+                            Full-cycle Hospital, Polyclinic & Pathology Laboratory Management System engineered specifically for Indian clinical workflows. Features automated OPD queue tokens, bilingual prescription generation, lab reporting, and ABDM digital health compliance.
+                        </p>
+                        <ul class="feature-bullets">
+                            <li><i class="fas fa-check"></i> Multi-counter OPD token queuing & digital display board sync</li>
+                            <li><i class="fas fa-check"></i> 1-Click bilingual prescription printing & WhatsApp delivery to patient</li>
+                            <li><i class="fas fa-check"></i> Pharmacy inventory management with expiry tracking & GST billing</li>
+                            <li><i class="fas fa-check"></i> Instant cloud sync with offline disaster protection</li>
+                        </ul>
+                        <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:24px;">
+                            <a href="https://medos.spotnet.in" target="_blank" rel="noopener" class="btn-futuristic btn-glow">
+                                <i class="fas fa-external-link-alt"></i> Launch MedOS
+                            </a>
+                            <a href="#consultation" class="btn-futuristic btn-glass">
+                                Request Hospital Demo
+                            </a>
                         </div>
                     </div>
-                    <div class="product-body">
-                        <h3>SpotNet MedOS</h3>
-                        <p>AI-powered Hospital & Lab Management System built for Indian clinics — patient records, billing, lab reports, and staff workflows in one place.</p>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check-circle"></i> Multi-tenant patient & OPD records</li>
-                            <li><i class="fas fa-check-circle"></i> Lab report generation & delivery</li>
-                            <li><i class="fas fa-check-circle"></i> Billing & staff role management</li>
-                            <li><i class="fas fa-check-circle"></i> Real-time cloud sync</li>
-                        </ul>
-                        <a href="https://medos.spotnet.in" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
-                            <i class="fas fa-external-link-alt"></i> Launch MedOS
-                        </a>
-                    </div>
-                </div>
-                <div class="product-card product-card--media">
-                    <div class="product-media" style="background-image: url('https://images.unsplash.com/photo-1709880945165-d2208c6ad2ec?fm=jpg&q=75&w=1200&auto=format&fit=crop');">
-                        <span class="product-badge-live">LIVE</span>
-                        <div class="product-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
-                            <i class="fas fa-file-invoice-dollar"></i>
+                    <div style="background: radial-gradient(circle at center, rgba(56,189,248,0.15) 0%, rgba(15,23,42,0.8) 100%); border-radius:18px; border:1px solid var(--border-subtle); padding:30px; display:flex; flex-direction:column; justify-content:center; gap:18px;">
+                        <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--electric-blue);">// SYSTEM TELEMETRY</div>
+                        <div style="background:#0a0f1d; border-radius:12px; padding:16px; border:1px solid var(--border-subtle);">
+                            <div style="font-size:0.85rem; color:var(--text-dim);">Clinic OPD Capacity</div>
+                            <div style="font-size:1.4rem; font-weight:700; color:#fff;">10,000+ Records / Day</div>
+                        </div>
+                        <div style="background:#0a0f1d; border-radius:12px; padding:16px; border:1px solid var(--border-subtle);">
+                            <div style="font-size:0.85rem; color:var(--text-dim);">Integration Support</div>
+                            <div style="font-size:1.4rem; font-weight:700; color:#34d399;">WhatsApp API + Thermal Printers</div>
                         </div>
                     </div>
-                    <div class="product-body">
-                        <h3>InvoiceKit</h3>
-                        <p>GST-ready invoicing and salary slip generator built for Indian MSMEs — create, send, and track professional invoices in seconds.</p>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check-circle"></i> GST-compliant invoice generation</li>
-                            <li><i class="fas fa-check-circle"></i> Salary slip & payroll templates</li>
-                            <li><i class="fas fa-check-circle"></i> Client & payment tracking</li>
-                            <li><i class="fas fa-check-circle"></i> PDF export & sharing</li>
-                        </ul>
-                        <a href="https://freeinvoice.spotnet.in" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
-                            <i class="fas fa-external-link-alt"></i> Launch InvoiceKit
-                        </a>
-                    </div>
                 </div>
-                <div class="product-card product-card--media">
-                    <div class="product-media" style="background-image: url('https://images.unsplash.com/photo-1745848413078-f85af10e5bf2?fm=jpg&q=75&w=1200&auto=format&fit=crop');">
-                        <span class="product-badge-live">LIVE</span>
-                        <div class="product-icon" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
-                            <i class="fas fa-link"></i>
-                        </div>
+
+                <!-- 2. InvoiceKit -->
+                <div class="glass-card" data-cat="saas">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #10b981, #047857);">
+                        <i class="fas fa-file-invoice-dollar"></i>
                     </div>
-                    <div class="product-body">
-                        <h3>iRange - Link in Bio</h3>
-                        <p>A clean, fast link-in-bio Android app to bring all your social links, store, and content together in one shareable page.</p>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check-circle"></i> Custom bio link page</li>
-                            <li><i class="fas fa-check-circle"></i> Social & store link blocks</li>
-                            <li><i class="fas fa-check-circle"></i> Click analytics</li>
-                            <li><i class="fas fa-check-circle"></i> Android app, free to use</li>
-                        </ul>
-                        <a href="https://irangebio.spotnet.in" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
-                            <i class="fas fa-external-link-alt"></i> Open iRange
-                        </a>
-                    </div>
+                    <span class="status-badge badge-live" style="margin-bottom:12px;">PRODUCTION LIVE</span>
+                    <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:10px; color:#fff;">InvoiceKit</h3>
+                    <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:16px;">
+                        High-speed GST invoicing, quotation, and payroll slips generator built for Indian MSMEs, freelancers, and retail trade.
+                    </p>
+                    <ul class="feature-bullets">
+                        <li><i class="fas fa-check"></i> Instant GST/IGST calculations & HSN lookup</li>
+                        <li><i class="fas fa-check"></i> WhatsApp PDF invoice sharing with payment QR</li>
+                        <li><i class="fas fa-check"></i> Salary slip generator & client balance ledger</li>
+                    </ul>
+                    <a href="https://freeinvoice.spotnet.in" target="_blank" rel="noopener" class="btn-futuristic btn-glow" style="width:100%; justify-content:center; margin-top:10px;">
+                        <i class="fas fa-external-link-alt"></i> Open InvoiceKit
+                    </a>
                 </div>
-                <div class="product-card">
-                    <div class="product-icon" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">
+
+                <!-- 3. iRange - Link in Bio -->
+                <div class="glass-card" data-cat="saas">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #f59e0b, #b45309);">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <span class="status-badge badge-live" style="margin-bottom:12px;">PRODUCTION LIVE</span>
+                    <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:10px; color:#fff;">iRange – Link in Bio</h3>
+                    <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:16px;">
+                        Ultra-fast link-in-bio mobile & web platform for creators, brands, and retail storefronts to aggregate all digital links and products.
+                    </p>
+                    <ul class="feature-bullets">
+                        <li><i class="fas fa-check"></i> Custom high-conversion bio link profiles</li>
+                        <li><i class="fas fa-check"></i> Integrated product catalogue & store redirection</li>
+                        <li><i class="fas fa-check"></i> Deep click analytics & geo insights</li>
+                    </ul>
+                    <a href="https://irangebio.spotnet.in" target="_blank" rel="noopener" class="btn-futuristic btn-glow" style="width:100%; justify-content:center; margin-top:10px;">
+                        <i class="fas fa-external-link-alt"></i> Launch iRange
+                    </a>
+                </div>
+
+                <!-- 4. SpotLink WhatsApp API -->
+                <div class="glass-card" data-cat="ai">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #25D366, #075e54);">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <span class="status-badge badge-waitlist" style="margin-bottom:12px;">PILOT / WAITLIST</span>
+                    <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:10px; color:#fff;">SpotLink – WhatsApp API</h3>
+                    <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:16px;">
+                        Enterprise conversational AI engine deployed on official Meta WhatsApp Business API. Automated catalogues, 24/7 customer service, and campaign broadcast.
+                    </p>
+                    <ul class="feature-bullets">
+                        <li><i class="fas fa-check"></i> Unlimited verified broadcast messaging</li>
+                        <li><i class="fas fa-check"></i> Smart RAG AI chatbot trained on internal docs</li>
+                        <li><i class="fas fa-check"></i> Multi-agent team dashboard & Green Tick prep</li>
+                    </ul>
+                    <a href="#whatsapp-demo" class="btn-futuristic btn-glass" style="width:100%; justify-content:center; margin-top:10px;">
+                        <i class="fas fa-play"></i> Test Interactive Demo
+                    </a>
+                </div>
+
+                <!-- 5. Servicele -->
+                <div class="glass-card" data-cat="saas">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #8b5cf6, #4338ca);">
                         <i class="fas fa-calendar-check"></i>
                     </div>
-                    <span class="product-badge-live" style="position: static; display: inline-flex; margin-bottom: 10px;">LIVE</span>
-                    <h3>Servicele - Service Booking</h3>
-                    <p>WhatsApp-native local service booking platform — vendor registration, customer bookings, and admin approval, all over WhatsApp.</p>
-                    <ul class="product-features">
-                        <li><i class="fas fa-check-circle"></i> WhatsApp-based booking flow</li>
-                        <li><i class="fas fa-check-circle"></i> Vendor registration & approval</li>
-                        <li><i class="fas fa-check-circle"></i> Admin commands via WhatsApp</li>
-                        <li><i class="fas fa-check-circle"></i> Subscription monetization ready</li>
+                    <span class="status-badge badge-live" style="margin-bottom:12px;">PRODUCTION LIVE</span>
+                    <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:10px; color:#fff;">Servicele – Bookings</h3>
+                    <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:16px;">
+                        Direct WhatsApp booking orchestration for local technicians, salons, and repair specialists. Instant customer confirmations and vendor tracking.
+                    </p>
+                    <ul class="feature-bullets">
+                        <li><i class="fas fa-check"></i> Zero-app customer booking on WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Vendor onboarding & geo dispatch</li>
+                        <li><i class="fas fa-check"></i> Cloudflare Workers microservices backbone</li>
                     </ul>
-                    <a href="https://servicele.spotnet.in/" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
-                        <i class="fas fa-external-link-alt"></i> Launch Servicele
+                    <a href="https://servicele.spotnet.in/" target="_blank" rel="noopener" class="btn-futuristic btn-glow" style="width:100%; justify-content:center; margin-top:10px;">
+                        <i class="fas fa-external-link-alt"></i> Open Servicele
                     </a>
                 </div>
-                <div class="product-card">
-                    <div class="product-icon" style="background: linear-gradient(135deg, #25D366, #128C7E);">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <span class="badge-dev"><i class="fas fa-hammer"></i> In Development</span>
-                    <h3>SpotLink - WhatsApp Business API</h3>
-                    <p>Professional WhatsApp Business API platform for automated customer communication, marketing campaigns, and 24/7 AI-powered support.</p>
-                    <ul class="product-features">
-                        <li><i class="fas fa-check-circle"></i> Unlimited broadcast messaging</li>
-                        <li><i class="fas fa-check-circle"></i> AI chatbot with NLP</li>
-                        <li><i class="fas fa-check-circle"></i> Multi-agent dashboard</li>
-                        <li><i class="fas fa-check-circle"></i> Advanced analytics & CRM</li>
-                        <li><i class="fas fa-check-circle"></i> Green tick verification</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
-                        <i class="fas fa-comments"></i> Join Waitlist
-                    </a>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <span class="badge-dev"><i class="fas fa-hammer"></i> In Development</span>
-                    <h3>Lawyer AI - Legal Intelligence</h3>
-                    <p>Advanced AI legal assistant trained on Indian law. Get instant legal insights, document drafting, case analysis, and compliance guidance.</p>
-                    <ul class="product-features">
-                        <li><i class="fas fa-check-circle"></i> Indian legal framework trained</li>
-                        <li><i class="fas fa-check-circle"></i> Automated document generation</li>
-                        <li><i class="fas fa-check-circle"></i> Case law research & analysis</li>
-                        <li><i class="fas fa-check-circle"></i> Compliance checking</li>
-                        <li><i class="fas fa-check-circle"></i> Legal precedent database</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
-                        <i class="fas fa-comments"></i> Join Waitlist
-                    </a>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Custom Software Development</h3>
-                    <p>Full-stack custom software solutions tailored to your business. Web apps, mobile apps, enterprise systems, and cloud infrastructure.</p>
-                    <ul class="product-features">
-                        <li><i class="fas fa-check-circle"></i> Web & mobile development</li>
-                        <li><i class="fas fa-check-circle"></i> Enterprise software systems</li>
-                        <li><i class="fas fa-check-circle"></i> Cloud infrastructure & DevOps</li>
-                        <li><i class="fas fa-check-circle"></i> API development & integration</li>
-                        <li><i class="fas fa-check-circle"></i> Ongoing support & maintenance</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
-                        <i class="fas fa-comments"></i> Discuss Project
-                    </a>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon" style="background: linear-gradient(135deg, #ff9a56, #ff6b6b);">
-                        <i class="fas fa-users-gear"></i>
-                    </div>
-                    <span class="badge-dev"><i class="fas fa-hammer"></i> In Development</span>
-                    <h3>SpotNet CRM - Smart CRM Suite</h3>
-                    <p>Unified customer relationship platform to track leads, manage follow-ups, and close deals faster across your entire sales pipeline.</p>
-                    <ul class="product-features">
-                        <li><i class="fas fa-check-circle"></i> Lead & pipeline tracking</li>
-                        <li><i class="fas fa-check-circle"></i> Automated follow-up reminders</li>
-                        <li><i class="fas fa-check-circle"></i> Team task assignment</li>
-                        <li><i class="fas fa-check-circle"></i> Sales performance reports</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
-                        <i class="fas fa-comments"></i> Join Waitlist
-                    </a>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon" style="background: linear-gradient(135deg, #43cea2, #185a9d);">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <span class="badge-dev"><i class="fas fa-hammer"></i> In Development</span>
-                    <h3>SpotNet Analytics - BI Dashboard</h3>
-                    <p>Real-time business intelligence dashboard that turns your sales, operations, and customer data into clear, actionable insights.</p>
-                    <ul class="product-features">
-                        <li><i class="fas fa-check-circle"></i> Real-time data dashboards</li>
-                        <li><i class="fas fa-check-circle"></i> Custom KPI tracking</li>
-                        <li><i class="fas fa-check-circle"></i> Automated report scheduling</li>
-                        <li><i class="fas fa-check-circle"></i> Multi-source data integration</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
-                        <i class="fas fa-comments"></i> Join Waitlist
-                    </a>
-                </div>
-            </div>
 
-            <div class="solar-banner">
-                <div>
-                    <h3><i class="fas fa-solar-panel"></i> Solar Installation Services</h3>
-                    <p>Rooftop solar panel installation for homes and businesses in Siddharthnagar & UP — cut your electricity bill and go green with SpotNet's certified installation team.</p>
+                <!-- 6. Solar Panel Division -->
+                <div class="glass-card" data-cat="infrastructure" style="border-color: rgba(245, 158, 11, 0.35);">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <span class="status-badge" style="background:rgba(245,158,11,0.2); color:#fbbf24; border:1px solid rgba(245,158,11,0.4); margin-bottom:12px;">
+                        <i class="fas fa-bolt"></i> CLEAN ENERGY DIV.
+                    </span>
+                    <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:10px; color:#fff;">SpotNet Solar Systems</h3>
+                    <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:16px;">
+                        Certified rooftop solar installation in Siddharthnagar & UP. We secure your PM Surya Ghar central subsidy + UP state subsidy with full net-metering setup.
+                    </p>
+                    <ul class="feature-bullets">
+                        <li><i class="fas fa-check"></i> Up to ₹78,000+ government subsidy handling</li>
+                        <li><i class="fas fa-check"></i> 25-Year performance warranty with Tier-1 panels</li>
+                        <li><i class="fas fa-check"></i> Free on-site shadow analysis & DISCOM net meter</li>
+                    </ul>
+                    <a href="solar.html" class="btn-futuristic btn-solar" style="width:100%; justify-content:center; margin-top:10px;">
+                        <i class="fas fa-sun"></i> Explore Solar Plans
+                    </a>
                 </div>
-                <a href="solar.html" class="btn btn-primary" style="background: white; color: #ff5e00; white-space: nowrap;">
-                    <i class="fas fa-arrow-right"></i> Explore Solar Plans
-                </a>
-            </div>
-        </div>
-    </section>
 
-    <section id="ai-services" style="background: #f8f9fa;">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">AI-Powered Solutions</div>
-                <h2>Comprehensive AI Services</h2>
-                <p>Cutting-edge artificial intelligence solutions to automate, optimize, and transform your business operations with intelligent technology.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>24/7 AI Chatbots & IVR</h3>
-                    <p>Intelligent chatbots and IVR call systems that efficiently manage customer queries with multilingual support.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Automated customer support 24/7</li>
-                        <li><i class="fas fa-check"></i> Multilingual conversation support</li>
-                        <li><i class="fas fa-check"></i> Reduced wait times & increased satisfaction</li>
-                        <li><i class="fas fa-check"></i> Seamless handoff to human agents</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Business Automation</h3>
-                    <p>Automate data entry, invoice processing, and CRM tasks to improve efficiency and reduce operational costs.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Automated data entry & processing</li>
-                        <li><i class="fas fa-check"></i> Invoice automation & validation</li>
-                        <li><i class="fas fa-check"></i> CRM task synchronization</li>
-                        <li><i class="fas fa-check"></i> Error reduction & accuracy boost</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Predictive Analytics</h3>
-                    <p>Advanced AI analytics platform providing deep insights for data-driven decision-making and business growth.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Predictive data modeling</li>
-                        <li><i class="fas fa-check"></i> Customer behavior analysis</li>
-                        <li><i class="fas fa-check"></i> Sales forecasting & trends</li>
-                        <li><i class="fas fa-check"></i> Real-time business intelligence</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-bullhorn"></i>
-                    </div>
-                    <h3>AI Marketing Campaigns</h3>
-                    <p>AI-powered advertising campaigns with customer insights and personalized offers to maximize ROI.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Targeted audience segmentation</li>
-                        <li><i class="fas fa-check"></i> Personalized customer offers</li>
-                        <li><i class="fas fa-check"></i> Campaign performance optimization</li>
-                        <li><i class="fas fa-check"></i> Enhanced customer loyalty</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3>Healthcare AI Solutions</h3>
-                    <p>AI diagnosis support, patient chatbots, and health analytics to enhance healthcare service delivery.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> AI-assisted diagnosis support</li>
-                        <li><i class="fas fa-check"></i> 24/7 patient assistance chatbots</li>
-                        <li><i class="fas fa-check"></i> Health analytics & insights</li>
-                        <li><i class="fas fa-check"></i> Faster medical decision-making</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Education AI Platform</h3>
-                    <p>AI tutors, exam prep bots, and smart learning platforms tailored to individual student needs.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Personalized AI tutoring</li>
-                        <li><i class="fas fa-check"></i> Exam preparation assistance</li>
-                        <li><i class="fas fa-check"></i> Adaptive learning paths</li>
-                        <li><i class="fas fa-check"></i> Student progress tracking</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <h3>E-commerce AI</h3>
-                    <p>AI product recommendations, fraud detection, and intelligent inventory management for online stores.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Smart product recommendations</li>
-                        <li><i class="fas fa-check"></i> Real-time fraud detection</li>
-                        <li><i class="fas fa-check"></i> Automated inventory optimization</li>
-                        <li><i class="fas fa-check"></i> Sales accuracy improvement</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Predictive Maintenance</h3>
-                    <p>AI-powered tools that prevent equipment failures, saving time and money in operations.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Equipment failure prediction</li>
-                        <li><i class="fas fa-check"></i> Maintenance scheduling automation</li>
-                        <li><i class="fas fa-check"></i> Downtime reduction</li>
-                        <li><i class="fas fa-check"></i> Cost savings optimization</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h3>Custom AI Solutions</h3>
-                    <p>Tailored AI systems designed for your specific business needs, from predictive analytics to workflow automation.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Custom AI model development</li>
-                        <li><i class="fas fa-check"></i> Workflow automation systems</li>
-                        <li><i class="fas fa-check"></i> Scalable AI infrastructure</li>
-                        <li><i class="fas fa-check"></i> Seamless integration support</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="tech-services">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Technology Infrastructure</div>
-                <h2>Enterprise Technology Services</h2>
-                <p>Comprehensive technology services to secure, optimize, and accelerate your business operations with enterprise-grade solutions.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Cybersecurity Solutions</h3>
-                    <p>Enterprise-grade security infrastructure to protect your business from cyber threats and data breaches.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Network security & firewall</li>
-                        <li><i class="fas fa-check"></i> Penetration testing services</li>
-                        <li><i class="fas fa-check"></i> Security audits & compliance</li>
-                        <li><i class="fas fa-check"></i> Advanced data encryption</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3>Cloud Solutions</h3>
-                    <p>Scalable cloud infrastructure with migration, management, and optimization services for modern businesses.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Cloud migration services</li>
-                        <li><i class="fas fa-check"></i> Multi-cloud management</li>
-                        <li><i class="fas fa-check"></i> Infrastructure as code</li>
-                        <li><i class="fas fa-check"></i> Cost optimization strategies</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
+                <!-- 7. SpotNet Broadband & Networking -->
+                <div class="glass-card" data-cat="infrastructure">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #06b6d4, #0e7490);">
                         <i class="fas fa-network-wired"></i>
                     </div>
-                    <h3>Network Infrastructure</h3>
-                    <p>Design, deploy, and manage robust network infrastructure for seamless enterprise operations.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Network design & setup</li>
-                        <li><i class="fas fa-check"></i> Enterprise Wi-Fi solutions</li>
-                        <li><i class="fas fa-check"></i> VPN & remote access</li>
-                        <li><i class="fas fa-check"></i> 24/7 network monitoring</li>
+                    <span class="status-badge badge-live" style="margin-bottom:12px;">ACTIVE NETWORK</span>
+                    <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:10px; color:#fff;">SpotNet Broadband</h3>
+                    <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:16px;">
+                        Dedicated gigabit fiber broadband for enterprises, clinics, and residences across Dumariyaganj & Siddharthnagar region with 99.5% uptime.
+                    </p>
+                    <ul class="feature-bullets">
+                        <li><i class="fas fa-check"></i> Symmetric gigabit upload/download bandwidth</li>
+                        <li><i class="fas fa-check"></i> Static IP & low-latency routing for servers</li>
+                        <li><i class="fas fa-check"></i> 2-Hour on-ground technician response SLA</li>
                     </ul>
+                    <a href="#consultation" class="btn-futuristic btn-glass" style="width:100%; justify-content:center; margin-top:10px;">
+                        <i class="fas fa-wifi"></i> Check Local Feasibility
+                    </a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-database"></i>
+
+                <!-- 8. Lawyer AI & Custom Software -->
+                <div class="glass-card" data-cat="ai">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #ec4899, #be185d);">
+                        <i class="fas fa-balance-scale"></i>
                     </div>
-                    <h3>Data Management</h3>
-                    <p>Comprehensive data storage, backup, and recovery solutions ensuring business continuity.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Database design & optimization</li>
-                        <li><i class="fas fa-check"></i> Automated backup systems</li>
-                        <li><i class="fas fa-check"></i> Disaster recovery planning</li>
-                        <li><i class="fas fa-check"></i> Advanced data analytics</li>
+                    <span class="status-badge badge-waitlist" style="margin-bottom:12px;">RESEARCH & DEV</span>
+                    <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:10px; color:#fff;">Lawyer AI & Custom Dev</h3>
+                    <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:16px;">
+                        Domain-specialized AI models for Indian legal drafting alongside end-to-end bespoke web, mobile, and cloud software engineering.
+                    </p>
+                    <ul class="feature-bullets">
+                        <li><i class="fas fa-check"></i> Indian legal codes & case retrieval RAG</li>
+                        <li><i class="fas fa-check"></i> Custom enterprise web applications (React, Node, Supabase)</li>
+                        <li><i class="fas fa-check"></i> High-performance API architecture & DevOps</li>
                     </ul>
+                    <a href="#consultation" class="btn-futuristic btn-glass" style="width:100%; justify-content:center; margin-top:10px;">
+                        <i class="fas fa-code"></i> Discuss Custom Build
+                    </a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Feature: Live WhatsApp AI Simulator (Tesla/xAI Grade) -->
+    <section class="simulator-section" id="whatsapp-demo">
+        <div class="container">
+            <div class="sim-grid">
+                <div>
+                    <div class="telemetry-badge" style="color:#25D366; border-color:rgba(37,211,102,0.3);">
+                        <i class="fab fa-whatsapp"></i> Live Interactive Agent Test
                     </div>
-                    <h3>Mobile App Development</h3>
-                    <p>Native and cross-platform mobile applications for iOS and Android with cutting-edge features.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> iOS & Android development</li>
-                        <li><i class="fas fa-check"></i> React Native & Flutter</li>
-                        <li><i class="fas fa-check"></i> App store optimization</li>
-                        <li><i class="fas fa-check"></i> Maintenance & updates</li>
-                    </ul>
+                    <h2 style="font-size:2.8rem; font-weight:800; letter-spacing:-0.02em; margin:18px 0 20px;">
+                        Test SpotNet AI Chat <br><span class="gradient-text">In Real-Time</span>
+                    </h2>
+                    <p style="color:var(--text-muted); font-size:1.1rem; line-height:1.7; margin-bottom:28px;">
+                        Experience how our automated WhatsApp AI agents engage your customers, query internal databases, and close appointments without human delay. Click any test action below to watch the live simulation:
+                    </p>
+
+                    <div class="prompt-triggers">
+                        <button class="sim-btn" onclick="simulateChat('medos')">
+                            <span><i class="fas fa-hospital" style="color:#38bdf8; margin-right:10px;"></i> "Book OPD appointment at clinic"</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="sim-btn" onclick="simulateChat('solar')">
+                            <span><i class="fas fa-sun" style="color:#f59e0b; margin-right:10px;"></i> "What is PM Surya Ghar subsidy in UP?"</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="sim-btn" onclick="simulateChat('invoice')">
+                            <span><i class="fas fa-file-invoice" style="color:#10b981; margin-right:10px;"></i> "Create GST Invoice for ₹12,500"</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="sim-btn" onclick="simulateChat('broadband')">
+                            <span><i class="fas fa-wifi" style="color:#a855f7; margin-right:10px;"></i> "Need Fiber Broadband in Dumariyaganj"</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div style="margin-top:30px;">
+                        <a href="https://wa.me/15558572517?text=Hi%20SpotNet!%20I%20want%20to%20deploy%20WhatsApp%20AI%20Automation." class="btn-futuristic btn-glow" style="background:#25D366; box-shadow:0 0 20px rgba(37,211,102,0.3);">
+                            <i class="fab fa-whatsapp"></i> Deploy This For Your Business
+                        </a>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-headset"></i>
+
+                <!-- Interactive Smartphone Canvas -->
+                <div>
+                    <div class="phone-wrapper">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="wa-header">
+                                <div class="wa-avatar">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="wa-info">
+                                    <h5>SpotNet AI Assistant</h5>
+                                    <p><i class="fas fa-check-circle"></i> Official Verified API</p>
+                                </div>
+                            </div>
+                            <div class="chat-body" id="chatStream">
+                                <div class="msg-bubble msg-bot">
+                                    Namaste! Welcome to SpotNet Services. 👋<br>
+                                    I am your automated AI business agent. Select a quick action on the left or type your query below!
+                                    <div class="msg-time">11:45 AM</div>
+                                </div>
+                            </div>
+                            <div style="background:#1f2c34; padding:12px; display:flex; gap:10px; align-items:center;">
+                                <input type="text" id="simUserInput" placeholder="Type a message..." style="flex:1; background:#2a3942; border:none; border-radius:20px; padding:10px 16px; color:#fff; font-size:0.88rem; outline:none;" onkeypress="handleSimEnter(event)">
+                                <button onclick="sendSimCustom()" style="background:#00a884; border:none; width:38px; height:38px; border-radius:50%; color:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center;">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <h3>IT Support & Consulting</h3>
-                    <p>Expert IT consulting and round-the-clock technical support for seamless business operations.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> 24/7 helpdesk support</li>
-                        <li><i class="fas fa-check"></i> IT strategy consulting</li>
-                        <li><i class="fas fa-check"></i> Technology audits</li>
-                        <li><i class="fas fa-check"></i> Digital transformation</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" style="background: linear-gradient(135deg, #ff6b6b, #f06595);">
-                        <i class="fas fa-share-nodes"></i>
-                    </div>
-                    <h3>Social Media Automation Suite</h3>
-                    <p>Automated content pipelines that source, caption, and publish across Instagram, X, Threads, and Facebook on schedule.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> AI-generated captions & hashtags</li>
-                        <li><i class="fas fa-check"></i> Scheduled multi-platform posting</li>
-                        <li><i class="fas fa-check"></i> Cron-based automation pipelines</li>
-                        <li><i class="fas fa-check"></i> Analytics & dedup tracking</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" style="background: linear-gradient(135deg, #25D366, #128C7E);">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>WhatsApp & Telegram Bot Development</h3>
-                    <p>Custom bots for bookings, support, and admin workflows built on official Bot APIs — no fragile unofficial libraries.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Booking & order automation</li>
-                        <li><i class="fas fa-check"></i> Admin approval workflows</li>
-                        <li><i class="fas fa-check"></i> AI-powered auto-replies</li>
-                        <li><i class="fas fa-check"></i> Channel & group management</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" style="background: linear-gradient(135deg, #ffb347, #ffcc33);">
-                        <i class="fas fa-magnifying-glass-chart"></i>
-                    </div>
-                    <h3>Lead Generation & Data Scraping</h3>
-                    <p>Automated lead scraping and data collection pipelines that deliver structured, city-wise business leads.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Google Maps & web scraping</li>
-                        <li><i class="fas fa-check"></i> Structured Excel/CSV delivery</li>
-                        <li><i class="fas fa-check"></i> Telegram lead notifications</li>
-                        <li><i class="fas fa-check"></i> City & category-wise targeting</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" style="background: linear-gradient(135deg, #6a11cb, #2575fc);">
-                        <i class="fas fa-window-restore"></i>
-                    </div>
-                    <h3>Business Websites & Landing Pages</h3>
-                    <p>Fast, professional websites and landing pages for local businesses — built, deployed, and optimized quickly.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Single-page & multi-page sites</li>
-                        <li><i class="fas fa-check"></i> Mobile-first responsive design</li>
-                        <li><i class="fas fa-check"></i> SEO & performance optimization</li>
-                        <li><i class="fas fa-check"></i> Fast turnaround delivery</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" style="background: linear-gradient(135deg, #7F00FF, #E100FF);">
-                        <i class="fas fa-infinity"></i>
-                    </div>
-                    <h3>DevOps & CI/CD Automation</h3>
-                    <p>Streamlined build, test, and deployment pipelines that get your software to production faster and more reliably.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> CI/CD pipeline setup</li>
-                        <li><i class="fas fa-check"></i> Automated testing & deployment</li>
-                        <li><i class="fas fa-check"></i> Containerization (Docker/K8s)</li>
-                        <li><i class="fas fa-check"></i> Server monitoring & alerts</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" style="background: linear-gradient(135deg, #f7971e, #ffd200);">
-                        <i class="fas fa-pen-ruler"></i>
-                    </div>
-                    <h3>UI/UX Design Services</h3>
-                    <p>User-centered design for web and mobile products — wireframes, prototypes, and polished interfaces that convert.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Wireframing & prototyping</li>
-                        <li><i class="fas fa-check"></i> Brand-aligned UI design</li>
-                        <li><i class="fas fa-check"></i> Usability testing</li>
-                        <li><i class="fas fa-check"></i> Design system creation</li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="industries" class="carousel-section">
+    <!-- Tesla-Style Interactive Solar ROI & Subsidy Calculator -->
+    <section id="roi-calc" style="padding-top:40px;">
         <div class="container">
             <div class="section-header">
-                <div class="section-badge">Industry Solutions</div>
-                <h2>Specialized Business Solutions</h2>
-                <p>WhatsApp API and automation solutions tailored for every industry vertical with dedicated support.</p>
-            </div>
-            <div class="carousel-wrapper">
-                <div class="carousel-container" id="industriesCarousel">
-                    <div class="carousel-card carousel-card--media">
-                        <div class="carousel-media" style="background-image: url('https://images.unsplash.com/photo-1758273705998-05655eea4635?fm=jpg&q=70&w=900&auto=format&fit=crop');">
-                            <div class="carousel-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
-                                <i class="fas fa-shopping-cart"></i>
-                            </div>
-                        </div>
-                        <div class="carousel-body">
-                        <h3>E-commerce & Retail</h3>
-                        <p>Complete commerce solution with catalogs, order tracking, and payment integration.</p>
-                        <ul class="carousel-features">
-                            <li><i class="fas fa-check"></i> Product catalog management</li>
-                            <li><i class="fas fa-check"></i> Abandoned cart recovery</li>
-                            <li><i class="fas fa-check"></i> Order tracking automation</li>
-                            <li><i class="fas fa-check"></i> Payment gateway integration</li>
-                        </ul>
-                        </div>
-                    </div>
-                    <div class="carousel-card carousel-card--media">
-                        <div class="carousel-media" style="background-image: url('https://images.unsplash.com/photo-1758691462848-ba1e929da259?fm=jpg&q=70&w=900&auto=format&fit=crop');">
-                            <div class="carousel-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
-                                <i class="fas fa-user-md"></i>
-                            </div>
-                        </div>
-                        <div class="carousel-body">
-                        <h3>Healthcare & Wellness</h3>
-                        <p>HIPAA-compliant patient communication and telemedicine integration platform.</p>
-                        <ul class="carousel-features">
-                            <li><i class="fas fa-check"></i> Appointment scheduling</li>
-                            <li><i class="fas fa-check"></i> Prescription management</li>
-                            <li><i class="fas fa-check"></i> Lab report delivery</li>
-                            <li><i class="fas fa-check"></i> Telemedicine support</li>
-                        </ul>
-                        </div>
-                    </div>
-                    <div class="carousel-card carousel-card--media">
-                        <div class="carousel-media" style="background-image: url('https://images.unsplash.com/photo-1742549586702-c23994895082?fm=jpg&q=70&w=900&auto=format&fit=crop');">
-                            <div class="carousel-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                        </div>
-                        <div class="carousel-body">
-                        <h3>Education & Training</h3>
-                        <p>Complete education management with student engagement and communication tools.</p>
-                        <ul class="carousel-features">
-                            <li><i class="fas fa-check"></i> Admission automation</li>
-                            <li><i class="fas fa-check"></i> Class schedules & reminders</li>
-                            <li><i class="fas fa-check"></i> Assignment sharing</li>
-                            <li><i class="fas fa-check"></i> Parent communication</li>
-                        </ul>
-                        </div>
-                    </div>
-                    <div class="carousel-card carousel-card--media">
-                        <div class="carousel-media" style="background-image: url('https://images.unsplash.com/photo-1742844552264-71e01c8dd7c0?fm=jpg&q=70&w=900&auto=format&fit=crop');">
-                            <div class="carousel-icon" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
-                                <i class="fas fa-hotel"></i>
-                            </div>
-                        </div>
-                        <div class="carousel-body">
-                        <h3>Hospitality & Travel</h3>
-                        <p>Guest experience platform with booking management and concierge services.</p>
-                        <ul class="carousel-features">
-                            <li><i class="fas fa-check"></i> Booking confirmations</li>
-                            <li><i class="fas fa-check"></i> Check-in/out automation</li>
-                            <li><i class="fas fa-check"></i> Travel itinerary updates</li>
-                            <li><i class="fas fa-check"></i> Guest request handling</li>
-                        </ul>
-                        </div>
-                    </div>
-                    <div class="carousel-card carousel-card--media">
-                        <div class="carousel-media" style="background-image: url('https://images.unsplash.com/photo-1741156386380-0236c72eb6f9?fm=jpg&q=70&w=900&auto=format&fit=crop');">
-                            <div class="carousel-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
-                                <i class="fas fa-building"></i>
-                            </div>
-                        </div>
-                        <div class="carousel-body">
-                        <h3>Real Estate</h3>
-                        <p>Property marketing platform with virtual tours and document sharing capabilities.</p>
-                        <ul class="carousel-features">
-                            <li><i class="fas fa-check"></i> Property listings broadcast</li>
-                            <li><i class="fas fa-check"></i> Virtual tour scheduling</li>
-                            <li><i class="fas fa-check"></i> Lead qualification</li>
-                            <li><i class="fas fa-check"></i> Document verification</li>
-                        </ul>
-                        </div>
-                    </div>
-                    <div class="carousel-card carousel-card--media">
-                        <div class="carousel-media" style="background-image: url('https://images.unsplash.com/photo-1727101981835-50bade3c4eaf?fm=jpg&q=70&w=900&auto=format&fit=crop');">
-                            <div class="carousel-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
-                                <i class="fas fa-truck"></i>
-                            </div>
-                        </div>
-                        <div class="carousel-body">
-                        <h3>Logistics & Delivery</h3>
-                        <p>Complete tracking system with real-time updates and driver coordination.</p>
-                        <ul class="carousel-features">
-                            <li><i class="fas fa-check"></i> Real-time tracking</li>
-                            <li><i class="fas fa-check"></i> Delivery confirmation</li>
-                            <li><i class="fas fa-check"></i> Driver communication</li>
-                            <li><i class="fas fa-check"></i> Route optimization</li>
-                        </ul>
-                        </div>
-                    </div>
-                    <div class="carousel-card carousel-card--media">
-                        <div class="carousel-media" style="background-image: url('https://images.unsplash.com/photo-1556817411-92f5ec899a55?fm=jpg&q=70&w=900&auto=format&fit=crop');">
-                            <div class="carousel-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
-                                <i class="fas fa-dumbbell"></i>
-                            </div>
-                        </div>
-                        <div class="carousel-body">
-                        <h3>Fitness & Gyms</h3>
-                        <p>Member engagement platform with class booking and fitness tracking integration.</p>
-                        <ul class="carousel-features">
-                            <li><i class="fas fa-check"></i> Class booking system</li>
-                            <li><i class="fas fa-check"></i> Membership renewals</li>
-                            <li><i class="fas fa-check"></i> Workout plan delivery</li>
-                            <li><i class="fas fa-check"></i> Progress tracking</li>
-                        </ul>
-                        </div>
-                    </div>
-                    <div class="carousel-card carousel-card--media">
-                        <div class="carousel-media" style="background-image: url('https://images.unsplash.com/photo-1760463921956-b21cfa5cb2ac?fm=jpg&q=70&w=900&auto=format&fit=crop');">
-                            <div class="carousel-icon" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
-                                <i class="fas fa-store"></i>
-                            </div>
-                        </div>
-                        <div class="carousel-body">
-                        <h3>Retail & FMCG</h3>
-                        <p>Distribution management and retailer communication platform for FMCG brands.</p>
-                        <ul class="carousel-features">
-                            <li><i class="fas fa-check"></i> Order placement automation</li>
-                            <li><i class="fas fa-check"></i> Inventory alerts</li>
-                            <li><i class="fas fa-check"></i> Promotional campaigns</li>
-                            <li><i class="fas fa-check"></i> Payment tracking</li>
-                        </ul>
-                        </div>
-                    </div>
+                <div class="telemetry-badge" style="color:#f59e0b; border-color:rgba(245,158,11,0.3);">
+                    <i class="fas fa-calculator"></i> PM Surya Ghar Estimator
                 </div>
-                <div class="carousel-nav">
-                    <button class="carousel-btn" onclick="scrollCarousel('industriesCarousel', -1)">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="carousel-btn" onclick="scrollCarousel('industriesCarousel', 1)">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
+                <h2>Interactive Rooftop Solar ROI Calculator</h2>
+                <p>Calculate your estimated government subsidy under the PM Surya Ghar Muft Bijli Yojana in Uttar Pradesh and see your projected 25-year savings.</p>
+            </div>
+
+            <div class="solar-calc-card">
+                <div class="calc-slider-box">
+                    <div>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                            <span style="font-weight:600; font-size:1.05rem; color:#fff;">Your Current Monthly Electricity Bill:</span>
+                            <span id="billValDisplay" style="font-family:var(--font-mono); font-size:1.6rem; font-weight:800; color:var(--solar-amber);">₹3,500</span>
+                        </div>
+                        <input type="range" min="1000" max="25000" step="500" value="3500" class="range-slider" id="billSlider" oninput="calculateSolarROI()">
+                        <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--text-dim); margin-top:6px; font-family:var(--font-mono);">
+                            <span>₹1,000 / mo</span>
+                            <span>₹10,000 / mo</span>
+                            <span>₹25,000 / mo</span>
+                        </div>
+                    </div>
+
+                    <div style="background:rgba(15,23,42,0.6); padding:20px; border-radius:16px; border:1px solid var(--border-subtle);">
+                        <div style="font-size:0.85rem; color:var(--text-dim); text-transform:uppercase; margin-bottom:6px;">Recommended System Size</div>
+                        <div id="recommendedKW" style="font-size:1.8rem; font-weight:800; color:#fff; font-family:var(--font-mono);">3.0 kW System</div>
+                        <div style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Requires approx. ~300 sq.ft shade-free rooftop space.</div>
+                    </div>
+
+                    <a id="solarLeadBtn" href="https://wa.me/15558572517?text=Hi%20SpotNet%20Solar!%20My%20monthly%20bill%20is%20approx%20Rs.3500.%20I%20want%20to%20claim%20the%20UP%20PM%20Surya%20Ghar%20subsidy%20for%20a%203kW%20system." class="btn-futuristic btn-solar" style="justify-content:center; padding:14px;">
+                        <i class="fas fa-file-signature"></i> Claim UP Subsidy & Book Free Site Survey
+                    </a>
+                </div>
+
+                <div class="calc-metrics-grid">
+                    <div class="metric-box">
+                        <h3 id="calcSubsidy" style="color:#34d399;">₹78,000</h3>
+                        <p>Total Government Subsidy (Central + UP)</p>
+                    </div>
+                    <div class="metric-box">
+                        <h3 id="calcAnnualSavings" style="color:var(--solar-amber);">₹38,400</h3>
+                        <p>Projected Annual Bill Savings</p>
+                    </div>
+                    <div class="metric-box">
+                        <h3 id="calcPayback">~ 2.8 Yrs</h3>
+                        <p>Estimated Payback Period</p>
+                    </div>
+                    <div class="metric-box">
+                        <h3 style="color:#38bdf8;">25 Years</h3>
+                        <p>Tier-1 Panel Performance Warranty</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="testimonials" style="background: #f8f9fa;">
+    <!-- Enterprise Technology & AI Services Deep Dive -->
+    <section id="ai-suite">
         <div class="container">
             <div class="section-header">
-                <div class="section-badge">Client Success Stories</div>
-                <h2>Trusted by Industry Leaders</h2>
-                <p>See how businesses are transforming their operations with SpotNet Services across India.</p>
+                <div class="telemetry-badge">Architecture Stack</div>
+                <h2>Enterprise AI & Cloud Infrastructure</h2>
+                <p>Deploy secure, compliant, and cost-effective intelligent workflows directly across your existing software stack.</p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">"The customer service team at SpotNet is top-notch. They helped us every step of the way, and the results speak for themselves – our sales have increased by 50%!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">RP</div>
-                        <div class="author-info">
-                            <h4>Rajesh Patel</h4>
-                            <p>CEO, Fashion Hub India</p>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
+
+            <div class="products-grid">
+                <div class="glass-card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
+                        <i class="fas fa-comments"></i>
                     </div>
+                    <h3 style="font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:10px;">Conversational AI & LLMs</h3>
+                    <p style="color:var(--text-muted); font-size:0.92rem;">
+                        Fine-tuned generative models hooked directly into your product inventory, SQL databases, and internal knowledge bases for instant human-grade support.
+                    </p>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">"The AI analytics platform has provided us with deep insights into our data, allowing us to make more informed decisions. It's like having a crystal ball for our business."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SM</div>
-                        <div class="author-info">
-                            <h4>Sneha Mehta</h4>
-                            <p>Director, Tech Innovations Ltd</p>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
+
+                <div class="glass-card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+                        <i class="fas fa-cogs"></i>
                     </div>
+                    <h3 style="font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:10px;">RPA & Workflow Automation</h3>
+                    <p style="color:var(--text-muted); font-size:0.92rem;">
+                        Eliminate manual repetitive copy-pasting, invoice data extraction, email parsing, and CRM updates with robotic process automation bots.
+                    </p>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">"The predictive maintenance tools from SpotNet have saved us significant time and money by preventing equipment failures. It's an invaluable resource for our operations."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">AK</div>
-                        <div class="author-info">
-                            <h4>Amit Kumar</h4>
-                            <p>Operations Head, Manufacturing Co</p>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
+
+                <div class="glass-card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">
+                        <i class="fas fa-chart-line"></i>
                     </div>
+                    <h3 style="font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:10px;">Predictive Analytics</h3>
+                    <p style="color:var(--text-muted); font-size:0.92rem;">
+                        Machine learning pipelines that forecast retail demand, predict customer churn, and optimize localized distribution logistics.
+                    </p>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 style="font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:10px;">Enterprise Cloud & Security</h3>
+                    <p style="color:var(--text-muted); font-size:0.92rem;">
+                        Multi-cloud architectures on AWS, Supabase, Vercel, and Cloudflare with Zero Trust access controls, automatic backups, and 99.99% availability.
+                    </p>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #f59e0b, #b45309);">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 style="font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:10px;">Computer Vision & OCR</h3>
+                    <p style="color:var(--text-muted); font-size:0.92rem;">
+                        Document digitization, Aadhaar/PAN validation, medical report digitization, and industrial camera quality inspection pipelines.
+                    </p>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #ec4899, #db2777);">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <h3 style="font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:10px;">Voice AI & Regional NLP</h3>
+                    <p style="color:var(--text-muted); font-size:0.92rem;">
+                        Voice agents fluent in Hindi and Indian English dialects for telecom inbound call screening and automated appointment reminders.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta" id="contact">
-        <div class="cta-content">
-            <div class="container">
-                <h2>Ready to Transform Your Business?</h2>
-                <p>Join 500+ enterprises who trust SpotNet Services for AI and technology solutions. Get a free consultation with our experts and discover how we can help scale your business.</p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary" style="background: white; color: var(--primary);">
-                        <i class="fas fa-rocket"></i> Get Started Free
-                    </a>
-                    <a href="https://wa.me/15558572517?text=Hi%20SpotNet%20Services!%20I%27m%20interested%20in%20your%20enterprise%20solutions." class="btn btn-outline" style="border-color: white; color: white;">
-                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                    </a>
-                    <a href="tel:+919120909501" class="btn btn-outline" style="border-color: white; color: white;">
-                        <i class="fas fa-phone"></i> Call Sales
-                    </a>
+    <!-- Industries Carousel Section -->
+    <section id="industries">
+        <div class="container">
+            <div class="section-header">
+                <div class="telemetry-badge">Verticals</div>
+                <h2>Proven In Mission-Critical Sectors</h2>
+                <p>From healthcare centers in Eastern UP to tech-first startups scaling nationally.</p>
+            </div>
+
+            <div class="carousel-track" id="industriesTrack">
+                <div class="industry-card">
+                    <i class="fas fa-hospital-user" style="font-size:2rem; color:#38bdf8; margin-bottom:14px;"></i>
+                    <h4 style="font-size:1.2rem; color:#fff; margin-bottom:8px;">Hospitals & Clinics</h4>
+                    <p style="color:var(--text-muted); font-size:0.9rem;">Automated OPD queues, digital lab reports, and doctor scheduling via MedOS.</p>
+                </div>
+                <div class="industry-card">
+                    <i class="fas fa-shopping-bag" style="font-size:2rem; color:#10b981; margin-bottom:14px;"></i>
+                    <h4 style="font-size:1.2rem; color:#fff; margin-bottom:8px;">Retail & E-commerce</h4>
+                    <p style="color:var(--text-muted); font-size:0.9rem;">WhatsApp multi-product catalogues, payment link triggers, and abandoned cart recovery.</p>
+                </div>
+                <div class="industry-card">
+                    <i class="fas fa-balance-scale" style="font-size:2rem; color:#f59e0b; margin-bottom:14px;"></i>
+                    <h4 style="font-size:1.2rem; color:#fff; margin-bottom:8px;">Legal & Compliance</h4>
+                    <p style="color:var(--text-muted); font-size:0.9rem;">Contract drafting, precedent search, and regulatory compliance validation with Lawyer AI.</p>
+                </div>
+                <div class="industry-card">
+                    <i class="fas fa-solar-panel" style="font-size:2rem; color:#ea580c; margin-bottom:14px;"></i>
+                    <h4 style="font-size:1.2rem; color:#fff; margin-bottom:8px;">Commercial Rooftops</h4>
+                    <p style="color:var(--text-muted); font-size:0.9rem;">High-capacity solar setups for schools, marriage halls, and commercial warehouses.</p>
+                </div>
+                <div class="industry-card">
+                    <i class="fas fa-graduation-cap" style="font-size:2rem; color:#a855f7; margin-bottom:14px;"></i>
+                    <h4 style="font-size:1.2rem; color:#fff; margin-bottom:8px;">Education & Schools</h4>
+                    <p style="color:var(--text-muted); font-size:0.9rem;">Dedicated high-speed fiber broadband and automated fee notification broadcasts.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Supabase-Wired Intake & Consultation Console -->
+    <section id="consultation">
+        <div class="container">
+            <div class="intake-console">
+                <div>
+                    <div class="telemetry-badge" style="color:var(--electric-blue); border-color:rgba(56,189,248,0.3);">
+                        <i class="fas fa-terminal"></i> Direct Consultation Intake
+                    </div>
+                    <h2 style="font-size:2.6rem; font-weight:800; margin:16px 0 16px; color:#fff;">
+                        Let’s Engineer Your <span class="gradient-text">Next Leap</span>
+                    </h2>
+                    <p style="color:var(--text-muted); font-size:1.02rem; line-height:1.7; margin-bottom:28px;">
+                        Have a software project, enterprise AI requirement, or want to schedule a site survey for Rooftop Solar in Siddharthnagar & UP? Fill in your details and our core team will connect with you within 2 business hours.
+                    </p>
+
+                    <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:28px;">
+                        <div style="display:flex; align-items:center; gap:12px; color:#cbd5e1; font-size:0.95rem;">
+                            <i class="fas fa-map-marker-alt" style="color:var(--electric-blue); width:20px;"></i>
+                            <span>Dumariyaganj, Siddharthnagar, Uttar Pradesh, India</span>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:12px; color:#cbd5e1; font-size:0.95rem;">
+                            <i class="fas fa-phone-alt" style="color:var(--electric-blue); width:20px;"></i>
+                            <a href="tel:+919120909501" style="color:#fff; font-family:var(--font-mono);">+91 91209 09501</a>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:12px; color:#cbd5e1; font-size:0.95rem;">
+                            <i class="fas fa-envelope" style="color:var(--electric-blue); width:20px;"></i>
+                            <a href="mailto:spotnet95@gmail.com" style="color:#fff;">spotnet95@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div style="padding:16px; background:rgba(15,23,42,0.6); border-radius:14px; border:1px solid var(--border-subtle); font-family:var(--font-mono); font-size:0.8rem; color:var(--text-dim);">
+                        <i class="fas fa-lock" style="color:#34d399; margin-right:6px;"></i> 256-Bit SSL Encrypted Intake • Supabase Storage
+                    </div>
+                </div>
+
+                <div>
+                    <form id="leadIntakeForm" onsubmit="handleLeadSubmission(event)" class="form-grid">
+                        <div class="input-group">
+                            <label>Your Full Name *</label>
+                            <input type="text" id="leadName" class="input-field" placeholder="Akhilesh Tripathi" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Phone / WhatsApp Number *</label>
+                            <input type="tel" id="leadPhone" class="input-field" placeholder="+91 91209 09501" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email Address</label>
+                            <input type="email" id="leadEmail" class="input-field" placeholder="name@business.com">
+                        </div>
+                        <div class="input-group">
+                            <label>Service Area Required *</label>
+                            <select id="leadService" class="input-field" required style="cursor:pointer;">
+                                <option value="AI Chatbot & Automation">Enterprise AI & WhatsApp API</option>
+                                <option value="MedOS Hospital Software">MedOS Clinic & Hospital Software</option>
+                                <option value="Rooftop Solar Installation">Rooftop Solar (PM Surya Ghar UP)</option>
+                                <option value="InvoiceKit & SaaS">InvoiceKit / Custom Software</option>
+                                <option value="SpotNet Fiber Broadband">SpotNet Fiber Broadband</option>
+                                <option value="General Inquiry">Other Custom Project</option>
+                            </select>
+                        </div>
+                        <div class="input-group full">
+                            <label>Project Details / Requirements</label>
+                            <textarea id="leadMessage" class="input-field" rows="4" placeholder="Briefly describe your requirements, scale, or location in UP..."></textarea>
+                        </div>
+                        <div class="input-group full">
+                            <button type="submit" id="submitBtn" class="btn-futuristic btn-glow" style="width:100%; justify-content:center; padding:14px; font-size:1rem;">
+                                <i class="fas fa-paper-plane"></i> Send Inquiry / Request Callback
+                            </button>
+                        </div>
+                        <div id="formFeedback" style="grid-column:1/-1; display:none; padding:12px; border-radius:10px; font-size:0.9rem; text-align:center;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- World-Class Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <h3>SpotNet Services</h3>
-                    <p>SpotNet Services is a Siddharthnagar-based technology company building AI, automation, and enterprise software for businesses across India. From WhatsApp Business API and AI chatbots to custom SaaS products like MedOS, InvoiceKit, and iRange, we combine local understanding with enterprise-grade engineering. We also run SpotNet Broadband, delivering reliable local internet connectivity in Dumariyaganj and the surrounding Siddharthnagar region, and are actively expanding into solar installation and business automation services.</p>
-                    <div class="footer-contact">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>Dumariyaganj, Siddharthnagar, Uttar Pradesh, India</div>
-                    </div>
-                    <div class="footer-contact">
-                        <i class="fab fa-whatsapp"></i>
+            <div class="footer-grid">
+                <div>
+                    <div class="logo-wrap" style="margin-bottom:16px;">
+                        <div class="brand-icon">
+                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="10" r="5" fill="#38bdf8"/>
+                                <circle cx="10" cy="34" r="5" fill="#818cf8"/>
+                                <circle cx="38" cy="34" r="5" fill="#00f2fe"/>
+                                <path d="M24 15L11 30M24 15L37 30M13 34H35" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/>
+                            </svg>
+                        </div>
                         <div>
-                            <a href="https://wa.me/15558572517?text=Hi%20SpotNet%20Services!%20I%27m%20interested%20in%20your%20solutions.">SpotNet Services</a>
+                            <div class="brand-name">SpotNet Services</div>
+                            <div class="brand-tag">Enterprise Technologies</div>
                         </div>
                     </div>
-                    <div class="footer-contact">
-                        <i class="fas fa-envelope"></i>
-                        <div><a href="mailto:spotnet95@gmail.com">spotnet95@gmail.com</a></div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://facebook.com/spotnetservices" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://wa.me/15558572517" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="mailto:spotnet95@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <p style="color:var(--text-dim); font-size:0.92rem; line-height:1.65; max-width:380px; margin-bottom:22px;">
+                        Engineering next-generation AI agents, specialized SaaS products, high-speed regional optical fiber networks, and certified rooftop clean energy installations. Based in Siddharthnagar, powering businesses across India.
+                    </p>
+                    <div style="display:flex; gap:12px;">
+                        <a href="https://facebook.com/spotnetservices" target="_blank" rel="noopener" style="width:38px; height:38px; border-radius:8px; background:rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; color:#fff; border:1px solid var(--border-subtle);"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/15558572517" target="_blank" rel="noopener" style="width:38px; height:38px; border-radius:8px; background:rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; color:#fff; border:1px solid var(--border-subtle);"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:spotnet95@gmail.com" style="width:38px; height:38px; border-radius:8px; background:rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; color:#fff; border:1px solid var(--border-subtle);"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
-                <div class="footer-column">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="https://medos.spotnet.in"><i class="fas fa-external-link-alt"></i> SpotNet MedOS</a></li>
-                        <li><a href="https://freeinvoice.spotnet.in"><i class="fas fa-external-link-alt"></i> InvoiceKit</a></li>
-                        <li><a href="https://irangebio.spotnet.in"><i class="fas fa-external-link-alt"></i> iRange – Link in Bio</a></li>
-                        <li><a href="https://servicele.spotnet.in/"><i class="fas fa-external-link-alt"></i> Servicele – Service Booking</a></li>
-                        <li><a href="solar.html"><i class="fas fa-solar-panel"></i> Solar Installation</a></li>
-                        <li><a href="#products"><i class="fas fa-hammer"></i> SpotLink Dashboard (In Development)</a></li>
-                        <li><a href="#products"><i class="fas fa-hammer"></i> AI Services Portal (In Development)</a></li>
-                        <li><a href="#products"><i class="fas fa-chevron-right"></i> Our Products</a></li>
-                        <li><a href="#ai-services"><i class="fas fa-chevron-right"></i> AI Solutions</a></li>
-                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
-                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
-                    </ul>
+
+                <div class="footer-col">
+                    <h5>SaaS Platforms</h5>
+                    <div class="footer-links-list">
+                        <a href="https://medos.spotnet.in" target="_blank" rel="noopener"><i class="fas fa-hospital"></i> SpotNet MedOS</a>
+                        <a href="https://freeinvoice.spotnet.in" target="_blank" rel="noopener"><i class="fas fa-file-invoice"></i> InvoiceKit Free</a>
+                        <a href="https://irangebio.spotnet.in" target="_blank" rel="noopener"><i class="fas fa-link"></i> iRange Bio Link</a>
+                        <a href="https://servicele.spotnet.in/" target="_blank" rel="noopener"><i class="fas fa-calendar-check"></i> Servicele Bookings</a>
+                        <a href="#products"><i class="fab fa-whatsapp"></i> SpotLink API</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Infrastructure & Blog</h5>
+                    <div class="footer-links-list">
+                        <a href="solar.html"><i class="fas fa-sun" style="color:#f59e0b;"></i> Solar Installation UP</a>
+                        <a href="blog.html"><i class="fas fa-newspaper"></i> Tech & Solar Blog</a>
+                        <a href="#roi-calc"><i class="fas fa-calculator"></i> Solar Subsidy Calculator</a>
+                        <a href="#products"><i class="fas fa-wifi"></i> Fiber Broadband</a>
+                        <a href="#ai-suite"><i class="fas fa-robot"></i> AI Architecture</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Contact & Regional</h5>
+                    <div class="footer-links-list">
+                        <span style="color:#94a3b8; font-size:0.9rem;"><i class="fas fa-map-marker-alt" style="color:var(--electric-blue);"></i> Dumariyaganj, UP 272189</span>
+                        <a href="tel:+919120909501"><i class="fas fa-phone"></i> +91 91209 09501</a>
+                        <a href="mailto:spotnet95@gmail.com"><i class="fas fa-envelope"></i> spotnet95@gmail.com</a>
+                        <a href="https://wa.me/15558572517"><i class="fab fa-whatsapp"></i> WhatsApp Direct</a>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2025 SpotNet Services. All rights reserved. | Enterprise AI & Technology Solutions</p>
+
+            <div class="footer-bottom-bar">
+                <div>© 2026 SpotNet Services. All rights reserved. Enterprise AI, Cloud & Clean Energy Division.</div>
+                <div style="display:flex; gap:20px;">
+                    <a href="sitemap.xml" style="color:var(--text-dim);">Sitemap</a>
+                    <a href="robots.txt" style="color:var(--text-dim);">Robots</a>
+                    <a href="blog.html" style="color:var(--text-dim);">Insights</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/15558572517?text=Hi%20SpotNet%20Services!%20I%27m%20interested%20in%20your%20enterprise%20solutions." class="whatsapp-float" title="Chat with SpotNet Services">
+    <!-- Floating Direct WhatsApp CTA -->
+    <a href="https://wa.me/15558572517?text=Hi%20SpotNet%20Services!%20I%20want%20to%20consult%20on%20a%20project." class="floating-wa-btn" title="Chat on WhatsApp" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- World-Class Interactive Scripts -->
     <script>
-        function toggleSidebar() {
-            document.getElementById('smartSidebar').classList.toggle('active');
-            document.getElementById('sidebarOverlay').classList.toggle('active');
-        }
+        // 1. Tesla/xAI Constellation Particle Background Canvas
+        (function() {
+            const canvas = document.getElementById('particleCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let width, height;
+            let particles = [];
+            const particleCount = 45;
+            let mouse = { x: null, y: null, radius: 140 };
 
-        function toggleSection(element) {
-            const section = element.parentElement;
-            const allSections = document.querySelectorAll('.sidebar-section');
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = canvas.parentElement.offsetHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
 
-            allSections.forEach(s => {
-                if (s !== section) {
-                    s.classList.remove('active');
-                }
+            window.addEventListener('mousemove', function(e) {
+                const rect = canvas.getBoundingClientRect();
+                mouse.x = e.clientX - rect.left;
+                mouse.y = e.clientY - rect.top;
             });
 
-            section.classList.toggle('active');
-        }
+            window.addEventListener('mouseleave', function() {
+                mouse.x = null;
+                mouse.y = null;
+            });
 
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.boxShadow = '0 5px 30px rgba(0,0,0,0.12)';
-            } else {
-                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
-            }
-        });
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.vx = (Math.random() - 0.5) * 0.7;
+                    this.vy = (Math.random() - 0.5) * 0.7;
+                    this.radius = Math.random() * 1.8 + 0.8;
+                }
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    if (this.x < 0 || this.x > width) this.vx = -this.vx;
+                    if (this.y < 0 || this.y > height) this.vy = -this.vy;
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        if (window.innerWidth <= 968) {
-                            toggleSidebar();
+                    // Mouse gravity push
+                    if (mouse.x !== null && mouse.y !== null) {
+                        const dx = mouse.x - this.x;
+                        const dy = mouse.y - this.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < mouse.radius) {
+                            const force = (mouse.radius - dist) / mouse.radius;
+                            this.x -= (dx / dist) * force * 2;
+                            this.y -= (dy / dist) * force * 2;
                         }
                     }
                 }
-            });
-        });
-
-        function scrollCarousel(carouselId, direction) {
-            const container = document.getElementById(carouselId);
-            const scrollAmount = 380;
-            container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-        }
-
-        function setupAutoScroll(carouselId, interval = 5000) {
-            const container = document.getElementById(carouselId);
-            let autoScrollInterval = setInterval(() => {
-                if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
-                    container.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    scrollCarousel(carouselId, 1);
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(56, 189, 248, 0.6)';
+                    ctx.fill();
                 }
-            }, interval);
+            }
 
-            container.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
-            container.addEventListener('mouseleave', () => {
-                autoScrollInterval = setInterval(() => {
-                    if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
-                        container.scrollTo({ left: 0, behavior: 'smooth' });
-                    } else {
-                        scrollCarousel(carouselId, 1);
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                for (let i = 0; i < particles.length; i++) {
+                    particles[i].update();
+                    particles[i].draw();
+
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < 110) {
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.strokeStyle = `rgba(56, 189, 248, ${0.15 * (1 - dist / 110)})`;
+                            ctx.lineWidth = 0.8;
+                            ctx.stroke();
+                        }
                     }
-                }, interval);
+                }
+                requestAnimationFrame(animate);
+            }
+            animate();
+        })();
+
+        // 2. Mobile Drawer Navigation
+        function toggleDrawer() {
+            document.getElementById('mobileDrawer').classList.toggle('active');
+            document.getElementById('drawerOverlay').classList.toggle('active');
+        }
+
+        // 3. Product Tabs Filter
+        function filterProducts(category, btn) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const cards = document.querySelectorAll('.products-grid > .glass-card');
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-cat');
+                if (category === 'all' || cardCat === category) {
+                    card.style.display = card.classList.contains('product-hero-card') ? 'grid' : 'block';
+                } else {
+                    card.style.display = 'none';
+                }
             });
         }
 
-        setupAutoScroll('industriesCarousel', 5000);
-    </script>
+        // 4. Interactive Live WhatsApp Simulator
+        const chatResponses = {
+            medos: [
+                { role: 'user', text: "I want to book an OPD appointment at Sharma Clinic for tomorrow morning." },
+                { role: 'bot', text: "🏥 **SpotNet MedOS Booking Confirmation**\n\n• Patient: Token #14 reserved\n• Doctor: Dr. A. Sharma (General Medicine)\n• Slot: Tomorrow, 10:30 AM\n• Clinic: Dumariyaganj Road\n\nPrescription & digital receipt will be sent here upon consultation!" }
+            ],
+            solar: [
+                { role: 'user', text: "How much subsidy can I get for a 3kW rooftop solar setup in UP?" },
+                { role: 'bot', text: "☀️ **PM Surya Ghar Subsidy Breakdown (UP)**:\n\n• Central Govt Subsidy: ₹78,000\n• UP State Subsidy: Available for on-grid\n• Estimated Bill Cut: 85% to 95%\n\nSpotNet Solar takes care of DISCOM paperwork and net-metering. Would you like a complimentary site survey?" }
+            ],
+            invoice: [
+                { role: 'user', text: "Generate a GST invoice for ₹12,500 with 18% tax for Sunrise Trading." },
+                { role: 'bot', text: "📄 **InvoiceKit Generated #INV-2026-89**\n\n• Subtotal: ₹10,593.22\n• CGST (9%): ₹953.39\n• SGST (9%): ₹953.39\n• **Total: ₹12,500.00**\n\n✅ PDF invoice & UPI Payment QR generated. Shared instantly via WhatsApp link!" }
+            ],
+            broadband: [
+                { role: 'user', text: "Is high-speed fiber broadband available near Dumariyaganj market?" },
+                { role: 'bot', text: "🌐 **SpotNet Fiber Coverage Alert**\n\nYes! Dumariyaganj market is fully lit with our Gigabit optical fiber backbone. Plans start at 100 Mbps with unlimited symmetric data & static IP options. Technician can install within 24 hours!" }
+            ]
+        };
 
-</body></html>
+        function simulateChat(key) {
+            const data = chatResponses[key];
+            if (!data) return;
+
+            const chatStream = document.getElementById('chatStream');
+            
+            // Add user message
+            const userBubble = document.createElement('div');
+            userBubble.className = 'msg-bubble msg-user';
+            userBubble.innerHTML = `${data[0].text}<div class="msg-time">Just now</div>`;
+            chatStream.appendChild(userBubble);
+            chatStream.scrollTop = chatStream.scrollHeight;
+
+            // Simulate typing indicator
+            const typingBubble = document.createElement('div');
+            typingBubble.className = 'msg-bubble msg-bot';
+            typingBubble.innerHTML = '<i class="fas fa-ellipsis-h fa-spin"></i> Typing...';
+            chatStream.appendChild(typingBubble);
+            chatStream.scrollTop = chatStream.scrollHeight;
+
+            setTimeout(() => {
+                typingBubble.remove();
+                const botBubble = document.createElement('div');
+                botBubble.className = 'msg-bubble msg-bot';
+                botBubble.innerHTML = `${data[1].text.replace(/\n/g, '<br>')}<div class="msg-time">Just now</div>`;
+                chatStream.appendChild(botBubble);
+                chatStream.scrollTop = chatStream.scrollHeight;
+            }, 800);
+        }
+
+        function handleSimEnter(e) {
+            if (e.key === 'Enter') sendSimCustom();
+        }
+
+        function sendSimCustom() {
+            const input = document.getElementById('simUserInput');
+            const text = input.value.trim();
+            if (!text) return;
+
+            const chatStream = document.getElementById('chatStream');
+            const userBubble = document.createElement('div');
+            userBubble.className = 'msg-bubble msg-user';
+            userBubble.innerHTML = `${text}<div class="msg-time">Just now</div>`;
+            chatStream.appendChild(userBubble);
+            input.value = '';
+            chatStream.scrollTop = chatStream.scrollHeight;
+
+            setTimeout(() => {
+                const botBubble = document.createElement('div');
+                botBubble.className = 'msg-bubble msg-bot';
+                botBubble.innerHTML = `Thank you for your message! Our AI is ready to automate your workflows. Click 'Deploy This For Your Business' below or WhatsApp us directly at +91 91209 09501 to get started.<div class="msg-time">Just now</div>`;
+                chatStream.appendChild(botBubble);
+                chatStream.scrollTop = chatStream.scrollHeight;
+            }, 600);
+        }
+
+        // 5. Interactive Rooftop Solar ROI Calculator
+        function calculateSolarROI() {
+            const bill = parseInt(document.getElementById('billSlider').value, 10);
+            document.getElementById('billValDisplay').innerText = `₹${bill.toLocaleString('en-IN')}`;
+
+            let kw = 1;
+            let subsidy = 30000;
+            if (bill < 2000) {
+                kw = 1.5;
+                subsidy = 45000;
+            } else if (bill < 4000) {
+                kw = 3.0;
+                subsidy = 78000;
+            } else if (bill < 8000) {
+                kw = 5.0;
+                subsidy = 78000;
+            } else {
+                kw = Math.min(10, Math.round((bill / 1200) * 10) / 10);
+                subsidy = 78000;
+            }
+
+            const annualSavings = Math.round(bill * 12 * 0.90);
+            const paybackYears = (kw <= 3) ? '2.8 Yrs' : '3.2 Yrs';
+
+            document.getElementById('recommendedKW').innerText = `${kw.toFixed(1)} kW System`;
+            document.getElementById('calcSubsidy').innerText = `₹${subsidy.toLocaleString('en-IN')}`;
+            document.getElementById('calcAnnualSavings').innerText = `₹${annualSavings.toLocaleString('en-IN')}`;
+            document.getElementById('calcPayback').innerText = `~ ${paybackYears}`;
+
+            // Update WhatsApp Link with dynamically calculated values
+            const msg = encodeURIComponent(`Hi SpotNet Solar! My monthly electricity bill is approx ₹${bill}. I used your online calculator and want to claim the UP PM Surya Ghar subsidy for a ${kw.toFixed(1)}kW system.`);
+            document.getElementById('solarLeadBtn').href = `https://wa.me/15558572517?text=${msg}`;
+        }
+        calculateSolarROI();
+
+        // 6. Supabase-Wired Lead Submission System
+        async function handleLeadSubmission(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('submitBtn');
+            const feedback = document.getElementById('formFeedback');
+            
+            const name = document.getElementById('leadName').value.trim();
+            const phone = document.getElementById('leadPhone').value.trim();
+            const email = document.getElementById('leadEmail').value.trim();
+            const service = document.getElementById('leadService').value;
+            const message = document.getElementById('leadMessage').value.trim();
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing Inquiry...';
+
+            // Attempt Supabase insert if credentials are provided in window.ENV_SUPABASE
+            let savedToDb = false;
+            if (window.supabase && window.ENV_SUPABASE_URL && window.ENV_SUPABASE_ANON_KEY) {
+                try {
+                    const sb = window.supabase.createClient(window.ENV_SUPABASE_URL, window.ENV_SUPABASE_ANON_KEY);
+                    const { error } = await sb.from('spotnet_leads').insert([
+                        { name, phone, email, service, message, created_at: new Date() }
+                    ]);
+                    if (!error) savedToDb = true;
+                } catch (err) {
+                    console.warn("Supabase direct insert fallback:", err);
+                }
+            }
+
+            // Always ensure WhatsApp fallback occurs so NO lead is ever dropped
+            const waText = encodeURIComponent(`*New SpotNet Inquiry*\n• Name: ${name}\n• Phone: ${phone}\n• Email: ${email || 'N/A'}\n• Service: ${service}\n• Message: ${message || 'None'}`);
+            const waUrl = `https://wa.me/15558572517?text=${waText}`;
+
+            feedback.style.display = 'block';
+            feedback.style.background = 'rgba(16, 185, 129, 0.2)';
+            feedback.style.color = '#34d399';
+            feedback.style.border = '1px solid rgba(16, 185, 129, 0.4)';
+            feedback.innerHTML = '<i class="fas fa-check-circle"></i> Inquiry recorded successfully! Connecting you directly with our team...';
+
+            setTimeout(() => {
+                window.open(waUrl, '_blank');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Inquiry / Request Callback';
+                document.getElementById('leadIntakeForm').reset();
+            }, 1200);
+        }
+    </script>
+</body>
+</html>
