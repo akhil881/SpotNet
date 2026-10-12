@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotNet Blog | AI, WhatsApp Business API & Technology Insights</title>
+    <meta name="description" content="Read practical guides and expert insights on WhatsApp Business API, AI automation, hospital management software, rooftop solar in UP, and digital invoicing for Indian businesses.">
+    <meta name="keywords" content="SpotNet Blog, WhatsApp Business API India, AI automation blog, MedOS hospital software, solar panel subsidy UP, rooftop solar Siddharthnagar, GST invoice generator, Dumariyaganj technology">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SpotNet Services">
+    <link rel="canonical" href="https://spotnet.in/blog.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SpotNet Services">
+    <meta property="og:title" content="SpotNet Blog | AI, WhatsApp Business API & Technology Insights">
+    <meta property="og:description" content="Practical technology guides on AI automation, WhatsApp API, clinic software, and solar power for businesses across Uttar Pradesh and India.">
+    <meta property="og:url" content="https://spotnet.in/blog.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1758691737083-0e7fdbde0f05?fm=jpg&q=70&w=1200&auto=format&fit=crop">
+    <meta property="og:locale" content="en_IN">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='11' fill='%230b1f3a'/%3E%3Ccircle cx='24' cy='10' r='5' fill='%23ffffff'/%3E%3Ccircle cx='10' cy='34' r='5' fill='%23ffffff' fill-opacity='0.85'/%3E%3Ccircle cx='38' cy='34' r='5' fill='%2306b6d4'/%3E%3Cpath d='M24 15L11 30M24 15L37 30M13 34H35' stroke='%23ffffff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "SpotNet Services Tech Blog",
+        "url": "https://spotnet.in/blog.html",
+        "description": "Practical guides and technical analysis on AI solutions, WhatsApp Business API, healthcare software, and clean energy.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "SpotNet Services",
+            "url": "https://spotnet.in/",
+            "logo": "https://spotnet.in/favicon.svg"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #1a56db;
+            --secondary: #0b1f3a;
+            --accent: #06b6d4;
+            --gold: #d4a017;
+            --whatsapp: #25D366;
+            --success: #4bb543;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --border: #e9ecef;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: #fbfcfd;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 16px rgba(11,31,58,0.25);
+        }
+
+        .logo-icon svg { width: 26px; height: 26px; }
+
+        .logo-text h1 {
+            font-size: 1.7rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .logo-text p {
+            font-size: 0.72rem;
+            color: var(--gray);
+            margin-top: -3px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .btn {
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(26, 86, 219, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 86, 219, 0.4);
+            color: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: var(--dark);
+        }
+
+        /* Sidebar */
+        .smart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 320px;
+            height: 100vh;
+            background: white;
+            box-shadow: -5px 0 30px rgba(0,0,0,0.15);
+            z-index: 2000;
+            transition: right 0.4s ease;
+            overflow-y: auto;
+        }
+
+        .smart-sidebar.active { right: 0; }
+
+        .sidebar-header {
+            padding: 22px 26px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sidebar-header h3 { font-size: 1.25rem; font-weight: 700; }
+        .sidebar-close { font-size: 1.6rem; cursor: pointer; }
+
+        .sidebar-links {
+            list-style: none;
+            padding: 20px 0;
+        }
+
+        .sidebar-links a {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 13px 26px;
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.25s;
+        }
+
+        .sidebar-links a:hover,
+        .sidebar-links a.active {
+            background: #f1f5f9;
+            color: var(--primary);
+            padding-left: 32px;
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            z-index: 1999;
+            display: none;
+        }
+
+        .sidebar-overlay.active { display: block; }
+
+        /* Blog Hero */
+        .blog-hero {
+            background: linear-gradient(125deg, rgba(26,86,219,0.94), rgba(11,31,58,0.96)), url('https://images.unsplash.com/photo-1758691737083-0e7fdbde0f05?fm=jpg&q=70&w=2000&auto=format&fit=crop') center/cover no-repeat;
+            color: white;
+            padding: 160px 0 70px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(8px);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .blog-hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 18px;
+            line-height: 1.2;
+        }
+
+        .blog-hero p {
+            font-size: 1.2rem;
+            opacity: 0.92;
+            max-width: 760px;
+            margin: 0 auto 30px;
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 40px 0 20px;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 1.5px solid #e2e8f0;
+            color: var(--dark);
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.25s;
+            font-family: inherit;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+            box-shadow: 0 4px 12px rgba(26, 86, 219, 0.25);
+        }
+
+        /* Blog Grid */
+        .blog-section {
+            padding: 50px 0 90px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 32px;
+            margin-top: 30px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+            border: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 45px rgba(0, 0, 0, 0.12);
+            border-color: rgba(26, 86, 219, 0.3);
+        }
+
+        .blog-card-img {
+            position: relative;
+            height: 210px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .blog-card-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(11, 31, 58, 0.88);
+            backdrop-filter: blur(4px);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .blog-card-body {
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.82rem;
+            color: var(--gray);
+            margin-bottom: 12px;
+        }
+
+        .blog-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .blog-card-body h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 12px;
+            line-height: 1.4;
+            transition: color 0.25s;
+        }
+
+        .blog-card:hover .blog-card-body h3 {
+            color: var(--primary);
+        }
+
+        .blog-card-body p {
+            color: var(--gray);
+            font-size: 0.94rem;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            flex-grow: 1;
+        }
+
+        .blog-read-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.92rem;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+            padding: 0;
+            transition: gap 0.25s;
+        }
+
+        .blog-read-btn:hover {
+            gap: 12px;
+            color: var(--secondary);
+        }
+
+        /* Modal */
+        .article-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(4px);
+            z-index: 3000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .article-modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 820px;
+            width: 100%;
+            max-height: 88vh;
+            overflow-y: auto;
+            padding: 40px;
+            position: relative;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--dark);
+            font-size: 1.2rem;
+            transition: all 0.2s;
+        }
+
+        .modal-close:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .modal-badge {
+            display: inline-block;
+            background: #eff6ff;
+            color: var(--primary);
+            padding: 5px 14px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--secondary);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .modal-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--gray);
+            font-size: 0.88rem;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 16px;
+        }
+
+        .modal-body {
+            color: #334155;
+            line-height: 1.8;
+            font-size: 1.02rem;
+        }
+
+        .modal-body h4 {
+            font-size: 1.35rem;
+            color: var(--secondary);
+            margin: 24px 0 10px;
+            font-weight: 700;
+        }
+
+        .modal-body ul {
+            margin: 14px 0 20px 24px;
+        }
+
+        .modal-body li {
+            margin-bottom: 8px;
+        }
+
+        .modal-body .callout {
+            background: #eff6ff;
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 22px 0;
+            font-weight: 500;
+        }
+
+        /* Consult Banner */
+        .consult-banner {
+            background: linear-gradient(135deg, var(--secondary) 0%, #0d284f 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 50px 40px;
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .consult-banner h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .consult-banner p {
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 600px;
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 70px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-about h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-about p {
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .footer-column h4 {
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+        .footer-contact {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .footer-contact i {
+            color: var(--whatsapp);
+            font-size: 1.3rem;
+            margin-top: 3px;
+        }
+
+        .footer-contact a {
+            color: var(--whatsapp);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: var(--whatsapp);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float i { font-size: 1.8rem; }
+
+        @media (max-width: 968px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .blog-hero h1 { font-size: 2.2rem; }
+            .footer-content { grid-template-columns: 1fr; gap: 40px; }
+            .consult-banner { flex-direction: column; align-items: flex-start; }
+            .modal-content { padding: 26px; }
+            .modal-title { font-size: 1.5rem; }
+        }
+
+        @media (max-width: 576px) {
+            .blog-grid { grid-template-columns: 1fr; }
+            .blog-hero h1 { font-size: 1.9rem; }
+            .consult-banner { padding: 30px 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo-container">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="10" r="5" fill="#ffffff"/>
+                            <circle cx="10" cy="34" r="5" fill="#ffffff" fill-opacity="0.85"/>
+                            <circle cx="38" cy="34" r="5" fill="#06b6d4"/>
+                            <path d="M24 15L11 30M24 15L37 30M13 34H35" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>SpotNet Services</h1>
+                        <p>Enterprise Technology Solutions</p>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#ai-services">AI Services</a></li>
+                    <li><a href="index.html#tech-services">Technology</a></li>
+                    <li><a href="solar.html">Solar</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="index.html#contact" class="btn btn-primary">Get Consultation</a></li>
+                </ul>
+                <div class="mobile-menu-btn" onclick="toggleSidebar()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+    <div class="smart-sidebar" id="smartSidebar">
+        <div class="sidebar-header">
+            <h3>SpotNet Navigation</h3>
+            <div class="sidebar-close" onclick="toggleSidebar()">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="index.html#products"><i class="fas fa-laptop-code"></i> Products</a></li>
+            <li><a href="index.html#ai-services"><i class="fas fa-robot"></i> AI Solutions</a></li>
+            <li><a href="solar.html"><i class="fas fa-solar-panel"></i> Solar Installation</a></li>
+            <li><a href="blog.html" class="active"><i class="fas fa-newspaper"></i> Tech Blog</a></li>
+            <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
+        </ul>
+        <div style="padding: 20px 26px;">
+            <a href="https://wa.me/15558572517?text=Hi%20SpotNet!%20I%20have%20an%20inquiry." class="btn btn-primary" style="width: 100%; justify-content: center;">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <span class="section-badge">SpotNet Insights & Knowledge</span>
+            <h1>Technology, AI & Business Engineering</h1>
+            <p>Actionable guides on WhatsApp Automation, Healthcare Software, Rooftop Solar and Digital Growth for Indian Enterprises and MSMEs.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="blog-section">
+        <div class="container">
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-btn active" onclick="filterArticles('all', this)">All Topics</button>
+                <button class="filter-btn" onclick="filterArticles('whatsapp', this)">WhatsApp & AI</button>
+                <button class="filter-btn" onclick="filterArticles('healthcare', this)">Healthcare & MedOS</button>
+                <button class="filter-btn" onclick="filterArticles('solar', this)">Solar & Energy</button>
+                <button class="filter-btn" onclick="filterArticles('msme', this)">MSME & Invoicing</button>
+            </div>
+
+            <!-- Articles Grid -->
+            <div class="blog-grid" id="blogGrid">
+
+                <!-- Article 1 -->
+                <article class="blog-card" data-category="whatsapp">
+                    <div class="blog-card-img" style="background-image: url('https://images.unsplash.com/photo-1745848413078-f85af10e5bf2?fm=jpg&q=75&w=800&auto=format&fit=crop');">
+                        <span class="blog-card-badge">WhatsApp Automation</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> October 2026</span>
+                            <span><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h3>How WhatsApp Business API Automates 70% of Customer Support for Indian MSMEs</h3>
+                        <p>Why relying on unofficial numbers leads to bans, and how the official Cloud API unlocks automated order tracking, appointment scheduling, and 24/7 AI replies.</p>
+                        <button class="blog-read-btn" onclick="openArticle('article1')">
+                            Read Full Guide <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-card" data-category="healthcare">
+                    <div class="blog-card-img" style="background-image: url('https://images.unsplash.com/photo-1758691462848-ba1e929da259?fm=jpg&q=75&w=800&auto=format&fit=crop');">
+                        <span class="blog-card-badge">Healthcare Tech</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> October 2026</span>
+                            <span><i class="far fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3>Digitizing Rural & Semi-Urban Clinics: Inside MedOS Hospital Architecture</h3>
+                        <p>How cloud-connected OPD records, instant lab test delivery, and staff permission controls eliminate paper loss and queue chaos in clinics across Uttar Pradesh.</p>
+                        <button class="blog-read-btn" onclick="openArticle('article2')">
+                            Read Full Guide <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-card" data-category="solar">
+                    <div class="blog-card-img" style="background-image: url('https://images.unsplash.com/photo-1745187946672-2c1d8cf26a2b?fm=jpg&q=75&w=800&auto=format&fit=crop');">
+                        <span class="blog-card-badge">Solar Energy</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> September 2026</span>
+                            <span><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h3>PM Surya Ghar Muft Bijli Yojana: Rooftop Solar Guide for Siddharthnagar & UP</h3>
+                        <p>Comprehensive breakdown of up to ₹78,000 in government subsidies, net-metering approvals with UPPCL, and why a 3kW system pays for itself in under 3.5 years.</p>
+                        <button class="blog-read-btn" onclick="openArticle('article3')">
+                            Read Full Guide <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="blog-card" data-category="msme">
+                    <div class="blog-card-img" style="background-image: url('https://images.unsplash.com/photo-1709880945165-d2208c6ad2ec?fm=jpg&q=75&w=800&auto=format&fit=crop');">
+                        <span class="blog-card-badge">Business & Finance</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> September 2026</span>
+                            <span><i class="far fa-clock"></i> 4 min read</span>
+                        </div>
+                        <h3>Moving Beyond Paper Bill Books: Why Small Businesses in UP Need Digital Invoicing</h3>
+                        <p>Handwritten bills lead to lost tax credits, unpaid customer receivables, and GST penalties. Learn how modern tools like InvoiceKit bring professional compliance.</p>
+                        <button class="blog-read-btn" onclick="openArticle('article4')">
+                            Read Full Guide <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="blog-card" data-category="whatsapp">
+                    <div class="blog-card-img" style="background-image: url('https://images.unsplash.com/photo-1742549586702-c23994895082?fm=jpg&q=75&w=800&auto=format&fit=crop');">
+                        <span class="blog-card-badge">Engineering & AI</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> August 2026</span>
+                            <span><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h3>Building High-Converting Landing Pages for Local Businesses</h3>
+                        <p>What actually makes a landing page convert in Tier-2 and Tier-3 cities? Direct WhatsApp CTAs, transparent local trust signals, fast mobile loading, and zero clutter.</p>
+                        <button class="blog-read-btn" onclick="openArticle('article5')">
+                            Read Full Guide <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Consultation Banner -->
+            <div class="consult-banner">
+                <div>
+                    <h3>Need Tech Solutions for Your Business?</h3>
+                    <p>From custom software and WhatsApp bots to solar installations — discuss your project with SpotNet's team in Siddharthnagar.</p>
+                </div>
+                <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+                    <a href="https://wa.me/15558572517?text=Hi%20SpotNet!%20I%20read%20your%20blog%20and%20want%20to%20discuss%20a%20project." class="btn btn-primary" style="background: white; color: var(--primary);">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                    <a href="index.html#contact" class="btn btn-outline" style="border-color: white; color: white;">
+                        <i class="fas fa-paper-plane"></i> Request Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Article Reading -->
+    <div class="article-modal" id="articleModal" onclick="closeModalOnOverlay(event)">
+        <div class="modal-content">
+            <div class="modal-close" onclick="closeArticleModal()"><i class="fas fa-times"></i></div>
+            <span class="modal-badge" id="modalBadge">Category</span>
+            <h2 class="modal-title" id="modalTitle">Article Title</h2>
+            <div class="modal-meta" id="modalMeta">October 2026 • 5 min read</div>
+            <div class="modal-body" id="modalBody">
+                <!-- Injected via JS -->
+            </div>
+            <div style="margin-top: 35px; padding-top: 25px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: gap: 15px;">
+                <span style="font-weight: 600; color: var(--secondary);">Have questions about this topic?</span>
+                <a href="https://wa.me/15558572517?text=Hi%20SpotNet!%20I%20have%20questions%20regarding%20your%20blog%20article." class="btn btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Ask Our Engineers
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>SpotNet Services</h3>
+                    <p>SpotNet Services is a Siddharthnagar-based technology company building AI, automation, and enterprise software for businesses across India. From WhatsApp Business API and AI chatbots to custom SaaS products like MedOS, InvoiceKit, and iRange, we combine local understanding with enterprise-grade engineering. We also deliver certified solar installations and reliable broadband connectivity in Dumariyaganj and surrounding regions.</p>
+                    <div class="footer-contact">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>Dumariyaganj, Siddharthnagar, Uttar Pradesh, India</div>
+                    </div>
+                    <div class="footer-contact">
+                        <i class="fab fa-whatsapp"></i>
+                        <div><a href="https://wa.me/15558572517">SpotNet WhatsApp Support</a></div>
+                    </div>
+                    <div class="footer-contact">
+                        <i class="fas fa-envelope"></i>
+                        <div><a href="mailto:spotnet95@gmail.com">spotnet95@gmail.com</a></div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://facebook.com/spotnetservices" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/15558572517" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:spotnet95@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="blog.html"><i class="fas fa-newspaper"></i> Tech Blog</a></li>
+                        <li><a href="https://medos.spotnet.in"><i class="fas fa-external-link-alt"></i> SpotNet MedOS</a></li>
+                        <li><a href="https://freeinvoice.spotnet.in"><i class="fas fa-external-link-alt"></i> InvoiceKit</a></li>
+                        <li><a href="https://irangebio.spotnet.in"><i class="fas fa-link"></i> iRange – Link in Bio</a></li>
+                        <li><a href="solar.html"><i class="fas fa-solar-panel"></i> Solar Installation</a></li>
+                        <li><a href="index.html#products"><i class="fas fa-chevron-right"></i> All Products</a></li>
+                        <li><a href="index.html#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 SpotNet Services. All rights reserved. | Enterprise AI & Technology Solutions</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/15558572517?text=Hi%20SpotNet%20Services!%20I%20read%20your%20blog%20and%20would%20like%20to%20connect." class="whatsapp-float" title="Chat with SpotNet Services">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        function toggleSidebar() {
+            document.getElementById('smartSidebar').classList.toggle('active');
+            document.getElementById('sidebarOverlay').classList.toggle('active');
+        }
+
+        function filterArticles(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const articles = document.querySelectorAll('.blog-card');
+            articles.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        const articleData = {
+            article1: {
+                badge: 'WhatsApp Automation',
+                title: 'How WhatsApp Business API Automates 70% of Customer Queries for Indian MSMEs',
+                meta: 'October 2026 • 5 min read • By SpotNet Tech Team',
+                content: `
+                    <p>In India, customer communication happens primarily on WhatsApp. Whether you run a distribution business, a diagnostic lab, an educational coaching institute, or an e-commerce brand, your customers expect instant updates on WhatsApp rather than opening emails or logging into complex web portals.</p>
+                    
+                    <div class="callout">
+                        <strong>The Big Problem with Unofficial WhatsApp Tools:</strong> Many small businesses use unofficial browser-automation scripts or third-party web scrapers. These tools frequently get numbers permanently blocked by Meta and expose sensitive customer numbers to leakage.
+                    </div>
+
+                    <h4>Why Official Cloud API is a Game Changer</h4>
+                    <p>SpotLink and Meta's official Cloud API allow businesses to send verified, pre-approved interactive template messages at scale with guaranteed 99.9% deliverability:</p>
+                    <ul>
+                        <li><strong>Instant Transactional Receipts & PDFs:</strong> Send PDF bills, invoices, and lab reports immediately when created.</li>
+                        <li><strong>Automated 24/7 FAQ Chatbots:</strong> Answer store timings, service pricing, and appointment availability in seconds.</li>
+                        <li><strong>Multi-Agent Team Inboxes:</strong> Multiple staff members can respond to incoming chats from a single official business number.</li>
+                        <li><strong>Official Green Tick Verification:</strong> Establish credibility and eliminate impersonation risks.</li>
+                    </ul>
+
+                    <h4>How Indian MSMEs Save 20+ Hours Every Week</h4>
+                    <p>By routing routine questions—such as "Is my order ready?", "What is the fee structure?", or "Can I book a consultation?"—through predefined interactive button menus, your human staff only deals with high-value conversations that require personal attention.</p>
+                `
+            },
+            article2: {
+                badge: 'Healthcare Tech',
+                title: 'Digitizing Rural & Semi-Urban Clinics: Inside MedOS Hospital Architecture',
+                meta: 'October 2026 • 6 min read • By SpotNet Healthcare Team',
+                content: `
+                    <p>Clinics and path labs across Tier-2 and Tier-3 cities in Uttar Pradesh and northern India face a unique set of challenges: overcrowded waiting rooms, handwritten OPD prescription books that get misplaced, and patients having to physically return the next day just to collect diagnostic blood test reports.</p>
+
+                    <h4>The Architectural Pillars of SpotNet MedOS</h4>
+                    <p>When developing <strong>SpotNet MedOS</strong>, we engineered the system around three core requirements:</p>
+                    <ul>
+                        <li><strong>Multi-Role Role-Based Security:</strong> Doctors, lab technicians, pharmacists, and receptionists have dedicated permission levels.</li>
+                        <li><strong>Sub-Second Report Generation:</strong> Pre-templated pathological normal ranges allow technicians to input numbers and generate barcode-stamped PDF reports in less than 30 seconds.</li>
+                        <li><strong>WhatsApp Delivery Direct to Patient:</strong> Once signed off by the pathologist, the lab report is automatically delivered straight to the patient's WhatsApp, cutting waiting area congestion by up to 60%.</li>
+                    </ul>
+
+                    <div class="callout">
+                        <strong>Result:</strong> Clinic staff saves hundreds of hours in physical filing, patient disputes over lost prescriptions drop to zero, and doctors get instant historical access to prior patient visits with one click.
+                    </div>
+                `
+            },
+            article3: {
+                badge: 'Solar Energy',
+                title: 'PM Surya Ghar Muft Bijli Yojana: Rooftop Solar Guide for Siddharthnagar & UP',
+                meta: 'September 2026 • 7 min read • By SpotNet Solar Team',
+                content: `
+                    <p>With increasing domestic electricity tariffs and growing summer heatwaves, rooftop solar is no longer an optional luxury—it has become one of the most profitable financial investments an Indian homeowner or shop owner can make.</p>
+
+                    <h4>Understanding the Central Subsidy Structure</h4>
+                    <p>Under the PM Surya Ghar Muft Bijli Yojana, residential installations receive direct bank transfer subsidies from the Government of India:</p>
+                    <ul>
+                        <li><strong>1 kW System:</strong> ₹30,000 Direct Subsidy</li>
+                        <li><strong>2 kW System:</strong> ₹60,000 Direct Subsidy</li>
+                        <li><strong>3 kW and Above:</strong> ₹78,000 Maximum Direct Subsidy</li>
+                    </ul>
+
+                    <h4>The Net-Metering Process with UPPCL</h4>
+                    <p>A grid-connected solar installation generates electricity during peak sunlight hours. Power you don't use is exported back into the UPPCL grid through a bidirectional net-meter. At the end of the month, your bill reflects only the net units consumed.</p>
+
+                    <div class="callout">
+                        <strong>Financial Return:</strong> A standard 3kW residential system produces approximately 360–420 units per month. At average UP electricity slab rates (₹7 per unit), homeowners save ₹2,500–₹3,000 every single month, recovering their investment in under 3.5 years.
+                    </div>
+
+                    <h4>Why Professional Installation Matters</h4>
+                    <p>SpotNet Solar provides end-to-end certification: rooftop structure load testing, mono-perc half-cut high-efficiency panels, certified inverters, and full DISCOM net-metering liaison so you don't have to navigate government paperwork alone.</p>
+                `
+            },
+            article4: {
+                badge: 'Business & Finance',
+                title: 'Moving Beyond Paper Bill Books: Why Small Businesses in UP Need Digital Invoicing',
+                meta: 'September 2026 • 4 min read • By SpotNet Product Team',
+                content: `
+                    <p>Walk into any local market in Dumariyaganj, Bansi, or Siddharthnagar, and you will see business owners still writing carbon-copy paper invoices by hand. While paper feels traditional, it incurs hidden costs that drag down business profits.</p>
+
+                    <h4>The Real Cost of Manual Paper Billing</h4>
+                    <ul>
+                        <li><strong>Input Tax Credit (ITC) Loss:</strong> Handwritten invoices frequently have missing GST numbers or miscalculated HSN tax rates, leading to disallowed tax credits during monthly GSTR filings.</li>
+                        <li><strong>Uncollected Customer Debts:</strong> Without automated payment tracking and due-date alerts, thousands of rupees in customer credit slip through the cracks.</li>
+                        <li><strong>Unprofessional Brand Perception:</strong> Sending a neat PDF invoice via WhatsApp with a direct UPI payment link increases prompt payment rates by over 45%.</li>
+                    </ul>
+
+                    <p>Tools like <strong>InvoiceKit</strong> make digital invoicing as quick as sending a message: select an item, apply standard GST rates, and export a clean PDF invoice or salary slip in under 15 seconds.</p>
+                `
+            },
+            article5: {
+                badge: 'Engineering & AI',
+                title: 'Building High-Converting Landing Pages for Local Businesses',
+                meta: 'August 2026 • 5 min read • By SpotNet Engineering',
+                content: `
+                    <p>Many web developers make the error of overcomplicating local business websites with massive video backgrounds, bloated animations, and confusing multi-step forms that take forever to load on 4G mobile networks.</p>
+
+                    <h4>What Actually Drives Conversions in Tier 2/3 Markets:</h4>
+                    <ul>
+                        <li><strong>Sub-2-Second Mobile Load Times:</strong> Clean, semantic HTML and CSS with zero heavy JavaScript frameworks.</li>
+                        <li><strong>Direct WhatsApp Action Triggers:</strong> A clear, sticky WhatsApp button with pre-filled greeting text converts 3x higher than standard email inquiry forms.</li>
+                        <li><strong>Hyper-Local Trust Signals:</strong> Mentioning exact local landmarks, physical office locations, and local phone numbers builds immediate customer confidence.</li>
+                        <li><strong>Clear Visual Proof:</strong> Real photos of services, certifications, and transparent pricing ranges rather than generic stock imagery.</li>
+                    </ul>
+
+                    <p>At SpotNet, we design every client solution around these conversion fundamentals so every visitor turns into a qualified lead.</p>
+                `
+            }
+        };
+
+        function openArticle(id) {
+            const data = articleData[id];
+            if (!data) return;
+
+            document.getElementById('modalBadge').innerText = data.badge;
+            document.getElementById('modalTitle').innerText = data.title;
+            document.getElementById('modalMeta').innerText = data.meta;
+            document.getElementById('modalBody').innerHTML = data.content;
+
+            document.getElementById('articleModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeArticleModal() {
+            document.getElementById('articleModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function closeModalOnOverlay(e) {
+            if (e.target.id === 'articleModal') {
+                closeArticleModal();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeArticleModal();
+        });
+    </script>
+</body>
+</html>
