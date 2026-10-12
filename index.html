@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpotNet Services | Enterprise AI, Intelligent SaaS & Clean Energy</title>
-    <meta name="description" content="SpotNet Services engineers enterprise AI chatbots, WhatsApp Business automation, healthcare SaaS (MedOS), GST invoicing (InvoiceKit), rooftop solar installations, and high-speed broadband in Uttar Pradesh and across India.">
+    <meta name="description" content="SpotNet Services engineers enterprise AI chatbots, WhatsApp Business automation, clinical hospital software (MedOS), GST invoicing tools (InvoiceKit), rooftop solar installations, and high-speed broadband in Uttar Pradesh and across India.">
     <meta name="keywords" content="SpotNet Services, Enterprise AI India, WhatsApp Business API automation, MedOS hospital software, InvoiceKit GST, rooftop solar installation UP, PM Surya Ghar subsidy Dumariyaganj, Siddharthnagar fiber broadband, custom SaaS software development">
     <meta name="robots" content="index, follow">
     <meta name="author" content="SpotNet Services">
     <link rel="canonical" href="https://spotnet.in/">
 
-    <!-- Open Graph / Meta -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="SpotNet Services">
     <meta property="og:title" content="SpotNet Services | Enterprise AI, Intelligent SaaS & Clean Energy">
@@ -37,10 +37,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/all.min.css">
 
-    <!-- Supabase JS CDN (Ready for Vercel/Supabase DB wiring) -->
+    <!-- Supabase JS CDN (Vercel & Supabase DB Ready) -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-    <!-- Schema.org Structured Data -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -68,26 +68,19 @@
             --bg-base: #030712;
             --bg-surface: #0a0f1d;
             --bg-elevated: #111827;
-            --bg-glass: rgba(15, 23, 42, 0.7);
             --border-subtle: rgba(255, 255, 255, 0.08);
             --border-glow: rgba(56, 189, 248, 0.35);
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --text-dim: #64748b;
-            --cyan-glow: #00f2fe;
             --electric-blue: #38bdf8;
-            --indigo-accent: #6366f1;
             --solar-amber: #f59e0b;
             --emerald-online: #10b981;
             --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-mono: 'JetBrains Mono', monospace;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         html {
             scroll-behavior: smooth;
@@ -101,44 +94,26 @@
             overflow-x: hidden;
             background-color: var(--bg-base);
             position: relative;
-            line-height: 1.6;
+            line-height: 1.55;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Ambient Glow & Grid Backdrop */
+        /* Ambient subtle backdrop */
         .ambient-mesh {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
+            top: 0; left: 0; width: 100vw; height: 100vh;
             pointer-events: none;
             z-index: 0;
             background: 
-                radial-gradient(circle at 50% -10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
-                radial-gradient(circle at 90% 40%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 10% 80%, rgba(6, 182, 212, 0.06) 0%, transparent 50%);
-        }
-
-        .ambient-grid {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            pointer-events: none;
-            z-index: 0;
-            background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-            background-size: 40px 40px;
-            opacity: 0.8;
+                radial-gradient(circle at 50% -15%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 95% 35%, rgba(99, 102, 241, 0.07) 0%, transparent 45%);
         }
 
         .container {
             width: 100%;
-            max-width: 1320px;
+            max-width: 1240px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 20px;
             position: relative;
             z-index: 10;
         }
@@ -146,43 +121,35 @@
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
 
-        /* Typography & Headings */
         .gradient-text {
-            background: linear-gradient(135deg, #ffffff 20%, #93c5fd 60%, #38bdf8 100%);
+            background: linear-gradient(135deg, #ffffff 25%, #93c5fd 65%, #38bdf8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .gradient-solar {
-            background: linear-gradient(135deg, #fef08a 0%, #f59e0b 60%, #ea580c 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Micro-Badges */
+        /* Micro Telemetry Badge */
         .telemetry-badge {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 6px 14px;
+            gap: 7px;
+            padding: 4px 12px;
             border-radius: 999px;
-            background: rgba(15, 23, 42, 0.8);
+            background: rgba(15, 23, 42, 0.7);
             border: 1px solid var(--border-subtle);
             font-family: var(--font-mono);
-            font-size: 0.76rem;
+            font-size: 0.73rem;
             color: #cbd5e1;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            letter-spacing: 0.06em;
+            backdrop-filter: blur(8px);
         }
 
         .pulse-dot {
-            width: 7px;
-            height: 7px;
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
             background-color: var(--emerald-online);
-            box-shadow: 0 0 10px var(--emerald-online);
+            box-shadow: 0 0 8px var(--emerald-online);
             animation: pulse-glow 2s infinite;
         }
 
@@ -191,96 +158,78 @@
             50% { opacity: 0.4; transform: scale(0.85); }
         }
 
-        /* Tesla-Style Floating Capsule Header */
+        /* Sticky Navigation Bar */
         header {
-            position: fixed;
-            top: 20px;
+            position: sticky;
+            top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            pointer-events: none;
+            background: rgba(3, 7, 18, 0.82);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: all 0.2s ease;
         }
 
-        .header-capsule {
-            pointer-events: auto;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 10px 24px;
-            border-radius: 999px;
-            background: rgba(10, 15, 29, 0.75);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--border-subtle);
+        .header-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-            transition: all 0.3s ease;
-        }
-
-        .header-capsule:hover {
-            border-color: rgba(255, 255, 255, 0.15);
+            padding: 12px 0;
         }
 
         .logo-wrap {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .brand-icon {
-            width: 38px;
-            height: 38px;
-            border-radius: 10px;
+            width: 36px;
+            height: 36px;
+            border-radius: 9px;
             background: linear-gradient(135deg, #1e293b, #0f172a);
             border: 1px solid rgba(255,255,255,0.12);
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 16px rgba(56, 189, 248, 0.2);
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.15);
         }
 
-        .brand-icon svg { width: 22px; height: 22px; }
+        .brand-icon svg { width: 20px; height: 20px; }
 
         .brand-name {
             font-size: 1.15rem;
             font-weight: 800;
             letter-spacing: -0.02em;
             color: #fff;
+            line-height: 1.1;
         }
 
         .brand-tag {
             font-family: var(--font-mono);
-            font-size: 0.65rem;
+            font-size: 0.62rem;
             color: var(--electric-blue);
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 22px;
         }
 
         .nav-links a {
             font-size: 0.88rem;
             font-weight: 500;
             color: #94a3b8;
-            transition: color 0.2s, text-shadow 0.2s;
-            position: relative;
+            transition: color 0.2s;
         }
 
         .nav-links a:hover {
             color: #ffffff;
-            text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
-        }
-
-        .nav-pill-solar {
-            color: #f59e0b !important;
-            display: flex;
-            align-items: center;
-            gap: 6px;
         }
 
         /* Buttons */
@@ -288,27 +237,27 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 10px 22px;
-            border-radius: 999px;
+            padding: 9px 20px;
+            border-radius: 8px;
             font-size: 0.88rem;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.2s ease;
             border: 1px solid transparent;
-            position: relative;
-            overflow: hidden;
+            text-align: center;
+            justify-content: center;
         }
 
         .btn-glow {
             background: linear-gradient(135deg, #2563eb, #0284c7);
             color: #ffffff;
             border-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+            box-shadow: 0 0 16px rgba(14, 165, 233, 0.35);
         }
 
         .btn-glow:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 30px rgba(14, 165, 233, 0.7);
+            transform: translateY(-1px);
+            box-shadow: 0 0 24px rgba(14, 165, 233, 0.6);
             color: #fff;
         }
 
@@ -322,18 +271,17 @@
         .btn-glass:hover {
             background: rgba(255, 255, 255, 0.1);
             border-color: rgba(255, 255, 255, 0.25);
-            transform: translateY(-2px);
         }
 
         .btn-solar {
             background: linear-gradient(135deg, #d97706, #b45309);
             color: #fff;
-            box-shadow: 0 0 20px rgba(245, 158, 11, 0.35);
+            box-shadow: 0 0 16px rgba(245, 158, 11, 0.3);
         }
 
         .btn-solar:hover {
-            box-shadow: 0 0 30px rgba(245, 158, 11, 0.6);
-            transform: translateY(-2px);
+            box-shadow: 0 0 24px rgba(245, 158, 11, 0.5);
+            transform: translateY(-1px);
         }
 
         .mobile-toggle {
@@ -344,21 +292,16 @@
             padding: 6px;
         }
 
-        /* Hero Section */
+        /* Tightly Spaced Hero Section */
         .hero-section {
             position: relative;
-            padding: 180px 0 120px;
+            padding: 60px 0 40px;
             overflow: hidden;
-            display: flex;
-            align-items: center;
         }
 
         #particleCanvas {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             z-index: 1;
             pointer-events: none;
         }
@@ -366,125 +309,126 @@
         .hero-content {
             position: relative;
             z-index: 10;
-            max-width: 900px;
+            max-width: 860px;
             margin: 0 auto;
             text-align: center;
         }
 
         .hero-title {
-            font-size: 4rem;
+            font-size: 3.2rem;
             font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -0.03em;
-            margin: 22px 0 24px;
+            line-height: 1.15;
+            letter-spacing: -0.025em;
+            margin: 14px 0 16px;
         }
 
         .hero-desc {
-            font-size: 1.25rem;
+            font-size: 1.08rem;
             color: var(--text-muted);
-            max-width: 780px;
-            margin: 0 auto 38px;
-            line-height: 1.65;
-            font-weight: 400;
+            max-width: 740px;
+            margin: 0 auto 28px;
+            line-height: 1.6;
         }
 
         .hero-actions {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 16px;
+            gap: 12px;
             flex-wrap: wrap;
-            margin-bottom: 50px;
+            margin-bottom: 32px;
         }
 
-        /* Telemetry Status Strip */
+        /* Compact Telemetry Strip */
         .telemetry-strip {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            max-width: 1000px;
+            gap: 12px;
+            max-width: 960px;
             margin: 0 auto;
-            padding: 20px;
-            border-radius: 18px;
-            background: rgba(15, 23, 42, 0.5);
+            padding: 14px 20px;
+            border-radius: 14px;
+            background: rgba(15, 23, 42, 0.6);
             border: 1px solid var(--border-subtle);
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(10px);
         }
 
         .tele-stat h4 {
-            font-size: 1.9rem;
+            font-size: 1.55rem;
             font-weight: 800;
             font-family: var(--font-mono);
             color: #fff;
+            line-height: 1.1;
         }
 
         .tele-stat p {
-            font-size: 0.8rem;
+            font-size: 0.74rem;
             color: var(--text-dim);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-top: 4px;
+            margin-top: 3px;
         }
 
-        /* Section Layout */
+        /* Tight Well-Proportioned Section Padding */
         section {
-            padding: 100px 0;
+            padding: 56px 0;
             position: relative;
             z-index: 10;
         }
 
         .section-header {
             text-align: center;
-            max-width: 760px;
-            margin: 0 auto 60px;
+            max-width: 720px;
+            margin: 0 auto 36px;
         }
 
         .section-header h2 {
-            font-size: 2.8rem;
+            font-size: 2.2rem;
             font-weight: 800;
             letter-spacing: -0.02em;
-            margin: 14px 0 16px;
+            margin: 10px 0 10px;
         }
 
         .section-header p {
             color: var(--text-muted);
-            font-size: 1.1rem;
+            font-size: 0.98rem;
         }
 
-        /* Glassmorphism Card System with Interactive Glow */
+        /* Card System */
         .glass-card {
             background: var(--bg-surface);
             border: 1px solid var(--border-subtle);
-            border-radius: 20px;
-            padding: 32px;
+            border-radius: 16px;
+            padding: 24px;
             position: relative;
-            overflow: hidden;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            backdrop-filter: blur(16px);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.25s ease;
+            backdrop-filter: blur(12px);
         }
 
         .glass-card:hover {
             border-color: var(--border-glow);
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(56, 189, 248, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(56, 189, 248, 0.08);
         }
 
-        /* Product Interactive Switcher Matrix */
+        /* Filter Switcher */
         .product-tabs-nav {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
             flex-wrap: wrap;
-            margin-bottom: 40px;
+            margin-bottom: 28px;
         }
 
         .tab-btn {
             background: rgba(15, 23, 42, 0.6);
             border: 1px solid var(--border-subtle);
             color: var(--text-muted);
-            padding: 10px 22px;
+            padding: 7px 18px;
             border-radius: 999px;
-            font-size: 0.88rem;
+            font-size: 0.82rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s ease;
@@ -495,36 +439,34 @@
             background: #1e293b;
             color: #fff;
             border-color: var(--electric-blue);
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
         }
 
         .products-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
+            gap: 20px;
         }
 
         .product-hero-card {
             grid-column: 1 / -1;
             display: grid;
             grid-template-columns: 1.2fr 1fr;
-            gap: 40px;
-            padding: 44px;
+            gap: 32px;
+            padding: 32px;
             background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(10, 15, 29, 0.9) 100%);
             border: 1px solid rgba(56, 189, 248, 0.3);
-            box-shadow: 0 25px 60px rgba(0,0,0,0.5), 0 0 35px rgba(56, 189, 248, 0.12);
         }
 
         .status-badge {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            padding: 4px 12px;
+            gap: 5px;
+            padding: 3px 10px;
             border-radius: 999px;
             font-family: var(--font-mono);
-            font-size: 0.72rem;
+            font-size: 0.68rem;
             font-weight: 700;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.04em;
         }
 
         .badge-live {
@@ -540,196 +482,186 @@
         }
 
         .card-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
-            margin-bottom: 20px;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
             color: #fff;
         }
 
         .feature-bullets {
-            margin: 20px 0 28px;
+            margin: 14px 0 20px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
+            flex: 1;
         }
 
         .feature-bullets li {
             display: flex;
             align-items: flex-start;
-            gap: 10px;
-            font-size: 0.92rem;
+            gap: 8px;
+            font-size: 0.88rem;
             color: #cbd5e1;
+            line-height: 1.45;
         }
 
         .feature-bullets i {
             color: var(--electric-blue);
-            margin-top: 4px;
-            font-size: 0.85rem;
+            margin-top: 3px;
+            font-size: 0.8rem;
         }
 
-        /* Interactive WhatsApp AI Simulator (Tesla/xAI level) */
+        /* Simulator Section */
         .simulator-section {
             background: linear-gradient(180deg, transparent 0%, rgba(10, 15, 29, 0.8) 50%, transparent 100%);
-            padding: 110px 0;
+            padding: 60px 0;
         }
 
         .sim-grid {
             display: grid;
-            grid-template-columns: 1fr 1.1fr;
-            gap: 50px;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
             align-items: center;
         }
 
         .phone-wrapper {
-            position: relative;
             background: #000;
-            border-radius: 36px;
-            padding: 16px;
-            border: 4px solid #1e293b;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 40px rgba(37, 211, 102, 0.15);
-            max-width: 460px;
+            border-radius: 28px;
+            padding: 12px;
+            border: 3px solid #1e293b;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.7), 0 0 30px rgba(37, 211, 102, 0.12);
+            max-width: 420px;
             margin: 0 auto;
-        }
-
-        .phone-notch {
-            width: 120px;
-            height: 20px;
-            background: #1e293b;
-            border-radius: 0 0 14px 14px;
-            margin: 0 auto 12px;
         }
 
         .phone-screen {
             background: #0b141a;
-            border-radius: 24px;
+            border-radius: 18px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            height: 520px;
+            height: 460px;
         }
 
         .wa-header {
             background: #1f2c34;
-            padding: 14px 16px;
+            padding: 12px 14px;
             display: flex;
             align-items: center;
-            gap: 12px;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            gap: 10px;
         }
 
         .wa-avatar {
-            width: 38px;
-            height: 38px;
+            width: 34px;
+            height: 34px;
             border-radius: 50%;
             background: linear-gradient(135deg, #25D366, #128C7E);
             display: flex;
             align-items: center;
             justify-content: center;
             color: #fff;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
-        .wa-info h5 { font-size: 0.95rem; color: #fff; font-weight: 600; }
-        .wa-info p { font-size: 0.75rem; color: #25D366; }
+        .wa-info h5 { font-size: 0.9rem; color: #fff; font-weight: 600; }
+        .wa-info p { font-size: 0.72rem; color: #25D366; }
 
         .chat-body {
             flex: 1;
-            padding: 16px;
+            padding: 14px;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
             background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
-            background-size: 18px 18px;
+            background-size: 16px 16px;
         }
 
         .msg-bubble {
-            max-width: 82%;
-            padding: 10px 14px;
-            border-radius: 14px;
-            font-size: 0.88rem;
-            line-height: 1.45;
-            position: relative;
+            max-width: 85%;
+            padding: 8px 12px;
+            border-radius: 12px;
+            font-size: 0.84rem;
+            line-height: 1.4;
         }
 
         .msg-bot {
             align-self: flex-start;
             background: #202c33;
             color: #e9edef;
-            border-bottom-left-radius: 4px;
+            border-bottom-left-radius: 2px;
         }
 
         .msg-user {
             align-self: flex-end;
             background: #005c4b;
             color: #e9edef;
-            border-bottom-right-radius: 4px;
+            border-bottom-right-radius: 2px;
         }
 
         .msg-time {
-            font-size: 0.65rem;
+            font-size: 0.62rem;
             color: rgba(255,255,255,0.5);
             text-align: right;
-            margin-top: 4px;
+            margin-top: 3px;
         }
 
         .prompt-triggers {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-top: 24px;
+            gap: 8px;
+            margin-top: 18px;
         }
 
         .sim-btn {
             background: rgba(15, 23, 42, 0.7);
             border: 1px solid var(--border-subtle);
             color: #f1f5f9;
-            padding: 14px 20px;
-            border-radius: 12px;
+            padding: 11px 16px;
+            border-radius: 10px;
             text-align: left;
-            font-size: 0.92rem;
+            font-size: 0.88rem;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            transition: all 0.25s ease;
+            transition: all 0.2s ease;
         }
 
         .sim-btn:hover {
             border-color: var(--electric-blue);
             background: rgba(30, 41, 59, 0.8);
-            transform: translateX(6px);
+            transform: translateX(4px);
         }
 
-        /* Tesla-Style Solar Calculator */
+        /* Compact Solar Calculator */
         .solar-calc-card {
-            background: linear-gradient(135deg, rgba(20, 24, 38, 0.9) 0%, rgba(12, 17, 30, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(20, 24, 38, 0.95) 0%, rgba(12, 17, 30, 0.95) 100%);
             border: 1px solid rgba(245, 158, 11, 0.25);
-            border-radius: 28px;
-            padding: 50px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 40px rgba(245, 158, 11, 0.08);
+            border-radius: 20px;
+            padding: 34px;
             display: grid;
             grid-template-columns: 1.1fr 1fr;
-            gap: 60px;
+            gap: 36px;
             align-items: center;
         }
 
         .calc-slider-box {
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 18px;
         }
 
         .range-slider {
             -webkit-appearance: none;
             width: 100%;
-            height: 8px;
-            border-radius: 5px;
+            height: 7px;
+            border-radius: 4px;
             background: #1e293b;
             outline: none;
             cursor: pointer;
@@ -737,88 +669,81 @@
 
         .range-slider::-webkit-slider-thumb {
             -webkit-appearance: none;
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
             border-radius: 50%;
             background: var(--solar-amber);
-            box-shadow: 0 0 15px var(--solar-amber);
+            box-shadow: 0 0 12px var(--solar-amber);
             cursor: pointer;
-            transition: transform 0.1s;
-        }
-
-        .range-slider::-webkit-slider-thumb:hover {
-            transform: scale(1.15);
         }
 
         .calc-metrics-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 18px;
+            gap: 14px;
         }
 
         .metric-box {
             background: rgba(15, 23, 42, 0.7);
             border: 1px solid var(--border-subtle);
-            border-radius: 16px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 16px;
             text-align: center;
         }
 
         .metric-box h3 {
-            font-size: 1.7rem;
+            font-size: 1.55rem;
             font-weight: 800;
             font-family: var(--font-mono);
             color: #fff;
         }
 
         .metric-box p {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--text-muted);
-            margin-top: 4px;
+            margin-top: 3px;
         }
 
-        /* Lead Intake Console (Supabase-wired) */
+        /* Compact Intake Console */
         .intake-console {
             background: rgba(10, 15, 29, 0.85);
             border: 1px solid var(--border-subtle);
-            border-radius: 28px;
-            padding: 50px;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+            border-radius: 22px;
+            padding: 36px;
             display: grid;
             grid-template-columns: 1fr 1.2fr;
-            gap: 60px;
+            gap: 36px;
         }
 
         .form-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 18px;
+            gap: 14px;
         }
 
         .input-group {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 6px;
         }
 
         .input-group.full { grid-column: 1 / -1; }
 
         .input-group label {
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             font-weight: 600;
             color: #cbd5e1;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.04em;
         }
 
         .input-field {
             background: rgba(15, 23, 42, 0.8);
             border: 1px solid var(--border-subtle);
-            border-radius: 12px;
-            padding: 14px 18px;
+            border-radius: 10px;
+            padding: 11px 14px;
             color: #fff;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             outline: none;
             transition: all 0.2s;
             font-family: inherit;
@@ -826,42 +751,36 @@
 
         .input-field:focus {
             border-color: var(--electric-blue);
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
             background: #111827;
         }
 
-        /* Industries Carousel */
+        /* Carousel */
         .carousel-track {
             display: flex;
-            gap: 20px;
+            gap: 16px;
             overflow-x: auto;
             scroll-behavior: smooth;
-            padding-bottom: 20px;
+            padding-bottom: 12px;
             scrollbar-width: none;
         }
 
         .carousel-track::-webkit-scrollbar { display: none; }
 
         .industry-card {
-            min-width: 320px;
+            min-width: 280px;
             background: var(--bg-surface);
             border: 1px solid var(--border-subtle);
-            border-radius: 18px;
-            padding: 28px;
+            border-radius: 14px;
+            padding: 22px;
             flex-shrink: 0;
-            transition: all 0.3s;
-        }
-
-        .industry-card:hover {
-            border-color: rgba(56, 189, 248, 0.4);
-            transform: translateY(-4px);
+            transition: all 0.2s;
         }
 
         /* Footer */
         footer {
             background: #020617;
             border-top: 1px solid var(--border-subtle);
-            padding: 90px 0 30px;
+            padding: 50px 0 24px;
             position: relative;
             z-index: 10;
         }
@@ -869,140 +788,128 @@
         .footer-grid {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 60px;
+            gap: 32px;
+            margin-bottom: 40px;
         }
 
         .footer-col h5 {
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 700;
             color: #fff;
-            margin-bottom: 20px;
-            letter-spacing: 0.02em;
+            margin-bottom: 14px;
         }
 
         .footer-links-list {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
         }
 
         .footer-links-list a {
             color: var(--text-dim);
-            font-size: 0.92rem;
+            font-size: 0.88rem;
             transition: color 0.2s;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 7px;
         }
 
-        .footer-links-list a:hover {
-            color: #fff;
-        }
+        .footer-links-list a:hover { color: #fff; }
 
         .footer-bottom-bar {
-            padding-top: 30px;
+            padding-top: 20px;
             border-top: 1px solid var(--border-subtle);
             display: flex;
             justify-content: space-between;
             align-items: center;
             color: var(--text-dim);
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 12px;
         }
 
         /* Floating WhatsApp Button */
         .floating-wa-btn {
             position: fixed;
-            bottom: 26px;
-            right: 26px;
-            width: 58px;
-            height: 58px;
+            bottom: 22px;
+            right: 22px;
+            width: 54px;
+            height: 54px;
             border-radius: 50%;
             background: #25D366;
             color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.7rem;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            font-size: 1.6rem;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
             z-index: 999;
-            transition: transform 0.25s;
+            transition: transform 0.2s;
         }
 
-        .floating-wa-btn:hover {
-            transform: scale(1.1);
-        }
+        .floating-wa-btn:hover { transform: scale(1.08); }
 
         /* Mobile Drawer */
         .mobile-drawer {
             position: fixed;
-            top: 0;
-            right: -100%;
-            width: 320px;
-            height: 100vh;
+            top: 0; right: -100%;
+            width: 290px; height: 100vh;
             background: #090e1a;
             border-left: 1px solid var(--border-subtle);
             z-index: 2000;
-            padding: 30px 24px;
+            padding: 24px 20px;
             display: flex;
             flex-direction: column;
-            gap: 24px;
-            transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            gap: 20px;
+            transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .mobile-drawer.active { right: 0; }
         .drawer-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0,0,0,0.7);
-            backdrop-filter: blur(4px);
-            z-index: 1999;
-            opacity: 0;
-            visibility: hidden;
-            transition: 0.3s;
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);
+            z-index: 1999; opacity: 0; visibility: hidden; transition: 0.25s;
         }
         .drawer-overlay.active { opacity: 1; visibility: visible; }
 
-        /* Responsive Breakpoints */
+        /* Mobile First Breakpoints & Tight Spacing */
         @media (max-width: 1024px) {
-            .hero-title { font-size: 3.1rem; }
+            .hero-title { font-size: 2.7rem; }
             .products-grid { grid-template-columns: repeat(2, 1fr); }
             .product-hero-card { grid-template-columns: 1fr; }
-            .sim-grid, .solar-calc-card, .intake-console { grid-template-columns: 1fr; gap: 40px; }
+            .sim-grid, .solar-calc-card, .intake-console { grid-template-columns: 1fr; gap: 28px; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
-            .telemetry-strip { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .mobile-toggle { display: block; }
-            header { top: 10px; }
-            .header-capsule { padding: 10px 18px; }
-            .hero-title { font-size: 2.3rem; }
-            .hero-desc { font-size: 1.05rem; }
-            .products-grid { grid-template-columns: 1fr; }
+            .hero-section { padding: 40px 0 24px; }
+            .hero-title { font-size: 2.1rem; line-height: 1.2; margin: 10px 0 14px; }
+            .hero-desc { font-size: 0.98rem; margin-bottom: 22px; }
+            .telemetry-strip { grid-template-columns: repeat(2, 1fr); padding: 12px; gap: 8px; }
+            .tele-stat h4 { font-size: 1.3rem; }
+            section { padding: 40px 0; }
+            .section-header { margin-bottom: 24px; }
+            .section-header h2 { font-size: 1.8rem; }
+            .products-grid { grid-template-columns: 1fr; gap: 16px; }
+            .product-hero-card { padding: 22px; gap: 20px; }
+            .glass-card { padding: 20px; }
             .form-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .section-header h2 { font-size: 2.1rem; }
-            .solar-calc-card, .intake-console { padding: 28px 20px; }
+            .solar-calc-card, .intake-console { padding: 22px 16px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+            .footer-bottom-bar { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Ambient Visual Effects -->
     <div class="ambient-mesh"></div>
-    <div class="ambient-grid"></div>
 
-    <!-- Tesla-Style Capsule Header -->
+    <!-- Sticky Navigation Bar -->
     <header>
         <div class="container">
-            <div class="header-capsule">
+            <div class="header-inner">
                 <a href="index.html" class="logo-wrap">
                     <div class="brand-icon">
                         <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1022,7 +929,7 @@
                     <a href="#products">Products</a>
                     <a href="#ai-suite">AI Suite</a>
                     <a href="#whatsapp-demo">AI Live Demo</a>
-                    <a href="solar.html" class="nav-pill-solar"><i class="fas fa-sun"></i> Solar Division</a>
+                    <a href="solar.html" style="color:var(--solar-amber);"><i class="fas fa-sun"></i> Solar Division</a>
                     <a href="#roi-calc">ROI Calc</a>
                     <a href="blog.html">Blog</a>
                     <a href="#consultation" class="btn-futuristic btn-glow">Deploy / Contact</a>
@@ -1035,7 +942,7 @@
         </div>
     </header>
 
-    <!-- Mobile Drawer Navigation -->
+    <!-- Mobile Drawer -->
     <div class="drawer-overlay" id="drawerOverlay" onclick="toggleDrawer()"></div>
     <div class="mobile-drawer" id="mobileDrawer">
         <div style="display:flex; justify-content:space-between; align-items:center;">
@@ -1043,23 +950,23 @@
                 <div class="brand-icon"><i class="fas fa-bolt" style="color:var(--electric-blue)"></i></div>
                 <div class="brand-name">SpotNet</div>
             </div>
-            <i class="fas fa-times" onclick="toggleDrawer()" style="cursor:pointer; color:#94a3b8; font-size:1.3rem;"></i>
+            <i class="fas fa-times" onclick="toggleDrawer()" style="cursor:pointer; color:#94a3b8; font-size:1.2rem;"></i>
         </div>
         <div class="telemetry-badge" style="width: fit-content;">
             <span class="pulse-dot"></span> System Operational
         </div>
-        <nav style="display:flex; flex-direction:column; gap:16px; margin-top:20px;">
-            <a href="#products" onclick="toggleDrawer()" style="font-size:1.05rem; color:#cbd5e1;"><i class="fas fa-boxes" style="width:24px;"></i> Products</a>
-            <a href="#ai-suite" onclick="toggleDrawer()" style="font-size:1.05rem; color:#cbd5e1;"><i class="fas fa-robot" style="width:24px;"></i> AI Suite</a>
-            <a href="#whatsapp-demo" onclick="toggleDrawer()" style="font-size:1.05rem; color:#cbd5e1;"><i class="fab fa-whatsapp" style="width:24px;"></i> AI Live Demo</a>
-            <a href="solar.html" onclick="toggleDrawer()" style="font-size:1.05rem; color:#f59e0b;"><i class="fas fa-sun" style="width:24px;"></i> Solar Installation</a>
-            <a href="#roi-calc" onclick="toggleDrawer()" style="font-size:1.05rem; color:#cbd5e1;"><i class="fas fa-calculator" style="width:24px;"></i> Solar ROI Calc</a>
-            <a href="blog.html" onclick="toggleDrawer()" style="font-size:1.05rem; color:#cbd5e1;"><i class="fas fa-newspaper" style="width:24px;"></i> Blog & Insights</a>
-            <a href="#consultation" onclick="toggleDrawer()" class="btn-futuristic btn-glow" style="margin-top:20px; justify-content:center;">Get Started</a>
+        <nav style="display:flex; flex-direction:column; gap:14px; margin-top:14px;">
+            <a href="#products" onclick="toggleDrawer()" style="font-size:1rem; color:#cbd5e1;"><i class="fas fa-boxes" style="width:22px;"></i> Products</a>
+            <a href="#ai-suite" onclick="toggleDrawer()" style="font-size:1rem; color:#cbd5e1;"><i class="fas fa-robot" style="width:22px;"></i> AI Suite</a>
+            <a href="#whatsapp-demo" onclick="toggleDrawer()" style="font-size:1rem; color:#cbd5e1;"><i class="fab fa-whatsapp" style="width:22px;"></i> AI Live Demo</a>
+            <a href="solar.html" onclick="toggleDrawer()" style="font-size:1rem; color:#f59e0b;"><i class="fas fa-sun" style="width:22px;"></i> Solar Installation</a>
+            <a href="#roi-calc" onclick="toggleDrawer()" style="font-size:1rem; color:#cbd5e1;"><i class="fas fa-calculator" style="width:22px;"></i> Solar ROI Calc</a>
+            <a href="blog.html" onclick="toggleDrawer()" style="font-size:1rem; color:#cbd5e1;"><i class="fas fa-newspaper" style="width:22px;"></i> Blog & Insights</a>
+            <a href="#consultation" onclick="toggleDrawer()" class="btn-futuristic btn-glow" style="margin-top:14px;">Get Started</a>
         </nav>
     </div>
 
-    <!-- Hero Section with Canvas Constellation -->
+    <!-- Tightly Placed Hero Section -->
     <section class="hero-section">
         <canvas id="particleCanvas"></canvas>
         <div class="container">
@@ -1081,14 +988,14 @@
                         <i class="fas fa-layer-group"></i> Explore Products
                     </a>
                     <a href="#whatsapp-demo" class="btn-futuristic btn-glass">
-                        <i class="fab fa-whatsapp"></i> Test AI Agent Live
+                        <i class="fab fa-whatsapp"></i> Test AI Live
                     </a>
                     <a href="solar.html" class="btn-futuristic btn-solar">
                         <i class="fas fa-solar-panel"></i> Solar Subsidy (UP)
                     </a>
                 </div>
 
-                <!-- Live System Telemetry Strip -->
+                <!-- Live Metrics Strip (Directly Below CTAs) -->
                 <div class="telemetry-strip">
                     <div class="tele-stat">
                         <h4>500+</h4>
@@ -1100,7 +1007,7 @@
                     </div>
                     <div class="tele-stat">
                         <h4>₹0 Bill</h4>
-                        <p>UP Rooftop Solar Target</p>
+                        <p>Rooftop Solar Target</p>
                     </div>
                     <div class="tele-stat">
                         <h4>&lt; 15ms</h4>
@@ -1111,16 +1018,15 @@
         </div>
     </section>
 
-    <!-- Flagship Products Showcase Matrix -->
+    <!-- Flagship Products Matrix -->
     <section id="products">
         <div class="container">
             <div class="section-header">
                 <div class="telemetry-badge">Ecosystem Matrix</div>
                 <h2>Engineered For Scale. Built For Real Impact.</h2>
-                <p>Proprietary SaaS platforms and AI engines developed in-house to solve critical operational bottlenecks for Indian enterprises and institutions.</p>
+                <p>Proprietary SaaS platforms and AI engines developed in-house to solve critical operational bottlenecks.</p>
             </div>
 
-            <!-- Product Category Filter Switcher -->
             <div class="product-tabs-nav">
                 <button class="tab-btn active" onclick="filterProducts('all', this)">All Solutions</button>
                 <button class="tab-btn" onclick="filterProducts('saas', this)">SaaS Platforms</button>
@@ -1132,22 +1038,24 @@
 
                 <!-- 1. SpotNet MedOS (Featured) -->
                 <div class="glass-card product-hero-card" data-cat="saas">
-                    <div>
-                        <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-                            <span class="status-badge badge-live"><i class="fas fa-check-circle"></i> PRODUCTION LIVE</span>
-                            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim);">HEALTHCARE SUITE</span>
+                    <div style="display:flex; flex-direction:column; justify-content:space-between;">
+                        <div>
+                            <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+                                <span class="status-badge badge-live"><i class="fas fa-check-circle"></i> PRODUCTION LIVE</span>
+                                <span style="font-family:var(--font-mono); font-size:0.72rem; color:var(--text-dim);">HEALTHCARE SUITE</span>
+                            </div>
+                            <h3 style="font-size:1.85rem; font-weight:800; margin-bottom:10px; color:#fff;">SpotNet MedOS</h3>
+                            <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.55; margin-bottom:14px;">
+                                Full-cycle Hospital, Polyclinic & Pathology Laboratory Management System engineered specifically for Indian clinical workflows. Features automated OPD queue tokens, bilingual prescription generation, lab reporting, and ABDM digital health compliance.
+                            </p>
+                            <ul class="feature-bullets">
+                                <li><i class="fas fa-check"></i> Multi-counter OPD token queuing & digital display board sync</li>
+                                <li><i class="fas fa-check"></i> 1-Click bilingual prescription printing & WhatsApp delivery to patient</li>
+                                <li><i class="fas fa-check"></i> Pharmacy inventory management with expiry tracking & GST billing</li>
+                                <li><i class="fas fa-check"></i> Instant cloud sync with offline disaster protection</li>
+                            </ul>
                         </div>
-                        <h3 style="font-size:2.2rem; font-weight:800; margin-bottom:14px; color:#fff;">SpotNet MedOS</h3>
-                        <p style="color:var(--text-muted); font-size:1.05rem; line-height:1.65; margin-bottom:20px;">
-                            Full-cycle Hospital, Polyclinic & Pathology Laboratory Management System engineered specifically for Indian clinical workflows. Features automated OPD queue tokens, bilingual prescription generation, lab reporting, and ABDM digital health compliance.
-                        </p>
-                        <ul class="feature-bullets">
-                            <li><i class="fas fa-check"></i> Multi-counter OPD token queuing & digital display board sync</li>
-                            <li><i class="fas fa-check"></i> 1-Click bilingual prescription printing & WhatsApp delivery to patient</li>
-                            <li><i class="fas fa-check"></i> Pharmacy inventory management with expiry tracking & GST billing</li>
-                            <li><i class="fas fa-check"></i> Instant cloud sync with offline disaster protection</li>
-                        </ul>
-                        <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:24px;">
+                        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:14px;">
                             <a href="https://medos.spotnet.in" target="_blank" rel="noopener" class="btn-futuristic btn-glow">
                                 <i class="fas fa-external-link-alt"></i> Launch MedOS
                             </a>
@@ -1156,157 +1064,176 @@
                             </a>
                         </div>
                     </div>
-                    <div style="background: radial-gradient(circle at center, rgba(56,189,248,0.15) 0%, rgba(15,23,42,0.8) 100%); border-radius:18px; border:1px solid var(--border-subtle); padding:30px; display:flex; flex-direction:column; justify-content:center; gap:18px;">
-                        <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--electric-blue);">// SYSTEM TELEMETRY</div>
-                        <div style="background:#0a0f1d; border-radius:12px; padding:16px; border:1px solid var(--border-subtle);">
-                            <div style="font-size:0.85rem; color:var(--text-dim);">Clinic OPD Capacity</div>
-                            <div style="font-size:1.4rem; font-weight:700; color:#fff;">10,000+ Records / Day</div>
+
+                    <div style="background: radial-gradient(circle at center, rgba(56,189,248,0.12) 0%, rgba(15,23,42,0.9) 100%); border-radius:14px; border:1px solid var(--border-subtle); padding:22px; display:flex; flex-direction:column; justify-content:center; gap:14px;">
+                        <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--electric-blue);">// SYSTEM TELEMETRY</div>
+                        <div style="background:#0a0f1d; border-radius:10px; padding:14px; border:1px solid var(--border-subtle);">
+                            <div style="font-size:0.78rem; color:var(--text-dim);">OPD Throughput</div>
+                            <div style="font-size:1.25rem; font-weight:700; color:#fff;">10,000+ Records / Day</div>
                         </div>
-                        <div style="background:#0a0f1d; border-radius:12px; padding:16px; border:1px solid var(--border-subtle);">
-                            <div style="font-size:0.85rem; color:var(--text-dim);">Integration Support</div>
-                            <div style="font-size:1.4rem; font-weight:700; color:#34d399;">WhatsApp API + Thermal Printers</div>
+                        <div style="background:#0a0f1d; border-radius:10px; padding:14px; border:1px solid var(--border-subtle);">
+                            <div style="font-size:0.78rem; color:var(--text-dim);">Integrated Hardware</div>
+                            <div style="font-size:1.25rem; font-weight:700; color:#34d399;">WhatsApp API + Thermal Printers</div>
+                        </div>
+                        <div style="background:#0a0f1d; border-radius:10px; padding:14px; border:1px solid var(--border-subtle);">
+                            <div style="font-size:0.78rem; color:var(--text-dim);">Data Compliance</div>
+                            <div style="font-size:1.25rem; font-weight:700; color:var(--electric-blue);">ABDM Digital Health Standard</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 2. InvoiceKit -->
                 <div class="glass-card" data-cat="saas">
-                    <div class="card-icon" style="background: linear-gradient(135deg, #10b981, #047857);">
-                        <i class="fas fa-file-invoice-dollar"></i>
+                    <div>
+                        <div class="card-icon" style="background: linear-gradient(135deg, #10b981, #047857);">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <span class="status-badge badge-live" style="margin-bottom:10px;">PRODUCTION LIVE</span>
+                        <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:8px; color:#fff;">InvoiceKit</h3>
+                        <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:12px;">
+                            High-speed GST invoicing, quotation, and payroll slips generator built for Indian MSMEs, freelancers, and retail trade.
+                        </p>
+                        <ul class="feature-bullets">
+                            <li><i class="fas fa-check"></i> Instant GST/IGST calculations & HSN lookup</li>
+                            <li><i class="fas fa-check"></i> WhatsApp PDF invoice sharing with payment QR</li>
+                            <li><i class="fas fa-check"></i> Salary slip generator & client balance ledger</li>
+                        </ul>
                     </div>
-                    <span class="status-badge badge-live" style="margin-bottom:12px;">PRODUCTION LIVE</span>
-                    <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:10px; color:#fff;">InvoiceKit</h3>
-                    <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:16px;">
-                        High-speed GST invoicing, quotation, and payroll slips generator built for Indian MSMEs, freelancers, and retail trade.
-                    </p>
-                    <ul class="feature-bullets">
-                        <li><i class="fas fa-check"></i> Instant GST/IGST calculations & HSN lookup</li>
-                        <li><i class="fas fa-check"></i> WhatsApp PDF invoice sharing with payment QR</li>
-                        <li><i class="fas fa-check"></i> Salary slip generator & client balance ledger</li>
-                    </ul>
-                    <a href="https://freeinvoice.spotnet.in" target="_blank" rel="noopener" class="btn-futuristic btn-glow" style="width:100%; justify-content:center; margin-top:10px;">
+                    <a href="https://freeinvoice.spotnet.in" target="_blank" rel="noopener" class="btn-futuristic btn-glow" style="margin-top:auto;">
                         <i class="fas fa-external-link-alt"></i> Open InvoiceKit
                     </a>
                 </div>
 
                 <!-- 3. iRange - Link in Bio -->
                 <div class="glass-card" data-cat="saas">
-                    <div class="card-icon" style="background: linear-gradient(135deg, #f59e0b, #b45309);">
-                        <i class="fas fa-link"></i>
+                    <div>
+                        <div class="card-icon" style="background: linear-gradient(135deg, #f59e0b, #b45309);">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <span class="status-badge badge-live" style="margin-bottom:10px;">PRODUCTION LIVE</span>
+                        <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:8px; color:#fff;">iRange – Link in Bio</h3>
+                        <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:12px;">
+                            Ultra-fast link-in-bio mobile & web platform for creators, brands, and retail storefronts to aggregate all digital links and products.
+                        </p>
+                        <ul class="feature-bullets">
+                            <li><i class="fas fa-check"></i> Custom high-conversion bio link profiles</li>
+                            <li><i class="fas fa-check"></i> Integrated product catalogue & store redirection</li>
+                            <li><i class="fas fa-check"></i> Deep click analytics & geo insights</li>
+                        </ul>
                     </div>
-                    <span class="status-badge badge-live" style="margin-bottom:12px;">PRODUCTION LIVE</span>
-                    <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:10px; color:#fff;">iRange – Link in Bio</h3>
-                    <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:16px;">
-                        Ultra-fast link-in-bio mobile & web platform for creators, brands, and retail storefronts to aggregate all digital links and products.
-                    </p>
-                    <ul class="feature-bullets">
-                        <li><i class="fas fa-check"></i> Custom high-conversion bio link profiles</li>
-                        <li><i class="fas fa-check"></i> Integrated product catalogue & store redirection</li>
-                        <li><i class="fas fa-check"></i> Deep click analytics & geo insights</li>
-                    </ul>
-                    <a href="https://irangebio.spotnet.in" target="_blank" rel="noopener" class="btn-futuristic btn-glow" style="width:100%; justify-content:center; margin-top:10px;">
+                    <a href="https://irangebio.spotnet.in" target="_blank" rel="noopener" class="btn-futuristic btn-glow" style="margin-top:auto;">
                         <i class="fas fa-external-link-alt"></i> Launch iRange
                     </a>
                 </div>
 
                 <!-- 4. SpotLink WhatsApp API -->
                 <div class="glass-card" data-cat="ai">
-                    <div class="card-icon" style="background: linear-gradient(135deg, #25D366, #075e54);">
-                        <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <div class="card-icon" style="background: linear-gradient(135deg, #25D366, #075e54);">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <span class="status-badge badge-waitlist" style="margin-bottom:10px;">PILOT / WAITLIST</span>
+                        <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:8px; color:#fff;">SpotLink – WhatsApp API</h3>
+                        <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:12px;">
+                            Enterprise conversational AI engine deployed on official Meta WhatsApp Business API. Automated catalogues, 24/7 customer service, and campaign broadcast.
+                        </p>
+                        <ul class="feature-bullets">
+                            <li><i class="fas fa-check"></i> Unlimited verified broadcast messaging</li>
+                            <li><i class="fas fa-check"></i> Smart RAG AI chatbot trained on internal docs</li>
+                            <li><i class="fas fa-check"></i> Multi-agent team dashboard & Green Tick prep</li>
+                        </ul>
                     </div>
-                    <span class="status-badge badge-waitlist" style="margin-bottom:12px;">PILOT / WAITLIST</span>
-                    <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:10px; color:#fff;">SpotLink – WhatsApp API</h3>
-                    <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:16px;">
-                        Enterprise conversational AI engine deployed on official Meta WhatsApp Business API. Automated catalogues, 24/7 customer service, and campaign broadcast.
-                    </p>
-                    <ul class="feature-bullets">
-                        <li><i class="fas fa-check"></i> Unlimited verified broadcast messaging</li>
-                        <li><i class="fas fa-check"></i> Smart RAG AI chatbot trained on internal docs</li>
-                        <li><i class="fas fa-check"></i> Multi-agent team dashboard & Green Tick prep</li>
-                    </ul>
-                    <a href="#whatsapp-demo" class="btn-futuristic btn-glass" style="width:100%; justify-content:center; margin-top:10px;">
+                    <a href="#whatsapp-demo" class="btn-futuristic btn-glass" style="margin-top:auto;">
                         <i class="fas fa-play"></i> Test Interactive Demo
                     </a>
                 </div>
 
                 <!-- 5. Servicele -->
                 <div class="glass-card" data-cat="saas">
-                    <div class="card-icon" style="background: linear-gradient(135deg, #8b5cf6, #4338ca);">
-                        <i class="fas fa-calendar-check"></i>
+                    <div>
+                        <div class="card-icon" style="background: linear-gradient(135deg, #8b5cf6, #4338ca);">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <span class="status-badge badge-live" style="margin-bottom:10px;">PRODUCTION LIVE</span>
+                        <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:8px; color:#fff;">Servicele – Bookings</h3>
+                        <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:12px;">
+                            Direct WhatsApp booking orchestration for local technicians, salons, and repair specialists. Instant customer confirmations and vendor tracking.
+                        </p>
+                        <ul class="feature-bullets">
+                            <li><i class="fas fa-check"></i> Zero-app customer booking on WhatsApp</li>
+                            <li><i class="fas fa-check"></i> Vendor onboarding & geo dispatch</li>
+                            <li><i class="fas fa-check"></i> Cloudflare Workers microservices backbone</li>
+                        </ul>
                     </div>
-                    <span class="status-badge badge-live" style="margin-bottom:12px;">PRODUCTION LIVE</span>
-                    <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:10px; color:#fff;">Servicele – Bookings</h3>
-                    <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:16px;">
-                        Direct WhatsApp booking orchestration for local technicians, salons, and repair specialists. Instant customer confirmations and vendor tracking.
-                    </p>
-                    <ul class="feature-bullets">
-                        <li><i class="fas fa-check"></i> Zero-app customer booking on WhatsApp</li>
-                        <li><i class="fas fa-check"></i> Vendor onboarding & geo dispatch</li>
-                        <li><i class="fas fa-check"></i> Cloudflare Workers microservices backbone</li>
-                    </ul>
-                    <a href="https://servicele.spotnet.in/" target="_blank" rel="noopener" class="btn-futuristic btn-glow" style="width:100%; justify-content:center; margin-top:10px;">
+                    <a href="https://servicele.spotnet.in/" target="_blank" rel="noopener" class="btn-futuristic btn-glow" style="margin-top:auto;">
                         <i class="fas fa-external-link-alt"></i> Open Servicele
                     </a>
                 </div>
 
                 <!-- 6. Solar Panel Division -->
                 <div class="glass-card" data-cat="infrastructure" style="border-color: rgba(245, 158, 11, 0.35);">
-                    <div class="card-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
-                        <i class="fas fa-solar-panel"></i>
+                    <div>
+                        <div class="card-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                        <span class="status-badge" style="background:rgba(245,158,11,0.2); color:#fbbf24; border:1px solid rgba(245,158,11,0.4); margin-bottom:10px;">
+                            <i class="fas fa-bolt"></i> CLEAN ENERGY DIV.
+                        </span>
+                        <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:8px; color:#fff;">SpotNet Solar Systems</h3>
+                        <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:12px;">
+                            Certified rooftop solar installation in Siddharthnagar & UP. We secure your PM Surya Ghar central subsidy + UP state subsidy with full net-metering setup.
+                        </p>
+                        <ul class="feature-bullets">
+                            <li><i class="fas fa-check"></i> Up to ₹78,000+ government subsidy handling</li>
+                            <li><i class="fas fa-check"></i> 25-Year performance warranty with Tier-1 panels</li>
+                            <li><i class="fas fa-check"></i> Free on-site shadow analysis & DISCOM net meter</li>
+                        </ul>
                     </div>
-                    <span class="status-badge" style="background:rgba(245,158,11,0.2); color:#fbbf24; border:1px solid rgba(245,158,11,0.4); margin-bottom:12px;">
-                        <i class="fas fa-bolt"></i> CLEAN ENERGY DIV.
-                    </span>
-                    <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:10px; color:#fff;">SpotNet Solar Systems</h3>
-                    <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:16px;">
-                        Certified rooftop solar installation in Siddharthnagar & UP. We secure your PM Surya Ghar central subsidy + UP state subsidy with full net-metering setup.
-                    </p>
-                    <ul class="feature-bullets">
-                        <li><i class="fas fa-check"></i> Up to ₹78,000+ government subsidy handling</li>
-                        <li><i class="fas fa-check"></i> 25-Year performance warranty with Tier-1 panels</li>
-                        <li><i class="fas fa-check"></i> Free on-site shadow analysis & DISCOM net meter</li>
-                    </ul>
-                    <a href="solar.html" class="btn-futuristic btn-solar" style="width:100%; justify-content:center; margin-top:10px;">
+                    <a href="solar.html" class="btn-futuristic btn-solar" style="margin-top:auto;">
                         <i class="fas fa-sun"></i> Explore Solar Plans
                     </a>
                 </div>
 
-                <!-- 7. SpotNet Broadband & Networking -->
+                <!-- 7. SpotNet Broadband -->
                 <div class="glass-card" data-cat="infrastructure">
-                    <div class="card-icon" style="background: linear-gradient(135deg, #06b6d4, #0e7490);">
-                        <i class="fas fa-network-wired"></i>
+                    <div>
+                        <div class="card-icon" style="background: linear-gradient(135deg, #06b6d4, #0e7490);">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <span class="status-badge badge-live" style="margin-bottom:10px;">ACTIVE NETWORK</span>
+                        <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:8px; color:#fff;">SpotNet Broadband</h3>
+                        <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:12px;">
+                            Dedicated gigabit fiber broadband for enterprises, clinics, and residences across Dumariyaganj & Siddharthnagar region with 99.5% uptime.
+                        </p>
+                        <ul class="feature-bullets">
+                            <li><i class="fas fa-check"></i> Symmetric gigabit upload/download bandwidth</li>
+                            <li><i class="fas fa-check"></i> Static IP & low-latency routing for servers</li>
+                            <li><i class="fas fa-check"></i> 2-Hour on-ground technician response SLA</li>
+                        </ul>
                     </div>
-                    <span class="status-badge badge-live" style="margin-bottom:12px;">ACTIVE NETWORK</span>
-                    <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:10px; color:#fff;">SpotNet Broadband</h3>
-                    <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:16px;">
-                        Dedicated gigabit fiber broadband for enterprises, clinics, and residences across Dumariyaganj & Siddharthnagar region with 99.5% uptime.
-                    </p>
-                    <ul class="feature-bullets">
-                        <li><i class="fas fa-check"></i> Symmetric gigabit upload/download bandwidth</li>
-                        <li><i class="fas fa-check"></i> Static IP & low-latency routing for servers</li>
-                        <li><i class="fas fa-check"></i> 2-Hour on-ground technician response SLA</li>
-                    </ul>
-                    <a href="#consultation" class="btn-futuristic btn-glass" style="width:100%; justify-content:center; margin-top:10px;">
+                    <a href="#consultation" class="btn-futuristic btn-glass" style="margin-top:auto;">
                         <i class="fas fa-wifi"></i> Check Local Feasibility
                     </a>
                 </div>
 
                 <!-- 8. Lawyer AI & Custom Software -->
                 <div class="glass-card" data-cat="ai">
-                    <div class="card-icon" style="background: linear-gradient(135deg, #ec4899, #be185d);">
-                        <i class="fas fa-balance-scale"></i>
+                    <div>
+                        <div class="card-icon" style="background: linear-gradient(135deg, #ec4899, #be185d);">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <span class="status-badge badge-waitlist" style="margin-bottom:10px;">RESEARCH & DEV</span>
+                        <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:8px; color:#fff;">Lawyer AI & Custom Dev</h3>
+                        <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:12px;">
+                            Domain-specialized AI models for Indian legal drafting alongside end-to-end bespoke web, mobile, and cloud software engineering.
+                        </p>
+                        <ul class="feature-bullets">
+                            <li><i class="fas fa-check"></i> Indian legal codes & case retrieval RAG</li>
+                            <li><i class="fas fa-check"></i> Custom enterprise web applications (React, Node, Supabase)</li>
+                            <li><i class="fas fa-check"></i> High-performance API architecture & DevOps</li>
+                        </ul>
                     </div>
-                    <span class="status-badge badge-waitlist" style="margin-bottom:12px;">RESEARCH & DEV</span>
-                    <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:10px; color:#fff;">Lawyer AI & Custom Dev</h3>
-                    <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:16px;">
-                        Domain-specialized AI models for Indian legal drafting alongside end-to-end bespoke web, mobile, and cloud software engineering.
-                    </p>
-                    <ul class="feature-bullets">
-                        <li><i class="fas fa-check"></i> Indian legal codes & case retrieval RAG</li>
-                        <li><i class="fas fa-check"></i> Custom enterprise web applications (React, Node, Supabase)</li>
-                        <li><i class="fas fa-check"></i> High-performance API architecture & DevOps</li>
-                    </ul>
-                    <a href="#consultation" class="btn-futuristic btn-glass" style="width:100%; justify-content:center; margin-top:10px;">
+                    <a href="#consultation" class="btn-futuristic btn-glass" style="margin-top:auto;">
                         <i class="fas fa-code"></i> Discuss Custom Build
                     </a>
                 </div>
@@ -1315,7 +1242,7 @@
         </div>
     </section>
 
-    <!-- Interactive Feature: Live WhatsApp AI Simulator (Tesla/xAI Grade) -->
+    <!-- Interactive Live WhatsApp AI Simulator -->
     <section class="simulator-section" id="whatsapp-demo">
         <div class="container">
             <div class="sim-grid">
@@ -1323,43 +1250,42 @@
                     <div class="telemetry-badge" style="color:#25D366; border-color:rgba(37,211,102,0.3);">
                         <i class="fab fa-whatsapp"></i> Live Interactive Agent Test
                     </div>
-                    <h2 style="font-size:2.8rem; font-weight:800; letter-spacing:-0.02em; margin:18px 0 20px;">
-                        Test SpotNet AI Chat <br><span class="gradient-text">In Real-Time</span>
+                    <h2 style="font-size:2.2rem; font-weight:800; letter-spacing:-0.02em; margin:12px 0 14px;">
+                        Test SpotNet AI Chat <span class="gradient-text">In Real-Time</span>
                     </h2>
-                    <p style="color:var(--text-muted); font-size:1.1rem; line-height:1.7; margin-bottom:28px;">
-                        Experience how our automated WhatsApp AI agents engage your customers, query internal databases, and close appointments without human delay. Click any test action below to watch the live simulation:
+                    <p style="color:var(--text-muted); font-size:0.98rem; line-height:1.6; margin-bottom:20px;">
+                        Experience how our automated WhatsApp AI agents engage your customers, query internal databases, and close appointments without human delay. Click any test action below:
                     </p>
 
                     <div class="prompt-triggers">
                         <button class="sim-btn" onclick="simulateChat('medos')">
-                            <span><i class="fas fa-hospital" style="color:#38bdf8; margin-right:10px;"></i> "Book OPD appointment at clinic"</span>
+                            <span><i class="fas fa-hospital" style="color:#38bdf8; margin-right:8px;"></i> "Book OPD appointment at clinic"</span>
                             <i class="fas fa-arrow-right"></i>
                         </button>
                         <button class="sim-btn" onclick="simulateChat('solar')">
-                            <span><i class="fas fa-sun" style="color:#f59e0b; margin-right:10px;"></i> "What is PM Surya Ghar subsidy in UP?"</span>
+                            <span><i class="fas fa-sun" style="color:#f59e0b; margin-right:8px;"></i> "What is PM Surya Ghar subsidy in UP?"</span>
                             <i class="fas fa-arrow-right"></i>
                         </button>
                         <button class="sim-btn" onclick="simulateChat('invoice')">
-                            <span><i class="fas fa-file-invoice" style="color:#10b981; margin-right:10px;"></i> "Create GST Invoice for ₹12,500"</span>
+                            <span><i class="fas fa-file-invoice" style="color:#10b981; margin-right:8px;"></i> "Create GST Invoice for ₹12,500"</span>
                             <i class="fas fa-arrow-right"></i>
                         </button>
                         <button class="sim-btn" onclick="simulateChat('broadband')">
-                            <span><i class="fas fa-wifi" style="color:#a855f7; margin-right:10px;"></i> "Need Fiber Broadband in Dumariyaganj"</span>
+                            <span><i class="fas fa-wifi" style="color:#a855f7; margin-right:8px;"></i> "Need Fiber Broadband in Dumariyaganj"</span>
                             <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
 
-                    <div style="margin-top:30px;">
-                        <a href="https://wa.me/15558572517?text=Hi%20SpotNet!%20I%20want%20to%20deploy%20WhatsApp%20AI%20Automation." class="btn-futuristic btn-glow" style="background:#25D366; box-shadow:0 0 20px rgba(37,211,102,0.3);">
+                    <div style="margin-top:22px;">
+                        <a href="https://wa.me/15558572517?text=Hi%20SpotNet!%20I%20want%20to%20deploy%20WhatsApp%20AI%20Automation." class="btn-futuristic btn-glow" style="background:#25D366; box-shadow:0 0 16px rgba(37,211,102,0.3);">
                             <i class="fab fa-whatsapp"></i> Deploy This For Your Business
                         </a>
                     </div>
                 </div>
 
-                <!-- Interactive Smartphone Canvas -->
+                <!-- Smartphone Mockup -->
                 <div>
                     <div class="phone-wrapper">
-                        <div class="phone-notch"></div>
                         <div class="phone-screen">
                             <div class="wa-header">
                                 <div class="wa-avatar">
@@ -1373,14 +1299,14 @@
                             <div class="chat-body" id="chatStream">
                                 <div class="msg-bubble msg-bot">
                                     Namaste! Welcome to SpotNet Services. 👋<br>
-                                    I am your automated AI business agent. Select a quick action on the left or type your query below!
+                                    I am your automated AI business agent. Click a test trigger on the left or type below!
                                     <div class="msg-time">11:45 AM</div>
                                 </div>
                             </div>
-                            <div style="background:#1f2c34; padding:12px; display:flex; gap:10px; align-items:center;">
-                                <input type="text" id="simUserInput" placeholder="Type a message..." style="flex:1; background:#2a3942; border:none; border-radius:20px; padding:10px 16px; color:#fff; font-size:0.88rem; outline:none;" onkeypress="handleSimEnter(event)">
-                                <button onclick="sendSimCustom()" style="background:#00a884; border:none; width:38px; height:38px; border-radius:50%; color:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center;">
-                                    <i class="fas fa-paper-plane"></i>
+                            <div style="background:#1f2c34; padding:10px; display:flex; gap:8px; align-items:center;">
+                                <input type="text" id="simUserInput" placeholder="Type a message..." style="flex:1; background:#2a3942; border:none; border-radius:18px; padding:8px 14px; color:#fff; font-size:0.85rem; outline:none;" onkeypress="handleSimEnter(event)">
+                                <button onclick="sendSimCustom()" style="background:#00a884; border:none; width:34px; height:34px; border-radius:50%; color:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center;">
+                                    <i class="fas fa-paper-plane" style="font-size:0.8rem;"></i>
                                 </button>
                             </div>
                         </div>
@@ -1391,7 +1317,7 @@
     </section>
 
     <!-- Tesla-Style Interactive Solar ROI & Subsidy Calculator -->
-    <section id="roi-calc" style="padding-top:40px;">
+    <section id="roi-calc">
         <div class="container">
             <div class="section-header">
                 <div class="telemetry-badge" style="color:#f59e0b; border-color:rgba(245,158,11,0.3);">
@@ -1404,25 +1330,25 @@
             <div class="solar-calc-card">
                 <div class="calc-slider-box">
                     <div>
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-                            <span style="font-weight:600; font-size:1.05rem; color:#fff;">Your Current Monthly Electricity Bill:</span>
-                            <span id="billValDisplay" style="font-family:var(--font-mono); font-size:1.6rem; font-weight:800; color:var(--solar-amber);">₹3,500</span>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                            <span style="font-weight:600; font-size:0.95rem; color:#fff;">Your Current Monthly Electricity Bill:</span>
+                            <span id="billValDisplay" style="font-family:var(--font-mono); font-size:1.45rem; font-weight:800; color:var(--solar-amber);">₹3,500</span>
                         </div>
                         <input type="range" min="1000" max="25000" step="500" value="3500" class="range-slider" id="billSlider" oninput="calculateSolarROI()">
-                        <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--text-dim); margin-top:6px; font-family:var(--font-mono);">
+                        <div style="display:flex; justify-content:space-between; font-size:0.72rem; color:var(--text-dim); margin-top:5px; font-family:var(--font-mono);">
                             <span>₹1,000 / mo</span>
                             <span>₹10,000 / mo</span>
                             <span>₹25,000 / mo</span>
                         </div>
                     </div>
 
-                    <div style="background:rgba(15,23,42,0.6); padding:20px; border-radius:16px; border:1px solid var(--border-subtle);">
-                        <div style="font-size:0.85rem; color:var(--text-dim); text-transform:uppercase; margin-bottom:6px;">Recommended System Size</div>
-                        <div id="recommendedKW" style="font-size:1.8rem; font-weight:800; color:#fff; font-family:var(--font-mono);">3.0 kW System</div>
-                        <div style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Requires approx. ~300 sq.ft shade-free rooftop space.</div>
+                    <div style="background:rgba(15,23,42,0.6); padding:16px; border-radius:12px; border:1px solid var(--border-subtle);">
+                        <div style="font-size:0.75rem; color:var(--text-dim); text-transform:uppercase; margin-bottom:4px;">Recommended System Size</div>
+                        <div id="recommendedKW" style="font-size:1.5rem; font-weight:800; color:#fff; font-family:var(--font-mono);">3.0 kW System</div>
+                        <div style="font-size:0.8rem; color:var(--text-muted); margin-top:3px;">Requires approx. ~300 sq.ft shade-free rooftop space.</div>
                     </div>
 
-                    <a id="solarLeadBtn" href="https://wa.me/15558572517?text=Hi%20SpotNet%20Solar!%20My%20monthly%20bill%20is%20approx%20Rs.3500.%20I%20want%20to%20claim%20the%20UP%20PM%20Surya%20Ghar%20subsidy%20for%20a%203kW%20system." class="btn-futuristic btn-solar" style="justify-content:center; padding:14px;">
+                    <a id="solarLeadBtn" href="https://wa.me/15558572517?text=Hi%20SpotNet%20Solar!%20My%20monthly%20bill%20is%20approx%20Rs.3500.%20I%20want%20to%20claim%20the%20UP%20PM%20Surya%20Ghar%20subsidy%20for%20a%203kW%20system." class="btn-futuristic btn-solar" style="justify-content:center; padding:12px;">
                         <i class="fas fa-file-signature"></i> Claim UP Subsidy & Book Free Site Survey
                     </a>
                 </div>
@@ -1463,8 +1389,8 @@
                     <div class="card-icon" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
                         <i class="fas fa-comments"></i>
                     </div>
-                    <h3 style="font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:10px;">Conversational AI & LLMs</h3>
-                    <p style="color:var(--text-muted); font-size:0.92rem;">
+                    <h3 style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:8px;">Conversational AI & LLMs</h3>
+                    <p style="color:var(--text-muted); font-size:0.88rem;">
                         Fine-tuned generative models hooked directly into your product inventory, SQL databases, and internal knowledge bases for instant human-grade support.
                     </p>
                 </div>
@@ -1473,8 +1399,8 @@
                     <div class="card-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
                         <i class="fas fa-cogs"></i>
                     </div>
-                    <h3 style="font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:10px;">RPA & Workflow Automation</h3>
-                    <p style="color:var(--text-muted); font-size:0.92rem;">
+                    <h3 style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:8px;">RPA & Workflow Automation</h3>
+                    <p style="color:var(--text-muted); font-size:0.88rem;">
                         Eliminate manual repetitive copy-pasting, invoice data extraction, email parsing, and CRM updates with robotic process automation bots.
                     </p>
                 </div>
@@ -1483,8 +1409,8 @@
                     <div class="card-icon" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 style="font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:10px;">Predictive Analytics</h3>
-                    <p style="color:var(--text-muted); font-size:0.92rem;">
+                    <h3 style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:8px;">Predictive Analytics</h3>
+                    <p style="color:var(--text-muted); font-size:0.88rem;">
                         Machine learning pipelines that forecast retail demand, predict customer churn, and optimize localized distribution logistics.
                     </p>
                 </div>
@@ -1493,8 +1419,8 @@
                     <div class="card-icon" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 style="font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:10px;">Enterprise Cloud & Security</h3>
-                    <p style="color:var(--text-muted); font-size:0.92rem;">
+                    <h3 style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:8px;">Enterprise Cloud & Security</h3>
+                    <p style="color:var(--text-muted); font-size:0.88rem;">
                         Multi-cloud architectures on AWS, Supabase, Vercel, and Cloudflare with Zero Trust access controls, automatic backups, and 99.99% availability.
                     </p>
                 </div>
@@ -1503,8 +1429,8 @@
                     <div class="card-icon" style="background: linear-gradient(135deg, #f59e0b, #b45309);">
                         <i class="fas fa-eye"></i>
                     </div>
-                    <h3 style="font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:10px;">Computer Vision & OCR</h3>
-                    <p style="color:var(--text-muted); font-size:0.92rem;">
+                    <h3 style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:8px;">Computer Vision & OCR</h3>
+                    <p style="color:var(--text-muted); font-size:0.88rem;">
                         Document digitization, Aadhaar/PAN validation, medical report digitization, and industrial camera quality inspection pipelines.
                     </p>
                 </div>
@@ -1513,8 +1439,8 @@
                     <div class="card-icon" style="background: linear-gradient(135deg, #ec4899, #db2777);">
                         <i class="fas fa-microphone-alt"></i>
                     </div>
-                    <h3 style="font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:10px;">Voice AI & Regional NLP</h3>
-                    <p style="color:var(--text-muted); font-size:0.92rem;">
+                    <h3 style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:8px;">Voice AI & Regional NLP</h3>
+                    <p style="color:var(--text-muted); font-size:0.88rem;">
                         Voice agents fluent in Hindi and Indian English dialects for telecom inbound call screening and automated appointment reminders.
                     </p>
                 </div>
@@ -1522,8 +1448,8 @@
         </div>
     </section>
 
-    <!-- Industries Carousel Section -->
-    <section id="industries">
+    <!-- Verticals Strip -->
+    <section id="industries" style="padding-top:20px;">
         <div class="container">
             <div class="section-header">
                 <div class="telemetry-badge">Verticals</div>
@@ -1533,35 +1459,35 @@
 
             <div class="carousel-track" id="industriesTrack">
                 <div class="industry-card">
-                    <i class="fas fa-hospital-user" style="font-size:2rem; color:#38bdf8; margin-bottom:14px;"></i>
-                    <h4 style="font-size:1.2rem; color:#fff; margin-bottom:8px;">Hospitals & Clinics</h4>
-                    <p style="color:var(--text-muted); font-size:0.9rem;">Automated OPD queues, digital lab reports, and doctor scheduling via MedOS.</p>
+                    <i class="fas fa-hospital-user" style="font-size:1.6rem; color:#38bdf8; margin-bottom:10px;"></i>
+                    <h4 style="font-size:1.1rem; color:#fff; margin-bottom:6px;">Hospitals & Clinics</h4>
+                    <p style="color:var(--text-muted); font-size:0.85rem;">Automated OPD queues, digital lab reports, and doctor scheduling via MedOS.</p>
                 </div>
                 <div class="industry-card">
-                    <i class="fas fa-shopping-bag" style="font-size:2rem; color:#10b981; margin-bottom:14px;"></i>
-                    <h4 style="font-size:1.2rem; color:#fff; margin-bottom:8px;">Retail & E-commerce</h4>
-                    <p style="color:var(--text-muted); font-size:0.9rem;">WhatsApp multi-product catalogues, payment link triggers, and abandoned cart recovery.</p>
+                    <i class="fas fa-shopping-bag" style="font-size:1.6rem; color:#10b981; margin-bottom:10px;"></i>
+                    <h4 style="font-size:1.1rem; color:#fff; margin-bottom:6px;">Retail & E-commerce</h4>
+                    <p style="color:var(--text-muted); font-size:0.85rem;">WhatsApp multi-product catalogues, payment link triggers, and abandoned cart recovery.</p>
                 </div>
                 <div class="industry-card">
-                    <i class="fas fa-balance-scale" style="font-size:2rem; color:#f59e0b; margin-bottom:14px;"></i>
-                    <h4 style="font-size:1.2rem; color:#fff; margin-bottom:8px;">Legal & Compliance</h4>
-                    <p style="color:var(--text-muted); font-size:0.9rem;">Contract drafting, precedent search, and regulatory compliance validation with Lawyer AI.</p>
+                    <i class="fas fa-balance-scale" style="font-size:1.6rem; color:#f59e0b; margin-bottom:10px;"></i>
+                    <h4 style="font-size:1.1rem; color:#fff; margin-bottom:6px;">Legal & Compliance</h4>
+                    <p style="color:var(--text-muted); font-size:0.85rem;">Contract drafting, precedent search, and regulatory compliance validation with Lawyer AI.</p>
                 </div>
                 <div class="industry-card">
-                    <i class="fas fa-solar-panel" style="font-size:2rem; color:#ea580c; margin-bottom:14px;"></i>
-                    <h4 style="font-size:1.2rem; color:#fff; margin-bottom:8px;">Commercial Rooftops</h4>
-                    <p style="color:var(--text-muted); font-size:0.9rem;">High-capacity solar setups for schools, marriage halls, and commercial warehouses.</p>
+                    <i class="fas fa-solar-panel" style="font-size:1.6rem; color:#ea580c; margin-bottom:10px;"></i>
+                    <h4 style="font-size:1.1rem; color:#fff; margin-bottom:6px;">Commercial Rooftops</h4>
+                    <p style="color:var(--text-muted); font-size:0.85rem;">High-capacity solar setups for schools, marriage halls, and commercial warehouses.</p>
                 </div>
                 <div class="industry-card">
-                    <i class="fas fa-graduation-cap" style="font-size:2rem; color:#a855f7; margin-bottom:14px;"></i>
-                    <h4 style="font-size:1.2rem; color:#fff; margin-bottom:8px;">Education & Schools</h4>
-                    <p style="color:var(--text-muted); font-size:0.9rem;">Dedicated high-speed fiber broadband and automated fee notification broadcasts.</p>
+                    <i class="fas fa-graduation-cap" style="font-size:1.6rem; color:#a855f7; margin-bottom:10px;"></i>
+                    <h4 style="font-size:1.1rem; color:#fff; margin-bottom:6px;">Education & Schools</h4>
+                    <p style="color:var(--text-muted); font-size:0.85rem;">Dedicated high-speed fiber broadband and automated fee notification broadcasts.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Supabase-Wired Intake & Consultation Console -->
+    <!-- Supabase-Wired Consultation & Lead Intake Console -->
     <section id="consultation">
         <div class="container">
             <div class="intake-console">
@@ -1569,30 +1495,30 @@
                     <div class="telemetry-badge" style="color:var(--electric-blue); border-color:rgba(56,189,248,0.3);">
                         <i class="fas fa-terminal"></i> Direct Consultation Intake
                     </div>
-                    <h2 style="font-size:2.6rem; font-weight:800; margin:16px 0 16px; color:#fff;">
+                    <h2 style="font-size:2.2rem; font-weight:800; margin:12px 0 12px; color:#fff;">
                         Let’s Engineer Your <span class="gradient-text">Next Leap</span>
                     </h2>
-                    <p style="color:var(--text-muted); font-size:1.02rem; line-height:1.7; margin-bottom:28px;">
+                    <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.6; margin-bottom:20px;">
                         Have a software project, enterprise AI requirement, or want to schedule a site survey for Rooftop Solar in Siddharthnagar & UP? Fill in your details and our core team will connect with you within 2 business hours.
                     </p>
 
-                    <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:28px;">
-                        <div style="display:flex; align-items:center; gap:12px; color:#cbd5e1; font-size:0.95rem;">
-                            <i class="fas fa-map-marker-alt" style="color:var(--electric-blue); width:20px;"></i>
+                    <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:20px;">
+                        <div style="display:flex; align-items:center; gap:10px; color:#cbd5e1; font-size:0.9rem;">
+                            <i class="fas fa-map-marker-alt" style="color:var(--electric-blue); width:18px;"></i>
                             <span>Dumariyaganj, Siddharthnagar, Uttar Pradesh, India</span>
                         </div>
-                        <div style="display:flex; align-items:center; gap:12px; color:#cbd5e1; font-size:0.95rem;">
-                            <i class="fas fa-phone-alt" style="color:var(--electric-blue); width:20px;"></i>
+                        <div style="display:flex; align-items:center; gap:10px; color:#cbd5e1; font-size:0.9rem;">
+                            <i class="fas fa-phone-alt" style="color:var(--electric-blue); width:18px;"></i>
                             <a href="tel:+919120909501" style="color:#fff; font-family:var(--font-mono);">+91 91209 09501</a>
                         </div>
-                        <div style="display:flex; align-items:center; gap:12px; color:#cbd5e1; font-size:0.95rem;">
-                            <i class="fas fa-envelope" style="color:var(--electric-blue); width:20px;"></i>
+                        <div style="display:flex; align-items:center; gap:10px; color:#cbd5e1; font-size:0.9rem;">
+                            <i class="fas fa-envelope" style="color:var(--electric-blue); width:18px;"></i>
                             <a href="mailto:spotnet95@gmail.com" style="color:#fff;">spotnet95@gmail.com</a>
                         </div>
                     </div>
 
-                    <div style="padding:16px; background:rgba(15,23,42,0.6); border-radius:14px; border:1px solid var(--border-subtle); font-family:var(--font-mono); font-size:0.8rem; color:var(--text-dim);">
-                        <i class="fas fa-lock" style="color:#34d399; margin-right:6px;"></i> 256-Bit SSL Encrypted Intake • Supabase Storage
+                    <div style="padding:12px; background:rgba(15,23,42,0.6); border-radius:10px; border:1px solid var(--border-subtle); font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim);">
+                        <i class="fas fa-lock" style="color:#34d399; margin-right:5px;"></i> 256-Bit SSL Encrypted Intake • Supabase Storage
                     </div>
                 </div>
 
@@ -1623,26 +1549,26 @@
                         </div>
                         <div class="input-group full">
                             <label>Project Details / Requirements</label>
-                            <textarea id="leadMessage" class="input-field" rows="4" placeholder="Briefly describe your requirements, scale, or location in UP..."></textarea>
+                            <textarea id="leadMessage" class="input-field" rows="3" placeholder="Briefly describe your requirements, scale, or location in UP..."></textarea>
                         </div>
                         <div class="input-group full">
-                            <button type="submit" id="submitBtn" class="btn-futuristic btn-glow" style="width:100%; justify-content:center; padding:14px; font-size:1rem;">
+                            <button type="submit" id="submitBtn" class="btn-futuristic btn-glow" style="width:100%; justify-content:center; padding:12px; font-size:0.95rem;">
                                 <i class="fas fa-paper-plane"></i> Send Inquiry / Request Callback
                             </button>
                         </div>
-                        <div id="formFeedback" style="grid-column:1/-1; display:none; padding:12px; border-radius:10px; font-size:0.9rem; text-align:center;"></div>
+                        <div id="formFeedback" style="grid-column:1/-1; display:none; padding:10px; border-radius:8px; font-size:0.85rem; text-align:center;"></div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- World-Class Footer -->
+    <!-- Compact Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <div class="logo-wrap" style="margin-bottom:16px;">
+                    <div class="logo-wrap" style="margin-bottom:12px;">
                         <div class="brand-icon">
                             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="24" cy="10" r="5" fill="#38bdf8"/>
@@ -1656,13 +1582,13 @@
                             <div class="brand-tag">Enterprise Technologies</div>
                         </div>
                     </div>
-                    <p style="color:var(--text-dim); font-size:0.92rem; line-height:1.65; max-width:380px; margin-bottom:22px;">
+                    <p style="color:var(--text-dim); font-size:0.88rem; line-height:1.55; max-width:360px; margin-bottom:18px;">
                         Engineering next-generation AI agents, specialized SaaS products, high-speed regional optical fiber networks, and certified rooftop clean energy installations. Based in Siddharthnagar, powering businesses across India.
                     </p>
-                    <div style="display:flex; gap:12px;">
-                        <a href="https://facebook.com/spotnetservices" target="_blank" rel="noopener" style="width:38px; height:38px; border-radius:8px; background:rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; color:#fff; border:1px solid var(--border-subtle);"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://wa.me/15558572517" target="_blank" rel="noopener" style="width:38px; height:38px; border-radius:8px; background:rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; color:#fff; border:1px solid var(--border-subtle);"><i class="fab fa-whatsapp"></i></a>
-                        <a href="mailto:spotnet95@gmail.com" style="width:38px; height:38px; border-radius:8px; background:rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; color:#fff; border:1px solid var(--border-subtle);"><i class="fas fa-envelope"></i></a>
+                    <div style="display:flex; gap:10px;">
+                        <a href="https://facebook.com/spotnetservices" target="_blank" rel="noopener" style="width:34px; height:34px; border-radius:8px; background:rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; color:#fff; border:1px solid var(--border-subtle);"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/15558572517" target="_blank" rel="noopener" style="width:34px; height:34px; border-radius:8px; background:rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; color:#fff; border:1px solid var(--border-subtle);"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:spotnet95@gmail.com" style="width:34px; height:34px; border-radius:8px; background:rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; color:#fff; border:1px solid var(--border-subtle);"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
 
@@ -1691,7 +1617,7 @@
                 <div class="footer-col">
                     <h5>Contact & Regional</h5>
                     <div class="footer-links-list">
-                        <span style="color:#94a3b8; font-size:0.9rem;"><i class="fas fa-map-marker-alt" style="color:var(--electric-blue);"></i> Dumariyaganj, UP 272189</span>
+                        <span style="color:#94a3b8; font-size:0.86rem;"><i class="fas fa-map-marker-alt" style="color:var(--electric-blue);"></i> Dumariyaganj, UP 272189</span>
                         <a href="tel:+919120909501"><i class="fas fa-phone"></i> +91 91209 09501</a>
                         <a href="mailto:spotnet95@gmail.com"><i class="fas fa-envelope"></i> spotnet95@gmail.com</a>
                         <a href="https://wa.me/15558572517"><i class="fab fa-whatsapp"></i> WhatsApp Direct</a>
@@ -1701,7 +1627,7 @@
 
             <div class="footer-bottom-bar">
                 <div>© 2026 SpotNet Services. All rights reserved. Enterprise AI, Cloud & Clean Energy Division.</div>
-                <div style="display:flex; gap:20px;">
+                <div style="display:flex; gap:16px;">
                     <a href="sitemap.xml" style="color:var(--text-dim);">Sitemap</a>
                     <a href="robots.txt" style="color:var(--text-dim);">Robots</a>
                     <a href="blog.html" style="color:var(--text-dim);">Insights</a>
@@ -1715,17 +1641,17 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- World-Class Interactive Scripts -->
+    <!-- Interactive Scripts -->
     <script>
-        // 1. Tesla/xAI Constellation Particle Background Canvas
+        // 1. Constellation Particle Background
         (function() {
             const canvas = document.getElementById('particleCanvas');
             if (!canvas) return;
             const ctx = canvas.getContext('2d');
             let width, height;
             let particles = [];
-            const particleCount = 45;
-            let mouse = { x: null, y: null, radius: 140 };
+            const particleCount = 38;
+            let mouse = { x: null, y: null, radius: 120 };
 
             function resize() {
                 width = canvas.width = window.innerWidth;
@@ -1749,9 +1675,9 @@
                 constructor() {
                     this.x = Math.random() * width;
                     this.y = Math.random() * height;
-                    this.vx = (Math.random() - 0.5) * 0.7;
-                    this.vy = (Math.random() - 0.5) * 0.7;
-                    this.radius = Math.random() * 1.8 + 0.8;
+                    this.vx = (Math.random() - 0.5) * 0.6;
+                    this.vy = (Math.random() - 0.5) * 0.6;
+                    this.radius = Math.random() * 1.6 + 0.8;
                 }
                 update() {
                     this.x += this.vx;
@@ -1759,22 +1685,21 @@
                     if (this.x < 0 || this.x > width) this.vx = -this.vx;
                     if (this.y < 0 || this.y > height) this.vy = -this.vy;
 
-                    // Mouse gravity push
                     if (mouse.x !== null && mouse.y !== null) {
                         const dx = mouse.x - this.x;
                         const dy = mouse.y - this.y;
                         const dist = Math.sqrt(dx * dx + dy * dy);
                         if (dist < mouse.radius) {
                             const force = (mouse.radius - dist) / mouse.radius;
-                            this.x -= (dx / dist) * force * 2;
-                            this.y -= (dy / dist) * force * 2;
+                            this.x -= (dx / dist) * force * 1.8;
+                            this.y -= (dy / dist) * force * 1.8;
                         }
                     }
                 }
                 draw() {
                     ctx.beginPath();
                     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = 'rgba(56, 189, 248, 0.6)';
+                    ctx.fillStyle = 'rgba(56, 189, 248, 0.55)';
                     ctx.fill();
                 }
             }
@@ -1793,11 +1718,11 @@
                         const dx = particles[i].x - particles[j].x;
                         const dy = particles[i].y - particles[j].y;
                         const dist = Math.sqrt(dx * dx + dy * dy);
-                        if (dist < 110) {
+                        if (dist < 100) {
                             ctx.beginPath();
                             ctx.moveTo(particles[i].x, particles[i].y);
                             ctx.lineTo(particles[j].x, particles[j].y);
-                            ctx.strokeStyle = `rgba(56, 189, 248, ${0.15 * (1 - dist / 110)})`;
+                            ctx.strokeStyle = `rgba(56, 189, 248, ${0.12 * (1 - dist / 100)})`;
                             ctx.lineWidth = 0.8;
                             ctx.stroke();
                         }
@@ -1823,7 +1748,7 @@
             cards.forEach(card => {
                 const cardCat = card.getAttribute('data-cat');
                 if (category === 'all' || cardCat === category) {
-                    card.style.display = card.classList.contains('product-hero-card') ? 'grid' : 'block';
+                    card.style.display = card.classList.contains('product-hero-card') ? 'grid' : 'flex';
                 } else {
                     card.style.display = 'none';
                 }
@@ -1856,14 +1781,12 @@
 
             const chatStream = document.getElementById('chatStream');
             
-            // Add user message
             const userBubble = document.createElement('div');
             userBubble.className = 'msg-bubble msg-user';
             userBubble.innerHTML = `${data[0].text}<div class="msg-time">Just now</div>`;
             chatStream.appendChild(userBubble);
             chatStream.scrollTop = chatStream.scrollHeight;
 
-            // Simulate typing indicator
             const typingBubble = document.createElement('div');
             typingBubble.className = 'msg-bubble msg-bot';
             typingBubble.innerHTML = '<i class="fas fa-ellipsis-h fa-spin"></i> Typing...';
@@ -1877,7 +1800,7 @@
                 botBubble.innerHTML = `${data[1].text.replace(/\n/g, '<br>')}<div class="msg-time">Just now</div>`;
                 chatStream.appendChild(botBubble);
                 chatStream.scrollTop = chatStream.scrollHeight;
-            }, 800);
+            }, 750);
         }
 
         function handleSimEnter(e) {
@@ -1903,7 +1826,7 @@
                 botBubble.innerHTML = `Thank you for your message! Our AI is ready to automate your workflows. Click 'Deploy This For Your Business' below or WhatsApp us directly at +91 91209 09501 to get started.<div class="msg-time">Just now</div>`;
                 chatStream.appendChild(botBubble);
                 chatStream.scrollTop = chatStream.scrollHeight;
-            }, 600);
+            }, 550);
         }
 
         // 5. Interactive Rooftop Solar ROI Calculator
@@ -1935,7 +1858,6 @@
             document.getElementById('calcAnnualSavings').innerText = `₹${annualSavings.toLocaleString('en-IN')}`;
             document.getElementById('calcPayback').innerText = `~ ${paybackYears}`;
 
-            // Update WhatsApp Link with dynamically calculated values
             const msg = encodeURIComponent(`Hi SpotNet Solar! My monthly electricity bill is approx ₹${bill}. I used your online calculator and want to claim the UP PM Surya Ghar subsidy for a ${kw.toFixed(1)}kW system.`);
             document.getElementById('solarLeadBtn').href = `https://wa.me/15558572517?text=${msg}`;
         }
@@ -1956,21 +1878,17 @@
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing Inquiry...';
 
-            // Attempt Supabase insert if credentials are provided in window.ENV_SUPABASE
-            let savedToDb = false;
             if (window.supabase && window.ENV_SUPABASE_URL && window.ENV_SUPABASE_ANON_KEY) {
                 try {
                     const sb = window.supabase.createClient(window.ENV_SUPABASE_URL, window.ENV_SUPABASE_ANON_KEY);
-                    const { error } = await sb.from('spotnet_leads').insert([
+                    await sb.from('spotnet_leads').insert([
                         { name, phone, email, service, message, created_at: new Date() }
                     ]);
-                    if (!error) savedToDb = true;
                 } catch (err) {
-                    console.warn("Supabase direct insert fallback:", err);
+                    console.warn("Supabase fallback:", err);
                 }
             }
 
-            // Always ensure WhatsApp fallback occurs so NO lead is ever dropped
             const waText = encodeURIComponent(`*New SpotNet Inquiry*\n• Name: ${name}\n• Phone: ${phone}\n• Email: ${email || 'N/A'}\n• Service: ${service}\n• Message: ${message || 'None'}`);
             const waUrl = `https://wa.me/15558572517?text=${waText}`;
 
@@ -1978,14 +1896,14 @@
             feedback.style.background = 'rgba(16, 185, 129, 0.2)';
             feedback.style.color = '#34d399';
             feedback.style.border = '1px solid rgba(16, 185, 129, 0.4)';
-            feedback.innerHTML = '<i class="fas fa-check-circle"></i> Inquiry recorded successfully! Connecting you directly with our team...';
+            feedback.innerHTML = '<i class="fas fa-check-circle"></i> Inquiry recorded! Connecting with SpotNet team...';
 
             setTimeout(() => {
                 window.open(waUrl, '_blank');
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Inquiry / Request Callback';
                 document.getElementById('leadIntakeForm').reset();
-            }, 1200);
+            }, 1000);
         }
     </script>
 </body>
