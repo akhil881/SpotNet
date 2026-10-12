@@ -2280,7 +2280,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="leadPhone">Phone / WhatsApp Number *</label>
-                                <input type="tel" id="leadPhone" class="form-control" placeholder="e.g. +91 98765 43210" required>
+                                <input type="tel" id="leadPhone" class="form-control" placeholder="e.g. +91 98765 43210" minlength="10" maxlength="15" pattern="[0-9+\s-]{10,15}" title="Please enter a valid phone number with at least 10 digits" required>
                             </div>
                         </div>
                         <div class="form-row">
@@ -2422,14 +2422,30 @@
             const city = document.getElementById('leadCity').value.trim() || 'Not specified';
             const message = document.getElementById('leadMessage').value.trim() || 'No additional notes';
 
+            const waText = encodeURIComponent(`Hi SpotNet Services! New Consultation Request:\n• Name: ${name}\n• Phone: ${phone}\n• Service: ${service}\n• Location: ${city}\n• Details: ${message}`);
+            const waUrl = `https://wa.me/15558572517?text=${waText}`;
+
             const feedback = document.getElementById('leadFeedback');
             feedback.className = 'form-feedback success';
-            feedback.innerHTML = `<strong>Thank you, ${name}!</strong> We've received your request for <em>${service}</em>. Connecting with our team on WhatsApp...`;
+            feedback.innerHTML = `
+                <div style="margin-bottom:8px;">
+                    <i class="fas fa-check-circle" style="color:#2e7d32; font-size:1.3rem; vertical-align:middle; margin-right:6px;"></i>
+                    <strong>Inquiry Submitted! Thank you, ${name}.</strong>
+                </div>
+                <p style="margin-bottom:12px; color:#2e7d32; font-size:0.9rem;">We have prepared your request for <em>${service}</em>.</p>
+                <a href="${waUrl}" target="_blank" class="btn" style="background:#25D366; color:white; width:100%; justify-content:center; padding:10px; font-size:0.92rem; text-decoration:none; display:inline-flex;">
+                    <i class="fab fa-whatsapp"></i> Chat with Our Team on WhatsApp Now
+                </a>
+            `;
 
-            const waText = encodeURIComponent(`Hi SpotNet Services! New Consultation Request:\n• Name: ${name}\n• Phone: ${phone}\n• Service: ${service}\n• Location: ${city}\n• Details: ${message}`);
-            setTimeout(() => {
-                window.open(`https://wa.me/15558572517?text=${waText}`, '_blank');
-            }, 1200);
+            document.getElementById('leadForm').reset();
+
+            // Try opening in new tab automatically
+            try {
+                window.open(waUrl, '_blank');
+            } catch (err) {
+                // If blocked by browser, user clicks the button rendered above
+            }
         }
 
         function scrollCarousel(carouselId, direction) {
